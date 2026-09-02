@@ -1,0 +1,12 @@
+digraph "lib/gps"
+{
+ // INTERACTIVE_SVG=YES
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  compound=true
+  subgraph clusterdir_97aefd0d527b934f1d99a682da8fe6a9 {
+    graph [ bgcolor="#edf0f7", pencolor="grey25", style="filled,dashed,", label="lib", fontname="Helvetica", fontsize="10", URL="dir_97aefd0d527b934f1d99a682da8fe6a9.html"]
+  dir_afc4a3b49f8c3fd7f5bc6652007fe995 [shape=box, label="gps", style="filled,bold,", fillcolor="#edf0f7", color="grey25", URL="dir_afc4a3b49f8c3fd7f5bc6652007fe995.html"];
+  }
+}

@@ -1,0 +1,161 @@
+\hypertarget{classActuate}{}\doxysection{Actuate Class Reference}
+\label{classActuate}\index{Actuate@{Actuate}}
+
+
+\mbox{\hyperlink{classActuate}{Actuate}} class will actuate the received microseconds value to the selected pin defined by enum actuator.  
+
+
+
+
+{\ttfamily \#include $<$actuate.\+h$>$}
+
+
+
+Collaboration diagram for Actuate\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=240pt]{classActuate__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{classActuate_a7775c3b80aeee5e4cce5f5648ac82d79}{actuator}} \{ \newline
+\mbox{\hyperlink{classActuate_a7775c3b80aeee5e4cce5f5648ac82d79ac23e72441ea38c96773ee848cdd7fc51}{M\+\_\+\+FR}}
+, \mbox{\hyperlink{classActuate_a7775c3b80aeee5e4cce5f5648ac82d79a6f5518d5394bdb6cfc1fc9a87191fa38}{M\+\_\+\+FL}}
+, \mbox{\hyperlink{classActuate_a7775c3b80aeee5e4cce5f5648ac82d79ac569fa7b937c535d99d9d25d25d9d8a0}{M\+\_\+\+RR}}
+, \mbox{\hyperlink{classActuate_a7775c3b80aeee5e4cce5f5648ac82d79a56a11c22098c7ead5dde1a32abf2854a}{M\+\_\+\+RL}}
+, \newline
+\mbox{\hyperlink{classActuate_a7775c3b80aeee5e4cce5f5648ac82d79a671db912c018a35d69da4a7b36353004}{SS}}
+ \}
+\begin{DoxyCompactList}\small\item\em All possible options to actuate. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{classActuate_ab7712530dffbe063a7a96ea3f4768f1a}{init}} ()
+\begin{DoxyCompactList}\small\item\em Initialization of the PWM pins. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classActuate_a2e0ceaee93543bf5b8066806f0e2c3dc}{write}} (\mbox{\hyperlink{classActuate_a7775c3b80aeee5e4cce5f5648ac82d79}{actuator}} act, uint16\+\_\+t pwm\+\_\+value\+\_\+us)
+\begin{DoxyCompactList}\small\item\em Write a certain µs value on the specified pin. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classActuate_ad3c2e537e4ea5686b0b856fa6c9ed8af}{disable\+All}} ()
+\begin{DoxyCompactList}\small\item\em Disable all PWM pins. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classActuate_ae2369ad1bbb14c792baf5b011078ed4f}{enable\+All}} ()
+\begin{DoxyCompactList}\small\item\em Enable all PWM pins. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{classActuate_ac4fb5113bf4fd86e0d5482f74ac9e644}{is\+Disabled}} ()
+\begin{DoxyCompactList}\small\item\em check if the PWM pins are disabled \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classActuate}{Actuate}} class will actuate the received microseconds value to the selected pin defined by enum actuator. 
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{classActuate_a7775c3b80aeee5e4cce5f5648ac82d79}\label{classActuate_a7775c3b80aeee5e4cce5f5648ac82d79}} 
+\index{Actuate@{Actuate}!actuator@{actuator}}
+\index{actuator@{actuator}!Actuate@{Actuate}}
+\doxysubsubsection{\texorpdfstring{actuator}{actuator}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{classActuate_a7775c3b80aeee5e4cce5f5648ac82d79}{Actuate\+::actuator}}}
+
+
+
+All possible options to actuate. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\_FR@{M\_FR}!Actuate@{Actuate}}\index{Actuate@{Actuate}!M\_FR@{M\_FR}}}\mbox{\Hypertarget{classActuate_a7775c3b80aeee5e4cce5f5648ac82d79ac23e72441ea38c96773ee848cdd7fc51}\label{classActuate_a7775c3b80aeee5e4cce5f5648ac82d79ac23e72441ea38c96773ee848cdd7fc51}} 
+M\+\_\+\+FR&Motor Front Right. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\_FL@{M\_FL}!Actuate@{Actuate}}\index{Actuate@{Actuate}!M\_FL@{M\_FL}}}\mbox{\Hypertarget{classActuate_a7775c3b80aeee5e4cce5f5648ac82d79a6f5518d5394bdb6cfc1fc9a87191fa38}\label{classActuate_a7775c3b80aeee5e4cce5f5648ac82d79a6f5518d5394bdb6cfc1fc9a87191fa38}} 
+M\+\_\+\+FL&Motor Front Left. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\_RR@{M\_RR}!Actuate@{Actuate}}\index{Actuate@{Actuate}!M\_RR@{M\_RR}}}\mbox{\Hypertarget{classActuate_a7775c3b80aeee5e4cce5f5648ac82d79ac569fa7b937c535d99d9d25d25d9d8a0}\label{classActuate_a7775c3b80aeee5e4cce5f5648ac82d79ac569fa7b937c535d99d9d25d25d9d8a0}} 
+M\+\_\+\+RR&Motor Rear Right. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\_RL@{M\_RL}!Actuate@{Actuate}}\index{Actuate@{Actuate}!M\_RL@{M\_RL}}}\mbox{\Hypertarget{classActuate_a7775c3b80aeee5e4cce5f5648ac82d79a56a11c22098c7ead5dde1a32abf2854a}\label{classActuate_a7775c3b80aeee5e4cce5f5648ac82d79a56a11c22098c7ead5dde1a32abf2854a}} 
+M\+\_\+\+RL&Motor Rear Left. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SS@{SS}!Actuate@{Actuate}}\index{Actuate@{Actuate}!SS@{SS}}}\mbox{\Hypertarget{classActuate_a7775c3b80aeee5e4cce5f5648ac82d79a671db912c018a35d69da4a7b36353004}\label{classActuate_a7775c3b80aeee5e4cce5f5648ac82d79a671db912c018a35d69da4a7b36353004}} 
+SS&Steer Servo. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classActuate_ad3c2e537e4ea5686b0b856fa6c9ed8af}\label{classActuate_ad3c2e537e4ea5686b0b856fa6c9ed8af}} 
+\index{Actuate@{Actuate}!disableAll@{disableAll}}
+\index{disableAll@{disableAll}!Actuate@{Actuate}}
+\doxysubsubsection{\texorpdfstring{disableAll()}{disableAll()}}
+{\footnotesize\ttfamily void Actuate\+::disable\+All (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Disable all PWM pins. 
+
+\mbox{\Hypertarget{classActuate_ae2369ad1bbb14c792baf5b011078ed4f}\label{classActuate_ae2369ad1bbb14c792baf5b011078ed4f}} 
+\index{Actuate@{Actuate}!enableAll@{enableAll}}
+\index{enableAll@{enableAll}!Actuate@{Actuate}}
+\doxysubsubsection{\texorpdfstring{enableAll()}{enableAll()}}
+{\footnotesize\ttfamily void Actuate\+::enable\+All (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Enable all PWM pins. 
+
+\mbox{\Hypertarget{classActuate_ab7712530dffbe063a7a96ea3f4768f1a}\label{classActuate_ab7712530dffbe063a7a96ea3f4768f1a}} 
+\index{Actuate@{Actuate}!init@{init}}
+\index{init@{init}!Actuate@{Actuate}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily uint8\+\_\+t Actuate\+::init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Initialization of the PWM pins. 
+
+Will attach the pins to the PWMServo library and will disable the pins such that no unwanted movement is caused.
+
+\begin{DoxyReturn}{Returns}
+uint8\+\_\+t returns 1 for success and 0 for failure 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classActuate_ac4fb5113bf4fd86e0d5482f74ac9e644}\label{classActuate_ac4fb5113bf4fd86e0d5482f74ac9e644}} 
+\index{Actuate@{Actuate}!isDisabled@{isDisabled}}
+\index{isDisabled@{isDisabled}!Actuate@{Actuate}}
+\doxysubsubsection{\texorpdfstring{isDisabled()}{isDisabled()}}
+{\footnotesize\ttfamily uint8\+\_\+t Actuate\+::is\+Disabled (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+check if the PWM pins are disabled 
+
+\begin{DoxyReturn}{Returns}
+uint8\+\_\+t 1 means disabled and 0 means not disabled 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classActuate_a2e0ceaee93543bf5b8066806f0e2c3dc}\label{classActuate_a2e0ceaee93543bf5b8066806f0e2c3dc}} 
+\index{Actuate@{Actuate}!write@{write}}
+\index{write@{write}!Actuate@{Actuate}}
+\doxysubsubsection{\texorpdfstring{write()}{write()}}
+{\footnotesize\ttfamily void Actuate\+::write (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classActuate_a7775c3b80aeee5e4cce5f5648ac82d79}{actuator}}}]{act,  }\item[{uint16\+\_\+t}]{pwm\+\_\+value\+\_\+us }\end{DoxyParamCaption})}
+
+
+
+Write a certain µs value on the specified pin. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pin} & the pin to actuate \\
+\hline
+{\em pwm\+\_\+value\+\_\+us} & the value to actuate\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+, internally, it will be converted between 0-\/180° 
+\end{DoxyNote}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+lib/actuation/\mbox{\hyperlink{actuate_8h}{actuate.\+h}}\item 
+lib/actuation/\mbox{\hyperlink{actuate_8cpp}{actuate.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,140 @@
+\hypertarget{classCurrentMeasure}{}\doxysection{Current\+Measure Class Reference}
+\label{classCurrentMeasure}\index{CurrentMeasure@{CurrentMeasure}}
+
+
+\mbox{\hyperlink{classCurrentMeasure}{Current\+Measure}} class is responible to initialize the pins, calculate and return the calculated current.  
+
+
+
+
+{\ttfamily \#include $<$current.\+h$>$}
+
+
+
+Collaboration diagram for Current\+Measure\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=230pt]{classCurrentMeasure__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{classCurrentMeasure_ab0fbc2c517c55632c04527522334e8b4}{current\+\_\+source}} \{ \newline
+\mbox{\hyperlink{classCurrentMeasure_ab0fbc2c517c55632c04527522334e8b4a4d00ea5bae92bf4974bc5d843fedb0c9}{hlc}}
+, \mbox{\hyperlink{classCurrentMeasure_ab0fbc2c517c55632c04527522334e8b4aee6a4d082c7c0cd43bd1f6aec65ae0ae}{llc}}
+, \mbox{\hyperlink{classCurrentMeasure_ab0fbc2c517c55632c04527522334e8b4a4049b6881b1eee24929a2177cd38a1c8}{ss}}
+, \mbox{\hyperlink{classCurrentMeasure_ab0fbc2c517c55632c04527522334e8b4adfa27cd413bd5252e4601406461a3498}{esc\+\_\+1}}
+, \newline
+\mbox{\hyperlink{classCurrentMeasure_ab0fbc2c517c55632c04527522334e8b4a9eb0da32af36af63a8bd3a8c935b2e76}{esc\+\_\+2}}
+, \mbox{\hyperlink{classCurrentMeasure_ab0fbc2c517c55632c04527522334e8b4af4422b2c7fd7f562e087e01243d8bc15}{esc\+\_\+3}}
+, \mbox{\hyperlink{classCurrentMeasure_ab0fbc2c517c55632c04527522334e8b4a7e9e56c6153c0b0f30434e462292dde6}{esc\+\_\+4}}
+ \}
+\begin{DoxyCompactList}\small\item\em the different current sources \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{classCurrentMeasure_a8a667f729fe6779c3354060fb54117b8}{init}} ()
+\begin{DoxyCompactList}\small\item\em initializes the utilized pins \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCurrentMeasure_a8fa9f1e552b55e128c8b7e9076a0e233}{Read\+Current}} ()
+\begin{DoxyCompactList}\small\item\em reads the analog value of the pins and repeats this process based on AVERAGE\+\_\+\+COUNT \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classCurrentMeasure_aff39217352667669343619f1817d8fa7}{get\+Current\+By\+Source}} (\mbox{\hyperlink{classCurrentMeasure_ab0fbc2c517c55632c04527522334e8b4}{current\+\_\+source}} source)
+\begin{DoxyCompactList}\small\item\em Get the current by source current\+\_\+source. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classCurrentMeasure}{Current\+Measure}} class is responible to initialize the pins, calculate and return the calculated current. 
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{classCurrentMeasure_ab0fbc2c517c55632c04527522334e8b4}\label{classCurrentMeasure_ab0fbc2c517c55632c04527522334e8b4}} 
+\index{CurrentMeasure@{CurrentMeasure}!current\_source@{current\_source}}
+\index{current\_source@{current\_source}!CurrentMeasure@{CurrentMeasure}}
+\doxysubsubsection{\texorpdfstring{current\_source}{current\_source}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{classCurrentMeasure_ab0fbc2c517c55632c04527522334e8b4}{Current\+Measure\+::current\+\_\+source}}}
+
+
+
+the different current sources 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{hlc@{hlc}!CurrentMeasure@{CurrentMeasure}}\index{CurrentMeasure@{CurrentMeasure}!hlc@{hlc}}}\mbox{\Hypertarget{classCurrentMeasure_ab0fbc2c517c55632c04527522334e8b4a4d00ea5bae92bf4974bc5d843fedb0c9}\label{classCurrentMeasure_ab0fbc2c517c55632c04527522334e8b4a4d00ea5bae92bf4974bc5d843fedb0c9}} 
+hlc&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{llc@{llc}!CurrentMeasure@{CurrentMeasure}}\index{CurrentMeasure@{CurrentMeasure}!llc@{llc}}}\mbox{\Hypertarget{classCurrentMeasure_ab0fbc2c517c55632c04527522334e8b4aee6a4d082c7c0cd43bd1f6aec65ae0ae}\label{classCurrentMeasure_ab0fbc2c517c55632c04527522334e8b4aee6a4d082c7c0cd43bd1f6aec65ae0ae}} 
+llc&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ss@{ss}!CurrentMeasure@{CurrentMeasure}}\index{CurrentMeasure@{CurrentMeasure}!ss@{ss}}}\mbox{\Hypertarget{classCurrentMeasure_ab0fbc2c517c55632c04527522334e8b4a4049b6881b1eee24929a2177cd38a1c8}\label{classCurrentMeasure_ab0fbc2c517c55632c04527522334e8b4a4049b6881b1eee24929a2177cd38a1c8}} 
+ss&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{esc\_1@{esc\_1}!CurrentMeasure@{CurrentMeasure}}\index{CurrentMeasure@{CurrentMeasure}!esc\_1@{esc\_1}}}\mbox{\Hypertarget{classCurrentMeasure_ab0fbc2c517c55632c04527522334e8b4adfa27cd413bd5252e4601406461a3498}\label{classCurrentMeasure_ab0fbc2c517c55632c04527522334e8b4adfa27cd413bd5252e4601406461a3498}} 
+esc\+\_\+1&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{esc\_2@{esc\_2}!CurrentMeasure@{CurrentMeasure}}\index{CurrentMeasure@{CurrentMeasure}!esc\_2@{esc\_2}}}\mbox{\Hypertarget{classCurrentMeasure_ab0fbc2c517c55632c04527522334e8b4a9eb0da32af36af63a8bd3a8c935b2e76}\label{classCurrentMeasure_ab0fbc2c517c55632c04527522334e8b4a9eb0da32af36af63a8bd3a8c935b2e76}} 
+esc\+\_\+2&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{esc\_3@{esc\_3}!CurrentMeasure@{CurrentMeasure}}\index{CurrentMeasure@{CurrentMeasure}!esc\_3@{esc\_3}}}\mbox{\Hypertarget{classCurrentMeasure_ab0fbc2c517c55632c04527522334e8b4af4422b2c7fd7f562e087e01243d8bc15}\label{classCurrentMeasure_ab0fbc2c517c55632c04527522334e8b4af4422b2c7fd7f562e087e01243d8bc15}} 
+esc\+\_\+3&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{esc\_4@{esc\_4}!CurrentMeasure@{CurrentMeasure}}\index{CurrentMeasure@{CurrentMeasure}!esc\_4@{esc\_4}}}\mbox{\Hypertarget{classCurrentMeasure_ab0fbc2c517c55632c04527522334e8b4a7e9e56c6153c0b0f30434e462292dde6}\label{classCurrentMeasure_ab0fbc2c517c55632c04527522334e8b4a7e9e56c6153c0b0f30434e462292dde6}} 
+esc\+\_\+4&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classCurrentMeasure_aff39217352667669343619f1817d8fa7}\label{classCurrentMeasure_aff39217352667669343619f1817d8fa7}} 
+\index{CurrentMeasure@{CurrentMeasure}!getCurrentBySource@{getCurrentBySource}}
+\index{getCurrentBySource@{getCurrentBySource}!CurrentMeasure@{CurrentMeasure}}
+\doxysubsubsection{\texorpdfstring{getCurrentBySource()}{getCurrentBySource()}}
+{\footnotesize\ttfamily float Current\+Measure\+::get\+Current\+By\+Source (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classCurrentMeasure_ab0fbc2c517c55632c04527522334e8b4}{current\+\_\+source}}}]{source }\end{DoxyParamCaption})}
+
+
+
+Get the current by source current\+\_\+source. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em source} & the requested source \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+float that represents the current value from the requested source 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classCurrentMeasure_a8a667f729fe6779c3354060fb54117b8}\label{classCurrentMeasure_a8a667f729fe6779c3354060fb54117b8}} 
+\index{CurrentMeasure@{CurrentMeasure}!init@{init}}
+\index{init@{init}!CurrentMeasure@{CurrentMeasure}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily uint8\+\_\+t Current\+Measure\+::init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+initializes the utilized pins 
+
+\begin{DoxyReturn}{Returns}
+uint8\+\_\+t 1 if success and 0 if failure 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classCurrentMeasure_a8fa9f1e552b55e128c8b7e9076a0e233}\label{classCurrentMeasure_a8fa9f1e552b55e128c8b7e9076a0e233}} 
+\index{CurrentMeasure@{CurrentMeasure}!ReadCurrent@{ReadCurrent}}
+\index{ReadCurrent@{ReadCurrent}!CurrentMeasure@{CurrentMeasure}}
+\doxysubsubsection{\texorpdfstring{ReadCurrent()}{ReadCurrent()}}
+{\footnotesize\ttfamily void Current\+Measure\+::\+Read\+Current (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+reads the analog value of the pins and repeats this process based on AVERAGE\+\_\+\+COUNT 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+lib/current/\mbox{\hyperlink{current_8h}{current.\+h}}\item 
+lib/current/\mbox{\hyperlink{current_8cpp}{current.\+cpp}}\end{DoxyCompactItemize}

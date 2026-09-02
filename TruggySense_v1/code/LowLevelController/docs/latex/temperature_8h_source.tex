@@ -1,0 +1,74 @@
+\hypertarget{temperature_8h_source}{}\doxysection{temperature.\+h}
+\label{temperature_8h_source}\index{lib/temperature/temperature.h@{lib/temperature/temperature.h}}
+\mbox{\hyperlink{temperature_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{15 \textcolor{preprocessor}{\#include <stdint.h>}}
+\DoxyCodeLine{16 }
+\DoxyCodeLine{17 \textcolor{preprocessor}{\#define ONE\_WIRE\_BUS 6}}
+\DoxyCodeLine{18 \textcolor{preprocessor}{\#define TEMPERATURE\_PRECISION 10}}
+\DoxyCodeLine{19 }
+\DoxyCodeLine{20 \textcolor{preprocessor}{\#include <OneWire.h>}}
+\DoxyCodeLine{21 \textcolor{preprocessor}{\#include <DallasTemperature.h>}}
+\DoxyCodeLine{22 }
+\DoxyCodeLine{23 \textcolor{preprocessor}{\#define HLC\_AVAILABILITY (1 << 0)}}
+\DoxyCodeLine{24 \textcolor{preprocessor}{\#define LLC\_AVAILABILITY (1 << 1)}}
+\DoxyCodeLine{25 \textcolor{preprocessor}{\#define SS\_AVAILABILITY (1 << 2)}}
+\DoxyCodeLine{26 \textcolor{preprocessor}{\#define BP\_AVAILABILITY (1 << 3)}}
+\DoxyCodeLine{27 }
+\DoxyCodeLine{28 \textcolor{preprocessor}{\#define BM\_1\_AVAILABILITY (1 << 0)}}
+\DoxyCodeLine{29 \textcolor{preprocessor}{\#define BM\_2\_AVAILABILITY (1 << 1)}}
+\DoxyCodeLine{30 \textcolor{preprocessor}{\#define BM\_3\_AVAILABILITY (1 << 2)}}
+\DoxyCodeLine{31 \textcolor{preprocessor}{\#define BM\_4\_AVAILABILITY (1 << 3)}}
+\DoxyCodeLine{32 \textcolor{preprocessor}{\#define ESC\_1\_AVAILABILITY (1 << 4)}}
+\DoxyCodeLine{33 \textcolor{preprocessor}{\#define ESC\_2\_AVAILABILITY (1 << 5)}}
+\DoxyCodeLine{34 \textcolor{preprocessor}{\#define ESC\_3\_AVAILABILITY (1 << 6)}}
+\DoxyCodeLine{35 \textcolor{preprocessor}{\#define ESC\_4\_AVAILABILITY (1 << 7)}}
+\DoxyCodeLine{36 }
+\DoxyCodeLine{41 \textcolor{keyword}{class }\mbox{\hyperlink{classTemperature}{Temperature}}}
+\DoxyCodeLine{42 \{}
+\DoxyCodeLine{43 \textcolor{keyword}{private}:}
+\DoxyCodeLine{44     \textcolor{keywordtype}{float} internal\_temp;}
+\DoxyCodeLine{45     uint8\_t sensor\_availability\_1;}
+\DoxyCodeLine{46     uint8\_t sensor\_availability\_2;}
+\DoxyCodeLine{47 }
+\DoxyCodeLine{48     \textcolor{comment}{// Addresses acquired from "{}playground -\/> platformio -\/> temperatures"{}}}
+\DoxyCodeLine{49     DeviceAddress hlc\_thermometer = \{0x28, 0x6E, 0x85, 0x71, 0x10, 0x0, 0x0, 0xBA\};}
+\DoxyCodeLine{50     DeviceAddress ss\_thermometer = \{0x28, 0x7B, 0x47, 0x72, 0x10, 0x0, 0x0, 0x23\};}
+\DoxyCodeLine{51     DeviceAddress esc\_1\_thermometer = \{0x28, 0xDB, 0xC3, 0x71, 0x10, 0x0, 0x0, 0x23\};}
+\DoxyCodeLine{52     DeviceAddress esc\_2\_thermometer = \{0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00\};}
+\DoxyCodeLine{53     DeviceAddress esc\_3\_thermometer = \{0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00\};}
+\DoxyCodeLine{54     DeviceAddress esc\_4\_thermometer = \{0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00\};}
+\DoxyCodeLine{55     DeviceAddress bm\_1\_thermometer = \{0x28, 0xE7, 0x39, 0x72, 0x10, 0x0, 0x0, 0x20\};}
+\DoxyCodeLine{56     DeviceAddress bm\_2\_thermometer = \{0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00\};}
+\DoxyCodeLine{57     DeviceAddress bm\_3\_thermometer = \{0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00\};}
+\DoxyCodeLine{58     DeviceAddress bm\_4\_thermometer = \{0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00\};}
+\DoxyCodeLine{59     DeviceAddress bp\_thermometer = \{0x28, 0xE5, 0x49, 0x72, 0x10, 0x00, 0x00, 0x23\};}
+\DoxyCodeLine{60 }
+\DoxyCodeLine{61 \textcolor{keyword}{public}:}
+\DoxyCodeLine{66     \textcolor{keyword}{enum} \mbox{\hyperlink{classTemperature_af7441a7bcbc69bbc36f98dbe1080d3d0}{temperature\_source}}}
+\DoxyCodeLine{67     \{}
+\DoxyCodeLine{68         \mbox{\hyperlink{classTemperature_af7441a7bcbc69bbc36f98dbe1080d3d0a174abceb69b41c0d3686049b4ecae21c}{hlc}},   \textcolor{comment}{// High level controller}}
+\DoxyCodeLine{69         \mbox{\hyperlink{classTemperature_af7441a7bcbc69bbc36f98dbe1080d3d0a020d34252410779795b582f396791fc5}{llc}},   \textcolor{comment}{// Low level controller}}
+\DoxyCodeLine{70         \mbox{\hyperlink{classTemperature_af7441a7bcbc69bbc36f98dbe1080d3d0a51c758bf28203422de6a5499a67340ca}{ss}},    \textcolor{comment}{// Steering Servo}}
+\DoxyCodeLine{71         \mbox{\hyperlink{classTemperature_af7441a7bcbc69bbc36f98dbe1080d3d0a7789521cbeee821af982c9e55d1592b3}{bp}},    \textcolor{comment}{// Battery pack}}
+\DoxyCodeLine{72         \mbox{\hyperlink{classTemperature_af7441a7bcbc69bbc36f98dbe1080d3d0ac3d88f8990493a069fda64ff629b2709}{esc\_1}}, \textcolor{comment}{// ESC 1}}
+\DoxyCodeLine{73         \mbox{\hyperlink{classTemperature_af7441a7bcbc69bbc36f98dbe1080d3d0a19bd86ebb9a5f276a51a21169d40679f}{esc\_2}}, \textcolor{comment}{// ESC 2}}
+\DoxyCodeLine{74         \mbox{\hyperlink{classTemperature_af7441a7bcbc69bbc36f98dbe1080d3d0a2ad4e69bbda8ebc9b7ebfa5727dd8ff5}{esc\_3}}, \textcolor{comment}{// ESC 3}}
+\DoxyCodeLine{75         \mbox{\hyperlink{classTemperature_af7441a7bcbc69bbc36f98dbe1080d3d0a7a915ef3fe19fce1f6d7f99831cc4470}{esc\_4}}, \textcolor{comment}{// ESC 4}}
+\DoxyCodeLine{76         \mbox{\hyperlink{classTemperature_af7441a7bcbc69bbc36f98dbe1080d3d0ae843e4fec18b9f6319e5d2b5334760ed}{bm\_1}},  \textcolor{comment}{// Brushless motor 1}}
+\DoxyCodeLine{77         \mbox{\hyperlink{classTemperature_af7441a7bcbc69bbc36f98dbe1080d3d0a156ef5b630e153caaef488e66a8d9220}{bm\_2}},  \textcolor{comment}{// Brushless motor 2}}
+\DoxyCodeLine{78         \mbox{\hyperlink{classTemperature_af7441a7bcbc69bbc36f98dbe1080d3d0a51e72caf44a812afbc8da711485d36e1}{bm\_3}},  \textcolor{comment}{// Brushless motor 3}}
+\DoxyCodeLine{79         \mbox{\hyperlink{classTemperature_af7441a7bcbc69bbc36f98dbe1080d3d0ab5d0537c0c5d4fcd9b15e9d2938ebf6f}{bm\_4}},  \textcolor{comment}{// Brushless motor 4}}
+\DoxyCodeLine{80     \};}
+\DoxyCodeLine{81 }
+\DoxyCodeLine{87     uint8\_t \mbox{\hyperlink{classTemperature_ad128f7e2a26ed2687f5d72a0d96a48a1}{init}}();}
+\DoxyCodeLine{88 }
+\DoxyCodeLine{93     \textcolor{keywordtype}{void} \mbox{\hyperlink{classTemperature_a6c4220dabe37458518cf3849ec20e0a4}{read}}();}
+\DoxyCodeLine{94 }
+\DoxyCodeLine{101     \textcolor{keywordtype}{float} \mbox{\hyperlink{classTemperature_a63426d19c1275afa8ab6fd6fd0e82eec}{getBySource}}(\mbox{\hyperlink{classTemperature_af7441a7bcbc69bbc36f98dbe1080d3d0}{temperature\_source}} source);}
+\DoxyCodeLine{102 \};}
+
+\end{DoxyCode}

@@ -1,0 +1,8 @@
+digraph "temperature"
+{
+ // INTERACTIVE_SVG=YES
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="{temperature\n|+ float t_llc\l+ float t_hlc\l+ float t_bp\l+ float t_ss\l+ float t_bm_1\l+ float t_bm_2\l+ float t_bm_3\l+ float t_bm_4\l+ float t_esc_1\l+ float t_esc_2\l+ float t_esc_3\l+ float t_esc_4\l|}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="datastruct of sensed temperatures"];
+}

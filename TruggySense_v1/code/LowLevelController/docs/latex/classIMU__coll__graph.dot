@@ -1,0 +1,8 @@
+digraph "IMU"
+{
+ // INTERACTIVE_SVG=YES
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="{IMU\n||+ uint8_t init()\l+ void computeData()\l+ float getDataBySource\l(imu_data data_source)\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Initialize, read and get the Euler or Quaternion specific angles given by e_imu_data from the BNO085 ..."];
+}

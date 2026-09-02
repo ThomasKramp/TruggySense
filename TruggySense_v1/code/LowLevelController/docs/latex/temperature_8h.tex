@@ -1,0 +1,166 @@
+\hypertarget{temperature_8h}{}\doxysection{lib/temperature/temperature.h File Reference}
+\label{temperature_8h}\index{lib/temperature/temperature.h@{lib/temperature/temperature.h}}
+
+
+Contains class and pins to enable temperature measurements with the internal MCU and DS18\+B20+ One\+Wire temperature sensors.  
+
+
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include $<$One\+Wire.\+h$>$}\newline
+{\ttfamily \#include $<$Dallas\+Temperature.\+h$>$}\newline
+Include dependency graph for temperature.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{temperature_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{temperature_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classTemperature}{Temperature}}
+\begin{DoxyCompactList}\small\item\em Class that will initialize, check if the sensor exists and read the value from the sensor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{temperature_8h_a4260ed8874da804fb9ef9abba200b487}{ONE\+\_\+\+WIRE\+\_\+\+BUS}}~6
+\item 
+\#define \mbox{\hyperlink{temperature_8h_a41a331314b46059bd942e76ffc60cf4a}{TEMPERATURE\+\_\+\+PRECISION}}~10
+\item 
+\#define \mbox{\hyperlink{temperature_8h_a5927ef22656ae37312714ad8450203ce}{HLC\+\_\+\+AVAILABILITY}}~(1 $<$$<$ 0)
+\item 
+\#define \mbox{\hyperlink{temperature_8h_a1dd0e7b43e684fe89f602e33e2a4490c}{LLC\+\_\+\+AVAILABILITY}}~(1 $<$$<$ 1)
+\item 
+\#define \mbox{\hyperlink{temperature_8h_a3b5bb5f0e4f2c9f7e33df163ba372c43}{SS\+\_\+\+AVAILABILITY}}~(1 $<$$<$ 2)
+\item 
+\#define \mbox{\hyperlink{temperature_8h_ae34f4c048fc3d72597ea615e7c8bb41e}{BP\+\_\+\+AVAILABILITY}}~(1 $<$$<$ 3)
+\item 
+\#define \mbox{\hyperlink{temperature_8h_ab0b800998c027bf6198d49e9b683db9f}{BM\+\_\+1\+\_\+\+AVAILABILITY}}~(1 $<$$<$ 0)
+\item 
+\#define \mbox{\hyperlink{temperature_8h_ab1393bc621ebf4743538922d0ef38df9}{BM\+\_\+2\+\_\+\+AVAILABILITY}}~(1 $<$$<$ 1)
+\item 
+\#define \mbox{\hyperlink{temperature_8h_a7a60efdbd3bf958929279b48724ff17d}{BM\+\_\+3\+\_\+\+AVAILABILITY}}~(1 $<$$<$ 2)
+\item 
+\#define \mbox{\hyperlink{temperature_8h_ab7ccae890c4d9112832f832c42ee8dba}{BM\+\_\+4\+\_\+\+AVAILABILITY}}~(1 $<$$<$ 3)
+\item 
+\#define \mbox{\hyperlink{temperature_8h_a220ccc746ad6eef6158d59aa37e854aa}{ESC\+\_\+1\+\_\+\+AVAILABILITY}}~(1 $<$$<$ 4)
+\item 
+\#define \mbox{\hyperlink{temperature_8h_a8da333a87dfb67c00169df07031ef18d}{ESC\+\_\+2\+\_\+\+AVAILABILITY}}~(1 $<$$<$ 5)
+\item 
+\#define \mbox{\hyperlink{temperature_8h_af9f04a6485266151fb5e5692a8648ed1}{ESC\+\_\+3\+\_\+\+AVAILABILITY}}~(1 $<$$<$ 6)
+\item 
+\#define \mbox{\hyperlink{temperature_8h_ae93990102ec489887dae69e148e8f649}{ESC\+\_\+4\+\_\+\+AVAILABILITY}}~(1 $<$$<$ 7)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Contains class and pins to enable temperature measurements with the internal MCU and DS18\+B20+ One\+Wire temperature sensors. 
+
+\begin{DoxyAuthor}{Author}
+Robbe Elsermans 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2025-\/04-\/10
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2025 Robbe Elsermans, All rights reserved. This project is released under the CC BY-\/\+NC-\/\+SA licence. See licence.\+txt for more information 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{temperature_8h_ab0b800998c027bf6198d49e9b683db9f}\label{temperature_8h_ab0b800998c027bf6198d49e9b683db9f}} 
+\index{temperature.h@{temperature.h}!BM\_1\_AVAILABILITY@{BM\_1\_AVAILABILITY}}
+\index{BM\_1\_AVAILABILITY@{BM\_1\_AVAILABILITY}!temperature.h@{temperature.h}}
+\doxysubsubsection{\texorpdfstring{BM\_1\_AVAILABILITY}{BM\_1\_AVAILABILITY}}
+{\footnotesize\ttfamily \#define BM\+\_\+1\+\_\+\+AVAILABILITY~(1 $<$$<$ 0)}
+
+\mbox{\Hypertarget{temperature_8h_ab1393bc621ebf4743538922d0ef38df9}\label{temperature_8h_ab1393bc621ebf4743538922d0ef38df9}} 
+\index{temperature.h@{temperature.h}!BM\_2\_AVAILABILITY@{BM\_2\_AVAILABILITY}}
+\index{BM\_2\_AVAILABILITY@{BM\_2\_AVAILABILITY}!temperature.h@{temperature.h}}
+\doxysubsubsection{\texorpdfstring{BM\_2\_AVAILABILITY}{BM\_2\_AVAILABILITY}}
+{\footnotesize\ttfamily \#define BM\+\_\+2\+\_\+\+AVAILABILITY~(1 $<$$<$ 1)}
+
+\mbox{\Hypertarget{temperature_8h_a7a60efdbd3bf958929279b48724ff17d}\label{temperature_8h_a7a60efdbd3bf958929279b48724ff17d}} 
+\index{temperature.h@{temperature.h}!BM\_3\_AVAILABILITY@{BM\_3\_AVAILABILITY}}
+\index{BM\_3\_AVAILABILITY@{BM\_3\_AVAILABILITY}!temperature.h@{temperature.h}}
+\doxysubsubsection{\texorpdfstring{BM\_3\_AVAILABILITY}{BM\_3\_AVAILABILITY}}
+{\footnotesize\ttfamily \#define BM\+\_\+3\+\_\+\+AVAILABILITY~(1 $<$$<$ 2)}
+
+\mbox{\Hypertarget{temperature_8h_ab7ccae890c4d9112832f832c42ee8dba}\label{temperature_8h_ab7ccae890c4d9112832f832c42ee8dba}} 
+\index{temperature.h@{temperature.h}!BM\_4\_AVAILABILITY@{BM\_4\_AVAILABILITY}}
+\index{BM\_4\_AVAILABILITY@{BM\_4\_AVAILABILITY}!temperature.h@{temperature.h}}
+\doxysubsubsection{\texorpdfstring{BM\_4\_AVAILABILITY}{BM\_4\_AVAILABILITY}}
+{\footnotesize\ttfamily \#define BM\+\_\+4\+\_\+\+AVAILABILITY~(1 $<$$<$ 3)}
+
+\mbox{\Hypertarget{temperature_8h_ae34f4c048fc3d72597ea615e7c8bb41e}\label{temperature_8h_ae34f4c048fc3d72597ea615e7c8bb41e}} 
+\index{temperature.h@{temperature.h}!BP\_AVAILABILITY@{BP\_AVAILABILITY}}
+\index{BP\_AVAILABILITY@{BP\_AVAILABILITY}!temperature.h@{temperature.h}}
+\doxysubsubsection{\texorpdfstring{BP\_AVAILABILITY}{BP\_AVAILABILITY}}
+{\footnotesize\ttfamily \#define BP\+\_\+\+AVAILABILITY~(1 $<$$<$ 3)}
+
+\mbox{\Hypertarget{temperature_8h_a220ccc746ad6eef6158d59aa37e854aa}\label{temperature_8h_a220ccc746ad6eef6158d59aa37e854aa}} 
+\index{temperature.h@{temperature.h}!ESC\_1\_AVAILABILITY@{ESC\_1\_AVAILABILITY}}
+\index{ESC\_1\_AVAILABILITY@{ESC\_1\_AVAILABILITY}!temperature.h@{temperature.h}}
+\doxysubsubsection{\texorpdfstring{ESC\_1\_AVAILABILITY}{ESC\_1\_AVAILABILITY}}
+{\footnotesize\ttfamily \#define ESC\+\_\+1\+\_\+\+AVAILABILITY~(1 $<$$<$ 4)}
+
+\mbox{\Hypertarget{temperature_8h_a8da333a87dfb67c00169df07031ef18d}\label{temperature_8h_a8da333a87dfb67c00169df07031ef18d}} 
+\index{temperature.h@{temperature.h}!ESC\_2\_AVAILABILITY@{ESC\_2\_AVAILABILITY}}
+\index{ESC\_2\_AVAILABILITY@{ESC\_2\_AVAILABILITY}!temperature.h@{temperature.h}}
+\doxysubsubsection{\texorpdfstring{ESC\_2\_AVAILABILITY}{ESC\_2\_AVAILABILITY}}
+{\footnotesize\ttfamily \#define ESC\+\_\+2\+\_\+\+AVAILABILITY~(1 $<$$<$ 5)}
+
+\mbox{\Hypertarget{temperature_8h_af9f04a6485266151fb5e5692a8648ed1}\label{temperature_8h_af9f04a6485266151fb5e5692a8648ed1}} 
+\index{temperature.h@{temperature.h}!ESC\_3\_AVAILABILITY@{ESC\_3\_AVAILABILITY}}
+\index{ESC\_3\_AVAILABILITY@{ESC\_3\_AVAILABILITY}!temperature.h@{temperature.h}}
+\doxysubsubsection{\texorpdfstring{ESC\_3\_AVAILABILITY}{ESC\_3\_AVAILABILITY}}
+{\footnotesize\ttfamily \#define ESC\+\_\+3\+\_\+\+AVAILABILITY~(1 $<$$<$ 6)}
+
+\mbox{\Hypertarget{temperature_8h_ae93990102ec489887dae69e148e8f649}\label{temperature_8h_ae93990102ec489887dae69e148e8f649}} 
+\index{temperature.h@{temperature.h}!ESC\_4\_AVAILABILITY@{ESC\_4\_AVAILABILITY}}
+\index{ESC\_4\_AVAILABILITY@{ESC\_4\_AVAILABILITY}!temperature.h@{temperature.h}}
+\doxysubsubsection{\texorpdfstring{ESC\_4\_AVAILABILITY}{ESC\_4\_AVAILABILITY}}
+{\footnotesize\ttfamily \#define ESC\+\_\+4\+\_\+\+AVAILABILITY~(1 $<$$<$ 7)}
+
+\mbox{\Hypertarget{temperature_8h_a5927ef22656ae37312714ad8450203ce}\label{temperature_8h_a5927ef22656ae37312714ad8450203ce}} 
+\index{temperature.h@{temperature.h}!HLC\_AVAILABILITY@{HLC\_AVAILABILITY}}
+\index{HLC\_AVAILABILITY@{HLC\_AVAILABILITY}!temperature.h@{temperature.h}}
+\doxysubsubsection{\texorpdfstring{HLC\_AVAILABILITY}{HLC\_AVAILABILITY}}
+{\footnotesize\ttfamily \#define HLC\+\_\+\+AVAILABILITY~(1 $<$$<$ 0)}
+
+\mbox{\Hypertarget{temperature_8h_a1dd0e7b43e684fe89f602e33e2a4490c}\label{temperature_8h_a1dd0e7b43e684fe89f602e33e2a4490c}} 
+\index{temperature.h@{temperature.h}!LLC\_AVAILABILITY@{LLC\_AVAILABILITY}}
+\index{LLC\_AVAILABILITY@{LLC\_AVAILABILITY}!temperature.h@{temperature.h}}
+\doxysubsubsection{\texorpdfstring{LLC\_AVAILABILITY}{LLC\_AVAILABILITY}}
+{\footnotesize\ttfamily \#define LLC\+\_\+\+AVAILABILITY~(1 $<$$<$ 1)}
+
+\mbox{\Hypertarget{temperature_8h_a4260ed8874da804fb9ef9abba200b487}\label{temperature_8h_a4260ed8874da804fb9ef9abba200b487}} 
+\index{temperature.h@{temperature.h}!ONE\_WIRE\_BUS@{ONE\_WIRE\_BUS}}
+\index{ONE\_WIRE\_BUS@{ONE\_WIRE\_BUS}!temperature.h@{temperature.h}}
+\doxysubsubsection{\texorpdfstring{ONE\_WIRE\_BUS}{ONE\_WIRE\_BUS}}
+{\footnotesize\ttfamily \#define ONE\+\_\+\+WIRE\+\_\+\+BUS~6}
+
+\mbox{\Hypertarget{temperature_8h_a3b5bb5f0e4f2c9f7e33df163ba372c43}\label{temperature_8h_a3b5bb5f0e4f2c9f7e33df163ba372c43}} 
+\index{temperature.h@{temperature.h}!SS\_AVAILABILITY@{SS\_AVAILABILITY}}
+\index{SS\_AVAILABILITY@{SS\_AVAILABILITY}!temperature.h@{temperature.h}}
+\doxysubsubsection{\texorpdfstring{SS\_AVAILABILITY}{SS\_AVAILABILITY}}
+{\footnotesize\ttfamily \#define SS\+\_\+\+AVAILABILITY~(1 $<$$<$ 2)}
+
+\mbox{\Hypertarget{temperature_8h_a41a331314b46059bd942e76ffc60cf4a}\label{temperature_8h_a41a331314b46059bd942e76ffc60cf4a}} 
+\index{temperature.h@{temperature.h}!TEMPERATURE\_PRECISION@{TEMPERATURE\_PRECISION}}
+\index{TEMPERATURE\_PRECISION@{TEMPERATURE\_PRECISION}!temperature.h@{temperature.h}}
+\doxysubsubsection{\texorpdfstring{TEMPERATURE\_PRECISION}{TEMPERATURE\_PRECISION}}
+{\footnotesize\ttfamily \#define TEMPERATURE\+\_\+\+PRECISION~10}
+

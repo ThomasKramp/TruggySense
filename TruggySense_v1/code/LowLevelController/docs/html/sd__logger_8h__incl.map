@@ -1,0 +1,4 @@
+<map id="lib/sd_logger/sd_logger.h" name="lib/sd_logger/sd_logger.h">
+<area shape="rect" id="node1" title="Class that uses SdFat.h to log logging_data_t struct in binary format to a local SD&#45;card." alt="" coords="5,5,188,32"/>
+<area shape="rect" id="node2" title=" " alt="" coords="62,80,131,107"/>
+</map>

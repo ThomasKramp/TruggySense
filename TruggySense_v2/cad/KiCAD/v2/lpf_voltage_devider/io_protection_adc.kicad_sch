@@ -1,0 +1,1358 @@
+(kicad_sch
+	(version 20250114)
+	(generator "eeschema")
+	(generator_version "9.0")
+	(uuid "ed24ba19-9a65-4cbc-9a12-aa9311a748a8")
+	(paper "A4")
+	(lib_symbols)
+	(wire
+		(pts
+			(xy 151.13 40.64) (xy 156.21 40.64)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "18074cc3-275d-4ff9-8e56-593708659d36")
+	)
+	(wire
+		(pts
+			(xy 151.13 66.04) (xy 156.21 66.04)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2cca578f-c133-4f5d-b5b8-d085f1568891")
+	)
+	(wire
+		(pts
+			(xy 151.13 104.14) (xy 156.21 104.14)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3d6a4747-afce-43fb-a1e5-6c2c0bc0f59b")
+	)
+	(wire
+		(pts
+			(xy 151.13 129.54) (xy 156.21 129.54)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4590cec4-bc99-45f7-8d75-6f8b802ca735")
+	)
+	(wire
+		(pts
+			(xy 151.13 53.34) (xy 156.21 53.34)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "59be11d9-c635-4faa-b623-1b216f494f64")
+	)
+	(wire
+		(pts
+			(xy 151.13 116.84) (xy 156.21 116.84)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "86ca6522-1ec6-42df-a09a-2dad5e61bf7c")
+	)
+	(wire
+		(pts
+			(xy 151.13 91.44) (xy 156.21 91.44)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "97e239d5-38c5-4b5e-b3e6-f9bb118e7adc")
+	)
+	(wire
+		(pts
+			(xy 151.13 78.74) (xy 156.21 78.74)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d9ff01f1-e116-4249-b58b-037f4c6f8b59")
+	)
+	(wire
+		(pts
+			(xy 151.13 142.24) (xy 156.21 142.24)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "db4b2214-97b9-419d-a2da-f8f1aee07b82")
+	)
+	(wire
+		(pts
+			(xy 151.13 154.94) (xy 156.21 154.94)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fd8b3080-669d-4dfa-886d-cd73fa370717")
+	)
+	(hierarchical_label "OUT_6"
+		(shape input)
+		(at 213.36 104.14 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "00218248-da41-4ebe-9e19-759b4c98f21e")
+	)
+	(hierarchical_label "IN_10"
+		(shape input)
+		(at 96.52 154.94 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "049476b5-46ba-4e17-9f77-8cd480852b4a")
+	)
+	(hierarchical_label "OUT_1"
+		(shape input)
+		(at 213.36 40.64 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "180c5990-8849-4c2c-b065-276e4efc9af4")
+	)
+	(hierarchical_label "IN_7"
+		(shape input)
+		(at 96.52 116.84 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "1d760ba6-7133-4e64-bcf9-efcc1106d117")
+	)
+	(hierarchical_label "IN_3"
+		(shape input)
+		(at 96.52 66.04 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "2b19777a-1d64-49ba-82a2-158e84d7b4dc")
+	)
+	(hierarchical_label "OUT_5"
+		(shape input)
+		(at 213.36 91.44 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "2c210b14-8b14-44d9-9304-afde753235ef")
+	)
+	(hierarchical_label "OUT_2"
+		(shape input)
+		(at 213.36 53.34 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "2da4a227-4184-42d9-aca8-7bec11c7f252")
+	)
+	(hierarchical_label "OUT_4"
+		(shape input)
+		(at 213.36 78.74 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "3211f577-ef7f-4bfc-9531-60dfd364d5b8")
+	)
+	(hierarchical_label "IN_8"
+		(shape input)
+		(at 96.52 129.54 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "58ed0caa-d400-4728-9210-d22eb2d5b12b")
+	)
+	(hierarchical_label "OUT_9"
+		(shape input)
+		(at 213.36 142.24 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "61f7730a-dc13-4f50-810f-47d1e9750502")
+	)
+	(hierarchical_label "IN_1"
+		(shape input)
+		(at 96.52 40.64 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "74610063-4ae7-47ba-9c5d-fd736c759ddc")
+	)
+	(hierarchical_label "IN_5"
+		(shape input)
+		(at 96.52 91.44 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "9ec257b8-cef1-4b89-9b10-3a63dd135fb5")
+	)
+	(hierarchical_label "IN_9"
+		(shape input)
+		(at 96.52 142.24 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "a0d4a626-3205-4e18-b6f1-54859e0835b7")
+	)
+	(hierarchical_label "IN_4"
+		(shape input)
+		(at 96.52 78.74 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "a7819811-f900-4e33-acdd-ff0e7cad7afc")
+	)
+	(hierarchical_label "OUT_10"
+		(shape input)
+		(at 213.36 154.94 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "a91c61e9-783f-4eac-8e35-3ab2651c3301")
+	)
+	(hierarchical_label "IN_2"
+		(shape input)
+		(at 96.52 53.34 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "b0a63b79-74ae-4601-be35-8a476f9f5947")
+	)
+	(hierarchical_label "OUT_8"
+		(shape input)
+		(at 213.36 129.54 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "c5786568-1203-4d97-8b42-0d866ff152bc")
+	)
+	(hierarchical_label "OUT_3"
+		(shape input)
+		(at 213.36 66.04 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "d0c3338e-ac87-4bf5-9d2a-2aa64d9639fd")
+	)
+	(hierarchical_label "OUT_7"
+		(shape input)
+		(at 213.36 116.84 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "f63c16a2-f8aa-49d3-82f3-619fbcccca56")
+	)
+	(hierarchical_label "IN_6"
+		(shape input)
+		(at 96.52 104.14 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "ffc9f893-042d-43bb-b3bf-066f8eb3d141")
+	)
+	(sheet
+		(at 96.52 38.1)
+		(size 54.61 5.08)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "056b18f4-0cb0-494c-8f9a-c9c1520b6426")
+		(property "Sheetname" "ADC Protection 1"
+			(at 96.52 37.3884 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "../io_protection_input/io_protection_input.kicad_sch"
+			(at 96.52 43.7646 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "IN" input
+			(at 96.52 40.64 180)
+			(uuid "36f1279e-1cf5-4dba-8b63-f52d3c036dd5")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "OUT" output
+			(at 151.13 40.64 0)
+			(uuid "0c2be9e6-75d4-4fc1-9d82-52aeeeedd4da")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(instances
+			(project "1_logic_board"
+				(path "/8a8d33ee-a184-451b-b823-bc8a1789b1d9/1f7cc05a-43df-4394-8a33-8b0ae56e3d34/ef128e2e-c55b-4d2a-964a-393e928561ca"
+					(page "21")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 156.21 63.5)
+		(size 57.15 17.78)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "1b92268b-afc6-4362-ba41-010b9134f26e")
+		(property "Sheetname" "ADC Buffer 2"
+			(at 156.21 62.7884 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "../io_protection_buffer/io_protection_buffer.kicad_sch"
+			(at 156.21 81.8646 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "IN_1" input
+			(at 156.21 66.04 180)
+			(uuid "0c664f67-1307-48bb-8fbe-6ee5736c47d6")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "IN_2" input
+			(at 156.21 78.74 180)
+			(uuid "1c62fb4b-3d09-4cbc-8fbb-24607e4526ee")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "OUT_1" output
+			(at 213.36 66.04 0)
+			(uuid "a32715ac-976d-4d2e-9996-d3b91c943368")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "OUT_2" output
+			(at 213.36 78.74 0)
+			(uuid "1b1855fc-96a0-4138-bc09-6c8b08c04b5a")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(instances
+			(project "1_logic_board"
+				(path "/8a8d33ee-a184-451b-b823-bc8a1789b1d9/1f7cc05a-43df-4394-8a33-8b0ae56e3d34/ef128e2e-c55b-4d2a-964a-393e928561ca"
+					(page "32")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 96.52 114.3)
+		(size 54.61 5.08)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "53ee6dcb-b0cb-4e77-a8fa-bc6fe866a43a")
+		(property "Sheetname" "ADC Protection 7"
+			(at 96.52 113.5884 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "../io_protection_input/io_protection_input.kicad_sch"
+			(at 96.52 119.9646 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "IN" input
+			(at 96.52 116.84 180)
+			(uuid "e086f794-af87-45bc-a6a7-605302dbf426")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "OUT" output
+			(at 151.13 116.84 0)
+			(uuid "3886cffe-9184-435d-b640-a01d6a76c1bf")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(instances
+			(project "1_logic_board"
+				(path "/8a8d33ee-a184-451b-b823-bc8a1789b1d9/1f7cc05a-43df-4394-8a33-8b0ae56e3d34/ef128e2e-c55b-4d2a-964a-393e928561ca"
+					(page "27")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 156.21 139.7)
+		(size 57.15 17.78)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "5e8f1ae9-fa9b-407e-ab9e-8470c65ccabe")
+		(property "Sheetname" "ADC Buffer 5"
+			(at 156.21 138.9884 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "../io_protection_buffer/io_protection_buffer.kicad_sch"
+			(at 156.21 158.0646 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "IN_1" input
+			(at 156.21 142.24 180)
+			(uuid "9c4ad703-e9dd-438f-a68d-584400d7cdc2")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "IN_2" input
+			(at 156.21 154.94 180)
+			(uuid "ab31d1b8-f3e8-477e-8064-afa0a133c7bc")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "OUT_1" output
+			(at 213.36 142.24 0)
+			(uuid "04268c66-edf9-401e-8f42-eb746f1526a4")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "OUT_2" output
+			(at 213.36 154.94 0)
+			(uuid "eca0ab58-5091-4721-ae71-4ca268e626c7")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(instances
+			(project "1_logic_board"
+				(path "/8a8d33ee-a184-451b-b823-bc8a1789b1d9/1f7cc05a-43df-4394-8a33-8b0ae56e3d34/ef128e2e-c55b-4d2a-964a-393e928561ca"
+					(page "35")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 96.52 63.5)
+		(size 54.61 5.08)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "6769dfb9-5fb6-4828-a641-cc175187ba1f")
+		(property "Sheetname" "ADC Protection 3"
+			(at 96.52 62.7884 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "../io_protection_input/io_protection_input.kicad_sch"
+			(at 96.52 69.1646 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "IN" input
+			(at 96.52 66.04 180)
+			(uuid "24084006-0cc5-44a9-80a9-828d6e7d0e4c")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "OUT" output
+			(at 151.13 66.04 0)
+			(uuid "6073fb14-7c9d-4fc6-a6e7-9bd38d9d1fbd")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(instances
+			(project "1_logic_board"
+				(path "/8a8d33ee-a184-451b-b823-bc8a1789b1d9/1f7cc05a-43df-4394-8a33-8b0ae56e3d34/ef128e2e-c55b-4d2a-964a-393e928561ca"
+					(page "23")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 96.52 127)
+		(size 54.61 5.08)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "7205d868-7e24-4ca2-a61d-fb274abbcd73")
+		(property "Sheetname" "ADC Protection 8"
+			(at 96.52 126.2884 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "../io_protection_input/io_protection_input.kicad_sch"
+			(at 96.52 132.6646 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "IN" input
+			(at 96.52 129.54 180)
+			(uuid "43a19eb8-71e8-4a61-b221-154de42eb8e2")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "OUT" output
+			(at 151.13 129.54 0)
+			(uuid "3eae1404-9b4a-46c7-95d6-de98773f0d59")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(instances
+			(project "1_logic_board"
+				(path "/8a8d33ee-a184-451b-b823-bc8a1789b1d9/1f7cc05a-43df-4394-8a33-8b0ae56e3d34/ef128e2e-c55b-4d2a-964a-393e928561ca"
+					(page "28")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 156.21 38.1)
+		(size 57.15 17.78)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "72792728-68e7-471d-98e6-305a7410ba52")
+		(property "Sheetname" "ADC Buffer 1"
+			(at 156.21 37.3884 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "../io_protection_buffer/io_protection_buffer.kicad_sch"
+			(at 156.21 56.4646 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "IN_1" input
+			(at 156.21 40.64 180)
+			(uuid "43809258-65a7-48ea-bd55-31f1b3490682")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "IN_2" input
+			(at 156.21 53.34 180)
+			(uuid "63f620df-f2e7-43c7-83bc-7c006a61b90e")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "OUT_1" output
+			(at 213.36 40.64 0)
+			(uuid "d678e473-b0b2-48fa-bc1a-5c8be56f01be")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "OUT_2" output
+			(at 213.36 53.34 0)
+			(uuid "e408c044-448e-4629-83c0-8f76258a83e5")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(instances
+			(project "1_logic_board"
+				(path "/8a8d33ee-a184-451b-b823-bc8a1789b1d9/1f7cc05a-43df-4394-8a33-8b0ae56e3d34/ef128e2e-c55b-4d2a-964a-393e928561ca"
+					(page "31")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 156.21 88.9)
+		(size 57.15 17.78)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "76b218b6-8d29-49e7-89ab-bae5b939465b")
+		(property "Sheetname" "ADC Buffer 3"
+			(at 156.21 88.1884 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "../io_protection_buffer/io_protection_buffer.kicad_sch"
+			(at 156.21 107.2646 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "IN_1" input
+			(at 156.21 91.44 180)
+			(uuid "b7fb6063-a816-4664-93c4-58fdf46c764c")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "IN_2" input
+			(at 156.21 104.14 180)
+			(uuid "75dbfee6-6430-4ace-b9d6-1c111b528547")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "OUT_1" output
+			(at 213.36 91.44 0)
+			(uuid "0afd3518-1731-4618-97ca-edc6ed389dfb")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "OUT_2" output
+			(at 213.36 104.14 0)
+			(uuid "1dc972f7-c9c6-405c-b4d9-db29dc0f32aa")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(instances
+			(project "1_logic_board"
+				(path "/8a8d33ee-a184-451b-b823-bc8a1789b1d9/1f7cc05a-43df-4394-8a33-8b0ae56e3d34/ef128e2e-c55b-4d2a-964a-393e928561ca"
+					(page "33")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 96.52 76.2)
+		(size 54.61 5.08)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "8b2d5be3-eac0-4f70-b1f3-c4c2e6fbf062")
+		(property "Sheetname" "ADC Protection 4"
+			(at 96.52 75.4884 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "../io_protection_input/io_protection_input.kicad_sch"
+			(at 96.52 81.8646 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "IN" input
+			(at 96.52 78.74 180)
+			(uuid "7a66c9ae-f838-4cfe-a473-4d9ae684ddbe")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "OUT" output
+			(at 151.13 78.74 0)
+			(uuid "6f5419a9-e4e6-495a-931d-e3a14346d428")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(instances
+			(project "1_logic_board"
+				(path "/8a8d33ee-a184-451b-b823-bc8a1789b1d9/1f7cc05a-43df-4394-8a33-8b0ae56e3d34/ef128e2e-c55b-4d2a-964a-393e928561ca"
+					(page "24")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 96.52 101.6)
+		(size 54.61 5.08)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "a6bce839-049d-406f-ac5e-169ccc27403d")
+		(property "Sheetname" "ADC Protection 6"
+			(at 96.52 100.8884 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "../io_protection_input/io_protection_input.kicad_sch"
+			(at 96.52 107.2646 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "IN" input
+			(at 96.52 104.14 180)
+			(uuid "713c77bf-6e37-4e08-b024-ac090b7a87e3")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "OUT" output
+			(at 151.13 104.14 0)
+			(uuid "5fcfccaf-bec5-408b-84a3-7789efce6078")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(instances
+			(project "1_logic_board"
+				(path "/8a8d33ee-a184-451b-b823-bc8a1789b1d9/1f7cc05a-43df-4394-8a33-8b0ae56e3d34/ef128e2e-c55b-4d2a-964a-393e928561ca"
+					(page "26")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 156.21 114.3)
+		(size 57.15 17.78)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "b1e0434f-8330-492e-a52b-08850c480da3")
+		(property "Sheetname" "ADC Buffer 4"
+			(at 156.21 113.5884 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "../io_protection_buffer/io_protection_buffer.kicad_sch"
+			(at 156.21 132.6646 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "IN_1" input
+			(at 156.21 116.84 180)
+			(uuid "8277de68-c740-4932-a526-0a7c08f93988")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "IN_2" input
+			(at 156.21 129.54 180)
+			(uuid "13909ab0-5afd-480f-88e2-8081582c5378")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "OUT_1" output
+			(at 213.36 116.84 0)
+			(uuid "19100053-943a-46e9-88d9-30ab94a1d30a")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "OUT_2" output
+			(at 213.36 129.54 0)
+			(uuid "5c3c5b4a-1ff4-4f57-bc42-92b333cffd81")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(instances
+			(project "1_logic_board"
+				(path "/8a8d33ee-a184-451b-b823-bc8a1789b1d9/1f7cc05a-43df-4394-8a33-8b0ae56e3d34/ef128e2e-c55b-4d2a-964a-393e928561ca"
+					(page "34")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 96.52 50.8)
+		(size 54.61 5.08)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "b42c56a0-52ce-45bd-8587-543abab07c07")
+		(property "Sheetname" "ADC Protection 2"
+			(at 96.52 50.0884 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "../io_protection_input/io_protection_input.kicad_sch"
+			(at 96.52 56.4646 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "IN" input
+			(at 96.52 53.34 180)
+			(uuid "4438d921-38be-4a22-83e7-a0f828d511ed")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "OUT" output
+			(at 151.13 53.34 0)
+			(uuid "2a785749-eabb-43e9-8161-10fdaacda342")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(instances
+			(project "1_logic_board"
+				(path "/8a8d33ee-a184-451b-b823-bc8a1789b1d9/1f7cc05a-43df-4394-8a33-8b0ae56e3d34/ef128e2e-c55b-4d2a-964a-393e928561ca"
+					(page "22")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 96.52 88.9)
+		(size 54.61 5.08)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "c4120dd6-b3af-48e0-be8c-24772f7ae1c2")
+		(property "Sheetname" "ADC Protection 5"
+			(at 96.52 88.1884 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "../io_protection_input/io_protection_input.kicad_sch"
+			(at 96.52 94.5646 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "IN" input
+			(at 96.52 91.44 180)
+			(uuid "99e941db-504b-4c59-ba5f-c266e33c0e60")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "OUT" output
+			(at 151.13 91.44 0)
+			(uuid "c5b32c2d-d1db-41a3-bd7f-f8a70692e466")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(instances
+			(project "1_logic_board"
+				(path "/8a8d33ee-a184-451b-b823-bc8a1789b1d9/1f7cc05a-43df-4394-8a33-8b0ae56e3d34/ef128e2e-c55b-4d2a-964a-393e928561ca"
+					(page "25")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 96.52 139.7)
+		(size 54.61 5.08)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "f3045c31-1ee0-41b0-abc3-3760411294d2")
+		(property "Sheetname" "ADC Protection 9"
+			(at 96.52 138.9884 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "../io_protection_input/io_protection_input.kicad_sch"
+			(at 96.52 145.3646 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "IN" input
+			(at 96.52 142.24 180)
+			(uuid "aee1dc16-a21f-4ae0-8c0a-5debac04f09f")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "OUT" output
+			(at 151.13 142.24 0)
+			(uuid "45ecde9c-0681-4dcc-985d-3a94b0d8324c")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(instances
+			(project "1_logic_board"
+				(path "/8a8d33ee-a184-451b-b823-bc8a1789b1d9/1f7cc05a-43df-4394-8a33-8b0ae56e3d34/ef128e2e-c55b-4d2a-964a-393e928561ca"
+					(page "29")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 96.52 152.4)
+		(size 54.61 5.08)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "f6bd8029-9242-4d21-aaf6-b357847d6e7c")
+		(property "Sheetname" "ADC Protection 10"
+			(at 96.52 151.6884 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "../io_protection_input/io_protection_input.kicad_sch"
+			(at 96.52 158.0646 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "IN" input
+			(at 96.52 154.94 180)
+			(uuid "68cee36b-1eb5-449a-b177-e99aec44435b")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "OUT" output
+			(at 151.13 154.94 0)
+			(uuid "310b10e0-d0f4-4998-820b-d15d7759f7b4")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(instances
+			(project "1_logic_board"
+				(path "/8a8d33ee-a184-451b-b823-bc8a1789b1d9/1f7cc05a-43df-4394-8a33-8b0ae56e3d34/ef128e2e-c55b-4d2a-964a-393e928561ca"
+					(page "30")
+				)
+			)
+		)
+	)
+)

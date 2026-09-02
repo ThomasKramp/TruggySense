@@ -1,0 +1,88 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[dutch]{babel}
+\usepackage{geometry}   % For margin control
+\usepackage{setspace}
+\usepackage{ragged2e}   % For left/right alignment
+\usepackage{titling}    % Allows retrieving \title, \author, \subtitle
+\usepackage{titlesec}   % For subtitle support
+
+\geometry{margin=2.5cm}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.8em}
+
+
+% ---------------------- Document variables ----------------------
+\usepackage{fontspec}
+% sudo apt install fonts-crosextra-carlitoFinished the logic PCB design.
+\setmainfont{Carlito}
+
+
+% ---------------------- Document variables ----------------------
+\newcommand{\documenttitle}{TruggySense: Hardware and Firmware Redesign for Reproducibility}
+\newcommand{\documentauthor}{Kramp Thomas}
+\newcommand{\HUGE}{\fontsize{30}{30}\selectfont}
+
+% Values injected by Makefile
+\providecommand{\ReportDate}{??/??/????}
+\providecommand{\ReportWeek}{?}
+
+
+% ---------------------- Listings setup ----------------------
+\usepackage{enumitem}
+\usepackage{array}
+\setlist[itemize]{
+    label=--,
+    topsep=0pt,
+    itemsep=0pt,
+    parsep=0pt,
+    partopsep=0pt
+}
+
+\begin{document}
+
+% Cover page
+{\HUGE \documenttitle \par}
+
+\vspace{-0.6em}
+{\large \documentauthor \par}
+
+\vspace{0.4em}
+Week \ReportWeek\ \ReportDate
+
+\vspace{-1.6em}
+\noindent\rule{\textwidth}{0.4pt}
+
+
+\vspace{1.5em}
+\textbf{Verwezenlijkt deze week:}
+\begin{itemize}
+    \item Het portfolio afgemaakt.
+    \item Het paper verder afgemaakt.
+    \item Nieuwe metingen uitgevoerd.
+\end{itemize}
+
+
+\vspace{1em}
+\textbf{Problemen deze week:}
+\begin{itemize}
+    \item De servo is weer stuk.
+\end{itemize}
+
+
+\vspace{1em}
+\textbf{Plannen volgende week:}
+\begin{itemize}
+    \item Verdediging voorbereiden.
+\end{itemize}
+
+
+\vspace{1em}
+\textbf{Eventuele grote problemen:}
+\begin{itemize}
+    \item /
+\end{itemize}
+
+
+\end{document}

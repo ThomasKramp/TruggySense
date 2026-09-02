@@ -1,0 +1,166 @@
+\hypertarget{classTemperature}{}\doxysection{Temperature Class Reference}
+\label{classTemperature}\index{Temperature@{Temperature}}
+
+
+Class that will initialize, check if the sensor exists and read the value from the sensor.  
+
+
+
+
+{\ttfamily \#include $<$temperature.\+h$>$}
+
+
+
+Collaboration diagram for Temperature\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=259pt]{classTemperature__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{classTemperature_af7441a7bcbc69bbc36f98dbe1080d3d0}{temperature\+\_\+source}} \{ \newline
+\mbox{\hyperlink{classTemperature_af7441a7bcbc69bbc36f98dbe1080d3d0a174abceb69b41c0d3686049b4ecae21c}{hlc}}
+, \mbox{\hyperlink{classTemperature_af7441a7bcbc69bbc36f98dbe1080d3d0a020d34252410779795b582f396791fc5}{llc}}
+, \mbox{\hyperlink{classTemperature_af7441a7bcbc69bbc36f98dbe1080d3d0a51c758bf28203422de6a5499a67340ca}{ss}}
+, \mbox{\hyperlink{classTemperature_af7441a7bcbc69bbc36f98dbe1080d3d0a7789521cbeee821af982c9e55d1592b3}{bp}}
+, \newline
+\mbox{\hyperlink{classTemperature_af7441a7bcbc69bbc36f98dbe1080d3d0ac3d88f8990493a069fda64ff629b2709}{esc\+\_\+1}}
+, \mbox{\hyperlink{classTemperature_af7441a7bcbc69bbc36f98dbe1080d3d0a19bd86ebb9a5f276a51a21169d40679f}{esc\+\_\+2}}
+, \mbox{\hyperlink{classTemperature_af7441a7bcbc69bbc36f98dbe1080d3d0a2ad4e69bbda8ebc9b7ebfa5727dd8ff5}{esc\+\_\+3}}
+, \mbox{\hyperlink{classTemperature_af7441a7bcbc69bbc36f98dbe1080d3d0a7a915ef3fe19fce1f6d7f99831cc4470}{esc\+\_\+4}}
+, \newline
+\mbox{\hyperlink{classTemperature_af7441a7bcbc69bbc36f98dbe1080d3d0ae843e4fec18b9f6319e5d2b5334760ed}{bm\+\_\+1}}
+, \mbox{\hyperlink{classTemperature_af7441a7bcbc69bbc36f98dbe1080d3d0a156ef5b630e153caaef488e66a8d9220}{bm\+\_\+2}}
+, \mbox{\hyperlink{classTemperature_af7441a7bcbc69bbc36f98dbe1080d3d0a51e72caf44a812afbc8da711485d36e1}{bm\+\_\+3}}
+, \mbox{\hyperlink{classTemperature_af7441a7bcbc69bbc36f98dbe1080d3d0ab5d0537c0c5d4fcd9b15e9d2938ebf6f}{bm\+\_\+4}}
+ \}
+\begin{DoxyCompactList}\small\item\em Defining the different sources a temperature can be measured from. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{classTemperature_ad128f7e2a26ed2687f5d72a0d96a48a1}{init}} ()
+\begin{DoxyCompactList}\small\item\em initialize the sensors \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classTemperature_a6c4220dabe37458518cf3849ec20e0a4}{read}} ()
+\begin{DoxyCompactList}\small\item\em read the temperatures from all devices \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classTemperature_a63426d19c1275afa8ab6fd6fd0e82eec}{get\+By\+Source}} (\mbox{\hyperlink{classTemperature_af7441a7bcbc69bbc36f98dbe1080d3d0}{temperature\+\_\+source}} source)
+\begin{DoxyCompactList}\small\item\em Get the temperature By Source. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class that will initialize, check if the sensor exists and read the value from the sensor. 
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{classTemperature_af7441a7bcbc69bbc36f98dbe1080d3d0}\label{classTemperature_af7441a7bcbc69bbc36f98dbe1080d3d0}} 
+\index{Temperature@{Temperature}!temperature\_source@{temperature\_source}}
+\index{temperature\_source@{temperature\_source}!Temperature@{Temperature}}
+\doxysubsubsection{\texorpdfstring{temperature\_source}{temperature\_source}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{classTemperature_af7441a7bcbc69bbc36f98dbe1080d3d0}{Temperature\+::temperature\+\_\+source}}}
+
+
+
+Defining the different sources a temperature can be measured from. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{hlc@{hlc}!Temperature@{Temperature}}\index{Temperature@{Temperature}!hlc@{hlc}}}\mbox{\Hypertarget{classTemperature_af7441a7bcbc69bbc36f98dbe1080d3d0a174abceb69b41c0d3686049b4ecae21c}\label{classTemperature_af7441a7bcbc69bbc36f98dbe1080d3d0a174abceb69b41c0d3686049b4ecae21c}} 
+hlc&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{llc@{llc}!Temperature@{Temperature}}\index{Temperature@{Temperature}!llc@{llc}}}\mbox{\Hypertarget{classTemperature_af7441a7bcbc69bbc36f98dbe1080d3d0a020d34252410779795b582f396791fc5}\label{classTemperature_af7441a7bcbc69bbc36f98dbe1080d3d0a020d34252410779795b582f396791fc5}} 
+llc&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ss@{ss}!Temperature@{Temperature}}\index{Temperature@{Temperature}!ss@{ss}}}\mbox{\Hypertarget{classTemperature_af7441a7bcbc69bbc36f98dbe1080d3d0a51c758bf28203422de6a5499a67340ca}\label{classTemperature_af7441a7bcbc69bbc36f98dbe1080d3d0a51c758bf28203422de6a5499a67340ca}} 
+ss&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{bp@{bp}!Temperature@{Temperature}}\index{Temperature@{Temperature}!bp@{bp}}}\mbox{\Hypertarget{classTemperature_af7441a7bcbc69bbc36f98dbe1080d3d0a7789521cbeee821af982c9e55d1592b3}\label{classTemperature_af7441a7bcbc69bbc36f98dbe1080d3d0a7789521cbeee821af982c9e55d1592b3}} 
+bp&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{esc\_1@{esc\_1}!Temperature@{Temperature}}\index{Temperature@{Temperature}!esc\_1@{esc\_1}}}\mbox{\Hypertarget{classTemperature_af7441a7bcbc69bbc36f98dbe1080d3d0ac3d88f8990493a069fda64ff629b2709}\label{classTemperature_af7441a7bcbc69bbc36f98dbe1080d3d0ac3d88f8990493a069fda64ff629b2709}} 
+esc\+\_\+1&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{esc\_2@{esc\_2}!Temperature@{Temperature}}\index{Temperature@{Temperature}!esc\_2@{esc\_2}}}\mbox{\Hypertarget{classTemperature_af7441a7bcbc69bbc36f98dbe1080d3d0a19bd86ebb9a5f276a51a21169d40679f}\label{classTemperature_af7441a7bcbc69bbc36f98dbe1080d3d0a19bd86ebb9a5f276a51a21169d40679f}} 
+esc\+\_\+2&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{esc\_3@{esc\_3}!Temperature@{Temperature}}\index{Temperature@{Temperature}!esc\_3@{esc\_3}}}\mbox{\Hypertarget{classTemperature_af7441a7bcbc69bbc36f98dbe1080d3d0a2ad4e69bbda8ebc9b7ebfa5727dd8ff5}\label{classTemperature_af7441a7bcbc69bbc36f98dbe1080d3d0a2ad4e69bbda8ebc9b7ebfa5727dd8ff5}} 
+esc\+\_\+3&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{esc\_4@{esc\_4}!Temperature@{Temperature}}\index{Temperature@{Temperature}!esc\_4@{esc\_4}}}\mbox{\Hypertarget{classTemperature_af7441a7bcbc69bbc36f98dbe1080d3d0a7a915ef3fe19fce1f6d7f99831cc4470}\label{classTemperature_af7441a7bcbc69bbc36f98dbe1080d3d0a7a915ef3fe19fce1f6d7f99831cc4470}} 
+esc\+\_\+4&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{bm\_1@{bm\_1}!Temperature@{Temperature}}\index{Temperature@{Temperature}!bm\_1@{bm\_1}}}\mbox{\Hypertarget{classTemperature_af7441a7bcbc69bbc36f98dbe1080d3d0ae843e4fec18b9f6319e5d2b5334760ed}\label{classTemperature_af7441a7bcbc69bbc36f98dbe1080d3d0ae843e4fec18b9f6319e5d2b5334760ed}} 
+bm\+\_\+1&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{bm\_2@{bm\_2}!Temperature@{Temperature}}\index{Temperature@{Temperature}!bm\_2@{bm\_2}}}\mbox{\Hypertarget{classTemperature_af7441a7bcbc69bbc36f98dbe1080d3d0a156ef5b630e153caaef488e66a8d9220}\label{classTemperature_af7441a7bcbc69bbc36f98dbe1080d3d0a156ef5b630e153caaef488e66a8d9220}} 
+bm\+\_\+2&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{bm\_3@{bm\_3}!Temperature@{Temperature}}\index{Temperature@{Temperature}!bm\_3@{bm\_3}}}\mbox{\Hypertarget{classTemperature_af7441a7bcbc69bbc36f98dbe1080d3d0a51e72caf44a812afbc8da711485d36e1}\label{classTemperature_af7441a7bcbc69bbc36f98dbe1080d3d0a51e72caf44a812afbc8da711485d36e1}} 
+bm\+\_\+3&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{bm\_4@{bm\_4}!Temperature@{Temperature}}\index{Temperature@{Temperature}!bm\_4@{bm\_4}}}\mbox{\Hypertarget{classTemperature_af7441a7bcbc69bbc36f98dbe1080d3d0ab5d0537c0c5d4fcd9b15e9d2938ebf6f}\label{classTemperature_af7441a7bcbc69bbc36f98dbe1080d3d0ab5d0537c0c5d4fcd9b15e9d2938ebf6f}} 
+bm\+\_\+4&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classTemperature_a63426d19c1275afa8ab6fd6fd0e82eec}\label{classTemperature_a63426d19c1275afa8ab6fd6fd0e82eec}} 
+\index{Temperature@{Temperature}!getBySource@{getBySource}}
+\index{getBySource@{getBySource}!Temperature@{Temperature}}
+\doxysubsubsection{\texorpdfstring{getBySource()}{getBySource()}}
+{\footnotesize\ttfamily float Temperature\+::get\+By\+Source (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTemperature_af7441a7bcbc69bbc36f98dbe1080d3d0}{temperature\+\_\+source}}}]{source }\end{DoxyParamCaption})}
+
+
+
+Get the temperature By Source. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em source} & the selected temperature module \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+float containing the temperature. -\/127 means not available. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classTemperature_ad128f7e2a26ed2687f5d72a0d96a48a1}\label{classTemperature_ad128f7e2a26ed2687f5d72a0d96a48a1}} 
+\index{Temperature@{Temperature}!init@{init}}
+\index{init@{init}!Temperature@{Temperature}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily uint8\+\_\+t Temperature\+::init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+initialize the sensors 
+
+\begin{DoxyReturn}{Returns}
+uint8\+\_\+t 1 on success and 0 on failure 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classTemperature_a6c4220dabe37458518cf3849ec20e0a4}\label{classTemperature_a6c4220dabe37458518cf3849ec20e0a4}} 
+\index{Temperature@{Temperature}!read@{read}}
+\index{read@{read}!Temperature@{Temperature}}
+\doxysubsubsection{\texorpdfstring{read()}{read()}}
+{\footnotesize\ttfamily void Temperature\+::read (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+read the temperatures from all devices 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+lib/temperature/\mbox{\hyperlink{temperature_8h}{temperature.\+h}}\item 
+lib/temperature/\mbox{\hyperlink{temperature_8cpp}{temperature.\+cpp}}\end{DoxyCompactItemize}

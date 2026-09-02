@@ -1,0 +1,428 @@
+(kicad_sch
+	(version 20250114)
+	(generator "eeschema")
+	(generator_version "9.0")
+	(uuid "921a43a6-eb88-4bcc-ad8e-59fbd2c22a02")
+	(paper "A4")
+	(lib_symbols)
+	(hierarchical_label "OUT_5"
+		(shape input)
+		(at 180.34 133.35 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "230f0678-8f85-47eb-944a-4ad8835c4ec4")
+	)
+	(hierarchical_label "OUT_3"
+		(shape input)
+		(at 180.34 109.22 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "5703533f-0996-44f3-bab9-82e7a338ec43")
+	)
+	(hierarchical_label "OUT_4"
+		(shape input)
+		(at 180.34 121.92 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "60021403-3b86-46c7-bfde-f90252d99979")
+	)
+	(hierarchical_label "IN_1"
+		(shape input)
+		(at 125.73 83.82 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "6057987a-1609-4155-8bda-67d179cdfa65")
+	)
+	(hierarchical_label "OUT_1"
+		(shape input)
+		(at 180.34 83.82 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "6c386e65-396f-48ba-ae56-79d70517746b")
+	)
+	(hierarchical_label "IN_2"
+		(shape input)
+		(at 125.73 96.52 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "77eb0673-5c75-4ff1-a839-19b48d55fd1d")
+	)
+	(hierarchical_label "IN_4"
+		(shape input)
+		(at 125.73 121.92 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "966440dd-93ab-4562-860c-c6ebe69bf86e")
+	)
+	(hierarchical_label "IN_5"
+		(shape input)
+		(at 125.73 133.35 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "971c8779-80ee-41f5-bf93-04bcc662a204")
+	)
+	(hierarchical_label "OUT_2"
+		(shape input)
+		(at 180.34 96.52 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "d3b57407-147e-4a93-941a-32409d88d65e")
+	)
+	(hierarchical_label "IN_3"
+		(shape input)
+		(at 125.73 109.22 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "e94d3183-1c3f-45aa-97ce-4c78e9fc2370")
+	)
+	(sheet
+		(at 125.73 130.81)
+		(size 54.61 5.08)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "17247037-bbe9-4d93-a02f-852ae2dd9876")
+		(property "Sheetname" "Input Protection 5"
+			(at 125.73 130.0984 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "../io_protection_input/io_protection_input.kicad_sch"
+			(at 125.73 136.4746 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "IN" input
+			(at 125.73 133.35 180)
+			(uuid "42958fcd-d705-424e-9664-716e23f165ff")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "OUT" output
+			(at 180.34 133.35 0)
+			(uuid "e41147bd-689e-4eb3-996b-29c3ffb5fc8a")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(instances
+			(project "1_logic_board"
+				(path "/8a8d33ee-a184-451b-b823-bc8a1789b1d9/7f68725f-f512-4ef7-863d-c4c44b0f2fb9/17a44c7f-205b-4cb3-915f-0890922cf082"
+					(page "47")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 125.73 93.98)
+		(size 54.61 5.08)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "2996a757-b431-4aaf-8d31-f342a18b784a")
+		(property "Sheetname" "Input Protection 2"
+			(at 125.73 93.2684 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "../io_protection_input/io_protection_input.kicad_sch"
+			(at 125.73 99.6446 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "IN" input
+			(at 125.73 96.52 180)
+			(uuid "9b8678a1-09b6-49c9-b20e-4267ea61a15b")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "OUT" output
+			(at 180.34 96.52 0)
+			(uuid "d9efac76-43eb-40d6-9490-fa7b4a2e4d23")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(instances
+			(project "1_logic_board"
+				(path "/8a8d33ee-a184-451b-b823-bc8a1789b1d9/7f68725f-f512-4ef7-863d-c4c44b0f2fb9/17a44c7f-205b-4cb3-915f-0890922cf082"
+					(page "44")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 125.73 119.38)
+		(size 54.61 5.08)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "78f113f3-0705-4684-a5c5-b34efaa972db")
+		(property "Sheetname" "Input Protection 4"
+			(at 125.73 118.6684 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "../io_protection_input/io_protection_input.kicad_sch"
+			(at 125.73 125.0446 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "IN" input
+			(at 125.73 121.92 180)
+			(uuid "4ea2f1bc-7603-4634-b787-d74b513f4088")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "OUT" output
+			(at 180.34 121.92 0)
+			(uuid "68eacbb3-eafa-4d78-ab22-67dd2fe694d1")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(instances
+			(project "1_logic_board"
+				(path "/8a8d33ee-a184-451b-b823-bc8a1789b1d9/7f68725f-f512-4ef7-863d-c4c44b0f2fb9/17a44c7f-205b-4cb3-915f-0890922cf082"
+					(page "46")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 125.73 81.28)
+		(size 54.61 5.08)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "a6d3d356-8dd5-49ec-867c-a2eaeaca762f")
+		(property "Sheetname" "Input Protection 1"
+			(at 125.73 80.5684 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "../io_protection_input/io_protection_input.kicad_sch"
+			(at 125.73 86.9446 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "IN" input
+			(at 125.73 83.82 180)
+			(uuid "ca889e49-3fd4-4654-828b-384c95d73de1")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "OUT" output
+			(at 180.34 83.82 0)
+			(uuid "2b33cd76-6c3a-4600-82f7-7287f9002332")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(instances
+			(project "1_logic_board"
+				(path "/8a8d33ee-a184-451b-b823-bc8a1789b1d9/7f68725f-f512-4ef7-863d-c4c44b0f2fb9/17a44c7f-205b-4cb3-915f-0890922cf082"
+					(page "43")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 125.73 106.68)
+		(size 54.61 5.08)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "ce361bd4-e91a-4221-811a-96f68542d76d")
+		(property "Sheetname" "Input Protection 3"
+			(at 125.73 105.9684 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "../io_protection_input/io_protection_input.kicad_sch"
+			(at 125.73 112.3446 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "IN" input
+			(at 125.73 109.22 180)
+			(uuid "0d1dc406-1d07-4813-8fc0-206b53f84656")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "OUT" output
+			(at 180.34 109.22 0)
+			(uuid "81eb0c2b-1d44-4e0a-b367-2869a205d0c2")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(instances
+			(project "1_logic_board"
+				(path "/8a8d33ee-a184-451b-b823-bc8a1789b1d9/7f68725f-f512-4ef7-863d-c4c44b0f2fb9/17a44c7f-205b-4cb3-915f-0890922cf082"
+					(page "45")
+				)
+			)
+		)
+	)
+)

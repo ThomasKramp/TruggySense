@@ -1,0 +1,8 @@
+digraph "vehicle_actuation"
+{
+ // INTERACTIVE_SVG=YES
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="{vehicle_actuation\n|+ uint16_t pwm_bm_1\l+ uint16_t pwm_bm_2\l+ uint16_t pwm_bm_3\l+ uint16_t pwm_bm_4\l+ uint16_t pwm_ss\l|}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="datastruct of pwm data that needs to be set"];
+}

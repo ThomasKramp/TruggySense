@@ -1,0 +1,111 @@
+\hypertarget{X6B_8h_source}{}\doxysection{X6\+B.\+h}
+\label{X6B_8h_source}\index{lib/X6B\_lib/X6B.h@{lib/X6B\_lib/X6B.h}}
+\mbox{\hyperlink{X6B_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{15 \textcolor{preprocessor}{\#ifndef \_X6B\_H\_}}
+\DoxyCodeLine{16 \textcolor{preprocessor}{\#define \_X6B\_H\_}}
+\DoxyCodeLine{17 }
+\DoxyCodeLine{18 \textcolor{preprocessor}{\#include "{}Arduino.h"{}}}
+\DoxyCodeLine{19 }
+\DoxyCodeLine{20 \textcolor{preprocessor}{\#define IBUS\_SERIAL Serial8}}
+\DoxyCodeLine{21 }
+\DoxyCodeLine{22 \textcolor{preprocessor}{\#define START\_FRAME\_SEQUENCE 0x2040}}
+\DoxyCodeLine{23 \textcolor{preprocessor}{\#define FRAME\_LENGTH 16}}
+\DoxyCodeLine{24 \textcolor{preprocessor}{\#define INTER\_FRAME\_STOP 4 }\textcolor{comment}{// 7ms of time gap between messages. Checking each 4ms is enough. Faster has no use.}}
+\DoxyCodeLine{25 \textcolor{preprocessor}{\#define DEAD\_TIME 20}}
+\DoxyCodeLine{26 \textcolor{preprocessor}{\#define NO\_CRC\_FRAME\_LENGTH ((FRAME\_LENGTH -\/ 1) * 2)}}
+\DoxyCodeLine{27 }
+\DoxyCodeLine{28 \textcolor{preprocessor}{\#define CH1\_DEFAULT\_VAL 1500}}
+\DoxyCodeLine{29 \textcolor{preprocessor}{\#define CH2\_DEFAULT\_VAL 1500}}
+\DoxyCodeLine{30 \textcolor{preprocessor}{\#define CH3\_DEFAULT\_VAL 1000}}
+\DoxyCodeLine{31 \textcolor{preprocessor}{\#define CH4\_DEFAULT\_VAL 1500}}
+\DoxyCodeLine{32 \textcolor{preprocessor}{\#define CH5\_DEFAULT\_VAL 1000}}
+\DoxyCodeLine{33 \textcolor{preprocessor}{\#define CH6\_DEFAULT\_VAL 1000}}
+\DoxyCodeLine{34 \textcolor{preprocessor}{\#define CH7\_DEFAULT\_VAL 1000}}
+\DoxyCodeLine{35 \textcolor{preprocessor}{\#define CH8\_DEFAULT\_VAL 1000}}
+\DoxyCodeLine{36 \textcolor{preprocessor}{\#define CH9\_DEFAULT\_VAL 1000}}
+\DoxyCodeLine{37 \textcolor{preprocessor}{\#define CH10\_DEFAULT\_VAL 1000}}
+\DoxyCodeLine{38 \textcolor{preprocessor}{\#define CH11\_DEFAULT\_VAL 1000}}
+\DoxyCodeLine{39 \textcolor{preprocessor}{\#define CH12\_DEFAULT\_VAL 1000}}
+\DoxyCodeLine{40 \textcolor{preprocessor}{\#define CH13\_DEFAULT\_VAL 1000}}
+\DoxyCodeLine{41 \textcolor{preprocessor}{\#define CH14\_DEFAULT\_VAL 1000}}
+\DoxyCodeLine{42 }
+\DoxyCodeLine{43 \textcolor{preprocessor}{\#define CH\_LOW\_MIN 950}}
+\DoxyCodeLine{44 \textcolor{preprocessor}{\#define CH\_HIGH\_MAX 2050}}
+\DoxyCodeLine{45 }
+\DoxyCodeLine{46 }
+\DoxyCodeLine{47 \textcolor{keyword}{class }\mbox{\hyperlink{classIBUS}{IBUS}}}
+\DoxyCodeLine{48 \{}
+\DoxyCodeLine{49 \textcolor{keyword}{private}:}
+\DoxyCodeLine{50     uint16\_t channel[14] = \{0\}; \textcolor{comment}{// Minus the checksum and header}}
+\DoxyCodeLine{51 }
+\DoxyCodeLine{52     HardwareSerial *s;}
+\DoxyCodeLine{53 }
+\DoxyCodeLine{54     \textcolor{keywordtype}{bool} pre\_start\_frame = \textcolor{keyword}{false};}
+\DoxyCodeLine{55     \textcolor{keywordtype}{bool} start\_frame\_detected = \textcolor{keyword}{true};}
+\DoxyCodeLine{56     \textcolor{keywordtype}{bool} is\_decoding = \textcolor{keyword}{false};}
+\DoxyCodeLine{57     \textcolor{keywordtype}{bool} alive = \textcolor{keyword}{false};}
+\DoxyCodeLine{58     \textcolor{comment}{// bool deadlock = false;}}
+\DoxyCodeLine{59     \textcolor{keywordtype}{long} trigger\_time;}
+\DoxyCodeLine{60 }
+\DoxyCodeLine{61     uint8\_t buffer[\mbox{\hyperlink{X6B_8h_a7ac0ffba6ed6694d963dd2bb59aaa876}{NO\_CRC\_FRAME\_LENGTH}}];}
+\DoxyCodeLine{62     uint8\_t buffer\_index = 0;}
+\DoxyCodeLine{63 }
+\DoxyCodeLine{64     uint16\_t channel\_defaults[14] = \{\mbox{\hyperlink{X6B_8h_adf1745bef900ab9b7756ca9a524a6c37}{CH1\_DEFAULT\_VAL}},}
+\DoxyCodeLine{65                                      \mbox{\hyperlink{X6B_8h_ad6f800af9d451eb3fcbccf3d1eed8b0b}{CH2\_DEFAULT\_VAL}},}
+\DoxyCodeLine{66                                      \mbox{\hyperlink{X6B_8h_a3545e45c5b80e4bbc9c21f5839e28605}{CH3\_DEFAULT\_VAL}},}
+\DoxyCodeLine{67                                      \mbox{\hyperlink{X6B_8h_a8232de80aeeb10246443862add4949ef}{CH4\_DEFAULT\_VAL}},}
+\DoxyCodeLine{68                                      \mbox{\hyperlink{X6B_8h_a6aba7f5d7ba7bda602bead188c019567}{CH5\_DEFAULT\_VAL}},}
+\DoxyCodeLine{69                                      \mbox{\hyperlink{X6B_8h_a70d7a8f0d7cc3d3d326fc80da85a6c4f}{CH6\_DEFAULT\_VAL}},}
+\DoxyCodeLine{70                                      \mbox{\hyperlink{X6B_8h_a17f44d896b73fd1a5fbc01f8211974eb}{CH7\_DEFAULT\_VAL}},}
+\DoxyCodeLine{71                                      \mbox{\hyperlink{X6B_8h_a7939de99f591ae150a87f2cf7480e2eb}{CH8\_DEFAULT\_VAL}},}
+\DoxyCodeLine{72                                      \mbox{\hyperlink{X6B_8h_a379bef039f47bd457b034b91ea232b35}{CH9\_DEFAULT\_VAL}},}
+\DoxyCodeLine{73                                      \mbox{\hyperlink{X6B_8h_aaaac6dc3a6a93c1f4d35f6c7b7308d0e}{CH10\_DEFAULT\_VAL}},}
+\DoxyCodeLine{74                                      \mbox{\hyperlink{X6B_8h_a9f8446a6cba2eb912e2bc4dcc2490240}{CH11\_DEFAULT\_VAL}},}
+\DoxyCodeLine{75                                      \mbox{\hyperlink{X6B_8h_a21b1c11f3a934b6f6e710fb1a53794fe}{CH12\_DEFAULT\_VAL}},}
+\DoxyCodeLine{76                                      \mbox{\hyperlink{X6B_8h_a4760b23dac8c69e3b2ac43121e796955}{CH13\_DEFAULT\_VAL}},}
+\DoxyCodeLine{77                                      \mbox{\hyperlink{X6B_8h_a5ceec5f672a64a0f8e082cb76601f358}{CH14\_DEFAULT\_VAL}}\};}
+\DoxyCodeLine{78 }
+\DoxyCodeLine{79     \textcolor{keywordtype}{long} timer;}
+\DoxyCodeLine{80     \textcolor{keywordtype}{long} deadTimer; \textcolor{comment}{// When no connection is present}}
+\DoxyCodeLine{81     uint16\_t crc\_calculated;}
+\DoxyCodeLine{82 }
+\DoxyCodeLine{83     \textcolor{keywordtype}{void} setDefaultChannelValue();}
+\DoxyCodeLine{84 }
+\DoxyCodeLine{85 \textcolor{keyword}{public}:}
+\DoxyCodeLine{86 }
+\DoxyCodeLine{93     \textcolor{keyword}{enum} \mbox{\hyperlink{classIBUS_a809520af2a748fa9798f91320e076e44}{channel\_source}}}
+\DoxyCodeLine{94     \{}
+\DoxyCodeLine{95         \mbox{\hyperlink{classIBUS_a809520af2a748fa9798f91320e076e44a732ed4b13113e339a7509b86947dd416}{ch\_1}},}
+\DoxyCodeLine{96         \mbox{\hyperlink{classIBUS_a809520af2a748fa9798f91320e076e44aaa33484aea878d98e2ffd5395aae2988}{ch\_2}},}
+\DoxyCodeLine{97         \mbox{\hyperlink{classIBUS_a809520af2a748fa9798f91320e076e44a01fa66a0de87e238930d753c6bbf3f95}{ch\_3}},}
+\DoxyCodeLine{98         \mbox{\hyperlink{classIBUS_a809520af2a748fa9798f91320e076e44a573832987c6312f4acc7f32d35da9b78}{ch\_4}},}
+\DoxyCodeLine{99         \mbox{\hyperlink{classIBUS_a809520af2a748fa9798f91320e076e44ac9546149e2e018b3bba4a001ea0cf439}{ch\_5}},}
+\DoxyCodeLine{100         \mbox{\hyperlink{classIBUS_a809520af2a748fa9798f91320e076e44a29e05d7b403b8aa226d5d3d896aca97a}{ch\_6}},}
+\DoxyCodeLine{101         \mbox{\hyperlink{classIBUS_a809520af2a748fa9798f91320e076e44a4fa191210f790ccc6ee1209545dacb4e}{ch\_7}},}
+\DoxyCodeLine{102         \mbox{\hyperlink{classIBUS_a809520af2a748fa9798f91320e076e44aa5d44b5907f6093e947241d256205ee3}{ch\_8}},}
+\DoxyCodeLine{103         \mbox{\hyperlink{classIBUS_a809520af2a748fa9798f91320e076e44a3254661966ac92589a6a1e9c9a0fa874}{ch\_9}},}
+\DoxyCodeLine{104         \mbox{\hyperlink{classIBUS_a809520af2a748fa9798f91320e076e44a809d60970853b19232d84dcc4f572d38}{ch\_10}},}
+\DoxyCodeLine{105         \mbox{\hyperlink{classIBUS_a809520af2a748fa9798f91320e076e44a5ece551e69692047b1ddc557bb0fc264}{ch\_11}},}
+\DoxyCodeLine{106         \mbox{\hyperlink{classIBUS_a809520af2a748fa9798f91320e076e44ae352696ca4da4f758c51dd6078481757}{ch\_12}},}
+\DoxyCodeLine{107         \mbox{\hyperlink{classIBUS_a809520af2a748fa9798f91320e076e44a7652fe882e32cabf56a92fbea3dcff30}{ch\_13}},}
+\DoxyCodeLine{108         \mbox{\hyperlink{classIBUS_a809520af2a748fa9798f91320e076e44a3558ff6965a58983065a662089957c2b}{ch\_14}},}
+\DoxyCodeLine{109     \};}
+\DoxyCodeLine{110 }
+\DoxyCodeLine{115     \mbox{\hyperlink{classIBUS_a4805e5c7a6008a81ae3a742c042c5474}{IBUS}}();}
+\DoxyCodeLine{116 }
+\DoxyCodeLine{122     \mbox{\hyperlink{classIBUS_a4805e5c7a6008a81ae3a742c042c5474}{IBUS}}(HardwareSerial \&serial);}
+\DoxyCodeLine{123 }
+\DoxyCodeLine{136     uint8\_t \mbox{\hyperlink{classIBUS_a0f4e3f8c940330295627e3328f009242}{readData}}();}
+\DoxyCodeLine{137 }
+\DoxyCodeLine{144     uint32\_t \mbox{\hyperlink{classIBUS_ae379fa8a6456bb7b570275048e7da799}{getChannel}}(\mbox{\hyperlink{classIBUS_a809520af2a748fa9798f91320e076e44}{channel\_source}} ch);}
+\DoxyCodeLine{145 }
+\DoxyCodeLine{151     uint8\_t \mbox{\hyperlink{classIBUS_a54f00b8b785ba41f3a035a6620d8b04e}{isAlive}}();}
+\DoxyCodeLine{152 }
+\DoxyCodeLine{160     uint8\_t \mbox{\hyperlink{classIBUS_ab43edae3ba453732e3e38a94ce554d5b}{setChannelDefaultValue}}(\mbox{\hyperlink{classIBUS_a809520af2a748fa9798f91320e076e44}{channel\_source}} ch, uint16\_t milliseconds);}
+\DoxyCodeLine{161 \};}
+\DoxyCodeLine{162 }
+\DoxyCodeLine{163 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

@@ -1,0 +1,41 @@
+* SPICE model Zener diodes ***MM3Z3V3***
+* Use the symbol file ***mm3z3v3.asy***
+*
+* (c) Diotec Semiconductor AG
+* www.diotec.com
+* 2022-01-28
+*
+*********************************************************
+* This model is for simulation purposes only. It does   *
+* not replace reviewing of the data sheet nor real life *
+* testing of the part inside the application.           *
+*********************************************************
+*
+.subckt MM3Z3V3  A  K  params: Vznom=3.3 Iztest=5m Vr=1 Ir=20u Rzj=85 Izmax=86m Cjo=270p
+
+* Above values are an example for the ***MM3Z3V3***. Using the
+* above symbol file allows for direct insertion of other values
+* according to these data sheet parameters:
+*
+* Vznom		Nominal zener voltage at 25°C = (Vzmin+Vzmax)/2
+* Iztest	Test current for Vz
+* Vr		Reverse voltage (minimum value)
+* Ir		Reverse current
+* Rzj		Dynamic resistance
+* Izmax		Max zener current
+* Cjo		Junction capacitance at 0V
+
+Dbr  INT  K  Zbr
+Df   A    K  Zf
+Dbl  INT  A  DIObl
+
+* Zener breakdown characteristic
+.model  Zbr  D(Is={Ir/10} N=2.0 Rs={Rzj} Bv={Vznom*(1+(temp-25)*0.001)} Ibv={Iztest} Eg=1.11 Xti=3 M=.33 diss={Vznom*Izmax})
+*
+* Forward characteristic
+.model  Zf  D(Is=100E-9 N=2.0 Rs=37m Cjo={Cjo} Eg=1.11 Xti=3 M=.33 Tt=800n)
+*
+* Internal blocking diode
+.model  DIObl  D(Ron=.1m)
+
+.ends

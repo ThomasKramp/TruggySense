@@ -1,0 +1,59 @@
+\hypertarget{current_8h_source}{}\doxysection{current.\+h}
+\label{current_8h_source}\index{lib/current/current.h@{lib/current/current.h}}
+\mbox{\hyperlink{current_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{15 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{16 }
+\DoxyCodeLine{17 \textcolor{preprocessor}{\#include <Arduino.h>}}
+\DoxyCodeLine{18 }
+\DoxyCodeLine{19 \textcolor{preprocessor}{\#define ADC\_I\_SS 41 }}
+\DoxyCodeLine{20 \textcolor{preprocessor}{\#define ADC\_I\_HLC 39 }}
+\DoxyCodeLine{21 \textcolor{preprocessor}{\#define ADC\_I\_LLC 40 }}
+\DoxyCodeLine{22 \textcolor{preprocessor}{\#define ADC\_I\_ESC\_1 27 }}
+\DoxyCodeLine{23 \textcolor{comment}{// \#define ADC\_I\_ESC\_2 38 /**< @brief Pin definition of ESC 2 current */ // RR}}
+\DoxyCodeLine{24 \textcolor{comment}{// \#define ADC\_I\_ESC\_3 26 /**< @brief Pin definition of ESC 3 current */ // FL}}
+\DoxyCodeLine{25 \textcolor{comment}{// \#define ADC\_I\_ESC\_4 25 /**< @brief Pin definition of ESC 4 current */ // FR}}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{31 \textcolor{preprocessor}{\#define AVERAGE\_COUNT 12.0F}}
+\DoxyCodeLine{32 }
+\DoxyCodeLine{37 \textcolor{keyword}{class }\mbox{\hyperlink{classCurrentMeasure}{CurrentMeasure}}}
+\DoxyCodeLine{38 \{}
+\DoxyCodeLine{39 \textcolor{keyword}{private}:}
+\DoxyCodeLine{40     \textcolor{keyword}{const} \textcolor{keywordtype}{float} delta\_v = 0.00322; }
+\DoxyCodeLine{41     \textcolor{keyword}{const} \textcolor{keywordtype}{float} fac\_curr\_hlc = 0.75;}
+\DoxyCodeLine{42     \textcolor{keyword}{const} \textcolor{keywordtype}{float} fac\_curr\_llc = 1;}
+\DoxyCodeLine{43     \textcolor{keyword}{const} \textcolor{keywordtype}{float} fac\_curr\_ss = 0.75;}
+\DoxyCodeLine{44     \textcolor{keyword}{const} \textcolor{keywordtype}{float} fac\_curr\_esc\_1 = 0.01; \textcolor{comment}{//10mV/A}}
+\DoxyCodeLine{45     \textcolor{keyword}{const} \textcolor{keywordtype}{float} zero\_curr\_esc\_1 = 2.5; \textcolor{comment}{//5V/2=2.5V}}
+\DoxyCodeLine{46     \textcolor{comment}{// const float fac\_curr\_esc\_2 = 0.02; //20mV/A}}
+\DoxyCodeLine{47     \textcolor{comment}{// const float zero\_curr\_esc\_2 = 2.5; //5V/2=2.5V}}
+\DoxyCodeLine{48     \textcolor{comment}{// const float fac\_curr\_esc\_3 = 0.02; //20mV/A}}
+\DoxyCodeLine{49     \textcolor{comment}{// const float zero\_curr\_esc\_3 = 2.5; //5V/2=2.5V}}
+\DoxyCodeLine{50     \textcolor{comment}{// const float fac\_curr\_esc\_4 = 0.02; //20mV/A}}
+\DoxyCodeLine{51     \textcolor{comment}{// const float zero\_curr\_esc\_4 = 2.5; //5V/2=2.5V}}
+\DoxyCodeLine{52 }
+\DoxyCodeLine{53     \textcolor{keywordtype}{float} raw\_data[8][(int)\mbox{\hyperlink{current_8h_ad0186187bc7c260e3521e58a4dd35034}{AVERAGE\_COUNT}}] = \{0\};}
+\DoxyCodeLine{54     \textcolor{keywordtype}{float} average\_data[8] = \{0\};}
+\DoxyCodeLine{55 }
+\DoxyCodeLine{56 \textcolor{keyword}{public}:}
+\DoxyCodeLine{57 }
+\DoxyCodeLine{62     \textcolor{keyword}{enum} \mbox{\hyperlink{classCurrentMeasure_ab0fbc2c517c55632c04527522334e8b4}{current\_source}}}
+\DoxyCodeLine{63     \{}
+\DoxyCodeLine{64         \mbox{\hyperlink{classCurrentMeasure_ab0fbc2c517c55632c04527522334e8b4a4d00ea5bae92bf4974bc5d843fedb0c9}{hlc}},   \textcolor{comment}{// High level controller}}
+\DoxyCodeLine{65         \mbox{\hyperlink{classCurrentMeasure_ab0fbc2c517c55632c04527522334e8b4aee6a4d082c7c0cd43bd1f6aec65ae0ae}{llc}},   \textcolor{comment}{// Low level controller}}
+\DoxyCodeLine{66         \mbox{\hyperlink{classCurrentMeasure_ab0fbc2c517c55632c04527522334e8b4a4049b6881b1eee24929a2177cd38a1c8}{ss}},    \textcolor{comment}{// Steering Servo}}
+\DoxyCodeLine{67         \mbox{\hyperlink{classCurrentMeasure_ab0fbc2c517c55632c04527522334e8b4adfa27cd413bd5252e4601406461a3498}{esc\_1}}, \textcolor{comment}{// ESC 1}}
+\DoxyCodeLine{68         \mbox{\hyperlink{classCurrentMeasure_ab0fbc2c517c55632c04527522334e8b4a9eb0da32af36af63a8bd3a8c935b2e76}{esc\_2}}, \textcolor{comment}{// ESC 2}}
+\DoxyCodeLine{69         \mbox{\hyperlink{classCurrentMeasure_ab0fbc2c517c55632c04527522334e8b4af4422b2c7fd7f562e087e01243d8bc15}{esc\_3}}, \textcolor{comment}{// ESC 3}}
+\DoxyCodeLine{70         \mbox{\hyperlink{classCurrentMeasure_ab0fbc2c517c55632c04527522334e8b4a7e9e56c6153c0b0f30434e462292dde6}{esc\_4}}, \textcolor{comment}{// ESC 4}}
+\DoxyCodeLine{71     \};}
+\DoxyCodeLine{72 }
+\DoxyCodeLine{78     uint8\_t \mbox{\hyperlink{classCurrentMeasure_a8a667f729fe6779c3354060fb54117b8}{init}}();}
+\DoxyCodeLine{79 }
+\DoxyCodeLine{84     \textcolor{keywordtype}{void} \mbox{\hyperlink{classCurrentMeasure_a8fa9f1e552b55e128c8b7e9076a0e233}{ReadCurrent}}();}
+\DoxyCodeLine{85 }
+\DoxyCodeLine{92     \textcolor{keywordtype}{float} \mbox{\hyperlink{classCurrentMeasure_aff39217352667669343619f1817d8fa7}{getCurrentBySource}}(\mbox{\hyperlink{classCurrentMeasure_ab0fbc2c517c55632c04527522334e8b4}{current\_source}} source);}
+\DoxyCodeLine{93 \};}
+
+\end{DoxyCode}

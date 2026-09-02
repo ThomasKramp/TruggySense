@@ -1,0 +1,11 @@
+FILE_TYPE = MULTI_PHYS_TABLE;
+
+PART 'VSSAF5M10_M3_H'
+CLASS = DISCRETE
+{========================================================================================}
+:"MANUFACTURER_NAME", "MANUFACTURER_PART_NUMBER"= "PART_NUMBER", "JEDEC_TYPE", "PACK_TYPE", "MOUSER_PART_NUMBER", "MOUSER_PRICE/STOCK", "ARROW_PART_NUMBER", "ARROW_PRICE/STOCK", "DESCRIPTION", "DATASHEET", "HEIGHT";
+{========================================================================================}
+ "Vishay", "VSSAF5M10-M3/H" (!) = "", "SODFL5226X100N", "Small Outline Diode Flat Lead", "78-VSSAF5M10-M3/H", "https://www.mouser.co.uk/ProductDetail/Vishay-General-Semiconductor/VSSAF5M10-M3-H?qs=ECv811tYSNgAKxXn4qJoLg%3D%3D", "VSSAF5M10-M3/H", "https://www.arrow.com/en/products/vssaf5m10-m3h/vishay?region=nac", "Schottky Diodes & Rectifiers TMBS 100V Vrrm eSMP SlimSMA (DO-221AC)", "https://www.mouser.co.uk/datasheet/2/427/VISH_S_A0006177028_1-2569585.pdf", "1 mm"
+END_PART
+
+END.

@@ -1,0 +1,124 @@
+(footprint "Pin_D1.3mm_L11.0mm"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(descr "solder Pin_ diameter 1.3mm, hole diameter 1.5mm (loose fit), length 11.0mm")
+	(tags "solder Pin_ loose fit")
+	(property "Reference" "TP2"
+		(at 0 2.55 0)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "588f9538-09c1-41bd-8073-7892273788f7")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "ETH_R-"
+		(at 0 -2 0)
+		(layer "F.SilkS")
+		(uuid "d22c31fe-5d8c-4cae-afdd-62c5b710490d")
+		(effects
+			(font
+				(size 0.5 0.5)
+				(thickness 0.1)
+				(bold yes)
+			)
+			(justify bottom)
+		)
+	)
+	(property "Datasheet" "~"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "8f14f846-dbf2-43fe-8c9b-1ef1995756ed")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" "test point (alternative probe-style design)"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "34536364-0859-4c08-83ec-1440da4cec52")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr through_hole)
+	(fp_circle
+		(center 0 0)
+		(end 1.8 0.05)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.SilkS")
+		(uuid "ca1dca53-718a-49fb-a650-3aa3bbdb262d")
+	)
+	(fp_circle
+		(center 0 0)
+		(end 2 0)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.CrtYd")
+		(uuid "34de8c1e-af84-42c0-8e21-d93827876c58")
+	)
+	(fp_circle
+		(center 0 0)
+		(end 0.65 -0.05)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.Fab")
+		(uuid "461e1f78-781b-44fe-9070-2cd54094b62f")
+	)
+	(fp_circle
+		(center 0 0)
+		(end 1.25 -0.05)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.Fab")
+		(uuid "880c4e35-c373-4063-a4c8-094b0646cb1a")
+	)
+	(pad "1" thru_hole circle
+		(at 0 0)
+		(size 3 3)
+		(drill 1.5)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "280d9274-0848-4fd1-8a3d-08c6520c5e1b")
+	)
+	(embedded_fonts no)
+	(model "${KICAD9_3DMODEL_DIR}/Connector_Pin.3dshapes/Pin_D1.3mm_L11.0mm_LooseFit.step"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)

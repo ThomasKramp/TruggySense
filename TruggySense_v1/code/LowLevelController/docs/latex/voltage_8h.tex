@@ -1,0 +1,120 @@
+\hypertarget{voltage_8h}{}\doxysection{lib/voltage/voltage.h File Reference}
+\label{voltage_8h}\index{lib/voltage/voltage.h@{lib/voltage/voltage.h}}
+
+
+Contains class and pins to enable voltage measurements with the build in ADC.  
+
+
+{\ttfamily \#include $<$Arduino.\+h$>$}\newline
+Include dependency graph for voltage.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=197pt]{voltage_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{voltage_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classVoltageMeasure}{Voltage\+Measure}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{voltage_8h_ac90c25b8d70eda30b66aa73706d0c7fd}{ADC\+\_\+\+V\+\_\+\+HLC}}~24
+\item 
+\#define \mbox{\hyperlink{voltage_8h_a97d59f497d6d1c0dc28b925d20d1112b}{ADC\+\_\+\+V\+\_\+\+LLC}}~20
+\item 
+\#define \mbox{\hyperlink{voltage_8h_a7ecb99c6273c8a823d73004ea4ce1ebc}{ADC\+\_\+\+V\+\_\+\+PER}}~21
+\item 
+\#define \mbox{\hyperlink{voltage_8h_af7a377c961987cbe78847df6a8142945}{ADC\+\_\+\+V\+\_\+\+B\+\_\+1}}~14
+\item 
+\#define \mbox{\hyperlink{voltage_8h_ac2bdb2c062ca6f00f0f6a1e5489dbd97}{ADC\+\_\+\+V\+\_\+\+B\+\_\+2}}~15
+\item 
+\#define \mbox{\hyperlink{voltage_8h_a32c051de18aed78c01bcbfae601b3bce}{ADC\+\_\+\+V\+\_\+\+B\+\_\+3}}~16
+\item 
+\#define \mbox{\hyperlink{voltage_8h_adf9819ba9896958c5c20ae4eb3ad147c}{ADC\+\_\+\+V\+\_\+\+B\+\_\+4}}~17
+\item 
+\#define \mbox{\hyperlink{voltage_8h_ad0186187bc7c260e3521e58a4dd35034}{AVERAGE\+\_\+\+COUNT}}~12.\+0F
+\begin{DoxyCompactList}\small\item\em The average number represents how many measurements we conduct to calculate an average. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Contains class and pins to enable voltage measurements with the build in ADC. 
+
+\begin{DoxyAuthor}{Author}
+Robbe Elsermans 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2025-\/04-\/10
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2025 Robbe Elsermans, All rights reserved. This project is released under the CC BY-\/\+NC-\/\+SA licence. See licence.\+txt for more information 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{voltage_8h_af7a377c961987cbe78847df6a8142945}\label{voltage_8h_af7a377c961987cbe78847df6a8142945}} 
+\index{voltage.h@{voltage.h}!ADC\_V\_B\_1@{ADC\_V\_B\_1}}
+\index{ADC\_V\_B\_1@{ADC\_V\_B\_1}!voltage.h@{voltage.h}}
+\doxysubsubsection{\texorpdfstring{ADC\_V\_B\_1}{ADC\_V\_B\_1}}
+{\footnotesize\ttfamily \#define ADC\+\_\+\+V\+\_\+\+B\+\_\+1~14}
+
+\mbox{\Hypertarget{voltage_8h_ac2bdb2c062ca6f00f0f6a1e5489dbd97}\label{voltage_8h_ac2bdb2c062ca6f00f0f6a1e5489dbd97}} 
+\index{voltage.h@{voltage.h}!ADC\_V\_B\_2@{ADC\_V\_B\_2}}
+\index{ADC\_V\_B\_2@{ADC\_V\_B\_2}!voltage.h@{voltage.h}}
+\doxysubsubsection{\texorpdfstring{ADC\_V\_B\_2}{ADC\_V\_B\_2}}
+{\footnotesize\ttfamily \#define ADC\+\_\+\+V\+\_\+\+B\+\_\+2~15}
+
+\mbox{\Hypertarget{voltage_8h_a32c051de18aed78c01bcbfae601b3bce}\label{voltage_8h_a32c051de18aed78c01bcbfae601b3bce}} 
+\index{voltage.h@{voltage.h}!ADC\_V\_B\_3@{ADC\_V\_B\_3}}
+\index{ADC\_V\_B\_3@{ADC\_V\_B\_3}!voltage.h@{voltage.h}}
+\doxysubsubsection{\texorpdfstring{ADC\_V\_B\_3}{ADC\_V\_B\_3}}
+{\footnotesize\ttfamily \#define ADC\+\_\+\+V\+\_\+\+B\+\_\+3~16}
+
+\mbox{\Hypertarget{voltage_8h_adf9819ba9896958c5c20ae4eb3ad147c}\label{voltage_8h_adf9819ba9896958c5c20ae4eb3ad147c}} 
+\index{voltage.h@{voltage.h}!ADC\_V\_B\_4@{ADC\_V\_B\_4}}
+\index{ADC\_V\_B\_4@{ADC\_V\_B\_4}!voltage.h@{voltage.h}}
+\doxysubsubsection{\texorpdfstring{ADC\_V\_B\_4}{ADC\_V\_B\_4}}
+{\footnotesize\ttfamily \#define ADC\+\_\+\+V\+\_\+\+B\+\_\+4~17}
+
+\mbox{\Hypertarget{voltage_8h_ac90c25b8d70eda30b66aa73706d0c7fd}\label{voltage_8h_ac90c25b8d70eda30b66aa73706d0c7fd}} 
+\index{voltage.h@{voltage.h}!ADC\_V\_HLC@{ADC\_V\_HLC}}
+\index{ADC\_V\_HLC@{ADC\_V\_HLC}!voltage.h@{voltage.h}}
+\doxysubsubsection{\texorpdfstring{ADC\_V\_HLC}{ADC\_V\_HLC}}
+{\footnotesize\ttfamily \#define ADC\+\_\+\+V\+\_\+\+HLC~24}
+
+\mbox{\Hypertarget{voltage_8h_a97d59f497d6d1c0dc28b925d20d1112b}\label{voltage_8h_a97d59f497d6d1c0dc28b925d20d1112b}} 
+\index{voltage.h@{voltage.h}!ADC\_V\_LLC@{ADC\_V\_LLC}}
+\index{ADC\_V\_LLC@{ADC\_V\_LLC}!voltage.h@{voltage.h}}
+\doxysubsubsection{\texorpdfstring{ADC\_V\_LLC}{ADC\_V\_LLC}}
+{\footnotesize\ttfamily \#define ADC\+\_\+\+V\+\_\+\+LLC~20}
+
+\mbox{\Hypertarget{voltage_8h_a7ecb99c6273c8a823d73004ea4ce1ebc}\label{voltage_8h_a7ecb99c6273c8a823d73004ea4ce1ebc}} 
+\index{voltage.h@{voltage.h}!ADC\_V\_PER@{ADC\_V\_PER}}
+\index{ADC\_V\_PER@{ADC\_V\_PER}!voltage.h@{voltage.h}}
+\doxysubsubsection{\texorpdfstring{ADC\_V\_PER}{ADC\_V\_PER}}
+{\footnotesize\ttfamily \#define ADC\+\_\+\+V\+\_\+\+PER~21}
+
+\mbox{\Hypertarget{voltage_8h_ad0186187bc7c260e3521e58a4dd35034}\label{voltage_8h_ad0186187bc7c260e3521e58a4dd35034}} 
+\index{voltage.h@{voltage.h}!AVERAGE\_COUNT@{AVERAGE\_COUNT}}
+\index{AVERAGE\_COUNT@{AVERAGE\_COUNT}!voltage.h@{voltage.h}}
+\doxysubsubsection{\texorpdfstring{AVERAGE\_COUNT}{AVERAGE\_COUNT}}
+{\footnotesize\ttfamily \#define AVERAGE\+\_\+\+COUNT~12.\+0F}
+
+
+
+The average number represents how many measurements we conduct to calculate an average. 
+

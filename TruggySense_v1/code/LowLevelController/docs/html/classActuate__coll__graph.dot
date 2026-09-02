@@ -1,0 +1,8 @@
+digraph "Actuate"
+{
+ // INTERACTIVE_SVG=YES
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="{Actuate\n||+ uint8_t init()\l+ void write(actuator\l act, uint16_t pwm_value_us)\l+ void disableAll()\l+ void enableAll()\l+ uint8_t isDisabled()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Actuate class will actuate the received microseconds value to the selected pin defined by enum actuat..."];
+}

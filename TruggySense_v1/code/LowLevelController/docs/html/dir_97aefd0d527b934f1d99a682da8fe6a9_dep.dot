@@ -1,0 +1,24 @@
+digraph "lib"
+{
+ // INTERACTIVE_SVG=YES
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  compound=true
+  subgraph clusterdir_97aefd0d527b934f1d99a682da8fe6a9 {
+    graph [ bgcolor="#edf0f7", pencolor="grey25", style="filled,bold,", label="", fontname="Helvetica", fontsize="10", URL="dir_97aefd0d527b934f1d99a682da8fe6a9.html"]
+    dir_97aefd0d527b934f1d99a682da8fe6a9 [shape=plaintext, label="lib"];
+  dir_39817f566112e4686961671e3b05f2db [shape=box, label="actuation", style="filled,", fillcolor="#a2b4d6", color="grey25", URL="dir_39817f566112e4686961671e3b05f2db.html"];
+  dir_4d431c45acbcdef76c0237122e27f31f [shape=box, label="base_station_link", style="filled,", fillcolor="#a2b4d6", color="grey25", URL="dir_4d431c45acbcdef76c0237122e27f31f.html"];
+  dir_9dd0442c08ae5e2b488663c6f99c9192 [shape=box, label="current", style="filled,", fillcolor="#a2b4d6", color="grey25", URL="dir_9dd0442c08ae5e2b488663c6f99c9192.html"];
+  dir_346d63a2cfbaa01f6a009f32f6baf3e8 [shape=box, label="encoder", style="filled,", fillcolor="#a2b4d6", color="grey25", URL="dir_346d63a2cfbaa01f6a009f32f6baf3e8.html"];
+  dir_afc4a3b49f8c3fd7f5bc6652007fe995 [shape=box, label="gps", style="filled,", fillcolor="#a2b4d6", color="grey25", URL="dir_afc4a3b49f8c3fd7f5bc6652007fe995.html"];
+  dir_0ed5a77db555fe38eb2ba7e8d2141d4d [shape=box, label="ibus_V2", style="filled,", fillcolor="#a2b4d6", color="grey25", URL="dir_0ed5a77db555fe38eb2ba7e8d2141d4d.html"];
+  dir_3554028ee2797c78c7765098b85f4139 [shape=box, label="IMU", style="filled,", fillcolor="#a2b4d6", color="grey25", URL="dir_3554028ee2797c78c7765098b85f4139.html"];
+  dir_581e8e87e3ba0109549fcc2c6aae307b [shape=box, label="sd_logger", style="filled,", fillcolor="#a2b4d6", color="grey25", URL="dir_581e8e87e3ba0109549fcc2c6aae307b.html"];
+  dir_6e01e27cfda63d92d74df21df087c3bc [shape=box, label="temperature", style="filled,", fillcolor="#a2b4d6", color="grey25", URL="dir_6e01e27cfda63d92d74df21df087c3bc.html"];
+  dir_8582c6848cc23efd68d9ce72c2dac99e [shape=box, label="voltage", style="filled,", fillcolor="#a2b4d6", color="grey25", URL="dir_8582c6848cc23efd68d9ce72c2dac99e.html"];
+  dir_2d92311ced0695ae49fb13341931b2ff [shape=box, label="X6B_lib", style="filled,", fillcolor="#a2b4d6", color="grey25", URL="dir_2d92311ced0695ae49fb13341931b2ff.html"];
+  }
+  dir_4d431c45acbcdef76c0237122e27f31f->dir_581e8e87e3ba0109549fcc2c6aae307b [headlabel="1", labeldistance=1.5 headhref="dir_000001_000009.html"];
+}

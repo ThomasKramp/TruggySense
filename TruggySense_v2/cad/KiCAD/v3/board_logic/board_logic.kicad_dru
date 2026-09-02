@@ -1,0 +1,5 @@
+(version 1)
+(rule ic_clearance
+  (constraint clearance (min 0.1mm))
+  (condition "A.insideArea('IC_zone') && B.insideArea('IC_zone')")
+)

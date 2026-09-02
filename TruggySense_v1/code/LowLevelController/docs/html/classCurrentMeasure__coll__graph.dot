@@ -1,0 +1,8 @@
+digraph "CurrentMeasure"
+{
+ // INTERACTIVE_SVG=YES
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="{CurrentMeasure\n||+ uint8_t init()\l+ void ReadCurrent()\l+ float getCurrentBySource\l(current_source source)\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="CurrentMeasure class is responible to initialize the pins, calculate and return the calculated curren..."];
+}

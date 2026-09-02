@@ -1,0 +1,164 @@
+\hypertarget{ibus_8h}{}\doxysection{lib/ibus\+\_\+\+V2/ibus.h File Reference}
+\label{ibus_8h}\index{lib/ibus\_V2/ibus.h@{lib/ibus\_V2/ibus.h}}
+
+
+Driver for the FS-\/\+X6B receiver which utilized \mbox{\hyperlink{classIBUS}{IBUS}} protocol. Can be used for any \mbox{\hyperlink{classIBUS}{IBUS}} enabled receiver.  
+
+
+{\ttfamily \#include \char`\"{}Arduino.\+h\char`\"{}}\newline
+Include dependency graph for ibus.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=182pt]{ibus_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=345pt]{ibus_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classIBUS}{IBUS}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{ibus_8h_adf1745bef900ab9b7756ca9a524a6c37}{CH1\+\_\+\+DEFAULT\+\_\+\+VAL}}~1500  /$\ast$$\ast$ $<$ @brief default value in case of failsafe to send out for channel 1 $\ast$/
+\item 
+\#define \mbox{\hyperlink{ibus_8h_ad6f800af9d451eb3fcbccf3d1eed8b0b}{CH2\+\_\+\+DEFAULT\+\_\+\+VAL}}~1500  /$\ast$$\ast$ $<$ @brief default value in case of failsafe to send out for channel 2 $\ast$/
+\item 
+\#define \mbox{\hyperlink{ibus_8h_a3545e45c5b80e4bbc9c21f5839e28605}{CH3\+\_\+\+DEFAULT\+\_\+\+VAL}}~1000  /$\ast$$\ast$ $<$ @brief default value in case of failsafe to send out for channel 3 $\ast$/
+\item 
+\#define \mbox{\hyperlink{ibus_8h_a8232de80aeeb10246443862add4949ef}{CH4\+\_\+\+DEFAULT\+\_\+\+VAL}}~1500  /$\ast$$\ast$ $<$ @brief default value in case of failsafe to send out for channel 4 $\ast$/
+\item 
+\#define \mbox{\hyperlink{ibus_8h_a6aba7f5d7ba7bda602bead188c019567}{CH5\+\_\+\+DEFAULT\+\_\+\+VAL}}~1000  /$\ast$$\ast$ $<$ @brief default value in case of failsafe to send out for channel 5 $\ast$/
+\item 
+\#define \mbox{\hyperlink{ibus_8h_a70d7a8f0d7cc3d3d326fc80da85a6c4f}{CH6\+\_\+\+DEFAULT\+\_\+\+VAL}}~1000  /$\ast$$\ast$ $<$ @brief default value in case of failsafe to send out for channel 6 $\ast$/
+\item 
+\#define \mbox{\hyperlink{ibus_8h_a17f44d896b73fd1a5fbc01f8211974eb}{CH7\+\_\+\+DEFAULT\+\_\+\+VAL}}~1000  /$\ast$$\ast$ $<$ @brief default value in case of failsafe to send out for channel 7 $\ast$/
+\item 
+\#define \mbox{\hyperlink{ibus_8h_a7939de99f591ae150a87f2cf7480e2eb}{CH8\+\_\+\+DEFAULT\+\_\+\+VAL}}~1000  /$\ast$$\ast$ $<$ @brief default value in case of failsafe to send out for channel 8 $\ast$/
+\item 
+\#define \mbox{\hyperlink{ibus_8h_a379bef039f47bd457b034b91ea232b35}{CH9\+\_\+\+DEFAULT\+\_\+\+VAL}}~1000  /$\ast$$\ast$ $<$ @brief default value in case of failsafe to send out for channel 9 $\ast$/
+\item 
+\#define \mbox{\hyperlink{ibus_8h_aaaac6dc3a6a93c1f4d35f6c7b7308d0e}{CH10\+\_\+\+DEFAULT\+\_\+\+VAL}}~1000 /$\ast$$\ast$ $<$ @brief default value in case of failsafe to send out for channel 10 $\ast$/
+\item 
+\#define \mbox{\hyperlink{ibus_8h_a9f8446a6cba2eb912e2bc4dcc2490240}{CH11\+\_\+\+DEFAULT\+\_\+\+VAL}}~1000 /$\ast$$\ast$ $<$ @brief default value in case of failsafe to send out for channel 11 $\ast$/
+\item 
+\#define \mbox{\hyperlink{ibus_8h_a21b1c11f3a934b6f6e710fb1a53794fe}{CH12\+\_\+\+DEFAULT\+\_\+\+VAL}}~1000 /$\ast$$\ast$ $<$ @brief default value in case of failsafe to send out for channel 12 $\ast$/
+\item 
+\#define \mbox{\hyperlink{ibus_8h_a4760b23dac8c69e3b2ac43121e796955}{CH13\+\_\+\+DEFAULT\+\_\+\+VAL}}~1000 /$\ast$$\ast$ $<$ @brief default value in case of failsafe to send out for channel 13 $\ast$/
+\item 
+\#define \mbox{\hyperlink{ibus_8h_a5ceec5f672a64a0f8e082cb76601f358}{CH14\+\_\+\+DEFAULT\+\_\+\+VAL}}~1000 /$\ast$$\ast$ $<$ @brief default value in case of failsafe to send out for channel 14 $\ast$/
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Driver for the FS-\/\+X6B receiver which utilized \mbox{\hyperlink{classIBUS}{IBUS}} protocol. Can be used for any \mbox{\hyperlink{classIBUS}{IBUS}} enabled receiver. 
+
+\begin{DoxyAuthor}{Author}
+Robbe Elsermans 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+2 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2025-\/04-\/28
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2025 Robbe Elsermans, All rights reserved. This project is released under the CC BY-\/\+NC-\/\+SA licence. See licence.\+txt for more information 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{ibus_8h_aaaac6dc3a6a93c1f4d35f6c7b7308d0e}\label{ibus_8h_aaaac6dc3a6a93c1f4d35f6c7b7308d0e}} 
+\index{ibus.h@{ibus.h}!CH10\_DEFAULT\_VAL@{CH10\_DEFAULT\_VAL}}
+\index{CH10\_DEFAULT\_VAL@{CH10\_DEFAULT\_VAL}!ibus.h@{ibus.h}}
+\doxysubsubsection{\texorpdfstring{CH10\_DEFAULT\_VAL}{CH10\_DEFAULT\_VAL}}
+{\footnotesize\ttfamily \#define CH10\+\_\+\+DEFAULT\+\_\+\+VAL~1000 /$\ast$$\ast$ $<$ @brief default value in case of failsafe to send out for channel 10 $\ast$/}
+
+\mbox{\Hypertarget{ibus_8h_a9f8446a6cba2eb912e2bc4dcc2490240}\label{ibus_8h_a9f8446a6cba2eb912e2bc4dcc2490240}} 
+\index{ibus.h@{ibus.h}!CH11\_DEFAULT\_VAL@{CH11\_DEFAULT\_VAL}}
+\index{CH11\_DEFAULT\_VAL@{CH11\_DEFAULT\_VAL}!ibus.h@{ibus.h}}
+\doxysubsubsection{\texorpdfstring{CH11\_DEFAULT\_VAL}{CH11\_DEFAULT\_VAL}}
+{\footnotesize\ttfamily \#define CH11\+\_\+\+DEFAULT\+\_\+\+VAL~1000 /$\ast$$\ast$ $<$ @brief default value in case of failsafe to send out for channel 11 $\ast$/}
+
+\mbox{\Hypertarget{ibus_8h_a21b1c11f3a934b6f6e710fb1a53794fe}\label{ibus_8h_a21b1c11f3a934b6f6e710fb1a53794fe}} 
+\index{ibus.h@{ibus.h}!CH12\_DEFAULT\_VAL@{CH12\_DEFAULT\_VAL}}
+\index{CH12\_DEFAULT\_VAL@{CH12\_DEFAULT\_VAL}!ibus.h@{ibus.h}}
+\doxysubsubsection{\texorpdfstring{CH12\_DEFAULT\_VAL}{CH12\_DEFAULT\_VAL}}
+{\footnotesize\ttfamily \#define CH12\+\_\+\+DEFAULT\+\_\+\+VAL~1000 /$\ast$$\ast$ $<$ @brief default value in case of failsafe to send out for channel 12 $\ast$/}
+
+\mbox{\Hypertarget{ibus_8h_a4760b23dac8c69e3b2ac43121e796955}\label{ibus_8h_a4760b23dac8c69e3b2ac43121e796955}} 
+\index{ibus.h@{ibus.h}!CH13\_DEFAULT\_VAL@{CH13\_DEFAULT\_VAL}}
+\index{CH13\_DEFAULT\_VAL@{CH13\_DEFAULT\_VAL}!ibus.h@{ibus.h}}
+\doxysubsubsection{\texorpdfstring{CH13\_DEFAULT\_VAL}{CH13\_DEFAULT\_VAL}}
+{\footnotesize\ttfamily \#define CH13\+\_\+\+DEFAULT\+\_\+\+VAL~1000 /$\ast$$\ast$ $<$ @brief default value in case of failsafe to send out for channel 13 $\ast$/}
+
+\mbox{\Hypertarget{ibus_8h_a5ceec5f672a64a0f8e082cb76601f358}\label{ibus_8h_a5ceec5f672a64a0f8e082cb76601f358}} 
+\index{ibus.h@{ibus.h}!CH14\_DEFAULT\_VAL@{CH14\_DEFAULT\_VAL}}
+\index{CH14\_DEFAULT\_VAL@{CH14\_DEFAULT\_VAL}!ibus.h@{ibus.h}}
+\doxysubsubsection{\texorpdfstring{CH14\_DEFAULT\_VAL}{CH14\_DEFAULT\_VAL}}
+{\footnotesize\ttfamily \#define CH14\+\_\+\+DEFAULT\+\_\+\+VAL~1000 /$\ast$$\ast$ $<$ @brief default value in case of failsafe to send out for channel 14 $\ast$/}
+
+\mbox{\Hypertarget{ibus_8h_adf1745bef900ab9b7756ca9a524a6c37}\label{ibus_8h_adf1745bef900ab9b7756ca9a524a6c37}} 
+\index{ibus.h@{ibus.h}!CH1\_DEFAULT\_VAL@{CH1\_DEFAULT\_VAL}}
+\index{CH1\_DEFAULT\_VAL@{CH1\_DEFAULT\_VAL}!ibus.h@{ibus.h}}
+\doxysubsubsection{\texorpdfstring{CH1\_DEFAULT\_VAL}{CH1\_DEFAULT\_VAL}}
+{\footnotesize\ttfamily \#define CH1\+\_\+\+DEFAULT\+\_\+\+VAL~1500  /$\ast$$\ast$ $<$ @brief default value in case of failsafe to send out for channel 1 $\ast$/}
+
+\mbox{\Hypertarget{ibus_8h_ad6f800af9d451eb3fcbccf3d1eed8b0b}\label{ibus_8h_ad6f800af9d451eb3fcbccf3d1eed8b0b}} 
+\index{ibus.h@{ibus.h}!CH2\_DEFAULT\_VAL@{CH2\_DEFAULT\_VAL}}
+\index{CH2\_DEFAULT\_VAL@{CH2\_DEFAULT\_VAL}!ibus.h@{ibus.h}}
+\doxysubsubsection{\texorpdfstring{CH2\_DEFAULT\_VAL}{CH2\_DEFAULT\_VAL}}
+{\footnotesize\ttfamily \#define CH2\+\_\+\+DEFAULT\+\_\+\+VAL~1500  /$\ast$$\ast$ $<$ @brief default value in case of failsafe to send out for channel 2 $\ast$/}
+
+\mbox{\Hypertarget{ibus_8h_a3545e45c5b80e4bbc9c21f5839e28605}\label{ibus_8h_a3545e45c5b80e4bbc9c21f5839e28605}} 
+\index{ibus.h@{ibus.h}!CH3\_DEFAULT\_VAL@{CH3\_DEFAULT\_VAL}}
+\index{CH3\_DEFAULT\_VAL@{CH3\_DEFAULT\_VAL}!ibus.h@{ibus.h}}
+\doxysubsubsection{\texorpdfstring{CH3\_DEFAULT\_VAL}{CH3\_DEFAULT\_VAL}}
+{\footnotesize\ttfamily \#define CH3\+\_\+\+DEFAULT\+\_\+\+VAL~1000  /$\ast$$\ast$ $<$ @brief default value in case of failsafe to send out for channel 3 $\ast$/}
+
+\mbox{\Hypertarget{ibus_8h_a8232de80aeeb10246443862add4949ef}\label{ibus_8h_a8232de80aeeb10246443862add4949ef}} 
+\index{ibus.h@{ibus.h}!CH4\_DEFAULT\_VAL@{CH4\_DEFAULT\_VAL}}
+\index{CH4\_DEFAULT\_VAL@{CH4\_DEFAULT\_VAL}!ibus.h@{ibus.h}}
+\doxysubsubsection{\texorpdfstring{CH4\_DEFAULT\_VAL}{CH4\_DEFAULT\_VAL}}
+{\footnotesize\ttfamily \#define CH4\+\_\+\+DEFAULT\+\_\+\+VAL~1500  /$\ast$$\ast$ $<$ @brief default value in case of failsafe to send out for channel 4 $\ast$/}
+
+\mbox{\Hypertarget{ibus_8h_a6aba7f5d7ba7bda602bead188c019567}\label{ibus_8h_a6aba7f5d7ba7bda602bead188c019567}} 
+\index{ibus.h@{ibus.h}!CH5\_DEFAULT\_VAL@{CH5\_DEFAULT\_VAL}}
+\index{CH5\_DEFAULT\_VAL@{CH5\_DEFAULT\_VAL}!ibus.h@{ibus.h}}
+\doxysubsubsection{\texorpdfstring{CH5\_DEFAULT\_VAL}{CH5\_DEFAULT\_VAL}}
+{\footnotesize\ttfamily \#define CH5\+\_\+\+DEFAULT\+\_\+\+VAL~1000  /$\ast$$\ast$ $<$ @brief default value in case of failsafe to send out for channel 5 $\ast$/}
+
+\mbox{\Hypertarget{ibus_8h_a70d7a8f0d7cc3d3d326fc80da85a6c4f}\label{ibus_8h_a70d7a8f0d7cc3d3d326fc80da85a6c4f}} 
+\index{ibus.h@{ibus.h}!CH6\_DEFAULT\_VAL@{CH6\_DEFAULT\_VAL}}
+\index{CH6\_DEFAULT\_VAL@{CH6\_DEFAULT\_VAL}!ibus.h@{ibus.h}}
+\doxysubsubsection{\texorpdfstring{CH6\_DEFAULT\_VAL}{CH6\_DEFAULT\_VAL}}
+{\footnotesize\ttfamily \#define CH6\+\_\+\+DEFAULT\+\_\+\+VAL~1000  /$\ast$$\ast$ $<$ @brief default value in case of failsafe to send out for channel 6 $\ast$/}
+
+\mbox{\Hypertarget{ibus_8h_a17f44d896b73fd1a5fbc01f8211974eb}\label{ibus_8h_a17f44d896b73fd1a5fbc01f8211974eb}} 
+\index{ibus.h@{ibus.h}!CH7\_DEFAULT\_VAL@{CH7\_DEFAULT\_VAL}}
+\index{CH7\_DEFAULT\_VAL@{CH7\_DEFAULT\_VAL}!ibus.h@{ibus.h}}
+\doxysubsubsection{\texorpdfstring{CH7\_DEFAULT\_VAL}{CH7\_DEFAULT\_VAL}}
+{\footnotesize\ttfamily \#define CH7\+\_\+\+DEFAULT\+\_\+\+VAL~1000  /$\ast$$\ast$ $<$ @brief default value in case of failsafe to send out for channel 7 $\ast$/}
+
+\mbox{\Hypertarget{ibus_8h_a7939de99f591ae150a87f2cf7480e2eb}\label{ibus_8h_a7939de99f591ae150a87f2cf7480e2eb}} 
+\index{ibus.h@{ibus.h}!CH8\_DEFAULT\_VAL@{CH8\_DEFAULT\_VAL}}
+\index{CH8\_DEFAULT\_VAL@{CH8\_DEFAULT\_VAL}!ibus.h@{ibus.h}}
+\doxysubsubsection{\texorpdfstring{CH8\_DEFAULT\_VAL}{CH8\_DEFAULT\_VAL}}
+{\footnotesize\ttfamily \#define CH8\+\_\+\+DEFAULT\+\_\+\+VAL~1000  /$\ast$$\ast$ $<$ @brief default value in case of failsafe to send out for channel 8 $\ast$/}
+
+\mbox{\Hypertarget{ibus_8h_a379bef039f47bd457b034b91ea232b35}\label{ibus_8h_a379bef039f47bd457b034b91ea232b35}} 
+\index{ibus.h@{ibus.h}!CH9\_DEFAULT\_VAL@{CH9\_DEFAULT\_VAL}}
+\index{CH9\_DEFAULT\_VAL@{CH9\_DEFAULT\_VAL}!ibus.h@{ibus.h}}
+\doxysubsubsection{\texorpdfstring{CH9\_DEFAULT\_VAL}{CH9\_DEFAULT\_VAL}}
+{\footnotesize\ttfamily \#define CH9\+\_\+\+DEFAULT\+\_\+\+VAL~1000  /$\ast$$\ast$ $<$ @brief default value in case of failsafe to send out for channel 9 $\ast$/}
+

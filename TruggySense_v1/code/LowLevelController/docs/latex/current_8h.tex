@@ -1,0 +1,115 @@
+\hypertarget{current_8h}{}\doxysection{lib/current/current.h File Reference}
+\label{current_8h}\index{lib/current/current.h@{lib/current/current.h}}
+
+
+Contains class and pins to enable current measurements with the INA169 and ACS758\+ECB-\/200B current sensors.  
+
+
+{\ttfamily \#include $<$Arduino.\+h$>$}\newline
+Include dependency graph for current.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=193pt]{current_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{current_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classCurrentMeasure}{Current\+Measure}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classCurrentMeasure}{Current\+Measure}} class is responible to initialize the pins, calculate and return the calculated current. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{current_8h_ab495e9fc171ca74f8c512bf02063b1e3}{ADC\+\_\+\+I\+\_\+\+SS}}~41
+\begin{DoxyCompactList}\small\item\em Pin definition of steerig servo current. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{current_8h_a1f4a69abf689940fe708217cfcf3dc7e}{ADC\+\_\+\+I\+\_\+\+HLC}}~39
+\begin{DoxyCompactList}\small\item\em Pin definition of high level controller current. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{current_8h_a1be777a699324e85fb193fe9e896286d}{ADC\+\_\+\+I\+\_\+\+LLC}}~40
+\begin{DoxyCompactList}\small\item\em Pin definition of low level controller current. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{current_8h_ad2bd8d5a301ad1dd417af04d107d25f8}{ADC\+\_\+\+I\+\_\+\+ESC\+\_\+1}}~27
+\begin{DoxyCompactList}\small\item\em Pin definition of ESC 1 current corresponding to Rear Left. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{current_8h_ad0186187bc7c260e3521e58a4dd35034}{AVERAGE\+\_\+\+COUNT}}~12.\+0F
+\begin{DoxyCompactList}\small\item\em The average number represents how many measurements we conduct to calculate an average. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Contains class and pins to enable current measurements with the INA169 and ACS758\+ECB-\/200B current sensors. 
+
+\begin{DoxyAuthor}{Author}
+Robbe Elsermans 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2025-\/04-\/10
+\end{DoxyDate}
+\begin{DoxyNote}{Note}
+the ACS758\+ECB-\/200B current sensor doesn\textquotesingle{}t work at the moment. Only ESC\+\_\+1 is implemented.
+\end{DoxyNote}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2025 Robbe Elsermans, All rights reserved. This project is released under the CC BY-\/\+NC-\/\+SA licence. See licence.\+txt for more information 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{current_8h_ad2bd8d5a301ad1dd417af04d107d25f8}\label{current_8h_ad2bd8d5a301ad1dd417af04d107d25f8}} 
+\index{current.h@{current.h}!ADC\_I\_ESC\_1@{ADC\_I\_ESC\_1}}
+\index{ADC\_I\_ESC\_1@{ADC\_I\_ESC\_1}!current.h@{current.h}}
+\doxysubsubsection{\texorpdfstring{ADC\_I\_ESC\_1}{ADC\_I\_ESC\_1}}
+{\footnotesize\ttfamily \#define ADC\+\_\+\+I\+\_\+\+ESC\+\_\+1~27}
+
+
+
+Pin definition of ESC 1 current corresponding to Rear Left. 
+
+\mbox{\Hypertarget{current_8h_a1f4a69abf689940fe708217cfcf3dc7e}\label{current_8h_a1f4a69abf689940fe708217cfcf3dc7e}} 
+\index{current.h@{current.h}!ADC\_I\_HLC@{ADC\_I\_HLC}}
+\index{ADC\_I\_HLC@{ADC\_I\_HLC}!current.h@{current.h}}
+\doxysubsubsection{\texorpdfstring{ADC\_I\_HLC}{ADC\_I\_HLC}}
+{\footnotesize\ttfamily \#define ADC\+\_\+\+I\+\_\+\+HLC~39}
+
+
+
+Pin definition of high level controller current. 
+
+\mbox{\Hypertarget{current_8h_a1be777a699324e85fb193fe9e896286d}\label{current_8h_a1be777a699324e85fb193fe9e896286d}} 
+\index{current.h@{current.h}!ADC\_I\_LLC@{ADC\_I\_LLC}}
+\index{ADC\_I\_LLC@{ADC\_I\_LLC}!current.h@{current.h}}
+\doxysubsubsection{\texorpdfstring{ADC\_I\_LLC}{ADC\_I\_LLC}}
+{\footnotesize\ttfamily \#define ADC\+\_\+\+I\+\_\+\+LLC~40}
+
+
+
+Pin definition of low level controller current. 
+
+\mbox{\Hypertarget{current_8h_ab495e9fc171ca74f8c512bf02063b1e3}\label{current_8h_ab495e9fc171ca74f8c512bf02063b1e3}} 
+\index{current.h@{current.h}!ADC\_I\_SS@{ADC\_I\_SS}}
+\index{ADC\_I\_SS@{ADC\_I\_SS}!current.h@{current.h}}
+\doxysubsubsection{\texorpdfstring{ADC\_I\_SS}{ADC\_I\_SS}}
+{\footnotesize\ttfamily \#define ADC\+\_\+\+I\+\_\+\+SS~41}
+
+
+
+Pin definition of steerig servo current. 
+
+\mbox{\Hypertarget{current_8h_ad0186187bc7c260e3521e58a4dd35034}\label{current_8h_ad0186187bc7c260e3521e58a4dd35034}} 
+\index{current.h@{current.h}!AVERAGE\_COUNT@{AVERAGE\_COUNT}}
+\index{AVERAGE\_COUNT@{AVERAGE\_COUNT}!current.h@{current.h}}
+\doxysubsubsection{\texorpdfstring{AVERAGE\_COUNT}{AVERAGE\_COUNT}}
+{\footnotesize\ttfamily \#define AVERAGE\+\_\+\+COUNT~12.\+0F}
+
+
+
+The average number represents how many measurements we conduct to calculate an average. 
+

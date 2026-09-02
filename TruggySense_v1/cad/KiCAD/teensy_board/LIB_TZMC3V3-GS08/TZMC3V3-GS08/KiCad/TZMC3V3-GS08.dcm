@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP TZMC3V3-GS08
+D Vishay, 3.3V Zener Diode 5% 500 mW SMT 2-Pin MiniMELF
+K
+F https://www.vishay.com/docs/84122/tzm.pdf
+$ENDCMP
+#
+#End Doc Library

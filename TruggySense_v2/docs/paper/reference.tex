@@ -1,0 +1,399 @@
+\documentclass[conference,a4paper]{IEEEtran}
+\IEEEoverridecommandlockouts
+
+% Some very useful LaTeX packages include:
+% (uncomment the ones you want to load)
+\usepackage[utf8]{inputenc}
+
+
+% *** CITATION PACKAGES ***
+%
+\usepackage{cite}
+
+
+% *** GRAPHICS RELATED PACKAGES ***
+%
+\usepackage[pdftex]{graphicx}
+% declare the path(s) where your graphic files are
+\graphicspath{{./Images/}}
+% and their extensions so you won't have to specify these with
+% every instance of \includegraphics
+% \DeclareGraphicsExtensions{.PDF,.jpeg,.png}
+\makeatletter
+\newcommand\footnoteref[1]{\protected@xdef\@thefnmark{\ref{#1}}\@footnotemark}
+\makeatother
+% https://tex.stackexchange.com/a/35044
+
+% *** MATH PACKAGES ***
+%
+\usepackage[cmex10]{amsmath}
+\usepackage[detect-all]{siunitx}
+
+
+
+% *** SPECIALIZED LIST PACKAGES ***
+%
+\usepackage{algorithmic}
+
+
+% *** ALIGNMENT PACKAGES ***
+%
+%\usepackage{array}
+
+%\usepackage{mdwmath}
+%\usepackage{mdwtab}
+
+% IEEEtran contains the IEEEeqnarray family of commands that can be used to
+% generate multiline equations as well as matrices, tables, etc., of high
+% quality.
+
+%\usepackage{eqparbox}
+
+% *** SUBFIGURE PACKAGES ***
+%\usepackage[tight,footnotesize]{subfigure}
+
+%\usepackage[caption=false]{caption}
+%\usepackage[font=footnotesize]{subfig}
+
+\usepackage[caption=false,font=footnotesize]{subfig}
+
+% *** FLOAT PACKAGES ***
+%
+%\usepackage{fixltx2e}
+
+%\usepackage{stfloats}
+
+%\fnbelowfloat
+
+% *** PDF, URL AND HYPERLINK PACKAGES ***
+%
+\usepackage[obeyspaces]{url}
+\usepackage{xurl}
+
+% Advanced table environment
+\usepackage{booktabs}
+
+% correct bad hyphenation here
+\hyphenation{op-tical net-works semi-conduc-tor}
+
+
+\begin{document}
+%
+% paper title
+% can use linebreaks \\ within to get better formatting as desired
+\title{Performance Impact and Mitigation Approaches of Latency in ROS-based Autonomous Systems}
+
+% author names and affiliations
+\author{
+	\IEEEauthorblockN{
+		Thomas Kramp\IEEEauthorrefmark{1}, 
+		Jan Steckel\IEEEauthorrefmark{1} \IEEEauthorrefmark{2}
+	}
+	\IEEEauthorblockA{
+		\IEEEauthorrefmark{1}Faculty of Applied Engineering: Department of \mbox{Electronics-ICT} - University of Antwerp, Antwerp, Belgium, \\
+		\IEEEauthorrefmark{2}Flanders Make Strategic Research Centre, Lommel, Belgium
+	}
+	\thanks{Master's thesis to obtain the diploma 
+			Master of Science in: Electronics and Information and Communication Technology. Academic year \mbox{2024-2025}.
+			This Master's thesis is an examination document that may not have been corrected for any errors in its final version. 
+			Reproduction and copying of this publication or parts thereof is prohibited without the prior written consent of 
+			both the supervisor(s) and the author(s). For requests or information regarding the publishing and/or use and/or 
+			realisation of parts of this publication, please contact the university at which the author is registered.
+			Prior written consent of the supervisor(s) is also required for the use of the (original) methods, products, 
+			circuits and programmes described in this thesis for industrial or commercial use and for the submission of this 
+			publication for participation in scientific prizes or competitions.
+
+			This document has been assessed by supervisor(s) and/or supervisors in accordance with the faculty 
+			Master's thesis regulations.}
+}
+
+% make the title area
+\maketitle
+
+\setlength{\parskip}{0em}
+\setlength{\parindent}{10pt}
+\begin{abstract}
+%\boldmath
+The continuous research and development in the field of autonomous vehicles (AVs) is accelerating the transition from human driven vehicles towards a fully driverless option.
+Thus, it necessitates a reliable performance of \mbox{time-critical} applications. 
+A firmware often used during the development of such systems is the Robot Operating System (ROS). 
+However, it is a well studied and documented fact that ROS has inherent latency issues. 
+To solve these \mbox{real-time} processing issues, the Robot Operating System 2 (ROS2) was developed, improving upon scheduling and \mbox{real-time} applications, and adding \mbox{build-in} security, yet some latency issues still persist.
+This paper aims to investigate the impact of these latency issues on the performance of AV systems and explore potential mitigation strategies if needed.
+\end{abstract}
+
+\setlength{\parskip}{0em}
+\setlength{\parindent}{10pt}
+\begin{keywords}
+Autonomous vehicles, ROS, ROS2
+\end{keywords}
+
+\setlength{\parskip}{0em}
+\setlength{\parindent}{0pt}
+\section{Introduction}
+
+\setlength{\parskip}{0em}
+\setlength{\parindent}{10pt}
+% Fully autonomous vehicle paragraph
+Automated driving technology has been a topic of wide research due to its potential for smart urban mobility, though an autonomous vehicle (AV) can only be referred to as truly autonomous if it is able to perform all driving functions independently without external intervention \cite{Faisal2019}. 
+However, legislators and policy makers are still unprepared to implement regulations for true AVs, not only due to practical concerns, but also because of ethical and legal implications \cite{Martinho2021}. 
+When an AV is in use, it relies on a multitude of sensors to perceive its environment, such as cameras, LIDAR and RADAR. 
+Yet, when an accident occurs, it is often unclear who is to blame: the manufacturer of the vehicle, the software developer or the vehicle’s driver. 
+This is why control must always be in the hand of a human driver.
+
+\setlength{\parskip}{1em}
+\setlength{\parindent}{10pt}
+% Non-fully autonomous vehicle paragraph
+Even though fully AVs may never be completely implemented, there is still a significant amount of potential in Driver Assistance Systems (DAS) and the research towards it. 
+According to the Federal Automated Vehicles Policy, a vehicle can still be defined as an AV if the driver is able to shift \mbox{safety-critical} functions to the system \cite{DoT2016} (level 3 autonomy or higher in Table~\ref{tab:autonomy_levels}). 
+Included in these \mbox{safety-critical} system, which were developed during the research towards AVs, are \mbox{Anti-lock} Braking Systems (ABS), Adaptive Cruise Control (ACC) and Lane Departure Warning (LDW) \cite{Marin2019, Lengyel2020}. 
+However, for the driver to be able to hand over control, the system needs to support a wide variety of sensors to detect the surroundings reliably and make \mbox{real-time} decisions based on that data. 
+The Robot Operating System (ROS) is widely used for these purposes \cite{Enright2024}.
+
+% Autonomy levels
+\begin{table}[!t]
+	\centering
+	\begin{tabular}{|c|c|}
+		\toprule
+			Level & Description \\
+		\midrule
+			1 & Most functions are controlled by the driver \\
+			2 & At least one driver assisted function is automated \\
+			3 & Driver is able to shift \mbox{safety-critical} functions to the system \\
+			4 & Fully autonomous in most driving scenarios \\
+			5 & Full automation that is equal to a human driver \\
+		\bottomrule
+	\end{tabular}
+	\caption{Levels of Vehicle Autonomy \cite{DoT2016, Wang2018}.}
+	\label{tab:autonomy_levels}
+\end{table}
+
+\setlength{\parskip}{1em}
+\setlength{\parindent}{10pt}
+% ROS introduction paragraph
+ROS is capable of handling programs written in various languages and running across multiple machines, in which each sensor and actuator is represented as a node that consists of a C++ program or Python script that would perform a specific task. 
+Since the framework is \mbox{open-source}, various packages have been developed by a multitude of institutions and developers, making it simple and quick to implement a wide range of tasks \cite{Panayiotou2022}. 
+However, ROS functions as a middleware layer rather than a standalone Operating System (OS), thus the scheduling of tasks are subject to both the ROS and underlying OS schedulers, making for complex timing behavior \cite{Casini2019}. 
+Even so, both ROS and ROS2 are widely used for AV development, leading to the possibility that their \mbox{real-time} complications are either acceptable or negligible within an AV context.
+
+\setlength{\parskip}{0em}
+\setlength{\parindent}{0pt}
+\section{Background}
+
+\setlength{\parskip}{0em}
+\setlength{\parindent}{0pt}
+\subsection{ROS and ROS2 latency}
+
+\setlength{\parskip}{0em}
+\setlength{\parindent}{10pt}
+% ROS design paragraph
+ROS was initially designed as a platform to build \mbox{single-robot} applications on. 
+It supports a network of processes, called nodes, that each perform a specific task \cite{Quigley2009}. 
+These are connected by a central node, named “the ROS master node”, that communicates with each node and acts as a liaison between them \cite{White2019}. 
+Introducing a single point of failure and a bottleneck \cite{Macenski2022}.
+
+\setlength{\parskip}{1em}
+\setlength{\parindent}{10pt}
+% ROS communication paragraph
+ROS utilizes three communication patterns for all node interactions \cite{Maruyama2016, Chaves2022}:
+\setlength{\parskip}{0em}
+\setlength{\parindent}{0pt}
+\begin{itemize}
+	\item Topics, which act as a \mbox{Publisher-Subscriber} (\mbox{Pub-Sub}) architecture, enabling publishers to broadcast a topic over a channel to which any subscriber can listen.
+	\item Services, which act as a synchronous client/server model, in which a client node sends a request to a server node and waits for it to respond, unable to perform another task while waiting.
+	\item Actions, which act as an asynchronous client/server model, in which a client node sends a request to a server node, except the client node can execute other task while waiting for the response of the server node.
+\end{itemize}
+\setlength{\parskip}{0em}
+\setlength{\parindent}{0pt}
+These patterns utilize ROSTCP and ROSUDP (as seen in Figure~\ref{fig:ros_stack}), which are based on the TCP and UDP protocols, respectfully \cite{Macenski2022}.
+Leading to added latency in regards to the TCP overhead--due to acknowledgements, retransmissions and ordered delivery--and UDP not guaranteeing delivery.
+
+\setlength{\parskip}{1em}
+\setlength{\parindent}{10pt}
+% ROS2 alterations paragraph
+ROS2 transitions from custom protocols to the Data Distribution Service (DDS) middleware for its communication infrastructure (as seen in Figure~\ref{fig:ros_stack}), with it being designed for \mbox{high-performance}, \mbox{real-time} and interoperable \mbox{Pub-Sub} communication \cite{Macenski2022}.
+% Improvements sub-section
+Integrating the DDS removes the need for a master node, removing the bottleneck and single point of failure; 
+and adds Quality of Service (QoS) policies to the communication patterns, giving more control over message delivery in case of Topics, and improving reliability of both Services and Actions \cite{Macenski2022},
+% Hindrances sub-section
+However, some added features impede its \mbox{real-time} performance, such as:
+\setlength{\parskip}{0em}
+\setlength{\parindent}{0pt}
+\begin{itemize}
+	\item The \mbox{build-in} security capabilities that, if used, will increase the latency drastically \cite{Kim2018}.
+	\item The default callback executors lacking a priority mechanism, causing buffer overflows and missed deadlines \cite{Casini2019}.
+\end{itemize}
+
+% ROS stack figure
+\begin{figure}[!t]
+	\centering
+	\includegraphics[width=\columnwidth]{ROS_stack}
+	\caption{ROS and ROS2 Stack \cite{Maruyama2016}.}
+	\label{fig:ros_stack}
+\end{figure}
+
+\setlength{\parskip}{0.5em}
+\setlength{\parindent}{0pt}
+\subsection{ROS latency for AVs}
+
+\setlength{\parskip}{0em}
+\setlength{\parindent}{10pt}
+% Introduction to ROS latency
+An essential measurement for an AV is the time needed to come to a complete halt.
+The stopping time therefore consist of the (1) reaction time, (2) the time needed to press the breaks, (3) the start to decelerate and (4) the time to stop\label{execturion_time} \cite{Lengyel2020}.
+Only (1) and (2) are crucial regarding communication latency within an AV, since the system needs to act as follows within that time frame:
+\begin{enumerate}
+	\item Sensor takes a measurement.
+	\item Measurement is transferred to the OS.
+	\item OS makes a decision.
+	\item Command is transferred to an actuator.
+	\item Actuator executes its task.
+\end{enumerate}
+Dedicated studies show that this time, in regards to human reaction, averages around 0.3s \cite{Jurecki2012}, thus the latency on the internal communication must stay below that value.
+
+\setlength{\parskip}{1em}
+\setlength{\parindent}{10pt}
+% Car data rates
+Todays smart cars--from manufacturers such as Toyota, Porsche, Volkswagen, BMW and Tesla--utilize \mbox{real-time} \mbox{intra-vehicle} wired connection protocols to transmit sensor data and actuator commands, with their data rates ranging between 20Kb/s and 20Mb/s \cite{Wang2018}.
+% ROS latency measurements
+Table~\ref{tab:system_specifications} shows the performance of 5 different systems that use ROS2 within an \mbox{End-to-End} (E2E) \mbox{Pub-Sub} setup.
+These tests produced data rates comparable to the ones used in current cars, though the latency alone of system (3) equals the reaction time as stated above, making it unsuitable for AV applications.
+
+Notably, the three systems with the lowest latency (those being (1), (2) and (5)) do not have the highest specifications.
+These systems do explicitly implement \mbox{Intra-Process} Communication (IPC), by which messages are sent via \mbox{in-process} memory instead of the ROS2 middleware layer.
+Thus, the latency produced by ROS2 is less dependent on the hardware and more dependent on how it is implemented.
+This is best shown in \cite{Maruyama2016}, where they tested different DDSs and modes (as seen in Table~\ref{tab:dds_data_rates}).
+
+\setlength{\parskip}{0em}
+\setlength{\parindent}{0pt}
+% System specification
+\begin{table*}[!t]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|c|c|}
+		\toprule
+			Index & CPU & Clock speed & RAM & Latency & Packet size & Citation & E2E connection \\
+		\midrule
+			1-1 & \mbox{Intel Core i5 3470} & 3.2GHz & 16GB & Packet deadline at 100ms & 64KB - 4MB & \cite{Maruyama2016} & With 1-2 \\
+			1-2 & \mbox{Intel Core i5 2320} & 3.0GHz & 8GB & The same as 1-1 & The same as 1-1 & \cite{Maruyama2016} & With 1-1 \\
+			2 & \mbox{Intel i7-6800K} & 3.4GHz & 32GB & Communications were below 1ms & 8MB & \cite{Macenski2022} & None mentioned \\
+			3 & \mbox{Intel Xeon E2278} GE & 3.3GHz & 32GB & Average latency of 300ms & None mentioned & \cite{Betz2023Feb} & With LiDAR \\
+			4 & \mbox{AMD EPYC 7313P} & 3.0GHz & 32GB & Average latency of 152ms & None mentioned & \cite{Betz2023Jun} & With LiDAR \\
+			5 & \mbox{Quad-Core Cortex-A72} & 1.5GHz & Max. 8GB & 4.5ms & 500KB & \cite{Macenski2023} & With RaspBerry Pi 4B \\
+		\bottomrule
+	\end{tabular}
+	\caption{The system specification and packet sizes used to test ROS2 latency.}
+	\label{tab:system_specifications}
+\end{table*}
+
+\setlength{\parskip}{0em}
+\setlength{\parindent}{0pt}
+% DDS data rates
+\begin{table}[!t]
+	\centering
+	\begin{tabular}{|c|c|c|}
+		\toprule
+			Implementation & Maintained the packet deadline & For packet size \\
+		\midrule
+			FastRTPS DDS & Could not maintain & 256B \\
+			Connext DDS & Reliably maintains & 64KB \\
+			OpenSlice DDS & Under \mbox{best-effort} maintains & 1MB \\
+			IPC & Maintains & 4MB \\
+		\bottomrule
+	\end{tabular}
+	\caption{Paraphrased version of "Table 4: Capabilities of ROS1 and/or ROS2 for each Data Transport" in \cite{Maruyama2016}.}
+	\label{tab:dds_data_rates}
+\end{table}
+
+\setlength{\parskip}{1em}
+\setlength{\parindent}{10pt}
+However, it should be noted that systems (3) and (4) do not explicitly state that they do or do not use IPC, and that they process LiDAR data, which can produce more than 10MB of data per packet.
+In addition, \cite{Macenski2023} tested single- and \mbox{multi-threaded} processing, the latter also being tested with loaned messages\footnote{With loaned messages both the publisher and subscriber utilize the same data buffers.} and IPC, finding that IPC achieved the lowest latency at the cost of being highly unstable when not implemented correctly. 
+
+\setlength{\parskip}{0.5em}
+\setlength{\parindent}{0pt}
+\subsection{ROS latency due to security}
+
+\setlength{\parskip}{0em}
+\setlength{\parindent}{10pt}
+As previously mentioned, the internal encryption of ROS2 can increase the latency drastically, doubling it in wired applications and tripling the latency in wireless applications \cite{Kim2018}.
+Using a VPN (SSL/STL) is a better alternative, since the latency only increases with ~25\% and the throughput remains unchanged \cite{Kim2018}, compared to halved with the internal encryption, 
+though encryption is redundant for an AV internally, since any data generated by the sensors is used in \mbox{real-time} and then discarded.
+Connections with sensors and actuators should be wired to reduce latency.
+Only the wireless connections need to have encryption integrated.
+
+\setlength{\parskip}{0.5em}
+\setlength{\parindent}{0pt}
+\subsection{ROS2 \mbox{plug-in} frameworks to reduce latency}
+
+% Autoware explanation
+\subsubsection{Autoware}
+Autoware is a software based on ROS2 that is designed for AVs which are intended to drive in urban areas.
+Similar to ROS, Autoware has a wide support of external modules--such as sensors and actuators--yet its focus lies with LiDAR and camera technology.
+To achieve \mbox{real-time} processing, it filters and \mbox{pre-processes} the point cloud data that is generated by the LiDAR sensor \cite{Kato2018}.
+The result is that a group of raw data points, within a certain cubic area, is reduced to a singular centroid, subsequently downsampling the point cloud.
+The resulting point cloud is utilized in both its localization and detection, the latter influencing its predictions in how the surrounding objects will be moving compared to the car itself.
+Using both its location and prediction it will decide on the next action to perform (as can be seen in Figure~\ref{fig:autoware_data_processing}).
+
+The resulting E2E execution time (equaling all four time stamps mentioned in section~\ref{execturion_time}) would average around 50ms for an \mbox{Intel Core i7-6700K} (4.0GHz) using 32GB of memory \cite{Kato2018}.
+This is a 6th of the latency with the comparable system using ROS2 (as seen with example (3) in Table~\ref{tab:dds_data_rates}).
+
+% Autoware data processing
+\begin{figure}[!t]
+	\centering
+	\includegraphics[width=\columnwidth]{autoware_data_processing}
+	\caption{A package configuration diagram of Autoware \cite{Kato2018}.}
+	\label{fig:autoware_data_processing}
+\end{figure}
+
+% PAAM explanation
+\subsubsection{PAAM}
+In ROS2 any callback can directly call the hardware accelerators\footnote{The CPU is a processor capable of generic computations, while an accelerator is an \mbox{add-on} that helps the CPU with specific tasks such as the GPU with graphical computations and the TPU with machine learning computations.}.
+When multiple processes complete their callback at the same time and try to utilize those accelerators, there is no priority on who will acquire the accelerators first, resulting in missed deadlines and latency.
+PAAM is a \mbox{Priority-driven} Accelerator Access Management framework built on top of ROS2.
+It offers accelerator access as a service, such that any ROS2 callback needs to send a request to the PAAM server--a standalone executor dedicated to accelerator access--also making the scheduling more predictable \cite{Enright2024}.
+This reduces the latency on high priority tasks and will drastically increase the latency on \mbox{non-critical} tasks (as can be seen in Figure~\ref{fig:PAAM_task_latency_comparison}).
+
+% PAAM task latency compared to ROS2
+\begin{figure}[!t]
+	\centering
+	\includegraphics[width=\columnwidth]{PAAM_task_latency_comparison}
+	\caption{A E2E latency comparison\footnoteref{note3} between PAAM, PiCAS\footnoteref{note4} and ROS2 \cite{Enright2024}.}
+	\label{fig:PAAM_task_latency_comparison}
+\end{figure}
+\stepcounter{footnote} % Manually increase the footnote counter
+\footnotetext{\label{note3}Chains 1-6 represent critical chains, with chain 1 having the highest priority going down to chain 6 having the lowest priority, while BE \mbox{1-2} represent \mbox{non-critical} \mbox{best-effort} chains \cite{Enright2024}.}
+\stepcounter{footnote} % Manually increase the footnote counter
+\footnotetext{\label{note4}\mbox{Priority-driven} \mbox{Chain-Aware} Scheduling (PiCAS) is an older (in comparison to PAAM) scheduling framework that works on top of the ROS2 stack. \cite{Choi2021}.}
+
+% ROSGM explanation
+\subsubsection{ROSGM}
+Since ROS2 only utilizes a singular fixed management policy for all GPU tasks, its resources aren't used efficiently.
+The ROS2 GPU Management (ROSGM) framework tries to solve this by providing a platform were one can add different policies, in case of "applications that need long time throughput" or "tasks that require \mbox{real-time} execution", allowing for the application to switch between modes, such as \mbox{"heavy-load"} mode or "urgent" mode for the previous examples respectfully.
+To test this framework an \mbox{Intel i5-9400H} CPU processor\footnote{The used CPU clock speed was not mentioned, even so the Intel website states it can reach 4.3GHz \cite{intelProcessor}.} using 24GB of memory was used.
+Their results show that, in applications with an increasing amount of callbacks, this framework reduces latency with \mbox{10-20ms} for to ROS2 systems with latencies of between \mbox{70-90ms} \cite{Wei2016}.
+
+\setlength{\parskip}{0em}
+\setlength{\parindent}{0pt}
+\section{Conclusion}
+
+\setlength{\parskip}{0em}
+\setlength{\parindent}{10pt}
+This paper asks if the latency issues inherent to ROS make it unsuitable for AV applications, since the communication (which includes latency) must be quicker than human reaction to be of any use.
+System (3) and arguably (4) (as seen in Table~\ref{tab:system_specifications}) have a latency that make the performance exceed this reaction time, despite these being high Performance systems with the highest specifications listed in this paper. 
+Showing that ROS is unsuitable for AV applications if it is not implemented with latency reduction in mind.
+
+\setlength{\parskip}{1em}
+\setlength{\parindent}{10pt}
+In order to ensure ROS is applicable, changing settings such as bypassing the schedular via IPC--as shown with systems (1), (2) and (5) (as seen in Table~\ref{tab:system_specifications})--and not utilizing security are shown to reduce the latency to such a degree that it can be used in AVs. 
+In addition, the integration of different frameworks compatible with ROS have been discussed, showing that \mbox{pre-processing} data (in case of Autoware) or changing how the schedular performs (in case of PAAM and ROSGM) can have a certain impact on its performance.
+Thus, leading to the conclusion that ROS can be used for AV applications if applied correctly.
+
+\setlength{\parskip}{1em}
+\setlength{\parindent}{0pt}
+\bibliographystyle{IEEEtran}
+
+\setlength{\parskip}{0em}
+\setlength{\parindent}{0pt}
+\bibliography{bibliography}
+
+\end{document}

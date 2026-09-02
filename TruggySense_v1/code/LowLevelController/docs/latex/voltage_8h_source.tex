@@ -1,0 +1,56 @@
+\hypertarget{voltage_8h_source}{}\doxysection{voltage.\+h}
+\label{voltage_8h_source}\index{lib/voltage/voltage.h@{lib/voltage/voltage.h}}
+\mbox{\hyperlink{voltage_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{15 \textcolor{preprocessor}{\#include <Arduino.h>}}
+\DoxyCodeLine{16 }
+\DoxyCodeLine{17 \textcolor{preprocessor}{\#define ADC\_V\_HLC 24}}
+\DoxyCodeLine{18 \textcolor{preprocessor}{\#define ADC\_V\_LLC 20}}
+\DoxyCodeLine{19 \textcolor{preprocessor}{\#define ADC\_V\_PER 21}}
+\DoxyCodeLine{20 }
+\DoxyCodeLine{21 \textcolor{preprocessor}{\#define ADC\_V\_B\_1 14 }\textcolor{comment}{// C1}}
+\DoxyCodeLine{22 \textcolor{preprocessor}{\#define ADC\_V\_B\_2 15 }\textcolor{comment}{// C2}}
+\DoxyCodeLine{23 \textcolor{preprocessor}{\#define ADC\_V\_B\_3 16 }\textcolor{comment}{// C3}}
+\DoxyCodeLine{24 \textcolor{preprocessor}{\#define ADC\_V\_B\_4 17 }\textcolor{comment}{// C4}}
+\DoxyCodeLine{25 }
+\DoxyCodeLine{30 \textcolor{preprocessor}{\#define AVERAGE\_COUNT 12.0F}}
+\DoxyCodeLine{31 }
+\DoxyCodeLine{32 \textcolor{keyword}{class }\mbox{\hyperlink{classVoltageMeasure}{VoltageMeasure}}}
+\DoxyCodeLine{33 \{}
+\DoxyCodeLine{34 \textcolor{keyword}{private}:}
+\DoxyCodeLine{35     \textcolor{keyword}{const} \textcolor{keywordtype}{float} delta\_v = 0.00322;}
+\DoxyCodeLine{36     \textcolor{keyword}{const} \textcolor{keywordtype}{float} fac\_volt\_3V3 = 0.8913;}
+\DoxyCodeLine{37     \textcolor{keyword}{const} \textcolor{keywordtype}{float} fac\_volt\_3V3\_peri = 0.8913;}
+\DoxyCodeLine{38     \textcolor{keyword}{const} \textcolor{keywordtype}{float} fac\_volt\_5v = 0.6427;}
+\DoxyCodeLine{39     \textcolor{keyword}{const} \textcolor{keywordtype}{float} fac\_volt\_c1 = 0.7674;}
+\DoxyCodeLine{40     \textcolor{keyword}{const} \textcolor{keywordtype}{float} fac\_volt\_c2 = 0.3394;}
+\DoxyCodeLine{41     \textcolor{keyword}{const} \textcolor{keywordtype}{float} fac\_volt\_c3 = 0.2476;}
+\DoxyCodeLine{42     \textcolor{keyword}{const} \textcolor{keywordtype}{float} fac\_volt\_c4 = 0.1803;}
+\DoxyCodeLine{43 }
+\DoxyCodeLine{44     \textcolor{keywordtype}{float} raw\_data[8][(int)\mbox{\hyperlink{voltage_8h_ad0186187bc7c260e3521e58a4dd35034}{AVERAGE\_COUNT}}] = \{0\};}
+\DoxyCodeLine{45     \textcolor{keywordtype}{float} average\_data[8] = \{0\};}
+\DoxyCodeLine{46 }
+\DoxyCodeLine{47 \textcolor{keyword}{public}:}
+\DoxyCodeLine{48     \textcolor{keyword}{enum} \mbox{\hyperlink{classVoltageMeasure_a543420e2be7494b1c26e65f37aad35fb}{volatge\_sources}}}
+\DoxyCodeLine{49     \{}
+\DoxyCodeLine{50         \mbox{\hyperlink{classVoltageMeasure_a543420e2be7494b1c26e65f37aad35fba92bc1fe5cb6e4aa8cdc2fabb3071cb2d}{hlc}}, \textcolor{comment}{// High level controller}}
+\DoxyCodeLine{51         \mbox{\hyperlink{classVoltageMeasure_a543420e2be7494b1c26e65f37aad35fbaef06283dc637d25f70af4fbe372f4c97}{llc}}, \textcolor{comment}{// Low level controller}}
+\DoxyCodeLine{52         \mbox{\hyperlink{classVoltageMeasure_a543420e2be7494b1c26e65f37aad35fba26a6a20a8d418f1443db9963a91dac42}{per}}, \textcolor{comment}{// pheripheral}}
+\DoxyCodeLine{53         \mbox{\hyperlink{classVoltageMeasure_a543420e2be7494b1c26e65f37aad35fba8eb62d654f8d6bb9e3d1c42bdc71bd38}{b\_1}}, \textcolor{comment}{// C1}}
+\DoxyCodeLine{54         \mbox{\hyperlink{classVoltageMeasure_a543420e2be7494b1c26e65f37aad35fba155a59ed73be5bdc3d4d7aada1fd6a4c}{b\_2}}, \textcolor{comment}{// C2}}
+\DoxyCodeLine{55         \mbox{\hyperlink{classVoltageMeasure_a543420e2be7494b1c26e65f37aad35fba49c835a161577f856b3a3e873736cfa3}{b\_3}}, \textcolor{comment}{// C3}}
+\DoxyCodeLine{56         \mbox{\hyperlink{classVoltageMeasure_a543420e2be7494b1c26e65f37aad35fba0a7480906bb0753fcf633176a7faa87a}{b\_4}}, \textcolor{comment}{// C4}}
+\DoxyCodeLine{57         \mbox{\hyperlink{classVoltageMeasure_a543420e2be7494b1c26e65f37aad35fba67c0513fa7a50cbb14e4034e2c7b00bc}{bat}}  \textcolor{comment}{// Summation of Cx}}
+\DoxyCodeLine{58     \};}
+\DoxyCodeLine{59     }
+\DoxyCodeLine{65     uint8\_t \mbox{\hyperlink{classVoltageMeasure_ab0ee6e57a0a5cfde66781fca1f718bed}{init}}();}
+\DoxyCodeLine{66 }
+\DoxyCodeLine{71     \textcolor{keywordtype}{void} \mbox{\hyperlink{classVoltageMeasure_ae84634b8c60f14a93e61f57f1ef66c86}{ReadVoltage}}();}
+\DoxyCodeLine{72 }
+\DoxyCodeLine{79     \textcolor{keywordtype}{float} \mbox{\hyperlink{classVoltageMeasure_abd595d15dfddfc76b0d0ad355e9eba2e}{getVoltageBySource}}(\mbox{\hyperlink{classVoltageMeasure_a543420e2be7494b1c26e65f37aad35fb}{volatge\_sources}} source);}
+\DoxyCodeLine{80 \};}
+
+\end{DoxyCode}

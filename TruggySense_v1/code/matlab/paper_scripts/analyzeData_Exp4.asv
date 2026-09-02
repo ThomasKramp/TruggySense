@@ -1,0 +1,163 @@
+clc;
+clear;
+imgTrack = imread('track_picture.jpeg');
+json_string_fast = fileread("llc_data_12.json" ); %crash
+json_string_slow = fileread("llc_data_2.json" ); %slow driving
+data_fast = jsondecode(json_string_fast);
+data_slow = jsondecode(json_string_slow);
+
+positionLat = [data_fast.latitude];
+positionLong = [data_fast.longitude];
+
+positionLat_slow = [data_slow.latitude];
+positionLong_slow = [data_slow.longitude];
+
+velocityCar = [ data_fast.velocity ];
+
+wheelRPM1 = [data_fast.rpm_wheel_1];
+wheelRPM2 = [data_fast.rpm_wheel_2 ];
+wheelRPM3 = [data_fast.rpm_wheel_3 ];
+wheelRPM4 = [data_fast.rpm_wheel_4 ];
+
+wheelRPM1_s = [data_slow.rpm_wheel_1];
+wheelRPM2_s = [data_slow.rpm_wheel_2 ];
+wheelRPM3_s = [data_slow.rpm_wheel_3 ];
+wheelRPM4_s = [data_slow.rpm_wheel_4 ];
+
+orientationYaw = [ data_fast.yaw ];
+orientationPitch = [ data_fast.pitch ];
+orientationRoll = [ data_fast.roll ];
+
+carServoCurrent = [data_fast.i_ss];
+
+carServoTemperature = [data_fast.t_ss];
+carESCTemperature = [data_fast.t_esc_1];
+carBMTemperature = [data_fast.t_bm_1];
+carBPTemperature = [ data_fast.t_bp ];
+
+carServoTemperature_slow = [data_slow.t_ss];
+carESCTemperature_slow = [data_slow.t_esc_1];
+carBMTemperature_slow = [data_slow.t_bm_1];
+carBPTemperature_slow = [ data_slow.t_bp ];
+
+timestamp = [ data_fast.timestamp ]/1000;
+timestamp_slow = [ data_slow.timestamp ]/1000;
+
+    
+idxValid = find( positionLat > 4 & positionLong > 4 );
+idxValid_slow = find( positionLat_slow > 4 & positionLong_slow > 4 );
+
+
+wheelSpeedsOK = [ wheelRPM1(idxValid);wheelRPM2(idxValid);wheelRPM3(idxValid);wheelRPM4(idxValid) ]';
+wheelSpeedsOK_s = [ wheelRPM1_s(idxValid_slow);wheelRPM2_s(idxValid_slow);wheelRPM3_s(idxValid_slow);wheelRPM4_s(idxValid_slow) ]';
+
+positionLongOK = smooth(positionLong(idxValid));
+positionLatOK = smooth(positionLat(idxValid));
+
+positionLongOK_s = smooth(positionLong_slow(idxValid_slow));
+positionLatOK_s = smooth(positionLat_slow(idxValid_slow));
+
+velocityCarOK = velocityCar(idxValid);
+orientationYawOK = orientationYaw( idxValid );
+orientationPitchOK= orientationPitch( idxValid );
+orientationRollOK = orientationRoll( idxValid );
+
+carServoCurrentOK = carServoCurrent(idxValid);
+
+carServoTemperatureOK_slow = carServoTemperature_slow(idxValid_slow);
+carESCTemperatureOK_slow = carESCTemperature_slow(idxValid_slow);
+carBMTemperatureOK_slow = carBMTemperature_slow(idxValid_slow);
+carBPTemperatureOK_slow = carBPTemperature_slow(idxValid_slow);
+
+carServoTemperatureOK = carServoTemperature(idxValid);
+carESCTemperatureOK = carESCTemperature(idxValid);
+carBMTemperatureOK = carBMTemperature(idxValid);
+carBPTemperatureOK = carBPTemperature(idxValid);
+
+timestampOK = timestamp(idxValid);
+timestampOK_slow = timestamp_slow(idxValid_slow);
+
+% Experiment 1 wheel speed differences
+rangeWheelSpeeds = range( wheelSpeedsOK' );
+rangeWheelSpeeds = rangeWheelSpeeds+abs(min(rangeWheelSpeeds));
+rangeWheelSpeeds = rangeWheelSpeeds./max(rangeWheelSpeeds);
+rangeWheelSpeeds = rangeWheelSpeeds*200-100;
+
+% meanWheelspeedFront =   wheelSpeedsOK(:,1) ;
+% meanWheelspeedBack =   wheelSpeedsOK(:,2) ;
+% 
+% meanWheelspeedFront_s =   wheelSpeedsOK_s(:,1) ;
+% meanWheelspeedBack_s =   wheelSpeedsOK_s(:,2) ;
+
+meanWheelspeedFront =  mean( wheelSpeedsOK(:,[1 4])' )';
+meanWheelspeedBack =  mean( wheelSpeedsOK(:,[2 3])' )';
+
+meanWheelspeedFront_s =  mean( wheelSpeedsOK_s(:,[1 4])' )';
+meanWheelspeedBack_s =  mean( wheelSpeedsOK_s(:,[2 3])' )';
+
+diffFrontBack = meanWheelspeedBack - meanWheelspeedFront;
+diffFrontBack_s = meanWheelspeedBack_s - meanWheelspeedFront_s;
+figure
+hold on
+plot(smooth(meanWheelspeedFront))
+plot(smooth(meanWheelspeedBack), LineStyle="--")
+hold off;
+
+diffFrontBack = diffFrontBack + abs(min(diffFrontBack));
+diffFrontBack = diffFrontBack./max(diffFrontBack);
+diffFrontBack = diffFrontBack*200-100;
+
+diffFrontBack_s = diffFrontBack_s + abs(min(diffFrontBack_s));
+diffFrontBack_s = diffFrontBack_s./max(diffFrontBack_s);
+diffFrontBack_s = diffFrontBack_s*200-100;
+
+%Experiment 2 wheel speed difference front and back
+figure; 
+%sgtitle('Exp 3: "Physical Failure", Difference in front and rear wheel speed normalized');
+plotImageOnTrack( imgTrack, positionLatOK, positionLongOK, smooth(diffFrontBack) )
+title('Exp 3: "Physical Failure",dogbone and rear diff locked');
+
+figure; 
+plotImageOnTrack( imgTrack, positionLatOK_s, positionLongOK_s, smooth(diffFrontBack_s) )
+title('Exp 3: "Physical Failure", slow driving experiment reference');
+
+
+% figure; plotImageOnTrack( imgTrack, positionLatOK, positionLongOK, rangeWheelSpeeds )
+% title('Exp 1: "Slow Driving", Difference in overall wheel speed');
+
+% Experiment 1 GPS track comparison.
+% plotImageOnTrack( imgTrack, positionLatOK, positionLongOK, 0)
+% title('Exp 1: "Slow Driving", GPS overlay of three laps')
+% legend("Path between gps coordinate points")
+
+% Experiment 1 GPS track in combination with pitch angel
+% plotImageOnTrack( imgTrack, positionLatOK, positionLongOK, orientationPitchOK)
+% title('Exp 1: "Slow Driving", pitch angle of three laps');
+
+% Some fancy 3d scatter
+% X = positionLongOK(1:int32(end/3));
+% Y = positionLatOK(1:int32(end/3));
+% Z = orientationPitchOK(1:int32(end/3)).*-1;
+% x = [X(:); X(:); X(:)];
+% y = [Y(:); Y(:); Y(:)];
+% z = [Z(:); Z(:); Z(:)];
+% s = scatter3(x,y,z, 100,z,'filled','MarkerEdgeColor','k');
+% xlabel('longitude (°)');
+% ylabel('latitude (°)');
+% zlabel('pitch angle (°)');
+% colormap(jet);
+% colorbar;
+
+% Experiment 2 Temperature ESC, battery and motor
+% figure;
+% hold on;
+% maximal_length = min([length(carESCTemperatureOK) length(carESCTemperatureOK_slow)]);
+% plot(carESCTemperatureOK(1:maximal_length) - carESCTemperatureOK_slow(1:maximal_length));
+% plot(carBMTemperatureOK(1:maximal_length) - carBMTemperatureOK_slow(1:maximal_length));
+% plot(carBPTemperatureOK(1:maximal_length) - carBPTemperatureOK_slow(1:maximal_length));
+% legend('t_{diff-esc1}', 't_{diff-motor1}', 't_{diff-battery}');
+% xlabel('time (s)');
+% ylabel('temperature (°C)');
+% title('Temperature difference between fast and slow track')
+% grid on;
+% hold off;

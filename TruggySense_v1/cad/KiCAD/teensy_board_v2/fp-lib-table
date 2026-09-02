@@ -1,0 +1,4 @@
+(fp_lib_table
+  (version 7)
+  (lib (name "Teensy")(type "KiCad")(uri "/media/robbe/Nextcloud/UA/Master_Thesis/Portfolio/Tech Report/CAD/KiCAD/Teensy_board/teensy.pretty-master")(options "")(descr ""))
+)

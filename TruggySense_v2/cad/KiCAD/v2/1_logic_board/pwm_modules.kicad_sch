@@ -1,0 +1,916 @@
+(kicad_sch
+	(version 20250114)
+	(generator "eeschema")
+	(generator_version "9.0")
+	(uuid "83af08a7-adc1-49a9-b1f9-892717b110f2")
+	(paper "A4")
+	(lib_symbols
+		(symbol "Connector_Generic:Conn_01x03"
+			(pin_names
+				(offset 1.016)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "J"
+				(at 0 5.08 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "Conn_01x03"
+				(at 0 -5.08 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "connector"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "Connector*:*_1x??_*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "Conn_01x03_1_1"
+				(rectangle
+					(start -1.27 3.81)
+					(end 1.27 -3.81)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(rectangle
+					(start -1.27 2.667)
+					(end 0 2.413)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start -1.27 0.127)
+					(end 0 -0.127)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start -1.27 -2.413)
+					(end 0 -2.667)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin passive line
+					(at -5.08 2.54 0)
+					(length 3.81)
+					(name "Pin_1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 0 0)
+					(length 3.81)
+					(name "Pin_2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 -2.54 0)
+					(length 3.81)
+					(name "Pin_3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+	)
+	(text "https://myosuploads3.banggood.com/products/20220907/20220907032153DS3225datasheet.pdf"
+		(exclude_from_sim no)
+		(at 225.044 167.894 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "61ec798d-064e-480e-9f18-dd1e3de5fa39")
+	)
+	(text "https://www.scribd.com/document/740954956/DS3225-datasheet"
+		(exclude_from_sim no)
+		(at 210.058 170.434 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "ae3b310f-18a4-46aa-9e3b-78acf818d036")
+	)
+	(global_label "PWM_SERVO"
+		(shape input)
+		(at 165.1 77.47 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "10ca4c28-a1ca-4fb0-89d1-90ab78ebeb1f")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 179.2732 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "PWM_M_RR"
+		(shape input)
+		(at 165.1 107.95 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "5aec5fc4-27d5-4679-9589-df580e829324")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 178.1846 107.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "PWM_M_FR"
+		(shape input)
+		(at 165.1 87.63 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "a627014d-2ae4-461f-90bc-63cf2b13f94b")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 178.0032 87.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "PWM_M_RL"
+		(shape input)
+		(at 165.1 118.11 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "cc66a992-2205-4d74-9383-dec34712a970")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 177.9427 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "PWM_M_FL"
+		(shape input)
+		(at 165.1 97.79 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "ec50c50f-6d77-4aae-9977-17a60d8de234")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 177.7613 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector_Generic:Conn_01x03")
+		(at 129.54 74.93 0)
+		(mirror y)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "22662ce1-56dc-42ac-ab56-79f0bfda02d9")
+		(property "Reference" "J12"
+			(at 117.856 77.216 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "PWM_SERVO"
+			(at 117.856 74.676 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "general:JST_XH_B3B-XH-A_1x03_P2.50mm_Vertical"
+			(at 129.54 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://myosuploads3.banggood.com/products/20220907/20220907032153DS3225datasheet.pdf"
+			(at 129.54 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 129.54 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datsheet2" "https://www.scribd.com/document/740954956/DS3225-datasheet"
+			(at 129.54 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "11b61248-ed2e-4d9f-89e9-d5dc9dabf05e")
+		)
+		(pin "1"
+			(uuid "0b4c7c91-1349-48d8-833e-ab757ef13165")
+		)
+		(pin "3"
+			(uuid "819cd781-e0ae-42b5-87bc-dc2e657114a9")
+		)
+		(instances
+			(project "1_logic_board"
+				(path "/8a8d33ee-a184-451b-b823-bc8a1789b1d9/14a4cce9-9ff0-4ca3-88e3-cf252eee7f5e"
+					(reference "J12")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector_Generic:Conn_01x03")
+		(at 129.54 95.25 0)
+		(mirror y)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "3a4e4efc-57c0-45fe-bc39-5e4af4fcf7b5")
+		(property "Reference" "J14"
+			(at 117.856 97.536 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "ESC_MOTOR_FL"
+			(at 117.856 94.996 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "general:JST_XH_B3B-XH-A_1x03_P2.50mm_Vertical"
+			(at 129.54 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 129.54 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 129.54 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "a79535a2-03c3-4af2-9e1c-e45704dee724")
+		)
+		(pin "1"
+			(uuid "749bf8bd-b827-4b6c-8020-4d08972fdc9d")
+		)
+		(pin "3"
+			(uuid "05286f3d-39aa-40c2-a0c4-f3531a694df4")
+		)
+		(instances
+			(project "1_logic_board"
+				(path "/8a8d33ee-a184-451b-b823-bc8a1789b1d9/14a4cce9-9ff0-4ca3-88e3-cf252eee7f5e"
+					(reference "J14")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector_Generic:Conn_01x03")
+		(at 129.54 115.57 0)
+		(mirror y)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "410190ce-e4e4-41f2-b6cf-2d23361a0faf")
+		(property "Reference" "J16"
+			(at 117.856 117.856 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "ESC_MOTOR_RL"
+			(at 117.856 115.316 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "general:JST_XH_B3B-XH-A_1x03_P2.50mm_Vertical"
+			(at 129.54 115.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 129.54 115.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 129.54 115.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "1a6c9413-5945-42d4-829d-7f0ec34eced8")
+		)
+		(pin "1"
+			(uuid "3173bf20-5203-4470-83ea-ed6c4d2469af")
+		)
+		(pin "3"
+			(uuid "24e7990d-174b-4877-acb8-fdcc07a6c4f6")
+		)
+		(instances
+			(project "1_logic_board"
+				(path "/8a8d33ee-a184-451b-b823-bc8a1789b1d9/14a4cce9-9ff0-4ca3-88e3-cf252eee7f5e"
+					(reference "J16")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector_Generic:Conn_01x03")
+		(at 129.54 105.41 0)
+		(mirror y)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "b112bfc1-6a12-4d86-a58f-c8491a25c830")
+		(property "Reference" "J15"
+			(at 117.602 107.442 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "ESC_MOTOR_RR"
+			(at 117.602 104.902 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "general:JST_XH_B3B-XH-A_1x03_P2.50mm_Vertical"
+			(at 129.54 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 129.54 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 129.54 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "8c459f4d-0f50-4696-9b1c-cafa830082e4")
+		)
+		(pin "1"
+			(uuid "019f5402-2d04-40b3-8dae-2404d1275f56")
+		)
+		(pin "3"
+			(uuid "f8886635-cb06-4a2f-8e51-28ebc61e737c")
+		)
+		(instances
+			(project "1_logic_board"
+				(path "/8a8d33ee-a184-451b-b823-bc8a1789b1d9/14a4cce9-9ff0-4ca3-88e3-cf252eee7f5e"
+					(reference "J15")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector_Generic:Conn_01x03")
+		(at 129.54 85.09 0)
+		(mirror y)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "d718f4ad-d44d-4e92-9dc4-b3a705fed16e")
+		(property "Reference" "J13"
+			(at 117.856 87.376 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "ESC_MOTOR_FR"
+			(at 117.856 84.836 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "general:JST_XH_B3B-XH-A_1x03_P2.50mm_Vertical"
+			(at 129.54 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 129.54 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 129.54 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "f98a0bb7-55fa-4123-aa63-1c8045d36026")
+		)
+		(pin "1"
+			(uuid "dfba71e5-2944-4960-9fa4-2403920967d7")
+		)
+		(pin "3"
+			(uuid "db14cfd7-1690-47b9-85cd-3d4081f4a4e6")
+		)
+		(instances
+			(project "1_logic_board"
+				(path "/8a8d33ee-a184-451b-b823-bc8a1789b1d9/14a4cce9-9ff0-4ca3-88e3-cf252eee7f5e"
+					(reference "J13")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(sheet
+		(at 134.62 68.58)
+		(size 30.48 53.34)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "ecc9dcf8-3f8c-4373-8856-7a04c2f83675")
+		(property "Sheetname" "IO_Protection"
+			(at 134.62 67.8684 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "pwm_protection.kicad_sch"
+			(at 134.62 122.5046 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "GND_OUT_1" input
+			(at 134.62 72.39 180)
+			(uuid "54343f70-baec-47e6-87d3-800b1982ec3c")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "GND_OUT_2" input
+			(at 134.62 82.55 180)
+			(uuid "a9270025-b2e9-40f2-8167-a2b3326a1189")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "GND_OUT_3" input
+			(at 134.62 92.71 180)
+			(uuid "6808cae1-ebc1-49b0-be56-aa0b781019d5")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "GND_OUT_4" input
+			(at 134.62 102.87 180)
+			(uuid "4b961905-4353-4969-94f6-22f884c2857c")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "GND_OUT_5" input
+			(at 134.62 113.03 180)
+			(uuid "d6fa7d46-9e93-4f2b-bc65-f1dce0517004")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "IN_1" input
+			(at 165.1 77.47 0)
+			(uuid "3b812bb1-5886-4c63-b50f-524cb93bd550")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "IN_2" input
+			(at 165.1 87.63 0)
+			(uuid "e27c50c5-daf6-4e17-bbba-01072bd15d23")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "IN_3" input
+			(at 165.1 97.79 0)
+			(uuid "d03ff4b1-222e-4488-ae99-abcbacd156a5")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "IN_4" input
+			(at 165.1 107.95 0)
+			(uuid "696263c5-f941-4d55-8bc9-0ffd82b111ff")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "IN_5" input
+			(at 165.1 118.11 0)
+			(uuid "58b4b1b1-9836-4f1d-ae4d-25395a64dcb5")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "OUT_1" output
+			(at 134.62 77.47 180)
+			(uuid "34d9a12b-8759-447a-bf98-77930436c1b9")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "OUT_2" output
+			(at 134.62 87.63 180)
+			(uuid "3afc310a-29be-4172-acb2-6fe09c16a242")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "OUT_3" output
+			(at 134.62 97.79 180)
+			(uuid "dc759fa4-e112-4807-a3fc-b7ac8a4c1f10")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "OUT_4" output
+			(at 134.62 107.95 180)
+			(uuid "544b2c5b-0867-4f11-9cd4-f6906fef899b")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "OUT_5" output
+			(at 134.62 118.11 180)
+			(uuid "ac190b25-5bab-4d80-aa31-e589ec00e7ca")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "VCC_OUT_1" input
+			(at 134.62 74.93 180)
+			(uuid "2342b764-bfb8-4a2f-a115-de731080151c")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "VCC_OUT_2" input
+			(at 134.62 85.09 180)
+			(uuid "59dffc27-f1b9-474b-b3fe-0185c46a0424")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "VCC_OUT_3" input
+			(at 134.62 95.25 180)
+			(uuid "385a1ae8-3464-43c3-a873-fc52bb739f78")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "VCC_OUT_4" input
+			(at 134.62 105.41 180)
+			(uuid "ca32c0e2-66e8-4fb8-aa8c-4fe3a3ee62d8")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "VCC_OUT_5" input
+			(at 134.62 115.57 180)
+			(uuid "38628d55-33de-4248-9778-a09b83b6c92e")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(instances
+			(project "1_logic_board"
+				(path "/8a8d33ee-a184-451b-b823-bc8a1789b1d9/14a4cce9-9ff0-4ca3-88e3-cf252eee7f5e"
+					(page "16")
+				)
+			)
+		)
+	)
+)

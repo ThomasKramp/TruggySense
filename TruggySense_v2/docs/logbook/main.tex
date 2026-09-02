@@ -1,0 +1,737 @@
+\documentclass[12pt,a4paper,twoside]{article}
+
+% Packages
+\usepackage{graphicx}   % For including images
+\usepackage{geometry}   % For margin control
+\usepackage{ragged2e}   % For left/right alignment
+\usepackage{titling}    % Allows retrieving \title, \author, \subtitle
+\usepackage{titlesec}   % For subtitle support
+\usepackage{mathptmx}   % For common fonts
+\usepackage{lastpage}   % Defines the total amount of pages
+\usepackage{listings}   % For code use
+\usepackage{xcolor}
+
+\usepackage[english]{babel} % load the proper language(s)
+\usepackage[backref,hyperindex=true,pagebackref=true]{hyperref} % generate PDFs with clickable links
+\usepackage[export]{adjustbox} % change the default image alignment
+
+\usepackage{booktabs}
+\usepackage{fancyhdr}
+\usepackage{tabularray}
+
+\graphicspath{{./images/}} % Path for images
+
+
+% ---------------------- Document variables ----------------------
+\newcommand{\documenttitle}{II-MAP:\@ LOGBOOK}
+\newcommand{\documentsubtitle}{Universiteit van Antwerpen
+Toegepaste Ingenieurswetenschappen (Elektronica-ICT)}
+\newcommand{\documentauthor}{Kramp Thomas}
+
+
+% ---------------------- Page layout ----------------------
+\geometry{top=2cm,left=2cm,right=2cm,bottom=2cm}
+\AddToHook{cmd/section/before}{\clearpage}
+
+
+% ---------------------- Header and footer layout ----------------------
+\pagestyle{empty}               % temporarily for cover page
+\setlength{\footskip}{1.2cm}    % Footer spacing
+\fancypagestyle{mainstyle}{     % Define the fancy book-style footer
+    \fancyhf{}
+    \fancyhead[LE,LO]{\documenttitle}   % title to left of all page headers
+    \fancyfoot[LE]{\thepage\ of\ \pageref*{LastPage}} % left footer on even pages
+    \fancyfoot[RO]{\thepage\ of\ \pageref*{LastPage}} % right footer on odd pages
+    \renewcommand{\headrulewidth}{0pt}
+    \renewcommand{\footrulewidth}{0pt}
+}
+
+
+% ---------------------- Hyperlink setup ----------------------
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+}
+\lstset{escapeinside={(*@}{@*)}}
+
+
+% ---------------------- Listings setup ----------------------
+\usepackage{enumitem}
+\usepackage{array}
+\setlist[itemize]{
+    label=--,
+    topsep=0pt,
+    itemsep=0pt,
+    parsep=0pt,
+    partopsep=0pt
+}
+
+
+% ---------------------- Document ----------------------
+\begin{document}
+
+\thispagestyle{empty}
+
+% Cover page
+{\Huge\bfseries \documenttitle\par}
+\vspace{0.5cm}
+{\large \documentauthor\par}
+\vspace{5.3cm}
+\includegraphics[width=0.69\textwidth, right]{ua_logo}
+\vfill
+\begin{flushright}
+    {\Large \documentsubtitle}
+\end{flushright}
+
+% Start page count from the second page
+\thispagestyle{empty}   % cover page has no number
+\clearpage              % go to page 2
+\pagestyle{fancy}       % make sure page 2+ use fancy headers/footers
+\pagestyle{mainstyle}   % enable mirrored pages
+
+% ---------------------- MAIN CONTENT ----------------------
+\begin{table}[!t]
+	\centering
+	\begin{tabular}{c p{14cm}}
+		\toprule
+			Date & Action \\
+		\midrule
+            % Week 1
+            % --------------------------------------------
+			\raisebox{-3.33mm}{05/01/2026} & 
+            \begin{itemize}
+                \item Setup docs: Paper, Portfolio, Logbook \& Reports
+                \item Add LLC review to Portfolio
+            \end{itemize} \\
+
+			\raisebox{-3.33mm}{07/01/2026} & 
+            \begin{itemize}
+                \item Create LLC schematic
+            \end{itemize} \\
+
+			\raisebox{-3.33mm}{09/01/2026} & 
+            \begin{itemize}
+                \item Create LLC PCB
+            \end{itemize} \\
+
+			\raisebox{-3.33mm}{11/01/2026} & 
+            \begin{itemize}
+                \item Continue working on LLC PCB
+            \end{itemize} \\
+
+        \midrule
+            % Week 2
+            % --------------------------------------------
+
+        \midrule
+            % Week 3
+            % --------------------------------------------
+			\raisebox{-3.33mm}{19/01/2026} & 
+            \begin{itemize}
+                \item Add new LLC review to portfolio (no more JLCPCB)
+                \item Disassemble TruggySense v1
+                \item Add temperature sensor review to portfolio
+                \item Create and finish temperature sensor schematic and PCB
+            \end{itemize} \\
+
+			\raisebox{-3.33mm}{20/01/2026} & 
+            \begin{itemize}
+                \item Figured out the external ADC usage (conflicting documentation)
+            \end{itemize} \\
+
+			\raisebox{-3.33mm}{21/01/2026} & 
+            \begin{itemize}
+                \item Made changes to the temperature sensor schematic and PCB to adhere to school components
+                \item Added the defense of ADC usage in the portfolio.
+                \item Started on figuring out the power supply (missing documentation).
+            \end{itemize} \\
+
+        \midrule
+            % Week 4
+            % --------------------------------------------
+			\raisebox{-3.33mm}{23/01/2026} & 
+            \begin{itemize}
+                \item Finished figuring out the power supply (missing documentation).
+                \item Made a schematic of missing power supply documentation.
+            \end{itemize} \\
+
+			\raisebox{-3.33mm}{25/01/2026} & 
+            \begin{itemize}
+                \item Added the defense for the HLC, Motion sensor, Wheel actuator and Ampere meter in the portfolio.
+                \item Started on the defense for the Position sensor, RC controller and wifi in the portfolio.
+                \item Worked on the defense of the supply and DC/DC converter in the portfolio.
+                \item Added power use expectation table.
+                \item Added I²C address use table.
+            \end{itemize} \\
+
+			\raisebox{-3.33mm}{27/01/2026} & 
+            \begin{itemize}
+                \item Added the defense for the Motion sensor, Position sensor in the portfolio.
+                \item Added reasoning of portfolio v1 to portfolio v2.
+                \item Added Kiwi, Conrad and Antratek to each stock table.
+                \item Updated power use expectation table.
+                \item Updated I²C address use table.
+            \end{itemize} \\
+
+			\raisebox{-3.33mm}{01/02/2026} & 
+            \begin{itemize}
+                \item Completed the defense for the LLC, Long range communication and Current sensor in the portfolio.
+            \end{itemize} \\
+
+        \midrule
+            % Week 5
+            % --------------------------------------------
+			\raisebox{-3.33mm}{02/02/2026} & 
+            \begin{itemize}
+                \item Added defense for the DC/DC converter to the portfolio.
+                \item Added Otronic to the stock tables.
+                \item Made it so only two of the following web-shops show: Kiwi, Conrad, Antratek and Otronic.
+                \item Changed the long-range communication defense based on feedback.
+            \end{itemize} \\
+
+			\raisebox{-3.33mm}{03/02/2026} & 
+            \begin{itemize}
+                \item Added Shunt resistor calculations to the current meter defense.
+                \item Create a schematic and PCB for the Power Supply PCB.
+            \end{itemize} \\
+	\end{tabular}
+\end{table}
+
+\begin{table}[!t]
+	\centering
+	\begin{tabular}{c p{14cm}}
+
+			\raisebox{-3.33mm}{06/02/2026} & 
+            \begin{itemize}
+                \item Added KiCAD guides.
+                \item Cleaned up and sorted old .stl files and their FreeCAD/OpenSCAD file.
+                \item Created an overview of all external libraries and their references.
+                \item Created a defense for and made changes to the IO protection circuits.
+            \end{itemize} \\
+
+			\raisebox{-3.33mm}{08/02/2026} & 
+            \begin{itemize}
+                \item Recreated the PCB layout for the nRF24L01 and PIM448 modules.
+                \item Recreated the PCB for the INA219 and LM2596 modules.
+                \item Continued on the IO protection defense.
+            \end{itemize} \\
+
+        \midrule
+            % Week 6
+            % --------------------------------------------
+			\raisebox{-3.33mm}{09/02/2026} & 
+            \begin{itemize}
+                \item Edited the IO protection circuits based on feedback.
+                \item Created a CSV for the low-pass filter/voltage divider circuit.
+                \item Created a schematic for the position module.
+            \end{itemize} \\
+
+
+        \midrule
+            % Week 7
+            % --------------------------------------------
+			\raisebox{-3.33mm}{16/02/2026} & 
+            \begin{itemize}
+                \item Created a PCB for the position module.
+                \item Started on the logic PCB schematic.
+            \end{itemize} \\
+
+			\raisebox{-3.33mm}{18/02/2026} & 
+            \begin{itemize}
+                \item Continued on the logic PCB schematic.
+            \end{itemize} \\
+
+			\raisebox{-3.33mm}{19/02/2026} & 
+            \begin{itemize}
+                \item Finished the logic PCB schematic.
+                \item Started on the logic PCB design.
+            \end{itemize} \\
+
+			\raisebox{-3.33mm}{20/02/2026} & 
+            \begin{itemize}
+                \item Continued on the logic PCB design.
+            \end{itemize} \\
+
+        \midrule
+            % Week 8
+            % --------------------------------------------
+			\raisebox{-3.33mm}{24/02/2026} & 
+            \begin{itemize}
+                \item Made the powerpoint for the first presentation.
+            \end{itemize} \\
+
+			\raisebox{-3.33mm}{25/02/2026} & 
+            \begin{itemize}
+                \item Gave the first progress report presentation.
+            \end{itemize} \\
+
+			\raisebox{-3.33mm}{26/02/2026} & 
+            \begin{itemize}
+                \item Continued on the logic PCB design.
+            \end{itemize} \\
+
+			\raisebox{-3.33mm}{27/02/2026} & 
+            \begin{itemize}
+                \item Finished the logic PCB design.
+            \end{itemize} \\
+
+			\raisebox{-3.33mm}{01/03/2026} & 
+            \begin{itemize}
+                \item Generated all the gerber, drill and BOM files.
+                \item Listed all parts with stocking urls for order.
+            \end{itemize} \\
+
+
+        \midrule
+            % Week 9
+            % --------------------------------------------
+			\raisebox{-3.33mm}{02/03/2026} & 
+            \begin{itemize}
+                \item Installed platformIO.
+                \item Figured out how to create a Teensy project via PlatformIO.
+                \item Documented process.
+            \end{itemize} \\
+
+			\raisebox{-3.33mm}{05/03/2026} & 
+            \begin{itemize}
+                \item Created test code for Teensy 4.1, I2C interface, INA219.
+                \item Created simple libraries for I2C interface and INA219.
+            \end{itemize} \\
+
+			\raisebox{-3.33mm}{06/03/2026} & 
+            \begin{itemize}
+                \item Created test code for SD-Card.
+                \item Tried to make test code for nRF24L01, FS-X6B and ACS758; but couldn't due to insufficient resources.
+                      Found compatible libraries that are ready for testing.
+                \item Tested the FlySky remotes and removed any faults.
+            \end{itemize} \\
+
+            \raisebox{-3.33mm}{06/03/2026} & 
+            \begin{itemize}
+                \item Figured out how to use FreeCAD and started its guide.
+            \end{itemize} \\
+
+        \midrule
+            % Week 10
+            % --------------------------------------------
+            \raisebox{-3.33mm}{09/03/2026} & 
+            \begin{itemize}
+                \item Cleaned up the old 3D-design sketches.
+                \item Edited the old 3D-design sketches.
+            \end{itemize} \\
+
+            \raisebox{-3.33mm}{10/03/2026} & 
+            \begin{itemize}
+                \item Edited the old 3D-design sketches.
+                \item Created a .dxf file for the new lasercut baseplate.
+            \end{itemize} \\
+	\end{tabular}
+\end{table}
+
+\begin{table}[!t]
+	\centering
+	\begin{tabular}{c p{14cm}}
+
+            \raisebox{-3.33mm}{15/03/2026} & 
+            \begin{itemize}
+                \item Edited the old 3D-design sketches.
+                \item Started with ROS2 \& micro-ROS implementation (not functioning).
+                \item Started working with Nvidia Jetson Nano (not functioning).
+            \end{itemize} \\
+
+        \midrule
+            % Week 11
+            % --------------------------------------------
+            \raisebox{-3.33mm}{16/03/2026} & 
+            \begin{itemize}
+                \item Printed all the finished 3D-prints.
+                \item Continued to work on the Nvidia Jetson Nano (not functioning).
+            \end{itemize} \\
+
+            \raisebox{-3.33mm}{17/03/2026} & 
+            \begin{itemize}
+                \item Got the Nvidia Jetson Nano to work.
+                \item Continued work on the ROS2 \& micro-ROS implementation (not functioning).
+            \end{itemize} \\
+
+            \raisebox{-3.33mm}{18/03/2026} & 
+            \begin{itemize}
+                \item Lasercut the base plate.
+                \item Made changes to the new 3D-design sketches so they fit the baseplate.
+            \end{itemize} \\
+
+            \raisebox{-3.33mm}{20/03/2026} & 
+            \begin{itemize}
+                \item Got a base implementation of ROS2 \& micro-ROS working between the Teensy 4.1 and my personal laptop.
+            \end{itemize} \\
+
+            \raisebox{-3.33mm}{21/03/2026} & 
+            \begin{itemize}
+                \item Updated AI-usage documentation.
+            \end{itemize} \\
+
+        \midrule
+            % Week 12
+            % --------------------------------------------
+            \raisebox{-3.33mm}{24/03/2026} & 
+            \begin{itemize}
+                \item Documented the complete KiCAD section.
+            \end{itemize} \\
+
+            \raisebox{-3.33mm}{26/03/2026} & 
+            \begin{itemize}
+                \item Created a diagram of the power layout.
+            \end{itemize} \\
+
+            \raisebox{-3.33mm}{27/03/2026} & 
+            \begin{itemize}
+                \item Fetched the components and PCBs.
+                \item Assembled the power board and temperature sensor PCBs.
+            \end{itemize} \\
+
+            \raisebox{-3.33mm}{28/03/2026} & 
+            \begin{itemize}
+                \item Documented the complete FreeCAD and Metalcut sections.
+                \item Updated the ROS integration of the Software chapter for both the Teensy and the Jetson.
+            \end{itemize} \\
+
+            \raisebox{-3.33mm}{29/03/2026} & 
+            \begin{itemize}
+                \item Created test code for LM75 and PIM448.
+                \item Created simple libraries for LM75 and PIM448.
+            \end{itemize} \\
+
+        \midrule
+            % Week 13
+            % --------------------------------------------
+            \raisebox{-3.33mm}{30/03/2026} & 
+            \begin{itemize}
+                \item Assembled the first temperature sensor board.
+                \item Assembled the power board.
+                \item Started assembly of the logic board.
+                \item Tested the temperature sensor.
+            \end{itemize} \\
+
+            \raisebox{-3.33mm}{31/03/2026} & 
+            \begin{itemize}
+                \item Finished assembly of the logic board.
+                \item Tested the power distribution of the logic board.
+            \end{itemize} \\
+
+            \raisebox{-3.33mm}{01/04/2026} & 
+            \begin{itemize}
+                \item Assembled the GNSS/GPS module.
+                \item Assembled the remaining temperature sensor boards.
+                \item Created a PWM test.
+                \item Tested the INA219, LM2596, PIM448.
+            \end{itemize} \\
+
+            \raisebox{-3.33mm}{03/04/2026} & 
+            \begin{itemize}
+                \item Created a servo script.
+                \item Tested the remaining temperature sensors and servo.
+                \item Tested the power cycle between power board, TMDC and logic board.
+                \item Continued documentation of design.
+                \item Documented PCB faults.
+            \end{itemize} \\
+
+        \midrule
+            % Week 14
+            % --------------------------------------------
+
+        \midrule
+            % Week 15
+            % --------------------------------------------
+            \raisebox{-3.33mm}{13/04/2026} & 
+            \begin{itemize}
+                \item Tested the voltage followers.
+                \item Found a fault with the buffer circuit.
+                \item Created a test for USB. --> Blew up my PC.
+            \end{itemize} \\
+	\end{tabular}
+\end{table}
+
+\begin{table}[!t]
+	\centering
+	\begin{tabular}{c p{14cm}}
+
+            \raisebox{-3.33mm}{15/04/2026} & 
+            \begin{itemize}
+                \item Reinstalled everything on new PC.
+                \item Tested old functioning sketches, to make sure board was still functioning.
+            \end{itemize} \\
+
+            \raisebox{-3.33mm}{16/04/2026} & 
+            \begin{itemize}
+                \item Created and tested the FS-X6B sketch.
+                \item Created and tested the Hall-sensor sketch.
+            \end{itemize} \\
+            
+            \raisebox{-3.33mm}{17/04/2026} & 
+            \begin{itemize}
+                \item Created and tested the high-current sensing.
+                \item Tested the self-made GPS (not functioning).
+            \end{itemize} \\
+
+            \raisebox{-3.33mm}{18/04/2026} & 
+            \begin{itemize}
+                \item Found the motor ECS startup sequence.
+                \item Fixed the motor sketch.
+                \item Created a working drive sketch.
+            \end{itemize} \\
+
+        \midrule
+            % Week 16
+            % --------------------------------------------
+            \raisebox{-3.33mm}{20/04/2026} & 
+            \begin{itemize}
+                \item Created the main sketch.
+                \item Implemented the remote control in the main sketch.
+                \item Implemented the steering servo in the main sketch.
+            \end{itemize} \\
+
+            \raisebox{-3.33mm}{21/04/2026} & 
+            \begin{itemize}
+                \item Implemented the motor control in the main sketch.
+                \item Implemented the voltage reading in the main sketch.
+            \end{itemize} \\
+
+            \raisebox{-3.33mm}{22/04/2026} & 
+            \begin{itemize}
+                \item Implemented a global debugging serial in the main sketch.
+                \item Implemented the encoder in the main sketch.
+                \item Tried to implement the high current reading in the main sketch.
+            \end{itemize} \\
+
+            \raisebox{-3.33mm}{23/04/2026} & 
+            \begin{itemize}
+                \item Implemented the high current reading in the main sketch.
+                \item Implemented the low current reading in the main sketch.
+                \item Implemented the temperature sensor in the main sketch.
+            \end{itemize} \\
+
+            \raisebox{-3.33mm}{24/04/2026} & 
+            \begin{itemize}
+                \item Implemented the indicator led in the main sketch.
+                \item Implemented the cooling fan in the main sketch.
+                \item Implemented the motion sensor in the main sketch.
+            \end{itemize} \\
+
+            \raisebox{-3.33mm}{25/04/2026} & 
+            \begin{itemize}
+                \item Tried to create a GPS sketch.
+            \end{itemize} \\
+
+            \raisebox{-3.33mm}{26/04/2026} & 
+            \begin{itemize}
+                \item Tried to make a long range communication sketch.
+            \end{itemize} \\
+
+        \midrule
+            % Week 17
+            % --------------------------------------------
+            \raisebox{-3.33mm}{27/04/2026} & 
+            \begin{itemize}
+                \item Made a long range communication TX and RX sketch.
+                \item Made a long range communication RX module.
+                \item Implemented the long range TX communication in the main sketch.
+            \end{itemize} \\
+
+            \raisebox{-3.33mm}{28/04/2026} & 
+            \begin{itemize}
+                \item Implemented the SD-logging into the main sketch.
+                \item Started to implement the schedular into the main sketch.
+            \end{itemize} \\
+
+            \raisebox{-3.33mm}{29/04/2026} & 
+            \begin{itemize}
+                \item Continued to implement the schedular into the main sketch.
+            \end{itemize} \\
+
+            \raisebox{-3.33mm}{30/04/2026} & 
+            \begin{itemize}
+                \item Finished to implement the schedular into the main sketch.
+                \item Debugged the main sketch for any mistakes.
+            \end{itemize} \\
+
+            \raisebox{-3.33mm}{01/05/2026} & 
+            \begin{itemize}
+                \item Debugged the main sketch for any mistakes.
+                \item Made a functioning GPS sketch.
+                \item Tried to implement micro-ROS into the main sketch.
+            \end{itemize} \\
+
+            \raisebox{-3.33mm}{02/05/2026} & 
+            \begin{itemize}
+                \item Implemented the GPS into the main sketch.
+                \item Tested the complete system and found bugs.
+                \item Removed the bugs.
+            \end{itemize} \\
+	\end{tabular}
+\end{table}
+
+\begin{table}[!t]
+	\centering
+	\begin{tabular}{c p{14cm}}
+
+            \raisebox{-3.33mm}{03/05/2026} &
+            \begin{itemize}
+                \item Implemented .csv and .json logging via the SD-Card (besides .bin).
+                \item Tested the complete system and found bugs.
+                \item Removed the bugs.
+                \item Started on the academic paper.
+            \end{itemize} \\
+
+        \midrule
+            % Week 18
+            % --------------------------------------------
+            \raisebox{-3.33mm}{04/05/2026} & 
+            \begin{itemize}
+                \item Continued working on the academic paper.
+            \end{itemize} \\
+
+            \raisebox{-3.33mm}{05/05/2026} & 
+            \begin{itemize}
+                \item Continued working on the academic paper.
+            \end{itemize} \\
+
+            \raisebox{-3.33mm}{06/05/2026} & 
+            \begin{itemize}
+                \item Continued working on the academic paper.
+            \end{itemize} \\
+
+            \raisebox{-3.33mm}{07/05/2026} & 
+            \begin{itemize}
+                \item Continued working on the academic paper.
+                \item Went on the RC Racing Fun track to test the system and gather data.
+                \item Replaced the broken Servo.
+            \end{itemize} \\
+
+            \raisebox{-3.33mm}{08/05/2026} & 
+            \begin{itemize}
+                \item Continued working on the academic paper.
+                \item Went on the RC Racing Fun track to test the system and gather data.
+            \end{itemize} \\
+
+            \raisebox{-3.33mm}{09/05/2026} & 
+            \begin{itemize}
+                \item Continued working on the academic paper.
+                \item Fixed the GPS baud rate, by programming the module inside the firmware.
+                \item Started on working on the next PCB.
+                \item Went on the RC Racing Fun track to test the system and gather data.
+            \end{itemize} \\
+
+            \raisebox{-3.33mm}{10/05/2026} &
+            \begin{itemize}
+                \item Continued working on the academic paper.
+                \item Attempted to fix the wheel encoder bug (untested on the track).
+            \end{itemize} \\
+
+        \midrule
+            % Week 19
+            % --------------------------------------------
+            \raisebox{-3.33mm}{11/05/2026} &
+            \begin{itemize}
+                \item Fixed the wheel encoder bug.
+                \item Fixed one of the broken servos.
+                \item Worked on the documentation.
+                \item Started on the finalized PCB designs (temperature sensor and supply board).
+            \end{itemize} \\
+
+            \raisebox{-3.33mm}{12/05/2026} &
+            \begin{itemize}
+                \item Worked on the documentation.
+                \item Continued on the finalized PCB designs (logic board).
+                \item Went on the RC Racing Fun track to test the system and gather data, but couldn't due to faulty GPS antenna.
+            \end{itemize} \\
+
+            \raisebox{-3.33mm}{13/05/2026} &
+            \begin{itemize}
+                \item Worked on the documentation.
+                \item Continued on the finalized PCB designs (logic board).
+            \end{itemize} \\
+
+            \raisebox{-3.33mm}{14/05/2026} &
+            \begin{itemize}
+                \item Worked on the documentation.
+                \item Finished the finalized PCB designs (logic board).
+                \item Started adding documentation to the code.
+            \end{itemize} \\
+
+            \raisebox{-3.33mm}{15/05/2026} &
+            \begin{itemize}
+                \item Generalized the motor control code (now includes both ESC and SERVO).
+                \item Finished adding documentation to the code.
+                \item Went on the RC Racing Fun track to test the system and gather data, but couldn't due to the state of the track and weather conditions.
+                \item Fixed problems caused by driving on a less than ideal track.
+            \end{itemize} \\
+
+            \raisebox{-3.33mm}{16/05/2026} &
+            \begin{itemize}
+                \item Added more functionality to the SD-logging.
+                \item Tested the complete system (in my front yard).
+            \end{itemize} \\
+
+            \raisebox{-3.33mm}{17/05/2026} &
+            \begin{itemize}
+                \item Went on the RC Racing Fun track to test the system and gather data, got base data that proves functionality, 
+                      but couldn't continue due to the state of the track and weather conditions.
+                \item Fixed problems caused by driving on a less than ideal track.
+            \end{itemize} \\
+	\end{tabular}
+\end{table}
+
+\begin{table}[!t]
+	\centering
+	\begin{tabular}{c p{14cm}}
+
+        \midrule
+            % Week 20
+            % --------------------------------------------
+            \raisebox{-3.33mm}{18/05/2026} &
+            \begin{itemize}
+                \item Worked on the academic paper.
+                \item Worked on the documentation.
+            \end{itemize} \\
+
+            \raisebox{-3.33mm}{19/05/2026} &
+            \begin{itemize}
+                \item Worked on the academic paper.
+                \item Worked on the documentation.
+            \end{itemize} \\
+
+            \raisebox{-3.33mm}{20/05/2026} &
+            \begin{itemize}
+                \item Worked on the documentation.
+            \end{itemize} \\
+
+            \raisebox{-3.33mm}{21/05/2026} &
+            \begin{itemize}
+                \item Re-read and corrected the academic paper.
+                \item Worked on the documentation.
+            \end{itemize} \\
+
+            \raisebox{-3.33mm}{22/05/2026} &
+            \begin{itemize}
+                \item Went on the RC Racing Fun track to test the system and gather data.
+                \item Implemented the new data into and finished the academic paper.
+            \end{itemize} \\
+
+            \raisebox{-3.33mm}{23/05/2026} &
+            \begin{itemize}
+                \item Re-read and corrected the academic paper.
+                \item Worked on the documentation.
+            \end{itemize} \\
+
+            \raisebox{-3.33mm}{24/05/2026} &
+            \begin{itemize}
+                \item Re-read and corrected the academic paper.
+                \item Finished on the documentation.
+            \end{itemize} \\
+		\bottomrule
+	\end{tabular}
+\end{table}
+
+\end{document}

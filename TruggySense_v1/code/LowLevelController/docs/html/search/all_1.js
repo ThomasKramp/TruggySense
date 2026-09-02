@@ -1,0 +1,27 @@
+var searchData=
+[
+  ['b_5f1_0',['b_1',['../classVoltageMeasure.html#a543420e2be7494b1c26e65f37aad35fba8eb62d654f8d6bb9e3d1c42bdc71bd38',1,'VoltageMeasure']]],
+  ['b_5f2_1',['b_2',['../classVoltageMeasure.html#a543420e2be7494b1c26e65f37aad35fba155a59ed73be5bdc3d4d7aada1fd6a4c',1,'VoltageMeasure']]],
+  ['b_5f3_2',['b_3',['../classVoltageMeasure.html#a543420e2be7494b1c26e65f37aad35fba49c835a161577f856b3a3e873736cfa3',1,'VoltageMeasure']]],
+  ['b_5f4_3',['b_4',['../classVoltageMeasure.html#a543420e2be7494b1c26e65f37aad35fba0a7480906bb0753fcf633176a7faa87a',1,'VoltageMeasure']]],
+  ['base_5ffile_5fname_4',['BASE_FILE_NAME',['../sd__logger_8h.html#a40766adf46556b3c71e99f42776b2454',1,'sd_logger.h']]],
+  ['base_5fstation_2ecpp_5',['base_station.cpp',['../base__station_8cpp.html',1,'']]],
+  ['base_5fstation_2eh_6',['base_station.h',['../base__station_8h.html',1,'']]],
+  ['basestation_7',['baseStation',['../tasks_8cpp.html#a71c7ed9c5a4e50908dd0b83a70742f6a',1,'tasks.cpp']]],
+  ['basestation_8',['BaseStation',['../classBaseStation.html',1,'']]],
+  ['bat_9',['bat',['../classVoltageMeasure.html#a543420e2be7494b1c26e65f37aad35fba67c0513fa7a50cbb14e4034e2c7b00bc',1,'VoltageMeasure']]],
+  ['baudrate_10',['BAUDRATE',['../gps_8h.html#a734bbab06e1a9fd2e5522db0221ff6e3',1,'gps.h']]],
+  ['bm_5f1_11',['bm_1',['../classTemperature.html#af7441a7bcbc69bbc36f98dbe1080d3d0ae843e4fec18b9f6319e5d2b5334760ed',1,'Temperature']]],
+  ['bm_5f1_5favailability_12',['BM_1_AVAILABILITY',['../temperature_8h.html#ab0b800998c027bf6198d49e9b683db9f',1,'temperature.h']]],
+  ['bm_5f2_13',['bm_2',['../classTemperature.html#af7441a7bcbc69bbc36f98dbe1080d3d0a156ef5b630e153caaef488e66a8d9220',1,'Temperature']]],
+  ['bm_5f2_5favailability_14',['BM_2_AVAILABILITY',['../temperature_8h.html#ab1393bc621ebf4743538922d0ef38df9',1,'temperature.h']]],
+  ['bm_5f3_15',['bm_3',['../classTemperature.html#af7441a7bcbc69bbc36f98dbe1080d3d0a51e72caf44a812afbc8da711485d36e1',1,'Temperature']]],
+  ['bm_5f3_5favailability_16',['BM_3_AVAILABILITY',['../temperature_8h.html#a7a60efdbd3bf958929279b48724ff17d',1,'temperature.h']]],
+  ['bm_5f4_17',['bm_4',['../classTemperature.html#af7441a7bcbc69bbc36f98dbe1080d3d0ab5d0537c0c5d4fcd9b15e9d2938ebf6f',1,'Temperature']]],
+  ['bm_5f4_5favailability_18',['BM_4_AVAILABILITY',['../temperature_8h.html#ab7ccae890c4d9112832f832c42ee8dba',1,'temperature.h']]],
+  ['bno08x_19',['bno08x',['../imu_8cpp.html#acb22e0701064044d229198e7a389bf2e',1,'imu.cpp']]],
+  ['bno08x_5freset_20',['BNO08X_RESET',['../imu_8h.html#a3b3a61aa35bd2fe237af0a4157223a28',1,'imu.h']]],
+  ['bp_21',['bp',['../classTemperature.html#af7441a7bcbc69bbc36f98dbe1080d3d0a7789521cbeee821af982c9e55d1592b3',1,'Temperature']]],
+  ['bp_5favailability_22',['BP_AVAILABILITY',['../temperature_8h.html#ae34f4c048fc3d72597ea615e7c8bb41e',1,'temperature.h']]],
+  ['bs_5ferror_23',['bs_error',['../tasks_8cpp.html#ac528d33f610076eaba9bb85156b145c2',1,'tasks.cpp']]]
+];

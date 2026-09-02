@@ -1,0 +1,58 @@
+\hypertarget{encoder_8h_source}{}\doxysection{encoder.\+h}
+\label{encoder_8h_source}\index{lib/encoder/encoder.h@{lib/encoder/encoder.h}}
+\mbox{\hyperlink{encoder_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{15 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{16 }
+\DoxyCodeLine{17 \textcolor{preprocessor}{\#include <Arduino.h>}}
+\DoxyCodeLine{18 \textcolor{preprocessor}{\#include "{}stdint.h"{}}}
+\DoxyCodeLine{19 \textcolor{preprocessor}{\#include "{}TimerInterrupt\_Generic.h"{}}}
+\DoxyCodeLine{20 }
+\DoxyCodeLine{21 \textcolor{preprocessor}{\#define WHEEL\_FR 5 }}
+\DoxyCodeLine{22 \textcolor{preprocessor}{\#define WHEEL\_FL 3 }}
+\DoxyCodeLine{23 \textcolor{preprocessor}{\#define WHEEL\_RR 4 }}
+\DoxyCodeLine{24 \textcolor{preprocessor}{\#define WHEEL\_RL 2 }}
+\DoxyCodeLine{26 \textcolor{preprocessor}{\#define MOTOR\_FR 30 }}
+\DoxyCodeLine{27 \textcolor{preprocessor}{\#define MOTOR\_FL 31 }}
+\DoxyCodeLine{28 \textcolor{preprocessor}{\#define MOTOR\_RR 32 }}
+\DoxyCodeLine{29 \textcolor{preprocessor}{\#define MOTOR\_RL 36 }}
+\DoxyCodeLine{35 \textcolor{preprocessor}{\#define FR\_N\_MAGNET 14}}
+\DoxyCodeLine{36 }
+\DoxyCodeLine{41 \textcolor{preprocessor}{\#define FL\_N\_MAGNET 14}}
+\DoxyCodeLine{42 }
+\DoxyCodeLine{47 \textcolor{preprocessor}{\#define RR\_N\_MAGNET 14}}
+\DoxyCodeLine{48 }
+\DoxyCodeLine{53 \textcolor{preprocessor}{\#define RL\_N\_MAGNET 14}}
+\DoxyCodeLine{54 }
+\DoxyCodeLine{59 \textcolor{preprocessor}{\#define NUM\_ENCODER\_PINS 4}}
+\DoxyCodeLine{60 }
+\DoxyCodeLine{66 \textcolor{keyword}{class }\mbox{\hyperlink{classEncoder}{Encoder}}}
+\DoxyCodeLine{67 \{}
+\DoxyCodeLine{68     \textcolor{keyword}{static} \textcolor{keyword}{volatile} \textcolor{keywordtype}{long} wheel\_counter[\mbox{\hyperlink{encoder_8h_a6485ba8baa7fbb0be37f03a96654bf56}{NUM\_ENCODER\_PINS}}];}
+\DoxyCodeLine{69     \textcolor{keyword}{static} \textcolor{keyword}{volatile} uint8\_t wheel\_magnets[\mbox{\hyperlink{encoder_8h_a6485ba8baa7fbb0be37f03a96654bf56}{NUM\_ENCODER\_PINS}}];}
+\DoxyCodeLine{70     \textcolor{keywordtype}{double} wheel\_f[\mbox{\hyperlink{encoder_8h_a6485ba8baa7fbb0be37f03a96654bf56}{NUM\_ENCODER\_PINS}}];}
+\DoxyCodeLine{71     \textcolor{keywordtype}{double} wheel\_rpm[\mbox{\hyperlink{encoder_8h_a6485ba8baa7fbb0be37f03a96654bf56}{NUM\_ENCODER\_PINS}}];}
+\DoxyCodeLine{72     \textcolor{keywordtype}{long} wheel\_timer[\mbox{\hyperlink{encoder_8h_a6485ba8baa7fbb0be37f03a96654bf56}{NUM\_ENCODER\_PINS}}];}
+\DoxyCodeLine{73 }
+\DoxyCodeLine{74     \textcolor{keyword}{static} \textcolor{keywordtype}{void} itWheelFL();}
+\DoxyCodeLine{75     \textcolor{keyword}{static} \textcolor{keywordtype}{void} itWheelFR();}
+\DoxyCodeLine{76     \textcolor{keyword}{static} \textcolor{keywordtype}{void} itWheelRL();}
+\DoxyCodeLine{77     \textcolor{keyword}{static} \textcolor{keywordtype}{void} itWheelRR();}
+\DoxyCodeLine{78 }
+\DoxyCodeLine{79 \textcolor{keyword}{public}:}
+\DoxyCodeLine{84     \textcolor{keyword}{enum} \mbox{\hyperlink{classEncoder_a58432c11ce8cec4b26684c87e10f4b57}{position}}}
+\DoxyCodeLine{85     \{}
+\DoxyCodeLine{86         \mbox{\hyperlink{classEncoder_a58432c11ce8cec4b26684c87e10f4b57a671b37104be2e52ce15fe5146dafb473}{FL}}, }
+\DoxyCodeLine{87         \mbox{\hyperlink{classEncoder_a58432c11ce8cec4b26684c87e10f4b57a8f02f8e5afe915a320c163f5645402da}{RL}}, }
+\DoxyCodeLine{88         \mbox{\hyperlink{classEncoder_a58432c11ce8cec4b26684c87e10f4b57a1ce670999847b168aab669cb0a0e3702}{RR}}, }
+\DoxyCodeLine{89         \mbox{\hyperlink{classEncoder_a58432c11ce8cec4b26684c87e10f4b57a3e35780efd735d36d520b8adc3220818}{FR}}  }
+\DoxyCodeLine{90     \};}
+\DoxyCodeLine{95     \mbox{\hyperlink{classEncoder_ab5d9324930644abeb150da7a7747ffe3}{Encoder}}();}
+\DoxyCodeLine{96 }
+\DoxyCodeLine{106     \textcolor{keywordtype}{float} \mbox{\hyperlink{classEncoder_a3c8a92bd5e85688abe614cab8944ba1d}{getWheelSpeed}}(\mbox{\hyperlink{classEncoder_a58432c11ce8cec4b26684c87e10f4b57}{position}} pos);}
+\DoxyCodeLine{107 }
+\DoxyCodeLine{114     \textcolor{keywordtype}{float} \mbox{\hyperlink{classEncoder_a8742143a7f5c3ba717128d98b57e8024}{getWheelCounter}}(\mbox{\hyperlink{classEncoder_a58432c11ce8cec4b26684c87e10f4b57}{position}} pos);}
+\DoxyCodeLine{115 \};}
+
+\end{DoxyCode}

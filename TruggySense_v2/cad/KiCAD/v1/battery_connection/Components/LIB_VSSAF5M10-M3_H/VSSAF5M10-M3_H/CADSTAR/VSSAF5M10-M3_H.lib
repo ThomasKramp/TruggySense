@@ -1,0 +1,18 @@
+.VSSAF5M10-M3_H :1 ;Schottky Diodes & Rectifiers TMBS 100V Vrrm eSMP SlimSMA (DO-221AC)
+SODFL5226X100N
+*STM D
+*NGS
+*PLB 1="K" 2="A"
+*MXP 2
+*DFN VSSAF5M10-M3_H
+~!Manufacturer_Name (Vishay)
+~!Manufacturer_Part_Number (VSSAF5M10-M3/H)
+~!Mouser Part Number (78-VSSAF5M10-M3/H)
+~!Link Mouser Price/Stock (https://www.mouser.co.uk/ProductDetail/Vishay-General-Semiconductor/VSSAF5M10-M3-H?qs=ECv811tYSNgAKxXn4qJoLg%3D%3D)
+~!Arrow Part Number (VSSAF5M10-M3/H)
+~!Link Arrow Price/Stock (https://www.arrow.com/en/products/vssaf5m10-m3h/vishay?region=nac)
+~!Link Datasheet (https://www.mouser.co.uk/datasheet/2/427/VISH_S_A0006177028_1-2569585.pdf)
+~!Height (1mm)
+~!3D_Model (VSSAF5M10-M3_H)
+VSSAF5M10-M3_H
+1.1!U 2.1!U 

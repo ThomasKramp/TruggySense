@@ -1,0 +1,41 @@
+***********************************************************
+*
+* BZX384-B3V6
+*
+* Nexperia
+*
+* Voltage regulator diodes
+* VFmax = 0,9V    @ IF = 10mA
+* IRmax = 5µA     @ VR = 1V
+* VZmax = 3,67V   @ IZ = 5mA
+* IZSM  = 6A      @ tp = 100µs
+*
+*
+*
+* Package pinning does not match Spice model pinning.
+* Package: SOD323 (SC-76)
+*
+* Package Pin 1: Cathode
+* Package Pin 2: Anode
+*
+*
+*
+* Extraction date (week/year): #
+* Simulator: SPICE2
+*
+***********************************************************
+*
+.SUBCKT BZX384-B3V6 K A
+D1 K A BZX384-B3V6
+.MODEL BZX384-B3V6 D
++ IS = 1.033E-15
++ N = 1.001
++ BV = 3.6
++ IBV = 0.005
++ RS = 0.387
++ CJO = 3.062E-10
++ VJ = 0.6643
++ M = 0.3168
++ FC = 0.5
+.ENDS BZX384-B3V6
+*

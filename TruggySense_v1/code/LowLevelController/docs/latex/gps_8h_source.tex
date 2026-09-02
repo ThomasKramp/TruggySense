@@ -1,0 +1,34 @@
+\hypertarget{gps_8h_source}{}\doxysection{gps.\+h}
+\label{gps_8h_source}\index{lib/gps/gps.h@{lib/gps/gps.h}}
+\mbox{\hyperlink{gps_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{14 \textcolor{preprocessor}{\#include <Arduino.h>}}
+\DoxyCodeLine{15 \textcolor{preprocessor}{\#include <TinyGPSPlus.h>}}
+\DoxyCodeLine{16 }
+\DoxyCodeLine{22 \textcolor{preprocessor}{\#define BAUDRATE 115200}}
+\DoxyCodeLine{23 }
+\DoxyCodeLine{24 \textcolor{keyword}{class }\mbox{\hyperlink{classGPSDriver}{GPSDriver}}}
+\DoxyCodeLine{25 \{}
+\DoxyCodeLine{26 \textcolor{keyword}{public}:}
+\DoxyCodeLine{32     uint8\_t \mbox{\hyperlink{classGPSDriver_a17e73a079be866162ca0c253758e218c}{init}}();}
+\DoxyCodeLine{33 }
+\DoxyCodeLine{41     uint8\_t \mbox{\hyperlink{classGPSDriver_ae8e1899f5db37454f172e946aae916be}{readGps}}();}
+\DoxyCodeLine{42 }
+\DoxyCodeLine{50     uint8\_t \mbox{\hyperlink{classGPSDriver_ab94192d92dde282930f44051e4005721}{getVelocity}}();}
+\DoxyCodeLine{51 }
+\DoxyCodeLine{59     \textcolor{keywordtype}{float} \mbox{\hyperlink{classGPSDriver_a1647379535095627a751bf760369bc29}{getLatitude}}();}
+\DoxyCodeLine{60 }
+\DoxyCodeLine{68     \textcolor{keywordtype}{float} \mbox{\hyperlink{classGPSDriver_a9ed63a96714f498365beaf5d94fb2651}{getLongitude}}();}
+\DoxyCodeLine{69 }
+\DoxyCodeLine{75     uint32\_t \mbox{\hyperlink{classGPSDriver_a2b87da9ee2b29217fd31f58c6b44c1e1}{getDate}}();}
+\DoxyCodeLine{76 }
+\DoxyCodeLine{83     uint32\_t \mbox{\hyperlink{classGPSDriver_abd3505ad1298feba973076a0ea216fd5}{getTime}}();}
+\DoxyCodeLine{84 }
+\DoxyCodeLine{92     int16\_t \mbox{\hyperlink{classGPSDriver_a6b62ba098b160307129cedc9d987403c}{getAltitude}}();}
+\DoxyCodeLine{93 }
+\DoxyCodeLine{99     uint8\_t \mbox{\hyperlink{classGPSDriver_a0c126cb0a905a5c855f7e4f310e44f2f}{getConnectedSatelites}}();}
+\DoxyCodeLine{100 \};}
+
+\end{DoxyCode}

@@ -1,0 +1,7125 @@
+(kicad_sch
+	(version 20250114)
+	(generator "eeschema")
+	(generator_version "9.0")
+	(uuid "4a327c72-410a-4f40-9662-63ad4cddcbbf")
+	(paper "A4")
+	(lib_symbols
+		(symbol "Device:D_Zener"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 1.016)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "D"
+				(at 0 2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "D_Zener"
+				(at 0 -2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Zener diode"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "diode"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "TO-???* *_Diode_* *SingleDiode* D_*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "D_Zener_0_1"
+				(polyline
+					(pts
+						(xy -1.27 -1.27) (xy -1.27 1.27) (xy -0.762 1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 0) (xy -1.27 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 -1.27) (xy 1.27 1.27) (xy -1.27 0) (xy 1.27 -1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "D_Zener_1_1"
+				(pin passive line
+					(at -3.81 0 0)
+					(length 2.54)
+					(name "K"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 3.81 0 180)
+					(length 2.54)
+					(name "A"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "Device:Fuse"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "F"
+				(at 2.032 0 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "Fuse"
+				(at -1.905 0 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at -1.778 0 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Fuse"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "fuse"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "*Fuse*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "Fuse_0_1"
+				(rectangle
+					(start -0.762 -2.54)
+					(end 0.762 2.54)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 2.54) (xy 0 -2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "Fuse_1_1"
+				(pin passive line
+					(at 0 3.81 270)
+					(length 1.27)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 1.27)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "Diode:PTVS5V0Z1USK"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "D"
+				(at 0 2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "PTVS5V0Z1USK"
+				(at 0 -2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "Diode_SMD:Nexperia_DSN1608-2_1.6x0.8mm"
+				(at 0 -4.445 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/PTVS5V0Z1USK.pdf"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "5V, 1200W TVS unidirectional diode, DSN1608-2"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "TVS diode"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "*DSN1608?2*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "PTVS5V0Z1USK_0_1"
+				(polyline
+					(pts
+						(xy -1.27 -1.27) (xy -1.27 1.27) (xy -0.762 1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 0) (xy -1.27 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 -1.27) (xy 1.27 1.27) (xy -1.27 0) (xy 1.27 -1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "PTVS5V0Z1USK_1_1"
+				(pin passive line
+					(at -3.81 0 0)
+					(length 2.54)
+					(name "K"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 3.81 0 180)
+					(length 2.54)
+					(name "A"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "power:GND"
+			(power)
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "#PWR"
+				(at 0 -6.35 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Value" "GND"
+				(at 0 -3.81 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "global power"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "GND_0_1"
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 -1.27) (xy 1.27 -1.27) (xy 0 -2.54) (xy -1.27 -1.27) (xy 0 -1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "GND_1_1"
+				(pin power_in line
+					(at 0 0 270)
+					(length 0)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+	)
+	(junction
+		(at 96.52 168.91)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "0527919e-7cbd-4386-aaa1-184be06186ed")
+	)
+	(junction
+		(at 165.1 67.31)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "09c9d62d-ed83-4a92-81e5-aa16a10a0fdb")
+	)
+	(junction
+		(at 154.94 46.99)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "20e08c53-f801-473b-bf7b-366a2b68bbdd")
+	)
+	(junction
+		(at 165.1 107.95)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "23cf5451-9a93-400d-bcb4-4efba99788f5")
+	)
+	(junction
+		(at 96.52 67.31)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "3d857f07-6ecc-4ee2-9976-27c98d6a1739")
+	)
+	(junction
+		(at 106.68 107.95)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "5a5998c9-c795-4d30-ba98-d5cb3b775705")
+	)
+	(junction
+		(at 154.94 107.95)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "5c1d5c31-2d7d-4f37-86e4-116001182e26")
+	)
+	(junction
+		(at 165.1 46.99)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "778dae50-b7ca-405a-8185-fb9dc896ae12")
+	)
+	(junction
+		(at 165.1 87.63)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "79729195-dc09-41fb-8264-5cb40aa942f2")
+	)
+	(junction
+		(at 106.68 87.63)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "9538449e-122f-4453-91bf-a1a63b95b779")
+	)
+	(junction
+		(at 165.1 129.54)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "a57980d8-5087-498b-9806-928dc21a8974")
+	)
+	(junction
+		(at 96.52 128.27)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "a6121cbc-d0c1-4d0f-b123-8fc0445a527c")
+	)
+	(junction
+		(at 96.52 107.95)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "aa7c0f13-8ac0-407a-8fff-3da0ff6a3dc8")
+	)
+	(junction
+		(at 106.68 168.91)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "ab29e3db-24e8-4bb1-91e5-59ba700de8b0")
+	)
+	(junction
+		(at 96.52 87.63)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "afae37ff-f739-4e07-8885-de61a9f00fdc")
+	)
+	(junction
+		(at 165.1 25.4)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "b6d50fa5-a51b-4ee3-96da-ca1e53d8f14f")
+	)
+	(junction
+		(at 96.52 148.59)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "bc622979-d975-438d-aaa4-8f3b3c64a00f")
+	)
+	(junction
+		(at 154.94 87.63)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "bed1cd2a-2b77-400f-8f85-550df5b8054b")
+	)
+	(junction
+		(at 106.68 67.31)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "c9dd8565-6a0b-40fc-8c02-08508508fd92")
+	)
+	(junction
+		(at 154.94 67.31)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "ce402793-0968-48ca-af47-ff7cb8d2ab68")
+	)
+	(junction
+		(at 106.68 25.4)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "d1906f37-23f9-4a16-8cf3-226f931fa43c")
+	)
+	(junction
+		(at 154.94 129.54)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "d54b67bf-c4b9-41ca-994f-2345ed42adda")
+	)
+	(junction
+		(at 96.52 46.99)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "d6228f6a-d69d-4261-befa-a3638a610100")
+	)
+	(junction
+		(at 154.94 25.4)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "d8c78220-1a12-452c-be34-ffb5a8d3b5d4")
+	)
+	(junction
+		(at 106.68 128.27)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "d99ecf3b-1dd0-4360-a8df-ab844337931f")
+	)
+	(junction
+		(at 106.68 46.99)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "dac1ae16-7929-4b80-b665-c53f8cbf195c")
+	)
+	(junction
+		(at 96.52 25.4)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "ebc0013d-8458-4135-9c42-a229ceb32fae")
+	)
+	(junction
+		(at 106.68 148.59)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "f55b0fdd-7b50-4ea5-9a3d-787339a98490")
+	)
+	(wire
+		(pts
+			(xy 96.52 48.26) (xy 96.52 46.99)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "017332c9-faf6-439b-a449-5de20961380b")
+	)
+	(wire
+		(pts
+			(xy 96.52 109.22) (xy 96.52 107.95)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "024174db-d526-4e2e-9cde-e214f5a9f1bb")
+	)
+	(wire
+		(pts
+			(xy 106.68 87.63) (xy 107.95 87.63)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "02fe74e3-6f60-4421-9c4f-4642873e41a2")
+	)
+	(wire
+		(pts
+			(xy 165.1 129.54) (xy 166.37 129.54)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "054dbf87-5035-48b0-84f1-a3d7c5914b62")
+	)
+	(wire
+		(pts
+			(xy 106.68 107.95) (xy 107.95 107.95)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "078c3703-af4b-4fac-9626-47fd5e71fd7f")
+	)
+	(wire
+		(pts
+			(xy 96.52 26.67) (xy 96.52 25.4)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0f6b502b-fda2-44a2-ab4c-4cb922d7ee1e")
+	)
+	(wire
+		(pts
+			(xy 153.67 67.31) (xy 154.94 67.31)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0fca5bda-0a1f-4836-b8dd-83a37931540e")
+	)
+	(wire
+		(pts
+			(xy 106.68 46.99) (xy 107.95 46.99)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1448a9c6-6210-41ce-8c4d-21c6458cc2fe")
+	)
+	(wire
+		(pts
+			(xy 163.83 107.95) (xy 165.1 107.95)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "156fde06-ba1b-492b-beca-160f8b262353")
+	)
+	(wire
+		(pts
+			(xy 105.41 168.91) (xy 106.68 168.91)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1db26725-1218-4a8c-b6da-dc5d9d8b6b80")
+	)
+	(wire
+		(pts
+			(xy 154.94 88.9) (xy 154.94 87.63)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1ebbe04d-4dac-4ee9-9699-958011d1e54b")
+	)
+	(wire
+		(pts
+			(xy 106.68 107.95) (xy 106.68 109.22)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "21c7a8ba-1206-4854-b2b5-35487fa4e9f4")
+	)
+	(wire
+		(pts
+			(xy 96.52 88.9) (xy 96.52 87.63)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2226171c-3ad7-4f92-b149-9e0db58d1323")
+	)
+	(wire
+		(pts
+			(xy 106.68 168.91) (xy 107.95 168.91)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "26c9c021-72a8-40ff-8121-4e7eeaa749ce")
+	)
+	(wire
+		(pts
+			(xy 106.68 128.27) (xy 107.95 128.27)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "27e12c86-1343-4fd7-ba55-81e0752ea8f1")
+	)
+	(wire
+		(pts
+			(xy 153.67 87.63) (xy 154.94 87.63)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2ca86bbc-d331-4945-b9b5-fda2731f6e15")
+	)
+	(wire
+		(pts
+			(xy 165.1 87.63) (xy 166.37 87.63)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2d6a00b6-2101-406b-ab02-fd38437d7a54")
+	)
+	(wire
+		(pts
+			(xy 95.25 148.59) (xy 96.52 148.59)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "353df4a1-293a-4e6e-9651-26027bf434de")
+	)
+	(wire
+		(pts
+			(xy 154.94 129.54) (xy 156.21 129.54)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3ab6b5aa-9baf-4c77-8443-4df5013e7171")
+	)
+	(wire
+		(pts
+			(xy 163.83 87.63) (xy 165.1 87.63)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3bf74951-80f9-4f81-b695-0eb32200cfb6")
+	)
+	(wire
+		(pts
+			(xy 165.1 67.31) (xy 166.37 67.31)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3fd1be7b-e346-4a0c-9b81-52d1cfe4e1dc")
+	)
+	(wire
+		(pts
+			(xy 96.52 46.99) (xy 97.79 46.99)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "418fa6cc-9c7c-4102-afb5-899f87b62283")
+	)
+	(wire
+		(pts
+			(xy 154.94 87.63) (xy 156.21 87.63)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "503b05a4-736e-414c-abd7-8fbbfaafb2d2")
+	)
+	(wire
+		(pts
+			(xy 154.94 25.4) (xy 156.21 25.4)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5353a72a-4a37-4a32-9884-d2fd527a0244")
+	)
+	(wire
+		(pts
+			(xy 165.1 87.63) (xy 165.1 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "59477313-8b14-4877-a205-f6f902c0bd51")
+	)
+	(wire
+		(pts
+			(xy 165.1 25.4) (xy 166.37 25.4)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5c7f7c57-522a-4985-9806-49474f502a9b")
+	)
+	(wire
+		(pts
+			(xy 95.25 128.27) (xy 96.52 128.27)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "672c98a4-e22c-4e7c-8079-111ef76d48c3")
+	)
+	(wire
+		(pts
+			(xy 106.68 67.31) (xy 106.68 68.58)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6816c326-38ea-4f0a-b1c3-1f9dabf646b5")
+	)
+	(wire
+		(pts
+			(xy 95.25 46.99) (xy 96.52 46.99)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6d53541d-af4e-4c7e-989c-fff7995faf1e")
+	)
+	(wire
+		(pts
+			(xy 154.94 68.58) (xy 154.94 67.31)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6dc800bd-eb4d-485d-92c9-c5014a6954d5")
+	)
+	(wire
+		(pts
+			(xy 95.25 25.4) (xy 96.52 25.4)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7948ffa8-c019-47dc-a176-1f9e46daacc6")
+	)
+	(wire
+		(pts
+			(xy 165.1 129.54) (xy 165.1 130.81)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7c87a45c-2304-4b26-9cff-8fae7389d720")
+	)
+	(wire
+		(pts
+			(xy 106.68 87.63) (xy 106.68 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7cec9bb4-f2e0-4a8d-a2c5-d1a41f361414")
+	)
+	(wire
+		(pts
+			(xy 96.52 149.86) (xy 96.52 148.59)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7e3c5b61-51c5-4389-b83c-1a01dc125cb3")
+	)
+	(wire
+		(pts
+			(xy 165.1 25.4) (xy 165.1 26.67)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "808dd64b-b6e5-46a0-8ba2-59de2849960a")
+	)
+	(wire
+		(pts
+			(xy 95.25 107.95) (xy 96.52 107.95)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "80906f39-f2e7-481e-b53e-b24e4dd0ab0e")
+	)
+	(wire
+		(pts
+			(xy 105.41 87.63) (xy 106.68 87.63)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "81322761-5f6f-46d2-aeee-7caa06ad3e42")
+	)
+	(wire
+		(pts
+			(xy 163.83 46.99) (xy 165.1 46.99)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "82a9055a-6f98-4d96-8322-1fd243f0930d")
+	)
+	(wire
+		(pts
+			(xy 106.68 67.31) (xy 107.95 67.31)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "897b2276-bd8a-459c-a6f1-2af1b48aa4aa")
+	)
+	(wire
+		(pts
+			(xy 105.41 25.4) (xy 106.68 25.4)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8de41908-0f0a-4880-820e-382823ef73d8")
+	)
+	(wire
+		(pts
+			(xy 165.1 46.99) (xy 165.1 48.26)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8f6ff1ac-d54a-49cb-8b2d-d0193c0b854d")
+	)
+	(wire
+		(pts
+			(xy 163.83 129.54) (xy 165.1 129.54)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "91ca9963-0308-4912-a6af-6c8ec4e3074a")
+	)
+	(wire
+		(pts
+			(xy 95.25 67.31) (xy 96.52 67.31)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "95e21a5a-c748-495c-9ba2-29aed670da69")
+	)
+	(wire
+		(pts
+			(xy 153.67 25.4) (xy 154.94 25.4)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9b46570a-78ed-4d34-830a-927825afbfbb")
+	)
+	(wire
+		(pts
+			(xy 154.94 46.99) (xy 156.21 46.99)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9e9e75a0-26b3-4043-90c2-1e46976369cf")
+	)
+	(wire
+		(pts
+			(xy 165.1 67.31) (xy 165.1 68.58)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a18ee0ed-304d-4f64-aa57-10f3de2d796e")
+	)
+	(wire
+		(pts
+			(xy 96.52 87.63) (xy 97.79 87.63)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a370454a-604b-4e09-befc-18ed68f0e8aa")
+	)
+	(wire
+		(pts
+			(xy 154.94 26.67) (xy 154.94 25.4)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a7ce7c8a-57bf-4c8c-82b4-8895cec345b7")
+	)
+	(wire
+		(pts
+			(xy 165.1 107.95) (xy 166.37 107.95)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a93ab885-af72-4433-ba4b-cdcdd94f9cd1")
+	)
+	(wire
+		(pts
+			(xy 154.94 48.26) (xy 154.94 46.99)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ac5bc9d8-f79c-401c-9757-da672b9a5fda")
+	)
+	(wire
+		(pts
+			(xy 106.68 168.91) (xy 106.68 170.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b03b7165-3ad8-4da7-9e9d-1c2e9a133551")
+	)
+	(wire
+		(pts
+			(xy 105.41 46.99) (xy 106.68 46.99)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bbc9031f-77cf-4a3e-ab9a-15716710fe48")
+	)
+	(wire
+		(pts
+			(xy 106.68 148.59) (xy 107.95 148.59)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c3471ebc-e91a-4a1d-83ea-663c523d92dd")
+	)
+	(wire
+		(pts
+			(xy 153.67 129.54) (xy 154.94 129.54)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c3f78329-9016-4b1d-a520-fd2c98b5f1ba")
+	)
+	(wire
+		(pts
+			(xy 153.67 46.99) (xy 154.94 46.99)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c570742b-b966-4ac4-9cbc-e6e22a9e300b")
+	)
+	(wire
+		(pts
+			(xy 96.52 168.91) (xy 97.79 168.91)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cbbc83a3-93e6-4980-9929-6616cdb1624c")
+	)
+	(wire
+		(pts
+			(xy 96.52 25.4) (xy 97.79 25.4)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cc6909f1-4bd7-4c50-b587-bcd90c5ca0b7")
+	)
+	(wire
+		(pts
+			(xy 153.67 107.95) (xy 154.94 107.95)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d1e9ccb1-0d0a-49c3-b26d-520e2619fd27")
+	)
+	(wire
+		(pts
+			(xy 96.52 67.31) (xy 97.79 67.31)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d651cfde-c914-4f60-a22a-59da48b1bfa5")
+	)
+	(wire
+		(pts
+			(xy 105.41 148.59) (xy 106.68 148.59)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d9de70a3-6954-4a0e-ad07-60398d8ac752")
+	)
+	(wire
+		(pts
+			(xy 96.52 68.58) (xy 96.52 67.31)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "dbbb5ff9-44df-4d99-9fcb-a3546e4ec809")
+	)
+	(wire
+		(pts
+			(xy 95.25 87.63) (xy 96.52 87.63)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "de1abd47-2652-4ee3-adfa-b901696f6077")
+	)
+	(wire
+		(pts
+			(xy 95.25 168.91) (xy 96.52 168.91)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e31e5f61-ef65-4ae2-895e-53b7de0111f2")
+	)
+	(wire
+		(pts
+			(xy 106.68 148.59) (xy 106.68 149.86)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e33cd160-fa00-4a61-9616-15a196e08a75")
+	)
+	(wire
+		(pts
+			(xy 106.68 128.27) (xy 106.68 129.54)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e4809286-d31e-4b3d-9718-4d22e0531c51")
+	)
+	(wire
+		(pts
+			(xy 165.1 46.99) (xy 166.37 46.99)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e4b7063f-a46d-4810-9389-c7301fce6f74")
+	)
+	(wire
+		(pts
+			(xy 163.83 25.4) (xy 165.1 25.4)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e5a06586-a3bc-4931-bffa-ea99292045a5")
+	)
+	(wire
+		(pts
+			(xy 106.68 25.4) (xy 107.95 25.4)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e7d8eaed-64d5-4636-877e-676704f33a09")
+	)
+	(wire
+		(pts
+			(xy 106.68 25.4) (xy 106.68 26.67)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e90a3678-5fc4-4cc5-84c7-8759ce55aa82")
+	)
+	(wire
+		(pts
+			(xy 105.41 107.95) (xy 106.68 107.95)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e9cd6339-1fb3-4361-b194-491114c7535d")
+	)
+	(wire
+		(pts
+			(xy 165.1 107.95) (xy 165.1 109.22)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "eb34f5ed-85c7-462f-98ce-444c561956b5")
+	)
+	(wire
+		(pts
+			(xy 96.52 129.54) (xy 96.52 128.27)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "eb9c772e-3199-411e-9798-290a614de54f")
+	)
+	(wire
+		(pts
+			(xy 106.68 46.99) (xy 106.68 48.26)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ec224ccd-f391-4332-8ab8-49974de2fc45")
+	)
+	(wire
+		(pts
+			(xy 96.52 107.95) (xy 97.79 107.95)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ee478b66-0acd-4b55-80d9-86a513857585")
+	)
+	(wire
+		(pts
+			(xy 105.41 67.31) (xy 106.68 67.31)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f24b25e2-4b82-46e6-8e48-4439efd1b98f")
+	)
+	(wire
+		(pts
+			(xy 154.94 109.22) (xy 154.94 107.95)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f29da6db-4c81-441a-ac6a-8fbd96952227")
+	)
+	(wire
+		(pts
+			(xy 154.94 67.31) (xy 156.21 67.31)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f67996fe-034f-4309-960e-7f6412fb5ede")
+	)
+	(wire
+		(pts
+			(xy 96.52 170.18) (xy 96.52 168.91)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f8c75457-fa63-4987-8048-07558e4e0f4d")
+	)
+	(wire
+		(pts
+			(xy 154.94 107.95) (xy 156.21 107.95)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f935b7af-fc66-42f4-94a5-fe94a75d4b0c")
+	)
+	(wire
+		(pts
+			(xy 96.52 148.59) (xy 97.79 148.59)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f972f18f-9987-43d6-b954-287d3537f953")
+	)
+	(wire
+		(pts
+			(xy 154.94 130.81) (xy 154.94 129.54)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f9a7a794-a415-4907-a159-7b62185a2d10")
+	)
+	(wire
+		(pts
+			(xy 96.52 128.27) (xy 97.79 128.27)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fa463f8c-2af4-4060-9a56-741edd4f98a6")
+	)
+	(wire
+		(pts
+			(xy 105.41 128.27) (xy 106.68 128.27)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fb7c65e6-ec87-458d-ad92-ca4abede687a")
+	)
+	(wire
+		(pts
+			(xy 163.83 67.31) (xy 165.1 67.31)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fd44e7e8-8d27-46c4-966d-cd9ca4cb3a08")
+	)
+	(image
+		(at 149.86 -16.51)
+		(uuid "b67dca8f-7467-49a4-ab9f-f1c9503e565c")
+		(data "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"
+			"dhs2vd/Ugpb0Sl9dHGn/dEkLdSnfruYrvgVsTCf0pmaNi50nStw/7MP0uC1MPlR8O+0Grl/e07NS"
+			"sCq3fvR5uU4+jurB2YW7/IFZmjK5NN6s3pp1645Uq3qq1Lhmi13P803Cz/q6aPV4R9qv3M6jx1p+"
+			"80pf9XIt2am7uq9Tvau5b7+7aQEAAABgHBDUAgDgUZ1259KxC2D0fqsvS0Huta6v04r/YhT7caQV"
+			"Y16n2+edB4+PPtF2xRTGTZcdrWj61ZLOMxllHHfqW80375Cs0+duWteUFpakV0+e63RpoUFovKzD"
+			"iuvquNcPrd72k8R9HQ40pa02+XBBv32b0zc32kqDeptsf69eVE0R3ea6x201rLXmNVvqej6/p+fG"
+			"SvVUw53UU+XjXbzTaVVwX3GN3YsdhSvD/DcJTbf6mS/e6bT2OrR00wIAAABATzwX1BqGUf6EGQAA"
+			"9KSfHbsA0NLkx4o++JO+Ks5ne5lSJJLS5eSU7lV0Ol5+kxvwjriBlw4dZboKi851Vttm2mDZxbtT"
+			"6f7dijD0kR4vS6e1bYXN9q7f3bQFUwtL0htpaaH7gGwYHZCXqYgmEuUO2svXX+lPD0yVcvziNWxf"
+			"u2tcfm3r7b0pTUrS21y5forjzeptQPtfniLakZPproO6Xm2tdVizDTpYO/vbVTze1F3drw3unYzW"
+			"piRNrRW+fFAI8+e2dV75M0/d1f02PxndtAAAAAAGod/Xg/UizwW1AABgOOjOBdAf7jVIZVvuVLRP"
+			"c4q+iGtSD7X95T3ZhSlqn35VeZ/XShSvddsX5cCrUXPo0UpFZ+DRioyKNtiLnefanStca7bFsqmF"
+			"Jc3tPq+YtvZI+7vS/bsdRHcD6aYtmFpTphi4deNoRfOn2/q/AXdATsZf6EvZpWscW19IX76Iq9wA"
+			"O6n4i8+lL9z6seyostuFq8w+OFPu6UTNeLN6k/pfV93ruNZa1OzFTri6U/toX7uVHazN6qLl4z3S"
+			"4+VdPa+Yd/lopaZLt6lp3Zvb1X5x5fMzvVl+XA5l6aYFAAAAgJ7dGvUOAAAAb+vke2s3CWuD/704"
+			"wOcm40qn24xNPtR2+lrbtfd9uK30dWH0MqXI09ICbV8/7N8+Hu2707jOG+XpXCUtNwpup+9pbnde"
+			"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"
+			"QwAAAHUAAAAAAAAA82N+Z/JkfbXxZH7iQQEAAAAAAACwbD1bxFUAALAM41rEVQAAAAAAAAAAAAAA"
+			"AAAAAAAAAA4AAAAAAAAA8Go9W8RVAAAGAAAAAAAAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAiGs9W8RVAAAAAAAAAAAAAAAAAAAAAAAAENLHXMx/AAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAEAAAAAAAAADgAAAKEAAAAAAAAAsGw9W8RVAAAgGx9czH8AAHBLPVvEVQAAcFU9W8RVAAAPAAAA"
+			"QAAAAIBaPVvEVQAABwAAAAAAAAAHAAAAAAAAABDSx1zMfwAAAAAAAAAAAAAAAAAAAAAAAChsPVvE"
+			"VQAAAAAAAAAAAAAAAAAAAAAAAOBOP1vEVQAAAAAAAAAAAAAAAAAAAAAAAP////8BVQAAwAEAAAAA"
+			"AAAwAAAAAAAAADaPKwfBVQAAbwAAADIAAAAuAAAAVQAAAHMAAABlAAAAcgAAAAAAAADRAAAAAAAA"
+			"ANBZPVvEVQAAUFI9W8RVAABDAAAAdQAAAAAAAAAAAAAAwGw9W8RVAAChAAAAAAAAAFBSPVvEVQAA"
+			"sAzjWsRVAAAAAAAAAAAAAAAAAAAAAAAAEAAAAMRVAACQbD1bxFUAAAYAAAAAAAAABgAAAAAAAAAA"
+			"AAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAobT1bxFUAAAAAAAAAAAAAAAAAAMRVAABjAAAAaAAAAAAA"
+			"AAAAAAAAACoqAIJ8dF6BfXX/gX11/4F9df+BfXX/gX11/4F9df+BfXX/gX11/4F9df+BfXX/bWtn"
+			"/1hYWP9YWFj/WFhY/1hYWP9YWFj/fXpy/4F9df+BfXX/gX11/4F9df+BfXX/gX11/4F9df+BfXX/"
+			"gX11/4F9df+BfXX/gX51XCoqKgAqKioAgX52cYF9df+BfXX/gX11/4F9df+BfXX/gX11/4F9df+B"
+			"fXX/gX11/4F9df99enL/eHRu/0NDQ/9DQ0P/V1ZT/3p2cP+BfXX/gX11/4F9df+BfXX/gX11/4F9"
+			"df+BfXX/gX11/4F9df+BfXX/gX11/4F9df+BfnZxKioqACoqKgCBfnZxgX11/4F9df+BfXX/gX11"
+			"/4F9df+BfXX/gX11/4F9df+BfXX/gX11/4F9df9/e3T/Pj4+/z4+Pv9XVVL/gX11/4F9df+BfXX/"
+			"gX11/4F9df+BfXX/gX11/4F9df+BfXX/gX11/4F9df+BfXX/gX11/4F+dnEqKioAKioqAIF+dnGB"
+			"fXX/gX11/4F9df+BfXX/gX11/4F9df+BfXX/gX11/4F9df+BfXX/gX11/397dP8+Pj7/Pj4+/1dV"
+			"Uv+BfXX/gX11/4F9df+BfXX/gX11/4F9df+BfXX/gX11/4F9df+BfXX/gX11/4F9df+BfXX/gX52"
+			"cSoqKgAqKioAgX52cYF9df+BfXX/gX11/4F9df+BfXX/gX11/4F9df+BfXX/gX11/4F9df+BfXX/"
+			"cm9p/z4+Pv8+Pj7/S0pI/397dP+BfXX/gX11/4F9df+BfXX/gX11/356c/93dG7/d3Ru/3d0bv93"
+			"dG7/d3Ru/3d0bv93dG2DKioqACoqKgCBfnZxgX11/4F9df+BfXX/gX11/4F9df+BfXX/gX11/4F9"
+			"df+BfXX/gX11/3Vya/9AQED/Pj4+/z4+Pv8+Pj7/UVBO/4F9df+BfXX/gX11/4F9df+BfXX/dHJs"
+			"/1hYWP9YWFj/WFhY/1hYWP9YWFj/WFhY/2RkYbkqKioAKioqAIF+dnGBfXX/gX11/4F9df+BfXX/"
+			"gX11/4F9df+BfXX/gX11/4F9df+BfXX/V1VS/z4+Pv8+Pj7/Pj4+/z4+Pv8+Pj7/SUhH/0xLSf9M"
+			"S0n/TEtJ/0xLSf9QT07/WFhY/1hYWP9YWFj/WFhY/1hYWP9YWFj/WFhX1SoqKgAqKioAgX52cYF9"
+			"df+BfXX/gX11/4F9df+BfXX/gX11/4F9df+BfXX/gX11/4F9df9QT03/Pj4+/z4+Pv8+Pj7/Pj4+"
+			"/z4+Pv8+Pj7/UlJS/4eGhv+QkJD/kJCQ/4+Pj/+CgYH/Wlpa/1hYWP9YWFj/WFhY/1hYWP9WVVTd"
+			"KioqACoqKgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAA=="
+		)
+	)
+	(hierarchical_label "OUT_3"
+		(shape output)
+		(at 107.95 67.31 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "003e13a7-359f-49b4-ba15-42c908150973")
+	)
+	(hierarchical_label "IN_5"
+		(shape input)
+		(at 95.25 107.95 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "0ee3045d-2ffb-4f28-a682-9bf399fe6fca")
+	)
+	(hierarchical_label "IN_11"
+		(shape input)
+		(at 153.67 67.31 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "274471c7-99e1-4f9c-a682-de0cd6651a51")
+	)
+	(hierarchical_label "IN_10"
+		(shape input)
+		(at 153.67 46.99 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "33f8c432-6a4d-488b-9a17-8f6954ff9e0c")
+	)
+	(hierarchical_label "IN_12"
+		(shape input)
+		(at 153.67 87.63 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "33fcb659-41e2-469f-9eff-8af915e37f87")
+	)
+	(hierarchical_label "IN_3"
+		(shape input)
+		(at 95.25 67.31 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "477f9319-8c2b-48de-9af8-b5adad646af3")
+	)
+	(hierarchical_label "IN_13"
+		(shape input)
+		(at 153.67 107.95 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "4b63327c-b70d-495d-b48c-c0c216147943")
+	)
+	(hierarchical_label "OUT_7"
+		(shape output)
+		(at 107.95 148.59 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "5b3c9e20-50b2-4ea7-a39f-e172dc2af660")
+	)
+	(hierarchical_label "OUT_5"
+		(shape output)
+		(at 107.95 107.95 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "65b03e72-0d46-44b0-84b7-dbcde6372af5")
+	)
+	(hierarchical_label "OUT_10"
+		(shape output)
+		(at 166.37 46.99 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "78ae6f2f-dbef-49d3-a6e8-182ccaa3b79b")
+	)
+	(hierarchical_label "IN_6"
+		(shape input)
+		(at 95.25 128.27 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "7db40f21-f5a3-4e79-acab-744496d638b6")
+	)
+	(hierarchical_label "OUT_8"
+		(shape output)
+		(at 107.95 168.91 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "85cd6f2d-b5b5-47e0-93c8-eaaee1122ba9")
+	)
+	(hierarchical_label "OUT_4"
+		(shape output)
+		(at 107.95 87.63 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "88253dc9-04c4-4c46-a9d9-bda8b8128a89")
+	)
+	(hierarchical_label "IN_1"
+		(shape input)
+		(at 95.25 25.4 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "96209f9c-fba7-41cf-a545-2ede10ce724f")
+	)
+	(hierarchical_label "IN_2"
+		(shape input)
+		(at 95.25 46.99 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "9ecfb942-2f9c-4bfa-8907-6794c9acfd5d")
+	)
+	(hierarchical_label "OUT_1"
+		(shape output)
+		(at 107.95 25.4 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "a0e9c01f-5544-46bb-b0c3-966c3b016496")
+	)
+	(hierarchical_label "IN_4"
+		(shape input)
+		(at 95.25 87.63 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "a80f07b0-330e-472e-ad4a-f7684cc53839")
+	)
+	(hierarchical_label "OUT_11"
+		(shape output)
+		(at 166.37 67.31 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "a9c70d2f-efbf-40e5-b027-7245152c747e")
+	)
+	(hierarchical_label "IN_14"
+		(shape input)
+		(at 153.67 129.54 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "aca1daf5-1798-473f-adbf-7962ef6fe8c9")
+	)
+	(hierarchical_label "OUT_13"
+		(shape output)
+		(at 166.37 107.95 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "b64f1258-4f2d-4419-8941-c47c5b19f527")
+	)
+	(hierarchical_label "IN_7"
+		(shape input)
+		(at 95.25 148.59 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "b921a2ba-d4c7-45b4-9056-59098fbd69a3")
+	)
+	(hierarchical_label "OUT_6"
+		(shape output)
+		(at 107.95 128.27 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "baa1d006-3a74-4a03-82e1-52595c95e14c")
+	)
+	(hierarchical_label "IN_9"
+		(shape input)
+		(at 153.67 25.4 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "ca7626c8-6e1c-4a67-8806-285f3e4d5f2a")
+	)
+	(hierarchical_label "OUT_9"
+		(shape output)
+		(at 166.37 25.4 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "ce60f423-7281-42b8-9629-83641ed8a22e")
+	)
+	(hierarchical_label "OUT_12"
+		(shape output)
+		(at 166.37 87.63 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "de676f2d-49ce-44a7-97d1-530c79b24f86")
+	)
+	(hierarchical_label "IN_8"
+		(shape input)
+		(at 95.25 168.91 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "e1c8f697-bd24-4798-b34e-2ee34e247522")
+	)
+	(hierarchical_label "OUT_14"
+		(shape output)
+		(at 166.37 129.54 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "e2695654-ad2d-4318-8af7-b1a2389ddeec")
+	)
+	(hierarchical_label "OUT_2"
+		(shape output)
+		(at 107.95 46.99 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "e55eb0f8-10df-4cd8-8544-1f79e5fa15e1")
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 154.94 76.2 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "0814f508-c6fe-433d-a596-887ba20e3379")
+		(property "Reference" "#PWR0243"
+			(at 154.94 82.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 154.94 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 154.94 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 154.94 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 154.94 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "6f07b63f-001e-4417-8eab-98f16d72aff9")
+		)
+		(instances
+			(project "Teensy_board"
+				(path "/16f30d3e-33bd-41b5-893d-bb346d840c71/670d310e-9991-441a-9fb5-c088e9d6b117/f8db35e7-4dc1-41b7-a5bb-1bb22a391ccc"
+					(reference "#PWR0243")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 165.1 34.29 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "0a21692a-03e7-4f56-b9c4-1194f7519efd")
+		(property "Reference" "#PWR0248"
+			(at 165.1 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 165.1 39.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 165.1 34.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 165.1 34.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 165.1 34.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "e3576d19-a5da-433c-be03-6a72e0df64b3")
+		)
+		(instances
+			(project "Teensy_board"
+				(path "/16f30d3e-33bd-41b5-893d-bb346d840c71/670d310e-9991-441a-9fb5-c088e9d6b117/f8db35e7-4dc1-41b7-a5bb-1bb22a391ccc"
+					(reference "#PWR0248")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Diode:PTVS5V0Z1USK")
+		(at 154.94 92.71 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "0c9a9f8b-886b-4387-8414-ddfdc99f0faa")
+		(property "Reference" "D26"
+			(at 152.654 91.44 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "TVS_SMF3.3"
+			(at 152.654 93.98 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "TVS:SOD3718X108N"
+			(at 150.495 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/PTVS5V0Z1USK.pdf"
+			(at 154.94 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "5V, 1200W TVS unidirectional diode, DSN1608-2"
+			(at 154.94 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "df0eab18-baf0-426c-a860-d8d1e24d8aa0")
+		)
+		(pin "1"
+			(uuid "88cd6047-1433-4b85-be49-42e58958bbd9")
+		)
+		(instances
+			(project "Teensy_board"
+				(path "/16f30d3e-33bd-41b5-893d-bb346d840c71/670d310e-9991-441a-9fb5-c088e9d6b117/f8db35e7-4dc1-41b7-a5bb-1bb22a391ccc"
+					(reference "D26")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Diode:PTVS5V0Z1USK")
+		(at 96.52 133.35 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "0dc35627-9122-4fed-9e61-347bbebd9299")
+		(property "Reference" "D13"
+			(at 94.234 132.08 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "TVS_SMF3.3"
+			(at 94.234 134.62 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "TVS:SOD3718X108N"
+			(at 92.075 133.35 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/PTVS5V0Z1USK.pdf"
+			(at 96.52 133.35 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "5V, 1200W TVS unidirectional diode, DSN1608-2"
+			(at 96.52 133.35 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "c9a7ca8e-350f-40e4-842d-68db760b7121")
+		)
+		(pin "1"
+			(uuid "d21c6637-e6b4-466a-a6cb-262c46a8ceee")
+		)
+		(instances
+			(project "Teensy_board"
+				(path "/16f30d3e-33bd-41b5-893d-bb346d840c71/670d310e-9991-441a-9fb5-c088e9d6b117/f8db35e7-4dc1-41b7-a5bb-1bb22a391ccc"
+					(reference "D13")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 154.94 116.84 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "0dd450de-0f0f-4635-aff8-7156c6289604")
+		(property "Reference" "#PWR0239"
+			(at 154.94 123.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 154.94 121.92 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 154.94 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 154.94 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 154.94 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "92c03924-1869-4376-849b-5857fb43afb2")
+		)
+		(instances
+			(project "Teensy_board"
+				(path "/16f30d3e-33bd-41b5-893d-bb346d840c71/670d310e-9991-441a-9fb5-c088e9d6b117/f8db35e7-4dc1-41b7-a5bb-1bb22a391ccc"
+					(reference "#PWR0239")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:Fuse")
+		(at 101.6 148.59 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "124c22e4-59b6-4f25-ac8a-1554f34fb217")
+		(property "Reference" "F8"
+			(at 101.6 143.51 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "SMD0805B010TF"
+			(at 101.6 146.05 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Fuse:Fuse_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
+			(at 101.6 150.368 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 101.6 148.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Fuse"
+			(at 101.6 148.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "31dafa45-052a-40f9-a253-c763b5bbc553")
+		)
+		(pin "1"
+			(uuid "87924986-0e98-4bde-8076-375b868a23a3")
+		)
+		(instances
+			(project "Teensy_board"
+				(path "/16f30d3e-33bd-41b5-893d-bb346d840c71/670d310e-9991-441a-9fb5-c088e9d6b117/f8db35e7-4dc1-41b7-a5bb-1bb22a391ccc"
+					(reference "F8")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:D_Zener")
+		(at 165.1 113.03 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "1f1fd0fb-fc1e-46e3-9b81-8a512be24704")
+		(property "Reference" "D25"
+			(at 167.64 111.7599 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Zener_ZM4729A-GS18"
+			(at 167.64 114.2999 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_MELF"
+			(at 165.1 113.03 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 165.1 113.03 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Zener diode"
+			(at 165.1 113.03 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "30e8c972-79c9-4e2b-b4e4-ea4580f0fd10")
+		)
+		(pin "1"
+			(uuid "e23530a3-4735-43da-a9d6-552162dab7f0")
+		)
+		(instances
+			(project "Teensy_board"
+				(path "/16f30d3e-33bd-41b5-893d-bb346d840c71/670d310e-9991-441a-9fb5-c088e9d6b117/f8db35e7-4dc1-41b7-a5bb-1bb22a391ccc"
+					(reference "D25")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Diode:PTVS5V0Z1USK")
+		(at 154.94 134.62 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "2003a5df-e22a-4956-87b6-f5814d300083")
+		(property "Reference" "D22"
+			(at 152.654 133.35 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "TVS_SMF3.3"
+			(at 152.654 135.89 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "TVS:SOD3718X108N"
+			(at 150.495 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/PTVS5V0Z1USK.pdf"
+			(at 154.94 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "5V, 1200W TVS unidirectional diode, DSN1608-2"
+			(at 154.94 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "c3c04cc7-7b44-46e5-b36f-67533a8fb6fe")
+		)
+		(pin "1"
+			(uuid "71fb739d-352b-4043-90c1-028d79066ba6")
+		)
+		(instances
+			(project "Teensy_board"
+				(path "/16f30d3e-33bd-41b5-893d-bb346d840c71/670d310e-9991-441a-9fb5-c088e9d6b117/f8db35e7-4dc1-41b7-a5bb-1bb22a391ccc"
+					(reference "D22")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Diode:PTVS5V0Z1USK")
+		(at 154.94 113.03 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "26169f17-603c-4ddf-9e83-da489f6cdb92")
+		(property "Reference" "D24"
+			(at 152.654 111.76 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "TVS_SMF3.3"
+			(at 152.654 114.3 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "TVS:SOD3718X108N"
+			(at 150.495 113.03 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/PTVS5V0Z1USK.pdf"
+			(at 154.94 113.03 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "5V, 1200W TVS unidirectional diode, DSN1608-2"
+			(at 154.94 113.03 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "e6492cdf-7d50-4c3b-8286-9e0b8557900d")
+		)
+		(pin "1"
+			(uuid "23bbd8c9-fc46-4c8f-900e-ca4acf2deeee")
+		)
+		(instances
+			(project "Teensy_board"
+				(path "/16f30d3e-33bd-41b5-893d-bb346d840c71/670d310e-9991-441a-9fb5-c088e9d6b117/f8db35e7-4dc1-41b7-a5bb-1bb22a391ccc"
+					(reference "D24")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Diode:PTVS5V0Z1USK")
+		(at 96.52 72.39 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "270fc6bd-1b31-4d47-87a6-21a430ba2042")
+		(property "Reference" "D7"
+			(at 94.234 71.12 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "TVS_SMF3.3"
+			(at 94.234 73.66 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "TVS:SOD3718X108N"
+			(at 92.075 72.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/PTVS5V0Z1USK.pdf"
+			(at 96.52 72.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "5V, 1200W TVS unidirectional diode, DSN1608-2"
+			(at 96.52 72.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "71293e74-aa52-4f67-9005-624547cc101e")
+		)
+		(pin "1"
+			(uuid "d1b48c5e-3582-4b48-85f6-0890e6d2283e")
+		)
+		(instances
+			(project "Teensy_board"
+				(path "/16f30d3e-33bd-41b5-893d-bb346d840c71/670d310e-9991-441a-9fb5-c088e9d6b117/f8db35e7-4dc1-41b7-a5bb-1bb22a391ccc"
+					(reference "D7")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 96.52 137.16 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "2a207bf3-64cf-4b7a-b7b2-e5b162868e83")
+		(property "Reference" "#PWR0105"
+			(at 96.52 143.51 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 96.52 142.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 96.52 137.16 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 96.52 137.16 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 96.52 137.16 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "c3f9911a-cd18-4833-8991-cf0abd1bbeab")
+		)
+		(instances
+			(project "Teensy_board"
+				(path "/16f30d3e-33bd-41b5-893d-bb346d840c71/670d310e-9991-441a-9fb5-c088e9d6b117/f8db35e7-4dc1-41b7-a5bb-1bb22a391ccc"
+					(reference "#PWR0105")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Diode:PTVS5V0Z1USK")
+		(at 154.94 52.07 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "2fa95873-4d16-4404-896e-795b1e997e80")
+		(property "Reference" "D30"
+			(at 152.654 50.8 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "TVS_SMF3.3"
+			(at 152.654 53.34 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "TVS:SOD3718X108N"
+			(at 150.495 52.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/PTVS5V0Z1USK.pdf"
+			(at 154.94 52.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "5V, 1200W TVS unidirectional diode, DSN1608-2"
+			(at 154.94 52.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "76afb466-479d-4138-82d0-ce55a5a7f8d5")
+		)
+		(pin "1"
+			(uuid "6163e81c-86e2-4d70-822a-8efde49d8d8d")
+		)
+		(instances
+			(project "Teensy_board"
+				(path "/16f30d3e-33bd-41b5-893d-bb346d840c71/670d310e-9991-441a-9fb5-c088e9d6b117/f8db35e7-4dc1-41b7-a5bb-1bb22a391ccc"
+					(reference "D30")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:D_Zener")
+		(at 106.68 92.71 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "30582343-0f97-423f-9193-9e168cef0464")
+		(property "Reference" "D10"
+			(at 109.22 91.4399 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Zener_ZM4729A-GS18"
+			(at 109.22 93.9799 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_MELF"
+			(at 106.68 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 106.68 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Zener diode"
+			(at 106.68 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "f6e365e7-2750-4fe0-8e16-cd0d760dbab7")
+		)
+		(pin "1"
+			(uuid "6c24f254-f384-44ac-ae85-f0952eb48cfd")
+		)
+		(instances
+			(project "Teensy_board"
+				(path "/16f30d3e-33bd-41b5-893d-bb346d840c71/670d310e-9991-441a-9fb5-c088e9d6b117/f8db35e7-4dc1-41b7-a5bb-1bb22a391ccc"
+					(reference "D10")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 96.52 76.2 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "31384d1d-491c-41e6-ab44-49e095c78a45")
+		(property "Reference" "#PWR083"
+			(at 96.52 82.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 96.52 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 96.52 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 96.52 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 96.52 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "3ce2e174-c8ce-4cd3-a8ba-39068edf93f7")
+		)
+		(instances
+			(project "Teensy_board"
+				(path "/16f30d3e-33bd-41b5-893d-bb346d840c71/670d310e-9991-441a-9fb5-c088e9d6b117/f8db35e7-4dc1-41b7-a5bb-1bb22a391ccc"
+					(reference "#PWR083")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Diode:PTVS5V0Z1USK")
+		(at 96.52 30.48 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "371ce821-7f5e-4921-954a-3b53897eec25")
+		(property "Reference" "D20"
+			(at 94.234 29.21 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "TVS_SMF3.3"
+			(at 94.234 31.75 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "TVS:SOD3718X108N"
+			(at 92.075 30.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/PTVS5V0Z1USK.pdf"
+			(at 96.52 30.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "5V, 1200W TVS unidirectional diode, DSN1608-2"
+			(at 96.52 30.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "3be797a6-f971-433a-b682-d2e9039772a9")
+		)
+		(pin "1"
+			(uuid "8c46f895-cd17-437d-802f-3215a5b0745a")
+		)
+		(instances
+			(project ""
+				(path "/16f30d3e-33bd-41b5-893d-bb346d840c71/670d310e-9991-441a-9fb5-c088e9d6b117/f8db35e7-4dc1-41b7-a5bb-1bb22a391ccc"
+					(reference "D20")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:Fuse")
+		(at 101.6 67.31 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "3bf2bbac-de02-4be9-96a5-af341990dd19")
+		(property "Reference" "F4"
+			(at 101.6 62.23 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "SMD0805B010TF"
+			(at 101.6 64.77 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Fuse:Fuse_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
+			(at 101.6 69.088 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 101.6 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Fuse"
+			(at 101.6 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "89fbd1fd-aa96-4e78-a9f7-5afc0dba5115")
+		)
+		(pin "1"
+			(uuid "ecdc3c57-ee8f-4397-ac72-420f6adebf40")
+		)
+		(instances
+			(project "Teensy_board"
+				(path "/16f30d3e-33bd-41b5-893d-bb346d840c71/670d310e-9991-441a-9fb5-c088e9d6b117/f8db35e7-4dc1-41b7-a5bb-1bb22a391ccc"
+					(reference "F4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 154.94 138.43 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "3e10b05e-77d7-4e3f-8381-a5abd72737e3")
+		(property "Reference" "#PWR0237"
+			(at 154.94 144.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 154.94 143.51 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 154.94 138.43 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 154.94 138.43 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 154.94 138.43 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "ce64e792-6d5e-4aa2-b442-306dfe0d2f84")
+		)
+		(instances
+			(project "Teensy_board"
+				(path "/16f30d3e-33bd-41b5-893d-bb346d840c71/670d310e-9991-441a-9fb5-c088e9d6b117/f8db35e7-4dc1-41b7-a5bb-1bb22a391ccc"
+					(reference "#PWR0237")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:Fuse")
+		(at 101.6 46.99 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "49f0541d-d2b7-4f77-89d6-e824bb3720de")
+		(property "Reference" "F3"
+			(at 101.6 41.91 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "SMD0805B010TF"
+			(at 101.6 44.45 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Fuse:Fuse_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
+			(at 101.6 48.768 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 101.6 46.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Fuse"
+			(at 101.6 46.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "7bad28e7-409e-4736-8ec4-e037e51b3331")
+		)
+		(pin "1"
+			(uuid "327695cd-9a04-49af-bfcc-bd31fc5bf8b3")
+		)
+		(instances
+			(project "Teensy_board"
+				(path "/16f30d3e-33bd-41b5-893d-bb346d840c71/670d310e-9991-441a-9fb5-c088e9d6b117/f8db35e7-4dc1-41b7-a5bb-1bb22a391ccc"
+					(reference "F3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 154.94 55.88 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "4f70ed10-7c5c-453e-b35c-838b2948d4ec")
+		(property "Reference" "#PWR0245"
+			(at 154.94 62.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 154.94 60.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 154.94 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 154.94 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 154.94 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "c4b6b0de-720f-437c-b83c-3be560539228")
+		)
+		(instances
+			(project "Teensy_board"
+				(path "/16f30d3e-33bd-41b5-893d-bb346d840c71/670d310e-9991-441a-9fb5-c088e9d6b117/f8db35e7-4dc1-41b7-a5bb-1bb22a391ccc"
+					(reference "#PWR0245")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:D_Zener")
+		(at 165.1 30.48 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "507e0ac7-79b1-4d7f-91ed-7b8b49950107")
+		(property "Reference" "D33"
+			(at 167.64 29.2099 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Zener_ZM4729A-GS18"
+			(at 167.64 31.7499 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_MELF"
+			(at 165.1 30.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 165.1 30.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Zener diode"
+			(at 165.1 30.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "ec89f8a7-9e05-4f90-bc41-6e4810f742db")
+		)
+		(pin "1"
+			(uuid "e4cf14e3-0f96-4a71-ba39-20eba91e1cba")
+		)
+		(instances
+			(project "Teensy_board"
+				(path "/16f30d3e-33bd-41b5-893d-bb346d840c71/670d310e-9991-441a-9fb5-c088e9d6b117/f8db35e7-4dc1-41b7-a5bb-1bb22a391ccc"
+					(reference "D33")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:Fuse")
+		(at 160.02 107.95 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "52dff5e5-e904-47b8-98a4-fae9b7aa5407")
+		(property "Reference" "F11"
+			(at 160.02 102.87 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "SMD0805B010TF"
+			(at 160.02 105.41 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Fuse:Fuse_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
+			(at 160.02 109.728 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 160.02 107.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Fuse"
+			(at 160.02 107.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "92f24ee7-9b2d-4302-a261-3206af5b89aa")
+		)
+		(pin "1"
+			(uuid "302318d5-02c1-4d64-b483-d3b2732f7459")
+		)
+		(instances
+			(project "Teensy_board"
+				(path "/16f30d3e-33bd-41b5-893d-bb346d840c71/670d310e-9991-441a-9fb5-c088e9d6b117/f8db35e7-4dc1-41b7-a5bb-1bb22a391ccc"
+					(reference "F11")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 106.68 157.48 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "55379ce0-6597-46c8-bfb8-622f91bfb07b")
+		(property "Reference" "#PWR0108"
+			(at 106.68 163.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 106.68 162.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 106.68 157.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 106.68 157.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 106.68 157.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "ba6a0256-1684-49fd-ac5e-1e4c440a5092")
+		)
+		(instances
+			(project "Teensy_board"
+				(path "/16f30d3e-33bd-41b5-893d-bb346d840c71/670d310e-9991-441a-9fb5-c088e9d6b117/f8db35e7-4dc1-41b7-a5bb-1bb22a391ccc"
+					(reference "#PWR0108")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:Fuse")
+		(at 101.6 168.91 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "56856d37-741a-4e02-8e57-69cf1c2f6974")
+		(property "Reference" "F9"
+			(at 101.6 163.83 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "SMD0805B010TF"
+			(at 101.6 166.37 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Fuse:Fuse_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
+			(at 101.6 170.688 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 101.6 168.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Fuse"
+			(at 101.6 168.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "aae398b3-078c-463c-b16f-d1302878a832")
+		)
+		(pin "1"
+			(uuid "122de61e-9558-409b-8045-b89d60eabe3c")
+		)
+		(instances
+			(project "Teensy_board"
+				(path "/16f30d3e-33bd-41b5-893d-bb346d840c71/670d310e-9991-441a-9fb5-c088e9d6b117/f8db35e7-4dc1-41b7-a5bb-1bb22a391ccc"
+					(reference "F9")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 96.52 177.8 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "58d99c8c-f762-49dd-91a0-db50d99ce399")
+		(property "Reference" "#PWR0235"
+			(at 96.52 184.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 96.52 182.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 96.52 177.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 96.52 177.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 96.52 177.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "f865d6f9-6b8f-4742-bbe1-7241556aa1ad")
+		)
+		(instances
+			(project "Teensy_board"
+				(path "/16f30d3e-33bd-41b5-893d-bb346d840c71/670d310e-9991-441a-9fb5-c088e9d6b117/f8db35e7-4dc1-41b7-a5bb-1bb22a391ccc"
+					(reference "#PWR0235")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 154.94 34.29 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "5af8a1be-36f5-44fa-b3f0-15bd3e6271a2")
+		(property "Reference" "#PWR0247"
+			(at 154.94 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 154.94 39.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 154.94 34.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 154.94 34.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 154.94 34.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "cdc62dab-f4a1-468c-85df-a087a351b20d")
+		)
+		(instances
+			(project "Teensy_board"
+				(path "/16f30d3e-33bd-41b5-893d-bb346d840c71/670d310e-9991-441a-9fb5-c088e9d6b117/f8db35e7-4dc1-41b7-a5bb-1bb22a391ccc"
+					(reference "#PWR0247")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:D_Zener")
+		(at 106.68 30.48 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "631c0f7d-2abd-4f96-84ef-618dcdc4e74d")
+		(property "Reference" "D2"
+			(at 109.22 29.2099 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Zener_ZM4729A-GS18"
+			(at 109.22 31.7499 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_MELF"
+			(at 106.68 30.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 106.68 30.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Zener diode"
+			(at 106.68 30.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "d5d014e0-b73d-495d-a619-df621bba309e")
+		)
+		(pin "1"
+			(uuid "4a3fa99f-f610-4bfb-8684-ba28249bbf80")
+		)
+		(instances
+			(project "Teensy_board"
+				(path "/16f30d3e-33bd-41b5-893d-bb346d840c71/670d310e-9991-441a-9fb5-c088e9d6b117/f8db35e7-4dc1-41b7-a5bb-1bb22a391ccc"
+					(reference "D2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:D_Zener")
+		(at 165.1 92.71 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "662e1012-5188-472d-a94f-ad937be80191")
+		(property "Reference" "D27"
+			(at 167.64 91.4399 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Zener_ZM4729A-GS18"
+			(at 167.64 93.9799 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_MELF"
+			(at 165.1 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 165.1 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Zener diode"
+			(at 165.1 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "2c738fe0-4b5f-44a9-bbe1-b1623c40af05")
+		)
+		(pin "1"
+			(uuid "5d6dbe1e-9c47-43e7-ab8b-36f90dfe919f")
+		)
+		(instances
+			(project "Teensy_board"
+				(path "/16f30d3e-33bd-41b5-893d-bb346d840c71/670d310e-9991-441a-9fb5-c088e9d6b117/f8db35e7-4dc1-41b7-a5bb-1bb22a391ccc"
+					(reference "D27")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Diode:PTVS5V0Z1USK")
+		(at 96.52 92.71 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "75b43703-4ade-4013-91a8-7e0164ee9e74")
+		(property "Reference" "D9"
+			(at 94.234 91.44 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "TVS_SMF3.3"
+			(at 94.234 93.98 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "TVS:SOD3718X108N"
+			(at 92.075 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/PTVS5V0Z1USK.pdf"
+			(at 96.52 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "5V, 1200W TVS unidirectional diode, DSN1608-2"
+			(at 96.52 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "37d4a352-1e15-4767-9a9b-a701ffc73df2")
+		)
+		(pin "1"
+			(uuid "a27f695f-b8ec-42d8-a102-9bf5908b6ffd")
+		)
+		(instances
+			(project "Teensy_board"
+				(path "/16f30d3e-33bd-41b5-893d-bb346d840c71/670d310e-9991-441a-9fb5-c088e9d6b117/f8db35e7-4dc1-41b7-a5bb-1bb22a391ccc"
+					(reference "D9")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:D_Zener")
+		(at 165.1 72.39 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "79eff497-059e-4521-9ca8-a72287597422")
+		(property "Reference" "D29"
+			(at 167.64 71.1199 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Zener_ZM4729A-GS18"
+			(at 167.64 73.6599 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_MELF"
+			(at 165.1 72.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 165.1 72.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Zener diode"
+			(at 165.1 72.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "5a311533-2aba-48ad-bc1b-396d60bd5618")
+		)
+		(pin "1"
+			(uuid "26af82e9-f654-4ac2-86c7-92e1c2c80877")
+		)
+		(instances
+			(project "Teensy_board"
+				(path "/16f30d3e-33bd-41b5-893d-bb346d840c71/670d310e-9991-441a-9fb5-c088e9d6b117/f8db35e7-4dc1-41b7-a5bb-1bb22a391ccc"
+					(reference "D29")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:Fuse")
+		(at 101.6 107.95 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "7a6de4ac-f4ea-413c-88d9-27e4dd79006e")
+		(property "Reference" "F6"
+			(at 101.6 102.87 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "SMD0805B010TF"
+			(at 101.6 105.41 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Fuse:Fuse_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
+			(at 101.6 109.728 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 101.6 107.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Fuse"
+			(at 101.6 107.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "a8ae13b6-b8a9-467d-b5f1-0931a1b9548b")
+		)
+		(pin "1"
+			(uuid "3701234c-24da-48b9-9ed6-34fb17497798")
+		)
+		(instances
+			(project "Teensy_board"
+				(path "/16f30d3e-33bd-41b5-893d-bb346d840c71/670d310e-9991-441a-9fb5-c088e9d6b117/f8db35e7-4dc1-41b7-a5bb-1bb22a391ccc"
+					(reference "F6")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:Fuse")
+		(at 101.6 25.4 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "81f5378a-849b-4cff-9128-15db781f7ad2")
+		(property "Reference" "F2"
+			(at 101.6 20.32 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "SMD0805B010TF"
+			(at 101.6 22.86 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Fuse:Fuse_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
+			(at 101.6 27.178 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 101.6 25.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Fuse"
+			(at 101.6 25.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "6a64b66c-37b1-4ba6-88ab-5dd3a40a07a4")
+		)
+		(pin "1"
+			(uuid "cf194f54-e381-4f51-b0b9-6afbba653a44")
+		)
+		(instances
+			(project ""
+				(path "/16f30d3e-33bd-41b5-893d-bb346d840c71/670d310e-9991-441a-9fb5-c088e9d6b117/f8db35e7-4dc1-41b7-a5bb-1bb22a391ccc"
+					(reference "F2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 106.68 116.84 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "870b10f7-fec2-472a-a384-5a0e9fda531c")
+		(property "Reference" "#PWR0104"
+			(at 106.68 123.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 106.68 121.92 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 106.68 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 106.68 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 106.68 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "864653f9-dfe4-4f68-b6c9-87e500248441")
+		)
+		(instances
+			(project "Teensy_board"
+				(path "/16f30d3e-33bd-41b5-893d-bb346d840c71/670d310e-9991-441a-9fb5-c088e9d6b117/f8db35e7-4dc1-41b7-a5bb-1bb22a391ccc"
+					(reference "#PWR0104")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:Fuse")
+		(at 160.02 87.63 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "88121e36-f757-4179-9e09-9ed2b3fe88d2")
+		(property "Reference" "F12"
+			(at 160.02 82.55 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "SMD0805B010TF"
+			(at 160.02 85.09 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Fuse:Fuse_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
+			(at 160.02 89.408 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 160.02 87.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Fuse"
+			(at 160.02 87.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "88c99436-a0ff-47aa-8e56-299f0c09e991")
+		)
+		(pin "1"
+			(uuid "100a7235-462d-4cd5-9e7e-725e6cf61510")
+		)
+		(instances
+			(project "Teensy_board"
+				(path "/16f30d3e-33bd-41b5-893d-bb346d840c71/670d310e-9991-441a-9fb5-c088e9d6b117/f8db35e7-4dc1-41b7-a5bb-1bb22a391ccc"
+					(reference "F12")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:D_Zener")
+		(at 106.68 52.07 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "8b50b426-92d0-44a8-ac0a-512502032207")
+		(property "Reference" "D6"
+			(at 109.22 50.7999 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Zener_ZM4729A-GS18"
+			(at 109.22 53.3399 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_MELF"
+			(at 106.68 52.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 106.68 52.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Zener diode"
+			(at 106.68 52.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "ae7c0e1c-84ae-48e7-9ca6-ffa0d950a512")
+		)
+		(pin "1"
+			(uuid "8d1eadb6-467e-44ba-860a-ba948fece6c6")
+		)
+		(instances
+			(project "Teensy_board"
+				(path "/16f30d3e-33bd-41b5-893d-bb346d840c71/670d310e-9991-441a-9fb5-c088e9d6b117/f8db35e7-4dc1-41b7-a5bb-1bb22a391ccc"
+					(reference "D6")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 106.68 177.8 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "8f007988-d571-4f9e-82bf-5d1278187844")
+		(property "Reference" "#PWR0236"
+			(at 106.68 184.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 106.68 182.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 106.68 177.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 106.68 177.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 106.68 177.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "f60cc0c0-8fb6-4640-9552-55d9b1cc3dac")
+		)
+		(instances
+			(project "Teensy_board"
+				(path "/16f30d3e-33bd-41b5-893d-bb346d840c71/670d310e-9991-441a-9fb5-c088e9d6b117/f8db35e7-4dc1-41b7-a5bb-1bb22a391ccc"
+					(reference "#PWR0236")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 106.68 137.16 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "902b1aeb-89e2-4f04-b2b1-aaadcc72538d")
+		(property "Reference" "#PWR0106"
+			(at 106.68 143.51 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 106.68 142.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 106.68 137.16 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 106.68 137.16 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 106.68 137.16 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "880c5f87-8d15-47bc-b628-e46be063610e")
+		)
+		(instances
+			(project "Teensy_board"
+				(path "/16f30d3e-33bd-41b5-893d-bb346d840c71/670d310e-9991-441a-9fb5-c088e9d6b117/f8db35e7-4dc1-41b7-a5bb-1bb22a391ccc"
+					(reference "#PWR0106")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 96.52 34.29 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "9134a3e3-ccd2-4599-b706-741237c9e631")
+		(property "Reference" "#PWR080"
+			(at 96.52 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 96.52 39.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 96.52 34.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 96.52 34.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 96.52 34.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "d2d32429-2fca-47b9-bffe-8a431d545074")
+		)
+		(instances
+			(project "Teensy_board"
+				(path "/16f30d3e-33bd-41b5-893d-bb346d840c71/670d310e-9991-441a-9fb5-c088e9d6b117/f8db35e7-4dc1-41b7-a5bb-1bb22a391ccc"
+					(reference "#PWR080")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:Fuse")
+		(at 160.02 67.31 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "91ac35c1-0f0c-4ac4-89e1-ec2874f55350")
+		(property "Reference" "F13"
+			(at 160.02 62.23 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "SMD0805B010TF"
+			(at 160.02 64.77 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Fuse:Fuse_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
+			(at 160.02 69.088 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 160.02 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Fuse"
+			(at 160.02 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "634b290d-dccb-4c12-843c-12247887710a")
+		)
+		(pin "1"
+			(uuid "ee2b2346-104c-495e-a9f2-ef6f1f399742")
+		)
+		(instances
+			(project "Teensy_board"
+				(path "/16f30d3e-33bd-41b5-893d-bb346d840c71/670d310e-9991-441a-9fb5-c088e9d6b117/f8db35e7-4dc1-41b7-a5bb-1bb22a391ccc"
+					(reference "F13")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:D_Zener")
+		(at 165.1 52.07 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "9438c892-b65d-4950-82b5-3609a0c02332")
+		(property "Reference" "D31"
+			(at 167.64 50.7999 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Zener_ZM4729A-GS18"
+			(at 167.64 53.3399 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_MELF"
+			(at 165.1 52.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 165.1 52.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Zener diode"
+			(at 165.1 52.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "184a78f9-e4f3-4c14-8080-f87cc943c325")
+		)
+		(pin "1"
+			(uuid "f523db5d-05be-4630-9fc2-1143f9e13c64")
+		)
+		(instances
+			(project "Teensy_board"
+				(path "/16f30d3e-33bd-41b5-893d-bb346d840c71/670d310e-9991-441a-9fb5-c088e9d6b117/f8db35e7-4dc1-41b7-a5bb-1bb22a391ccc"
+					(reference "D31")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 106.68 34.29 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "94f96536-fefb-471b-a3dd-9553f2cf8ec2")
+		(property "Reference" "#PWR072"
+			(at 106.68 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 106.68 39.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 106.68 34.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 106.68 34.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 106.68 34.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "1eda1c9f-8988-4587-a9cd-5974e099edae")
+		)
+		(instances
+			(project ""
+				(path "/16f30d3e-33bd-41b5-893d-bb346d840c71/670d310e-9991-441a-9fb5-c088e9d6b117/f8db35e7-4dc1-41b7-a5bb-1bb22a391ccc"
+					(reference "#PWR072")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 106.68 55.88 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "97fa4304-7768-4571-a80c-04142e0db542")
+		(property "Reference" "#PWR082"
+			(at 106.68 62.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 106.68 60.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 106.68 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 106.68 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 106.68 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "6d17f054-ecb2-45f3-a2ec-7fd5a5b8f74e")
+		)
+		(instances
+			(project "Teensy_board"
+				(path "/16f30d3e-33bd-41b5-893d-bb346d840c71/670d310e-9991-441a-9fb5-c088e9d6b117/f8db35e7-4dc1-41b7-a5bb-1bb22a391ccc"
+					(reference "#PWR082")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:D_Zener")
+		(at 106.68 153.67 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "9c7ad599-98cb-40ca-814a-8aec06264837")
+		(property "Reference" "D16"
+			(at 109.22 152.3999 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Zener_ZM4729A-GS18"
+			(at 109.22 154.9399 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_MELF"
+			(at 106.68 153.67 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 106.68 153.67 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Zener diode"
+			(at 106.68 153.67 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "f7911138-18ff-4239-a38d-0db663c6a06c")
+		)
+		(pin "1"
+			(uuid "7d0981e0-bced-441b-b61e-15afe47ae361")
+		)
+		(instances
+			(project "Teensy_board"
+				(path "/16f30d3e-33bd-41b5-893d-bb346d840c71/670d310e-9991-441a-9fb5-c088e9d6b117/f8db35e7-4dc1-41b7-a5bb-1bb22a391ccc"
+					(reference "D16")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 165.1 55.88 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "9cbe6af0-4367-45fb-9fe1-06a259a775d7")
+		(property "Reference" "#PWR0246"
+			(at 165.1 62.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 165.1 60.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 165.1 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 165.1 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 165.1 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "a9b8f685-adc3-4823-bb8c-7b4a8a6aa1d4")
+		)
+		(instances
+			(project "Teensy_board"
+				(path "/16f30d3e-33bd-41b5-893d-bb346d840c71/670d310e-9991-441a-9fb5-c088e9d6b117/f8db35e7-4dc1-41b7-a5bb-1bb22a391ccc"
+					(reference "#PWR0246")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 96.52 96.52 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "a1da7f8e-333f-4d4b-833f-28e258cbe00c")
+		(property "Reference" "#PWR091"
+			(at 96.52 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 96.52 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 96.52 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 96.52 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 96.52 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "61b8f4dd-fa68-412b-8d99-f44b634f212f")
+		)
+		(instances
+			(project "Teensy_board"
+				(path "/16f30d3e-33bd-41b5-893d-bb346d840c71/670d310e-9991-441a-9fb5-c088e9d6b117/f8db35e7-4dc1-41b7-a5bb-1bb22a391ccc"
+					(reference "#PWR091")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:D_Zener")
+		(at 106.68 173.99 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "a917e79b-0679-4082-abe1-0706a45507d9")
+		(property "Reference" "D21"
+			(at 109.22 172.7199 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Zener_ZM4729A-GS18"
+			(at 109.22 175.2599 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_MELF"
+			(at 106.68 173.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 106.68 173.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Zener diode"
+			(at 106.68 173.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "7a2f7d91-ba45-4fd1-b7eb-f1f162a60487")
+		)
+		(pin "1"
+			(uuid "ea6a3873-3030-42f3-bdc3-dc976e5ea66e")
+		)
+		(instances
+			(project "Teensy_board"
+				(path "/16f30d3e-33bd-41b5-893d-bb346d840c71/670d310e-9991-441a-9fb5-c088e9d6b117/f8db35e7-4dc1-41b7-a5bb-1bb22a391ccc"
+					(reference "D21")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 165.1 76.2 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "af863501-5864-4982-9cc4-f38785af006f")
+		(property "Reference" "#PWR0244"
+			(at 165.1 82.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 165.1 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 165.1 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 165.1 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 165.1 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "278d6558-3615-417f-ab20-909ce5b49c6e")
+		)
+		(instances
+			(project "Teensy_board"
+				(path "/16f30d3e-33bd-41b5-893d-bb346d840c71/670d310e-9991-441a-9fb5-c088e9d6b117/f8db35e7-4dc1-41b7-a5bb-1bb22a391ccc"
+					(reference "#PWR0244")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 96.52 116.84 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "b087909c-d4a9-4686-95d0-8f12db8f10d9")
+		(property "Reference" "#PWR0103"
+			(at 96.52 123.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 96.52 121.92 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 96.52 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 96.52 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 96.52 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "576e1b30-2d0d-4863-8669-1130034e9ab8")
+		)
+		(instances
+			(project "Teensy_board"
+				(path "/16f30d3e-33bd-41b5-893d-bb346d840c71/670d310e-9991-441a-9fb5-c088e9d6b117/f8db35e7-4dc1-41b7-a5bb-1bb22a391ccc"
+					(reference "#PWR0103")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:Fuse")
+		(at 101.6 87.63 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "b5468650-e236-4d17-89ae-b9c09ae0cd94")
+		(property "Reference" "F5"
+			(at 101.6 82.55 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "SMD0805B010TF"
+			(at 101.6 85.09 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Fuse:Fuse_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
+			(at 101.6 89.408 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 101.6 87.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Fuse"
+			(at 101.6 87.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "c0c46a84-44a9-4f0e-a190-05643fe87eb3")
+		)
+		(pin "1"
+			(uuid "ac4843cd-77bb-492d-8c2b-15e123c98484")
+		)
+		(instances
+			(project "Teensy_board"
+				(path "/16f30d3e-33bd-41b5-893d-bb346d840c71/670d310e-9991-441a-9fb5-c088e9d6b117/f8db35e7-4dc1-41b7-a5bb-1bb22a391ccc"
+					(reference "F5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 154.94 96.52 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "b5575ae1-8099-43dd-9980-e582bf06fe8c")
+		(property "Reference" "#PWR0241"
+			(at 154.94 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 154.94 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 154.94 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 154.94 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 154.94 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "11ce3fbc-a26e-45c0-8f21-0e0defaec77e")
+		)
+		(instances
+			(project "Teensy_board"
+				(path "/16f30d3e-33bd-41b5-893d-bb346d840c71/670d310e-9991-441a-9fb5-c088e9d6b117/f8db35e7-4dc1-41b7-a5bb-1bb22a391ccc"
+					(reference "#PWR0241")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:D_Zener")
+		(at 106.68 133.35 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "b5786316-59ed-4722-bbe3-79ee578b3be2")
+		(property "Reference" "D14"
+			(at 109.22 132.0799 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Zener_ZM4729A-GS18"
+			(at 109.22 134.6199 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_MELF"
+			(at 106.68 133.35 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 106.68 133.35 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Zener diode"
+			(at 106.68 133.35 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "a7361942-7eaa-45ae-bb8f-4902a6377c95")
+		)
+		(pin "1"
+			(uuid "9fae0249-67c7-4780-9d48-2c07885d3eb2")
+		)
+		(instances
+			(project "Teensy_board"
+				(path "/16f30d3e-33bd-41b5-893d-bb346d840c71/670d310e-9991-441a-9fb5-c088e9d6b117/f8db35e7-4dc1-41b7-a5bb-1bb22a391ccc"
+					(reference "D14")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Diode:PTVS5V0Z1USK")
+		(at 154.94 30.48 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "b9729798-0c30-4423-8661-dcc39f6346de")
+		(property "Reference" "D32"
+			(at 152.654 29.21 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "TVS_SMF3.3"
+			(at 152.654 31.75 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "TVS:SOD3718X108N"
+			(at 150.495 30.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/PTVS5V0Z1USK.pdf"
+			(at 154.94 30.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "5V, 1200W TVS unidirectional diode, DSN1608-2"
+			(at 154.94 30.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "25387309-bce5-4b31-8437-329e5211e08b")
+		)
+		(pin "1"
+			(uuid "57c9bfdf-67ed-424f-b6db-c0aafdf8662c")
+		)
+		(instances
+			(project "Teensy_board"
+				(path "/16f30d3e-33bd-41b5-893d-bb346d840c71/670d310e-9991-441a-9fb5-c088e9d6b117/f8db35e7-4dc1-41b7-a5bb-1bb22a391ccc"
+					(reference "D32")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 106.68 96.52 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "bd16a869-11d0-4b64-9f38-9ae7ea807bd6")
+		(property "Reference" "#PWR092"
+			(at 106.68 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 106.68 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 106.68 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 106.68 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 106.68 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "bfdba05d-2073-4390-9502-897dfb41faf6")
+		)
+		(instances
+			(project "Teensy_board"
+				(path "/16f30d3e-33bd-41b5-893d-bb346d840c71/670d310e-9991-441a-9fb5-c088e9d6b117/f8db35e7-4dc1-41b7-a5bb-1bb22a391ccc"
+					(reference "#PWR092")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:Fuse")
+		(at 101.6 128.27 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "bf4309b4-3813-4b8d-a1fb-035710eadc45")
+		(property "Reference" "F7"
+			(at 101.6 123.19 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "SMD0805B010TF"
+			(at 101.6 125.73 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Fuse:Fuse_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
+			(at 101.6 130.048 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 101.6 128.27 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Fuse"
+			(at 101.6 128.27 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "31f42cf8-ca29-4439-9071-c83cf4dcf0a5")
+		)
+		(pin "1"
+			(uuid "3c014b95-1684-4d3c-a494-e9118e4ea892")
+		)
+		(instances
+			(project "Teensy_board"
+				(path "/16f30d3e-33bd-41b5-893d-bb346d840c71/670d310e-9991-441a-9fb5-c088e9d6b117/f8db35e7-4dc1-41b7-a5bb-1bb22a391ccc"
+					(reference "F7")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:Fuse")
+		(at 160.02 25.4 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "c0285d67-3df5-4b6b-b3af-3d7d5f7182ee")
+		(property "Reference" "F15"
+			(at 160.02 20.32 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "SMD0805B010TF"
+			(at 160.02 22.86 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Fuse:Fuse_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
+			(at 160.02 27.178 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 160.02 25.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Fuse"
+			(at 160.02 25.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "e328f8e0-bc57-477c-a987-999e71bcf112")
+		)
+		(pin "1"
+			(uuid "22138760-5c91-46a8-b725-a6d5305fc2ae")
+		)
+		(instances
+			(project "Teensy_board"
+				(path "/16f30d3e-33bd-41b5-893d-bb346d840c71/670d310e-9991-441a-9fb5-c088e9d6b117/f8db35e7-4dc1-41b7-a5bb-1bb22a391ccc"
+					(reference "F15")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 96.52 157.48 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "c0aa11f5-9ce3-4ccb-bf9e-b205a63789b4")
+		(property "Reference" "#PWR0107"
+			(at 96.52 163.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 96.52 162.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 96.52 157.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 96.52 157.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 96.52 157.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "6df7f082-4bc2-4fe6-a0e8-4b0660df1db6")
+		)
+		(instances
+			(project "Teensy_board"
+				(path "/16f30d3e-33bd-41b5-893d-bb346d840c71/670d310e-9991-441a-9fb5-c088e9d6b117/f8db35e7-4dc1-41b7-a5bb-1bb22a391ccc"
+					(reference "#PWR0107")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Diode:PTVS5V0Z1USK")
+		(at 154.94 72.39 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "c274396d-d14b-45b9-b9c0-c514b6189bd3")
+		(property "Reference" "D28"
+			(at 152.654 71.12 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "TVS_SMF3.3"
+			(at 152.654 73.66 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "TVS:SOD3718X108N"
+			(at 150.495 72.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/PTVS5V0Z1USK.pdf"
+			(at 154.94 72.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "5V, 1200W TVS unidirectional diode, DSN1608-2"
+			(at 154.94 72.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "8282b549-8fab-48b2-b23e-c725bdd147dc")
+		)
+		(pin "1"
+			(uuid "17d09170-9c40-413a-a65c-6ca2baea90ab")
+		)
+		(instances
+			(project "Teensy_board"
+				(path "/16f30d3e-33bd-41b5-893d-bb346d840c71/670d310e-9991-441a-9fb5-c088e9d6b117/f8db35e7-4dc1-41b7-a5bb-1bb22a391ccc"
+					(reference "D28")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Diode:PTVS5V0Z1USK")
+		(at 96.52 113.03 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "c294ac2e-3450-4d98-9921-f6e3002ae4f4")
+		(property "Reference" "D11"
+			(at 94.234 111.76 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "TVS_SMF3.3"
+			(at 94.234 114.3 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "TVS:SOD3718X108N"
+			(at 92.075 113.03 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/PTVS5V0Z1USK.pdf"
+			(at 96.52 113.03 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "5V, 1200W TVS unidirectional diode, DSN1608-2"
+			(at 96.52 113.03 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "f6a1895e-2e6d-4191-a2c1-85d0be7ab85d")
+		)
+		(pin "1"
+			(uuid "14ee22db-0efe-459a-817e-752f6a6e8592")
+		)
+		(instances
+			(project "Teensy_board"
+				(path "/16f30d3e-33bd-41b5-893d-bb346d840c71/670d310e-9991-441a-9fb5-c088e9d6b117/f8db35e7-4dc1-41b7-a5bb-1bb22a391ccc"
+					(reference "D11")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Diode:PTVS5V0Z1USK")
+		(at 96.52 52.07 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "c305569f-d339-4998-b0a3-1413d34143cf")
+		(property "Reference" "D5"
+			(at 94.234 50.8 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "TVS_SMF3.3"
+			(at 94.234 53.34 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "TVS:SOD3718X108N"
+			(at 92.075 52.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/PTVS5V0Z1USK.pdf"
+			(at 96.52 52.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "5V, 1200W TVS unidirectional diode, DSN1608-2"
+			(at 96.52 52.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "9d4be8ad-d720-4cbc-b248-cd1d0113eecf")
+		)
+		(pin "1"
+			(uuid "d21d9e0e-813d-4b6a-bfff-f3a69824a9aa")
+		)
+		(instances
+			(project "Teensy_board"
+				(path "/16f30d3e-33bd-41b5-893d-bb346d840c71/670d310e-9991-441a-9fb5-c088e9d6b117/f8db35e7-4dc1-41b7-a5bb-1bb22a391ccc"
+					(reference "D5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 96.52 55.88 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "d481107c-2e35-4c7f-a4ed-95f234e96217")
+		(property "Reference" "#PWR081"
+			(at 96.52 62.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 96.52 60.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 96.52 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 96.52 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 96.52 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "2c343d11-2efc-46cd-8d8f-f00984af6c0b")
+		)
+		(instances
+			(project "Teensy_board"
+				(path "/16f30d3e-33bd-41b5-893d-bb346d840c71/670d310e-9991-441a-9fb5-c088e9d6b117/f8db35e7-4dc1-41b7-a5bb-1bb22a391ccc"
+					(reference "#PWR081")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Diode:PTVS5V0Z1USK")
+		(at 96.52 173.99 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "dfa6f768-e0d6-4112-80d5-19f0bb7c3154")
+		(property "Reference" "D17"
+			(at 94.234 172.72 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "TVS_SMF3.3"
+			(at 94.234 175.26 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "TVS:SOD3718X108N"
+			(at 92.075 173.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/PTVS5V0Z1USK.pdf"
+			(at 96.52 173.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "5V, 1200W TVS unidirectional diode, DSN1608-2"
+			(at 96.52 173.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "53d8e038-404a-4534-a83c-845c01fcd97f")
+		)
+		(pin "1"
+			(uuid "5ff2a2c8-1d4a-4f74-96d0-49d4876ba782")
+		)
+		(instances
+			(project "Teensy_board"
+				(path "/16f30d3e-33bd-41b5-893d-bb346d840c71/670d310e-9991-441a-9fb5-c088e9d6b117/f8db35e7-4dc1-41b7-a5bb-1bb22a391ccc"
+					(reference "D17")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Diode:PTVS5V0Z1USK")
+		(at 96.52 153.67 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "e6a0672b-d644-4e71-b794-6b8730fe8b24")
+		(property "Reference" "D15"
+			(at 94.234 152.4 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "TVS_SMF3.3"
+			(at 94.234 154.94 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "TVS:SOD3718X108N"
+			(at 92.075 153.67 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/PTVS5V0Z1USK.pdf"
+			(at 96.52 153.67 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "5V, 1200W TVS unidirectional diode, DSN1608-2"
+			(at 96.52 153.67 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "ecb5509f-b68f-4580-af57-f83bf46a3522")
+		)
+		(pin "1"
+			(uuid "55881e81-daee-4715-9bc7-9b042052689e")
+		)
+		(instances
+			(project "Teensy_board"
+				(path "/16f30d3e-33bd-41b5-893d-bb346d840c71/670d310e-9991-441a-9fb5-c088e9d6b117/f8db35e7-4dc1-41b7-a5bb-1bb22a391ccc"
+					(reference "D15")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:Fuse")
+		(at 160.02 129.54 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "e8228d31-edff-4e2e-a3c1-0a1bb8ca1c34")
+		(property "Reference" "F10"
+			(at 160.02 124.46 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "SMD0805B010TF"
+			(at 160.02 127 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Fuse:Fuse_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
+			(at 160.02 131.318 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 160.02 129.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Fuse"
+			(at 160.02 129.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "76132dbd-1ffb-4d28-8186-ccadcf7fcd3c")
+		)
+		(pin "1"
+			(uuid "3fcb4c05-4bcf-4b41-b8d0-298ffb08cbd0")
+		)
+		(instances
+			(project "Teensy_board"
+				(path "/16f30d3e-33bd-41b5-893d-bb346d840c71/670d310e-9991-441a-9fb5-c088e9d6b117/f8db35e7-4dc1-41b7-a5bb-1bb22a391ccc"
+					(reference "F10")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 165.1 96.52 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "e88e9b6f-b598-45d5-9134-fac8831f963e")
+		(property "Reference" "#PWR0242"
+			(at 165.1 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 165.1 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 165.1 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 165.1 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 165.1 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "20399ba0-a79f-4c71-ade6-3228423ff7ec")
+		)
+		(instances
+			(project "Teensy_board"
+				(path "/16f30d3e-33bd-41b5-893d-bb346d840c71/670d310e-9991-441a-9fb5-c088e9d6b117/f8db35e7-4dc1-41b7-a5bb-1bb22a391ccc"
+					(reference "#PWR0242")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 165.1 138.43 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "eaa35528-5169-46bf-b5c0-d6659e884400")
+		(property "Reference" "#PWR0238"
+			(at 165.1 144.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 165.1 143.51 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 165.1 138.43 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 165.1 138.43 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 165.1 138.43 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "2326dfa5-30a2-4f46-be2e-0f084f644cab")
+		)
+		(instances
+			(project "Teensy_board"
+				(path "/16f30d3e-33bd-41b5-893d-bb346d840c71/670d310e-9991-441a-9fb5-c088e9d6b117/f8db35e7-4dc1-41b7-a5bb-1bb22a391ccc"
+					(reference "#PWR0238")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:D_Zener")
+		(at 165.1 134.62 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "f02a88f5-70ed-46a3-a154-54415cd14c52")
+		(property "Reference" "D23"
+			(at 167.64 133.3499 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Zener_ZM4729A-GS18"
+			(at 167.64 135.8899 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_MELF"
+			(at 165.1 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 165.1 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Zener diode"
+			(at 165.1 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "3ac99697-b14f-49ac-be60-2f7e8d4f33e8")
+		)
+		(pin "1"
+			(uuid "7054b5c2-b332-4c51-8486-bbf76dc7f289")
+		)
+		(instances
+			(project "Teensy_board"
+				(path "/16f30d3e-33bd-41b5-893d-bb346d840c71/670d310e-9991-441a-9fb5-c088e9d6b117/f8db35e7-4dc1-41b7-a5bb-1bb22a391ccc"
+					(reference "D23")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:D_Zener")
+		(at 106.68 113.03 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "f1d38881-472f-44aa-bf6e-2c7827e41753")
+		(property "Reference" "D12"
+			(at 109.22 111.7599 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Zener_ZM4729A-GS18"
+			(at 109.22 114.2999 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_MELF"
+			(at 106.68 113.03 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 106.68 113.03 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Zener diode"
+			(at 106.68 113.03 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "3dc251f1-bbd0-40e6-bccc-6b144dcc2f1b")
+		)
+		(pin "1"
+			(uuid "774074c2-80aa-4028-9ab8-9a63c4ab497f")
+		)
+		(instances
+			(project "Teensy_board"
+				(path "/16f30d3e-33bd-41b5-893d-bb346d840c71/670d310e-9991-441a-9fb5-c088e9d6b117/f8db35e7-4dc1-41b7-a5bb-1bb22a391ccc"
+					(reference "D12")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:D_Zener")
+		(at 106.68 72.39 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "f5be6c9a-5fcc-4a24-a24d-11e201107744")
+		(property "Reference" "D8"
+			(at 109.22 71.1199 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Zener_ZM4729A-GS18"
+			(at 109.22 73.6599 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_MELF"
+			(at 106.68 72.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 106.68 72.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Zener diode"
+			(at 106.68 72.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "39488d1a-9b8b-4d86-ba11-48cc703c5acf")
+		)
+		(pin "1"
+			(uuid "f882745c-416e-4809-b6d7-79f7bf4cd660")
+		)
+		(instances
+			(project "Teensy_board"
+				(path "/16f30d3e-33bd-41b5-893d-bb346d840c71/670d310e-9991-441a-9fb5-c088e9d6b117/f8db35e7-4dc1-41b7-a5bb-1bb22a391ccc"
+					(reference "D8")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:Fuse")
+		(at 160.02 46.99 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "f80045e9-af45-44fd-8d2a-30ed6a2618a2")
+		(property "Reference" "F14"
+			(at 160.02 41.91 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "SMD0805B010TF"
+			(at 160.02 44.45 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Fuse:Fuse_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
+			(at 160.02 48.768 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 160.02 46.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Fuse"
+			(at 160.02 46.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "fc13fab3-649e-46b1-8530-fb9080925239")
+		)
+		(pin "1"
+			(uuid "98ef3edd-4ee0-4746-8ce0-5297b341dfbb")
+		)
+		(instances
+			(project "Teensy_board"
+				(path "/16f30d3e-33bd-41b5-893d-bb346d840c71/670d310e-9991-441a-9fb5-c088e9d6b117/f8db35e7-4dc1-41b7-a5bb-1bb22a391ccc"
+					(reference "F14")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 165.1 116.84 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "fd561cb7-59e9-48f1-95ad-62ff169d01d6")
+		(property "Reference" "#PWR0240"
+			(at 165.1 123.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 165.1 121.92 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 165.1 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 165.1 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 165.1 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "ff85240f-e4c0-4503-8ce1-1af94b8e9fe8")
+		)
+		(instances
+			(project "Teensy_board"
+				(path "/16f30d3e-33bd-41b5-893d-bb346d840c71/670d310e-9991-441a-9fb5-c088e9d6b117/f8db35e7-4dc1-41b7-a5bb-1bb22a391ccc"
+					(reference "#PWR0240")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 106.68 76.2 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "fe9b1591-9c06-4b41-a542-df37de403f43")
+		(property "Reference" "#PWR084"
+			(at 106.68 82.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 106.68 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 106.68 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 106.68 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 106.68 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "70e9c557-88bf-4245-8ff8-e7ba4c2ae2b7")
+		)
+		(instances
+			(project "Teensy_board"
+				(path "/16f30d3e-33bd-41b5-893d-bb346d840c71/670d310e-9991-441a-9fb5-c088e9d6b117/f8db35e7-4dc1-41b7-a5bb-1bb22a391ccc"
+					(reference "#PWR084")
+					(unit 1)
+				)
+			)
+		)
+	)
+)

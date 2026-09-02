@@ -1,0 +1,11 @@
+FILE_TYPE = MULTI_PHYS_TABLE;
+
+PART 'OPA350UA_2K5'
+CLASS = IC
+{========================================================================================}
+:"MANUFACTURER_NAME", "MANUFACTURER_PART_NUMBER"= "PART_NUMBER", "JEDEC_TYPE", "PACK_TYPE", "MOUSER_PART_NUMBER", "MOUSER_PRICE/STOCK", "ARROW_PART_NUMBER", "ARROW_PRICE/STOCK", "DESCRIPTION", "DATASHEET", "HEIGHT";
+{========================================================================================}
+ "Texas Instruments", "OPA350UA/2K5" (!) = "", "SOIC127P600X175-8N", "Small Outline Packages", "595-OPA350UA/2K5", "https://www.mouser.co.uk/ProductDetail/Texas-Instruments/OPA350UA-2K5?qs=7nS3%252BbEUL6sT6%2Fm03FwKkQ%3D%3D", "OPA350UA/2K5", "https://www.arrow.com/en/products/opa350ua2k5/texas-instruments?region=nac", "High-Speed, Single-Supply, Rail-to-Rail Operational Amplifiers MicroAmplifier Series", "http://www.ti.com/lit/gpn/OPA350", "1.75 mm"
+END_PART
+
+END.

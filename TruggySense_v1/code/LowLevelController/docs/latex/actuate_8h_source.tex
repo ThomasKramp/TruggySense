@@ -1,0 +1,46 @@
+\hypertarget{actuate_8h_source}{}\doxysection{actuate.\+h}
+\label{actuate_8h_source}\index{lib/actuation/actuate.h@{lib/actuation/actuate.h}}
+\mbox{\hyperlink{actuate_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{20 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{21 }
+\DoxyCodeLine{22 \textcolor{preprocessor}{\#include "{}stdint.h"{}}}
+\DoxyCodeLine{23 \textcolor{preprocessor}{\#include <PWMServo.h>}}
+\DoxyCodeLine{24 \textcolor{preprocessor}{\#include "{}wiring.h"{}}}
+\DoxyCodeLine{25 }
+\DoxyCodeLine{26 \textcolor{preprocessor}{\#define PWM\_PIN\_MOTOR\_RR 33     }}
+\DoxyCodeLine{27 \textcolor{preprocessor}{\#define PWM\_PIN\_MOTOR\_RL 9      }}
+\DoxyCodeLine{28 \textcolor{preprocessor}{\#define PWM\_PIN\_MOTOR\_FR 23     }}
+\DoxyCodeLine{29 \textcolor{preprocessor}{\#define PWM\_PIN\_MOTOR\_FL 37     }}
+\DoxyCodeLine{30 \textcolor{preprocessor}{\#define PWM\_PIN\_STEER\_SERVO 22  }}
+\DoxyCodeLine{35 \textcolor{preprocessor}{\#define PWM\_US\_LOW\_VAL 1000}}
+\DoxyCodeLine{36 }
+\DoxyCodeLine{41 \textcolor{preprocessor}{\#define PWM\_US\_HIGH\_VAL 2000}}
+\DoxyCodeLine{42 }
+\DoxyCodeLine{46 \textcolor{keyword}{class }\mbox{\hyperlink{classActuate}{Actuate}}}
+\DoxyCodeLine{47 \{}
+\DoxyCodeLine{48 \textcolor{keyword}{private}:}
+\DoxyCodeLine{49     uint8\_t disabled; }
+\DoxyCodeLine{51 \textcolor{keyword}{public}:}
+\DoxyCodeLine{56     \textcolor{keyword}{enum} \mbox{\hyperlink{classActuate_a7775c3b80aeee5e4cce5f5648ac82d79}{actuator}}}
+\DoxyCodeLine{57     \{}
+\DoxyCodeLine{58         \mbox{\hyperlink{classActuate_a7775c3b80aeee5e4cce5f5648ac82d79ac23e72441ea38c96773ee848cdd7fc51}{M\_FR}}, }
+\DoxyCodeLine{59         \mbox{\hyperlink{classActuate_a7775c3b80aeee5e4cce5f5648ac82d79a6f5518d5394bdb6cfc1fc9a87191fa38}{M\_FL}}, }
+\DoxyCodeLine{60         \mbox{\hyperlink{classActuate_a7775c3b80aeee5e4cce5f5648ac82d79ac569fa7b937c535d99d9d25d25d9d8a0}{M\_RR}}, }
+\DoxyCodeLine{61         \mbox{\hyperlink{classActuate_a7775c3b80aeee5e4cce5f5648ac82d79a56a11c22098c7ead5dde1a32abf2854a}{M\_RL}}, }
+\DoxyCodeLine{62         \mbox{\hyperlink{classActuate_a7775c3b80aeee5e4cce5f5648ac82d79a671db912c018a35d69da4a7b36353004}{SS}}    }
+\DoxyCodeLine{63     \};}
+\DoxyCodeLine{64 }
+\DoxyCodeLine{72     uint8\_t \mbox{\hyperlink{classActuate_ab7712530dffbe063a7a96ea3f4768f1a}{init}}();}
+\DoxyCodeLine{73 }
+\DoxyCodeLine{82     \textcolor{keywordtype}{void} \mbox{\hyperlink{classActuate_a2e0ceaee93543bf5b8066806f0e2c3dc}{write}}(\mbox{\hyperlink{classActuate_a7775c3b80aeee5e4cce5f5648ac82d79}{actuator}} act, uint16\_t pwm\_value\_us);}
+\DoxyCodeLine{83 }
+\DoxyCodeLine{88     \textcolor{keywordtype}{void} \mbox{\hyperlink{classActuate_ad3c2e537e4ea5686b0b856fa6c9ed8af}{disableAll}}();}
+\DoxyCodeLine{89 }
+\DoxyCodeLine{94     \textcolor{keywordtype}{void} \mbox{\hyperlink{classActuate_ae2369ad1bbb14c792baf5b011078ed4f}{enableAll}}();}
+\DoxyCodeLine{95 }
+\DoxyCodeLine{101     uint8\_t \mbox{\hyperlink{classActuate_ac4fb5113bf4fd86e0d5482f74ac9e644}{isDisabled}}();}
+\DoxyCodeLine{102 \};}
+
+\end{DoxyCode}

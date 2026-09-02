@@ -1,0 +1,87 @@
+\hypertarget{imu_8h}{}\doxysection{lib/\+IMU/imu.h File Reference}
+\label{imu_8h}\index{lib/IMU/imu.h@{lib/IMU/imu.h}}
+
+
+A driver that utilize the Adafruit\+\_\+\+BNO08x library to acquire Euler angle and Quaternions from a BNO085 \mbox{\hyperlink{classIMU}{IMU}} 9-\/axis sensor.  
+
+
+{\ttfamily \#include $<$Adafruit\+\_\+\+BNO08x.\+h$>$}\newline
+{\ttfamily \#include $<$Wire.\+h$>$}\newline
+Include dependency graph for imu.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=256pt]{imu_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=325pt]{imu_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structeuler}{euler}}
+\begin{DoxyCompactList}\small\item\em An Euler struct containing all 3 Euler angles yaw, pitch and roll. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structquaternion}{quaternion}}
+\begin{DoxyCompactList}\small\item\em An Quaternion struct containing all 4 Quaternion values w, i, j, k. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classIMU}{IMU}}
+\begin{DoxyCompactList}\small\item\em Initialize, read and get the Euler or Quaternion specific angles given by e\+\_\+imu\+\_\+data from the BNO085 \mbox{\hyperlink{classIMU}{IMU}} 9-\/axis sensor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{imu_8h_a3b3a61aa35bd2fe237af0a4157223a28}{BNO08\+X\+\_\+\+RESET}}~-\/1
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \mbox{\hyperlink{structeuler}{euler}} \mbox{\hyperlink{imu_8h_a7750989efa5183a544502dc4e77bbd85}{euler\+\_\+t}}
+\item 
+typedef struct \mbox{\hyperlink{structquaternion}{quaternion}} \mbox{\hyperlink{imu_8h_a73799bdea35ea9f153688a23e2a11701}{quaternion\+\_\+t}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A driver that utilize the Adafruit\+\_\+\+BNO08x library to acquire Euler angle and Quaternions from a BNO085 \mbox{\hyperlink{classIMU}{IMU}} 9-\/axis sensor. 
+
+\begin{DoxyAuthor}{Author}
+Robbe Elsermans 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2025-\/04-\/10
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2025 Robbe Elsermans, All rights reserved. This project is released under the CC BY-\/\+NC-\/\+SA licence. See licence.\+txt for more information 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{imu_8h_a3b3a61aa35bd2fe237af0a4157223a28}\label{imu_8h_a3b3a61aa35bd2fe237af0a4157223a28}} 
+\index{imu.h@{imu.h}!BNO08X\_RESET@{BNO08X\_RESET}}
+\index{BNO08X\_RESET@{BNO08X\_RESET}!imu.h@{imu.h}}
+\doxysubsubsection{\texorpdfstring{BNO08X\_RESET}{BNO08X\_RESET}}
+{\footnotesize\ttfamily \#define BNO08\+X\+\_\+\+RESET~-\/1}
+
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{imu_8h_a7750989efa5183a544502dc4e77bbd85}\label{imu_8h_a7750989efa5183a544502dc4e77bbd85}} 
+\index{imu.h@{imu.h}!euler\_t@{euler\_t}}
+\index{euler\_t@{euler\_t}!imu.h@{imu.h}}
+\doxysubsubsection{\texorpdfstring{euler\_t}{euler\_t}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structeuler}{euler}} \mbox{\hyperlink{imu_8h_a7750989efa5183a544502dc4e77bbd85}{euler\+\_\+t}}}
+
+\mbox{\Hypertarget{imu_8h_a73799bdea35ea9f153688a23e2a11701}\label{imu_8h_a73799bdea35ea9f153688a23e2a11701}} 
+\index{imu.h@{imu.h}!quaternion\_t@{quaternion\_t}}
+\index{quaternion\_t@{quaternion\_t}!imu.h@{imu.h}}
+\doxysubsubsection{\texorpdfstring{quaternion\_t}{quaternion\_t}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structquaternion}{quaternion}} \mbox{\hyperlink{imu_8h_a73799bdea35ea9f153688a23e2a11701}{quaternion\+\_\+t}}}
+

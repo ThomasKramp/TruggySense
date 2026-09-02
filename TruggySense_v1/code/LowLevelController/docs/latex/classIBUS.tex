@@ -1,0 +1,546 @@
+\hypertarget{classIBUS}{}\doxysection{IBUS Class Reference}
+\label{classIBUS}\index{IBUS@{IBUS}}
+
+
+{\ttfamily \#include $<$ibus.\+h$>$}
+
+
+
+Collaboration diagram for IBUS\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=235pt]{classIBUS__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{classIBUS_a809520af2a748fa9798f91320e076e44}{channel\+\_\+source}} \{ \newline
+\mbox{\hyperlink{classIBUS_a809520af2a748fa9798f91320e076e44a732ed4b13113e339a7509b86947dd416}{ch\+\_\+1}}
+, \mbox{\hyperlink{classIBUS_a809520af2a748fa9798f91320e076e44aaa33484aea878d98e2ffd5395aae2988}{ch\+\_\+2}}
+, \mbox{\hyperlink{classIBUS_a809520af2a748fa9798f91320e076e44a01fa66a0de87e238930d753c6bbf3f95}{ch\+\_\+3}}
+, \mbox{\hyperlink{classIBUS_a809520af2a748fa9798f91320e076e44a573832987c6312f4acc7f32d35da9b78}{ch\+\_\+4}}
+, \newline
+\mbox{\hyperlink{classIBUS_a809520af2a748fa9798f91320e076e44ac9546149e2e018b3bba4a001ea0cf439}{ch\+\_\+5}}
+, \mbox{\hyperlink{classIBUS_a809520af2a748fa9798f91320e076e44a29e05d7b403b8aa226d5d3d896aca97a}{ch\+\_\+6}}
+, \mbox{\hyperlink{classIBUS_a809520af2a748fa9798f91320e076e44a4fa191210f790ccc6ee1209545dacb4e}{ch\+\_\+7}}
+, \mbox{\hyperlink{classIBUS_a809520af2a748fa9798f91320e076e44aa5d44b5907f6093e947241d256205ee3}{ch\+\_\+8}}
+, \newline
+\mbox{\hyperlink{classIBUS_a809520af2a748fa9798f91320e076e44a3254661966ac92589a6a1e9c9a0fa874}{ch\+\_\+9}}
+, \mbox{\hyperlink{classIBUS_a809520af2a748fa9798f91320e076e44a809d60970853b19232d84dcc4f572d38}{ch\+\_\+10}}
+, \mbox{\hyperlink{classIBUS_a809520af2a748fa9798f91320e076e44a5ece551e69692047b1ddc557bb0fc264}{ch\+\_\+11}}
+, \mbox{\hyperlink{classIBUS_a809520af2a748fa9798f91320e076e44ae352696ca4da4f758c51dd6078481757}{ch\+\_\+12}}
+, \newline
+\mbox{\hyperlink{classIBUS_a809520af2a748fa9798f91320e076e44a7652fe882e32cabf56a92fbea3dcff30}{ch\+\_\+13}}
+, \mbox{\hyperlink{classIBUS_a809520af2a748fa9798f91320e076e44a3558ff6965a58983065a662089957c2b}{ch\+\_\+14}}
+, \mbox{\hyperlink{classIBUS_a809520af2a748fa9798f91320e076e44a732ed4b13113e339a7509b86947dd416}{ch\+\_\+1}}
+, \mbox{\hyperlink{classIBUS_a809520af2a748fa9798f91320e076e44aaa33484aea878d98e2ffd5395aae2988}{ch\+\_\+2}}
+, \newline
+\mbox{\hyperlink{classIBUS_a809520af2a748fa9798f91320e076e44a01fa66a0de87e238930d753c6bbf3f95}{ch\+\_\+3}}
+, \mbox{\hyperlink{classIBUS_a809520af2a748fa9798f91320e076e44a573832987c6312f4acc7f32d35da9b78}{ch\+\_\+4}}
+, \mbox{\hyperlink{classIBUS_a809520af2a748fa9798f91320e076e44ac9546149e2e018b3bba4a001ea0cf439}{ch\+\_\+5}}
+, \mbox{\hyperlink{classIBUS_a809520af2a748fa9798f91320e076e44a29e05d7b403b8aa226d5d3d896aca97a}{ch\+\_\+6}}
+, \newline
+\mbox{\hyperlink{classIBUS_a809520af2a748fa9798f91320e076e44a4fa191210f790ccc6ee1209545dacb4e}{ch\+\_\+7}}
+, \mbox{\hyperlink{classIBUS_a809520af2a748fa9798f91320e076e44aa5d44b5907f6093e947241d256205ee3}{ch\+\_\+8}}
+, \mbox{\hyperlink{classIBUS_a809520af2a748fa9798f91320e076e44a3254661966ac92589a6a1e9c9a0fa874}{ch\+\_\+9}}
+, \mbox{\hyperlink{classIBUS_a809520af2a748fa9798f91320e076e44a809d60970853b19232d84dcc4f572d38}{ch\+\_\+10}}
+, \newline
+\mbox{\hyperlink{classIBUS_a809520af2a748fa9798f91320e076e44a5ece551e69692047b1ddc557bb0fc264}{ch\+\_\+11}}
+, \mbox{\hyperlink{classIBUS_a809520af2a748fa9798f91320e076e44ae352696ca4da4f758c51dd6078481757}{ch\+\_\+12}}
+, \mbox{\hyperlink{classIBUS_a809520af2a748fa9798f91320e076e44a7652fe882e32cabf56a92fbea3dcff30}{ch\+\_\+13}}
+, \mbox{\hyperlink{classIBUS_a809520af2a748fa9798f91320e076e44a3558ff6965a58983065a662089957c2b}{ch\+\_\+14}}
+ \}
+\begin{DoxyCompactList}\small\item\em Defining the different channel sources that are available in \mbox{\hyperlink{classIBUS}{IBUS}}. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{classIBUS_a809520af2a748fa9798f91320e076e44}{channel\+\_\+source}} \{ \newline
+\mbox{\hyperlink{classIBUS_a809520af2a748fa9798f91320e076e44a732ed4b13113e339a7509b86947dd416}{ch\+\_\+1}}
+, \mbox{\hyperlink{classIBUS_a809520af2a748fa9798f91320e076e44aaa33484aea878d98e2ffd5395aae2988}{ch\+\_\+2}}
+, \mbox{\hyperlink{classIBUS_a809520af2a748fa9798f91320e076e44a01fa66a0de87e238930d753c6bbf3f95}{ch\+\_\+3}}
+, \mbox{\hyperlink{classIBUS_a809520af2a748fa9798f91320e076e44a573832987c6312f4acc7f32d35da9b78}{ch\+\_\+4}}
+, \newline
+\mbox{\hyperlink{classIBUS_a809520af2a748fa9798f91320e076e44ac9546149e2e018b3bba4a001ea0cf439}{ch\+\_\+5}}
+, \mbox{\hyperlink{classIBUS_a809520af2a748fa9798f91320e076e44a29e05d7b403b8aa226d5d3d896aca97a}{ch\+\_\+6}}
+, \mbox{\hyperlink{classIBUS_a809520af2a748fa9798f91320e076e44a4fa191210f790ccc6ee1209545dacb4e}{ch\+\_\+7}}
+, \mbox{\hyperlink{classIBUS_a809520af2a748fa9798f91320e076e44aa5d44b5907f6093e947241d256205ee3}{ch\+\_\+8}}
+, \newline
+\mbox{\hyperlink{classIBUS_a809520af2a748fa9798f91320e076e44a3254661966ac92589a6a1e9c9a0fa874}{ch\+\_\+9}}
+, \mbox{\hyperlink{classIBUS_a809520af2a748fa9798f91320e076e44a809d60970853b19232d84dcc4f572d38}{ch\+\_\+10}}
+, \mbox{\hyperlink{classIBUS_a809520af2a748fa9798f91320e076e44a5ece551e69692047b1ddc557bb0fc264}{ch\+\_\+11}}
+, \mbox{\hyperlink{classIBUS_a809520af2a748fa9798f91320e076e44ae352696ca4da4f758c51dd6078481757}{ch\+\_\+12}}
+, \newline
+\mbox{\hyperlink{classIBUS_a809520af2a748fa9798f91320e076e44a7652fe882e32cabf56a92fbea3dcff30}{ch\+\_\+13}}
+, \mbox{\hyperlink{classIBUS_a809520af2a748fa9798f91320e076e44a3558ff6965a58983065a662089957c2b}{ch\+\_\+14}}
+, \mbox{\hyperlink{classIBUS_a809520af2a748fa9798f91320e076e44a732ed4b13113e339a7509b86947dd416}{ch\+\_\+1}}
+, \mbox{\hyperlink{classIBUS_a809520af2a748fa9798f91320e076e44aaa33484aea878d98e2ffd5395aae2988}{ch\+\_\+2}}
+, \newline
+\mbox{\hyperlink{classIBUS_a809520af2a748fa9798f91320e076e44a01fa66a0de87e238930d753c6bbf3f95}{ch\+\_\+3}}
+, \mbox{\hyperlink{classIBUS_a809520af2a748fa9798f91320e076e44a573832987c6312f4acc7f32d35da9b78}{ch\+\_\+4}}
+, \mbox{\hyperlink{classIBUS_a809520af2a748fa9798f91320e076e44ac9546149e2e018b3bba4a001ea0cf439}{ch\+\_\+5}}
+, \mbox{\hyperlink{classIBUS_a809520af2a748fa9798f91320e076e44a29e05d7b403b8aa226d5d3d896aca97a}{ch\+\_\+6}}
+, \newline
+\mbox{\hyperlink{classIBUS_a809520af2a748fa9798f91320e076e44a4fa191210f790ccc6ee1209545dacb4e}{ch\+\_\+7}}
+, \mbox{\hyperlink{classIBUS_a809520af2a748fa9798f91320e076e44aa5d44b5907f6093e947241d256205ee3}{ch\+\_\+8}}
+, \mbox{\hyperlink{classIBUS_a809520af2a748fa9798f91320e076e44a3254661966ac92589a6a1e9c9a0fa874}{ch\+\_\+9}}
+, \mbox{\hyperlink{classIBUS_a809520af2a748fa9798f91320e076e44a809d60970853b19232d84dcc4f572d38}{ch\+\_\+10}}
+, \newline
+\mbox{\hyperlink{classIBUS_a809520af2a748fa9798f91320e076e44a5ece551e69692047b1ddc557bb0fc264}{ch\+\_\+11}}
+, \mbox{\hyperlink{classIBUS_a809520af2a748fa9798f91320e076e44ae352696ca4da4f758c51dd6078481757}{ch\+\_\+12}}
+, \mbox{\hyperlink{classIBUS_a809520af2a748fa9798f91320e076e44a7652fe882e32cabf56a92fbea3dcff30}{ch\+\_\+13}}
+, \mbox{\hyperlink{classIBUS_a809520af2a748fa9798f91320e076e44a3558ff6965a58983065a662089957c2b}{ch\+\_\+14}}
+ \}
+\begin{DoxyCompactList}\small\item\em Defining the different channel sources that are available in \mbox{\hyperlink{classIBUS}{IBUS}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{classIBUS_a96a11a00f7a8db167177f973b7c607be}{init}} ()
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{classIBUS}{IBUS}} object with Hardware\+Serial8 object. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{classIBUS_a7417d9ebbae20700416702eb1c8bcefa}{read}} ()
+\begin{DoxyCompactList}\small\item\em search for receiving data based on the START\+\_\+\+FRAME\+\_\+\+SEQUENCE \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{classIBUS_a07a87883a0a61b6621d83d91b72fb21d}{get\+Channel}} (\mbox{\hyperlink{classIBUS_a809520af2a748fa9798f91320e076e44}{channel\+\_\+source}} channel\+\_\+number)
+\begin{DoxyCompactList}\small\item\em Get the Channel value based on provided channel source. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{classIBUS_ae7d0ad69a6822723e2cae72e6ea6d836}{is\+Failsafe}} ()
+\begin{DoxyCompactList}\small\item\em Defines if a connection is alive meaning if a transmitter is connected to the receiver. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classIBUS_a4805e5c7a6008a81ae3a742c042c5474}{IBUS}} ()
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{classIBUS}{IBUS}} object with Hardware\+Serial8 object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classIBUS_acd2a0e53ee5538d5a77632e87b16ff26}{IBUS}} (Hardware\+Serial \&serial)
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{classIBUS}{IBUS}} object with another Hardware\+Serial object. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{classIBUS_a0f4e3f8c940330295627e3328f009242}{read\+Data}} ()
+\begin{DoxyCompactList}\small\item\em search for receiving data based on the START\+\_\+\+FRAME\+\_\+\+SEQUENCE \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{classIBUS_ae379fa8a6456bb7b570275048e7da799}{get\+Channel}} (\mbox{\hyperlink{classIBUS_a809520af2a748fa9798f91320e076e44}{channel\+\_\+source}} ch)
+\begin{DoxyCompactList}\small\item\em Get the Channel value based on provided channel source. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{classIBUS_a54f00b8b785ba41f3a035a6620d8b04e}{is\+Alive}} ()
+\begin{DoxyCompactList}\small\item\em Defines if a connection is alive meaning if a transmitter is connected to the receiver. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{classIBUS_ab43edae3ba453732e3e38a94ce554d5b}{set\+Channel\+Default\+Value}} (\mbox{\hyperlink{classIBUS_a809520af2a748fa9798f91320e076e44}{channel\+\_\+source}} ch, uint16\+\_\+t milliseconds)
+\begin{DoxyCompactList}\small\item\em Set the Channel Default Value object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{classIBUS_a809520af2a748fa9798f91320e076e44}\label{classIBUS_a809520af2a748fa9798f91320e076e44}} 
+\index{IBUS@{IBUS}!channel\_source@{channel\_source}}
+\index{channel\_source@{channel\_source}!IBUS@{IBUS}}
+\doxysubsubsection{\texorpdfstring{channel\_source}{channel\_source}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{classIBUS_a809520af2a748fa9798f91320e076e44}{IBUS\+::channel\+\_\+source}}}
+
+
+
+Defining the different channel sources that are available in \mbox{\hyperlink{classIBUS}{IBUS}}. 
+
+\begin{DoxyNote}{Note}
+depending on the used transmitter, not all sources can be used 
+\end{DoxyNote}
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ch\_1@{ch\_1}!IBUS@{IBUS}}\index{IBUS@{IBUS}!ch\_1@{ch\_1}}}\mbox{\Hypertarget{classIBUS_a809520af2a748fa9798f91320e076e44a732ed4b13113e339a7509b86947dd416}\label{classIBUS_a809520af2a748fa9798f91320e076e44a732ed4b13113e339a7509b86947dd416}} 
+ch\+\_\+1&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ch\_2@{ch\_2}!IBUS@{IBUS}}\index{IBUS@{IBUS}!ch\_2@{ch\_2}}}\mbox{\Hypertarget{classIBUS_a809520af2a748fa9798f91320e076e44aaa33484aea878d98e2ffd5395aae2988}\label{classIBUS_a809520af2a748fa9798f91320e076e44aaa33484aea878d98e2ffd5395aae2988}} 
+ch\+\_\+2&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ch\_3@{ch\_3}!IBUS@{IBUS}}\index{IBUS@{IBUS}!ch\_3@{ch\_3}}}\mbox{\Hypertarget{classIBUS_a809520af2a748fa9798f91320e076e44a01fa66a0de87e238930d753c6bbf3f95}\label{classIBUS_a809520af2a748fa9798f91320e076e44a01fa66a0de87e238930d753c6bbf3f95}} 
+ch\+\_\+3&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ch\_4@{ch\_4}!IBUS@{IBUS}}\index{IBUS@{IBUS}!ch\_4@{ch\_4}}}\mbox{\Hypertarget{classIBUS_a809520af2a748fa9798f91320e076e44a573832987c6312f4acc7f32d35da9b78}\label{classIBUS_a809520af2a748fa9798f91320e076e44a573832987c6312f4acc7f32d35da9b78}} 
+ch\+\_\+4&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ch\_5@{ch\_5}!IBUS@{IBUS}}\index{IBUS@{IBUS}!ch\_5@{ch\_5}}}\mbox{\Hypertarget{classIBUS_a809520af2a748fa9798f91320e076e44ac9546149e2e018b3bba4a001ea0cf439}\label{classIBUS_a809520af2a748fa9798f91320e076e44ac9546149e2e018b3bba4a001ea0cf439}} 
+ch\+\_\+5&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ch\_6@{ch\_6}!IBUS@{IBUS}}\index{IBUS@{IBUS}!ch\_6@{ch\_6}}}\mbox{\Hypertarget{classIBUS_a809520af2a748fa9798f91320e076e44a29e05d7b403b8aa226d5d3d896aca97a}\label{classIBUS_a809520af2a748fa9798f91320e076e44a29e05d7b403b8aa226d5d3d896aca97a}} 
+ch\+\_\+6&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ch\_7@{ch\_7}!IBUS@{IBUS}}\index{IBUS@{IBUS}!ch\_7@{ch\_7}}}\mbox{\Hypertarget{classIBUS_a809520af2a748fa9798f91320e076e44a4fa191210f790ccc6ee1209545dacb4e}\label{classIBUS_a809520af2a748fa9798f91320e076e44a4fa191210f790ccc6ee1209545dacb4e}} 
+ch\+\_\+7&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ch\_8@{ch\_8}!IBUS@{IBUS}}\index{IBUS@{IBUS}!ch\_8@{ch\_8}}}\mbox{\Hypertarget{classIBUS_a809520af2a748fa9798f91320e076e44aa5d44b5907f6093e947241d256205ee3}\label{classIBUS_a809520af2a748fa9798f91320e076e44aa5d44b5907f6093e947241d256205ee3}} 
+ch\+\_\+8&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ch\_9@{ch\_9}!IBUS@{IBUS}}\index{IBUS@{IBUS}!ch\_9@{ch\_9}}}\mbox{\Hypertarget{classIBUS_a809520af2a748fa9798f91320e076e44a3254661966ac92589a6a1e9c9a0fa874}\label{classIBUS_a809520af2a748fa9798f91320e076e44a3254661966ac92589a6a1e9c9a0fa874}} 
+ch\+\_\+9&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ch\_10@{ch\_10}!IBUS@{IBUS}}\index{IBUS@{IBUS}!ch\_10@{ch\_10}}}\mbox{\Hypertarget{classIBUS_a809520af2a748fa9798f91320e076e44a809d60970853b19232d84dcc4f572d38}\label{classIBUS_a809520af2a748fa9798f91320e076e44a809d60970853b19232d84dcc4f572d38}} 
+ch\+\_\+10&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ch\_11@{ch\_11}!IBUS@{IBUS}}\index{IBUS@{IBUS}!ch\_11@{ch\_11}}}\mbox{\Hypertarget{classIBUS_a809520af2a748fa9798f91320e076e44a5ece551e69692047b1ddc557bb0fc264}\label{classIBUS_a809520af2a748fa9798f91320e076e44a5ece551e69692047b1ddc557bb0fc264}} 
+ch\+\_\+11&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ch\_12@{ch\_12}!IBUS@{IBUS}}\index{IBUS@{IBUS}!ch\_12@{ch\_12}}}\mbox{\Hypertarget{classIBUS_a809520af2a748fa9798f91320e076e44ae352696ca4da4f758c51dd6078481757}\label{classIBUS_a809520af2a748fa9798f91320e076e44ae352696ca4da4f758c51dd6078481757}} 
+ch\+\_\+12&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ch\_13@{ch\_13}!IBUS@{IBUS}}\index{IBUS@{IBUS}!ch\_13@{ch\_13}}}\mbox{\Hypertarget{classIBUS_a809520af2a748fa9798f91320e076e44a7652fe882e32cabf56a92fbea3dcff30}\label{classIBUS_a809520af2a748fa9798f91320e076e44a7652fe882e32cabf56a92fbea3dcff30}} 
+ch\+\_\+13&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ch\_14@{ch\_14}!IBUS@{IBUS}}\index{IBUS@{IBUS}!ch\_14@{ch\_14}}}\mbox{\Hypertarget{classIBUS_a809520af2a748fa9798f91320e076e44a3558ff6965a58983065a662089957c2b}\label{classIBUS_a809520af2a748fa9798f91320e076e44a3558ff6965a58983065a662089957c2b}} 
+ch\+\_\+14&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ch\_1@{ch\_1}!IBUS@{IBUS}}\index{IBUS@{IBUS}!ch\_1@{ch\_1}}}\mbox{\Hypertarget{classIBUS_a809520af2a748fa9798f91320e076e44a732ed4b13113e339a7509b86947dd416}\label{classIBUS_a809520af2a748fa9798f91320e076e44a732ed4b13113e339a7509b86947dd416}} 
+ch\+\_\+1&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ch\_2@{ch\_2}!IBUS@{IBUS}}\index{IBUS@{IBUS}!ch\_2@{ch\_2}}}\mbox{\Hypertarget{classIBUS_a809520af2a748fa9798f91320e076e44aaa33484aea878d98e2ffd5395aae2988}\label{classIBUS_a809520af2a748fa9798f91320e076e44aaa33484aea878d98e2ffd5395aae2988}} 
+ch\+\_\+2&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ch\_3@{ch\_3}!IBUS@{IBUS}}\index{IBUS@{IBUS}!ch\_3@{ch\_3}}}\mbox{\Hypertarget{classIBUS_a809520af2a748fa9798f91320e076e44a01fa66a0de87e238930d753c6bbf3f95}\label{classIBUS_a809520af2a748fa9798f91320e076e44a01fa66a0de87e238930d753c6bbf3f95}} 
+ch\+\_\+3&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ch\_4@{ch\_4}!IBUS@{IBUS}}\index{IBUS@{IBUS}!ch\_4@{ch\_4}}}\mbox{\Hypertarget{classIBUS_a809520af2a748fa9798f91320e076e44a573832987c6312f4acc7f32d35da9b78}\label{classIBUS_a809520af2a748fa9798f91320e076e44a573832987c6312f4acc7f32d35da9b78}} 
+ch\+\_\+4&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ch\_5@{ch\_5}!IBUS@{IBUS}}\index{IBUS@{IBUS}!ch\_5@{ch\_5}}}\mbox{\Hypertarget{classIBUS_a809520af2a748fa9798f91320e076e44ac9546149e2e018b3bba4a001ea0cf439}\label{classIBUS_a809520af2a748fa9798f91320e076e44ac9546149e2e018b3bba4a001ea0cf439}} 
+ch\+\_\+5&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ch\_6@{ch\_6}!IBUS@{IBUS}}\index{IBUS@{IBUS}!ch\_6@{ch\_6}}}\mbox{\Hypertarget{classIBUS_a809520af2a748fa9798f91320e076e44a29e05d7b403b8aa226d5d3d896aca97a}\label{classIBUS_a809520af2a748fa9798f91320e076e44a29e05d7b403b8aa226d5d3d896aca97a}} 
+ch\+\_\+6&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ch\_7@{ch\_7}!IBUS@{IBUS}}\index{IBUS@{IBUS}!ch\_7@{ch\_7}}}\mbox{\Hypertarget{classIBUS_a809520af2a748fa9798f91320e076e44a4fa191210f790ccc6ee1209545dacb4e}\label{classIBUS_a809520af2a748fa9798f91320e076e44a4fa191210f790ccc6ee1209545dacb4e}} 
+ch\+\_\+7&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ch\_8@{ch\_8}!IBUS@{IBUS}}\index{IBUS@{IBUS}!ch\_8@{ch\_8}}}\mbox{\Hypertarget{classIBUS_a809520af2a748fa9798f91320e076e44aa5d44b5907f6093e947241d256205ee3}\label{classIBUS_a809520af2a748fa9798f91320e076e44aa5d44b5907f6093e947241d256205ee3}} 
+ch\+\_\+8&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ch\_9@{ch\_9}!IBUS@{IBUS}}\index{IBUS@{IBUS}!ch\_9@{ch\_9}}}\mbox{\Hypertarget{classIBUS_a809520af2a748fa9798f91320e076e44a3254661966ac92589a6a1e9c9a0fa874}\label{classIBUS_a809520af2a748fa9798f91320e076e44a3254661966ac92589a6a1e9c9a0fa874}} 
+ch\+\_\+9&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ch\_10@{ch\_10}!IBUS@{IBUS}}\index{IBUS@{IBUS}!ch\_10@{ch\_10}}}\mbox{\Hypertarget{classIBUS_a809520af2a748fa9798f91320e076e44a809d60970853b19232d84dcc4f572d38}\label{classIBUS_a809520af2a748fa9798f91320e076e44a809d60970853b19232d84dcc4f572d38}} 
+ch\+\_\+10&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ch\_11@{ch\_11}!IBUS@{IBUS}}\index{IBUS@{IBUS}!ch\_11@{ch\_11}}}\mbox{\Hypertarget{classIBUS_a809520af2a748fa9798f91320e076e44a5ece551e69692047b1ddc557bb0fc264}\label{classIBUS_a809520af2a748fa9798f91320e076e44a5ece551e69692047b1ddc557bb0fc264}} 
+ch\+\_\+11&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ch\_12@{ch\_12}!IBUS@{IBUS}}\index{IBUS@{IBUS}!ch\_12@{ch\_12}}}\mbox{\Hypertarget{classIBUS_a809520af2a748fa9798f91320e076e44ae352696ca4da4f758c51dd6078481757}\label{classIBUS_a809520af2a748fa9798f91320e076e44ae352696ca4da4f758c51dd6078481757}} 
+ch\+\_\+12&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ch\_13@{ch\_13}!IBUS@{IBUS}}\index{IBUS@{IBUS}!ch\_13@{ch\_13}}}\mbox{\Hypertarget{classIBUS_a809520af2a748fa9798f91320e076e44a7652fe882e32cabf56a92fbea3dcff30}\label{classIBUS_a809520af2a748fa9798f91320e076e44a7652fe882e32cabf56a92fbea3dcff30}} 
+ch\+\_\+13&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ch\_14@{ch\_14}!IBUS@{IBUS}}\index{IBUS@{IBUS}!ch\_14@{ch\_14}}}\mbox{\Hypertarget{classIBUS_a809520af2a748fa9798f91320e076e44a3558ff6965a58983065a662089957c2b}\label{classIBUS_a809520af2a748fa9798f91320e076e44a3558ff6965a58983065a662089957c2b}} 
+ch\+\_\+14&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{classIBUS_a809520af2a748fa9798f91320e076e44}\label{classIBUS_a809520af2a748fa9798f91320e076e44}} 
+\index{IBUS@{IBUS}!channel\_source@{channel\_source}}
+\index{channel\_source@{channel\_source}!IBUS@{IBUS}}
+\doxysubsubsection{\texorpdfstring{channel\_source}{channel\_source}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{classIBUS_a809520af2a748fa9798f91320e076e44}{IBUS\+::channel\+\_\+source}}}
+
+
+
+Defining the different channel sources that are available in \mbox{\hyperlink{classIBUS}{IBUS}}. 
+
+\begin{DoxyNote}{Note}
+depending on the used transmitter, not all sources can be used 
+\end{DoxyNote}
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ch\_1@{ch\_1}!IBUS@{IBUS}}\index{IBUS@{IBUS}!ch\_1@{ch\_1}}}\mbox{\Hypertarget{classIBUS_a809520af2a748fa9798f91320e076e44a732ed4b13113e339a7509b86947dd416}\label{classIBUS_a809520af2a748fa9798f91320e076e44a732ed4b13113e339a7509b86947dd416}} 
+ch\+\_\+1&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ch\_2@{ch\_2}!IBUS@{IBUS}}\index{IBUS@{IBUS}!ch\_2@{ch\_2}}}\mbox{\Hypertarget{classIBUS_a809520af2a748fa9798f91320e076e44aaa33484aea878d98e2ffd5395aae2988}\label{classIBUS_a809520af2a748fa9798f91320e076e44aaa33484aea878d98e2ffd5395aae2988}} 
+ch\+\_\+2&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ch\_3@{ch\_3}!IBUS@{IBUS}}\index{IBUS@{IBUS}!ch\_3@{ch\_3}}}\mbox{\Hypertarget{classIBUS_a809520af2a748fa9798f91320e076e44a01fa66a0de87e238930d753c6bbf3f95}\label{classIBUS_a809520af2a748fa9798f91320e076e44a01fa66a0de87e238930d753c6bbf3f95}} 
+ch\+\_\+3&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ch\_4@{ch\_4}!IBUS@{IBUS}}\index{IBUS@{IBUS}!ch\_4@{ch\_4}}}\mbox{\Hypertarget{classIBUS_a809520af2a748fa9798f91320e076e44a573832987c6312f4acc7f32d35da9b78}\label{classIBUS_a809520af2a748fa9798f91320e076e44a573832987c6312f4acc7f32d35da9b78}} 
+ch\+\_\+4&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ch\_5@{ch\_5}!IBUS@{IBUS}}\index{IBUS@{IBUS}!ch\_5@{ch\_5}}}\mbox{\Hypertarget{classIBUS_a809520af2a748fa9798f91320e076e44ac9546149e2e018b3bba4a001ea0cf439}\label{classIBUS_a809520af2a748fa9798f91320e076e44ac9546149e2e018b3bba4a001ea0cf439}} 
+ch\+\_\+5&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ch\_6@{ch\_6}!IBUS@{IBUS}}\index{IBUS@{IBUS}!ch\_6@{ch\_6}}}\mbox{\Hypertarget{classIBUS_a809520af2a748fa9798f91320e076e44a29e05d7b403b8aa226d5d3d896aca97a}\label{classIBUS_a809520af2a748fa9798f91320e076e44a29e05d7b403b8aa226d5d3d896aca97a}} 
+ch\+\_\+6&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ch\_7@{ch\_7}!IBUS@{IBUS}}\index{IBUS@{IBUS}!ch\_7@{ch\_7}}}\mbox{\Hypertarget{classIBUS_a809520af2a748fa9798f91320e076e44a4fa191210f790ccc6ee1209545dacb4e}\label{classIBUS_a809520af2a748fa9798f91320e076e44a4fa191210f790ccc6ee1209545dacb4e}} 
+ch\+\_\+7&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ch\_8@{ch\_8}!IBUS@{IBUS}}\index{IBUS@{IBUS}!ch\_8@{ch\_8}}}\mbox{\Hypertarget{classIBUS_a809520af2a748fa9798f91320e076e44aa5d44b5907f6093e947241d256205ee3}\label{classIBUS_a809520af2a748fa9798f91320e076e44aa5d44b5907f6093e947241d256205ee3}} 
+ch\+\_\+8&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ch\_9@{ch\_9}!IBUS@{IBUS}}\index{IBUS@{IBUS}!ch\_9@{ch\_9}}}\mbox{\Hypertarget{classIBUS_a809520af2a748fa9798f91320e076e44a3254661966ac92589a6a1e9c9a0fa874}\label{classIBUS_a809520af2a748fa9798f91320e076e44a3254661966ac92589a6a1e9c9a0fa874}} 
+ch\+\_\+9&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ch\_10@{ch\_10}!IBUS@{IBUS}}\index{IBUS@{IBUS}!ch\_10@{ch\_10}}}\mbox{\Hypertarget{classIBUS_a809520af2a748fa9798f91320e076e44a809d60970853b19232d84dcc4f572d38}\label{classIBUS_a809520af2a748fa9798f91320e076e44a809d60970853b19232d84dcc4f572d38}} 
+ch\+\_\+10&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ch\_11@{ch\_11}!IBUS@{IBUS}}\index{IBUS@{IBUS}!ch\_11@{ch\_11}}}\mbox{\Hypertarget{classIBUS_a809520af2a748fa9798f91320e076e44a5ece551e69692047b1ddc557bb0fc264}\label{classIBUS_a809520af2a748fa9798f91320e076e44a5ece551e69692047b1ddc557bb0fc264}} 
+ch\+\_\+11&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ch\_12@{ch\_12}!IBUS@{IBUS}}\index{IBUS@{IBUS}!ch\_12@{ch\_12}}}\mbox{\Hypertarget{classIBUS_a809520af2a748fa9798f91320e076e44ae352696ca4da4f758c51dd6078481757}\label{classIBUS_a809520af2a748fa9798f91320e076e44ae352696ca4da4f758c51dd6078481757}} 
+ch\+\_\+12&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ch\_13@{ch\_13}!IBUS@{IBUS}}\index{IBUS@{IBUS}!ch\_13@{ch\_13}}}\mbox{\Hypertarget{classIBUS_a809520af2a748fa9798f91320e076e44a7652fe882e32cabf56a92fbea3dcff30}\label{classIBUS_a809520af2a748fa9798f91320e076e44a7652fe882e32cabf56a92fbea3dcff30}} 
+ch\+\_\+13&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ch\_14@{ch\_14}!IBUS@{IBUS}}\index{IBUS@{IBUS}!ch\_14@{ch\_14}}}\mbox{\Hypertarget{classIBUS_a809520af2a748fa9798f91320e076e44a3558ff6965a58983065a662089957c2b}\label{classIBUS_a809520af2a748fa9798f91320e076e44a3558ff6965a58983065a662089957c2b}} 
+ch\+\_\+14&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ch\_1@{ch\_1}!IBUS@{IBUS}}\index{IBUS@{IBUS}!ch\_1@{ch\_1}}}\mbox{\Hypertarget{classIBUS_a809520af2a748fa9798f91320e076e44a732ed4b13113e339a7509b86947dd416}\label{classIBUS_a809520af2a748fa9798f91320e076e44a732ed4b13113e339a7509b86947dd416}} 
+ch\+\_\+1&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ch\_2@{ch\_2}!IBUS@{IBUS}}\index{IBUS@{IBUS}!ch\_2@{ch\_2}}}\mbox{\Hypertarget{classIBUS_a809520af2a748fa9798f91320e076e44aaa33484aea878d98e2ffd5395aae2988}\label{classIBUS_a809520af2a748fa9798f91320e076e44aaa33484aea878d98e2ffd5395aae2988}} 
+ch\+\_\+2&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ch\_3@{ch\_3}!IBUS@{IBUS}}\index{IBUS@{IBUS}!ch\_3@{ch\_3}}}\mbox{\Hypertarget{classIBUS_a809520af2a748fa9798f91320e076e44a01fa66a0de87e238930d753c6bbf3f95}\label{classIBUS_a809520af2a748fa9798f91320e076e44a01fa66a0de87e238930d753c6bbf3f95}} 
+ch\+\_\+3&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ch\_4@{ch\_4}!IBUS@{IBUS}}\index{IBUS@{IBUS}!ch\_4@{ch\_4}}}\mbox{\Hypertarget{classIBUS_a809520af2a748fa9798f91320e076e44a573832987c6312f4acc7f32d35da9b78}\label{classIBUS_a809520af2a748fa9798f91320e076e44a573832987c6312f4acc7f32d35da9b78}} 
+ch\+\_\+4&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ch\_5@{ch\_5}!IBUS@{IBUS}}\index{IBUS@{IBUS}!ch\_5@{ch\_5}}}\mbox{\Hypertarget{classIBUS_a809520af2a748fa9798f91320e076e44ac9546149e2e018b3bba4a001ea0cf439}\label{classIBUS_a809520af2a748fa9798f91320e076e44ac9546149e2e018b3bba4a001ea0cf439}} 
+ch\+\_\+5&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ch\_6@{ch\_6}!IBUS@{IBUS}}\index{IBUS@{IBUS}!ch\_6@{ch\_6}}}\mbox{\Hypertarget{classIBUS_a809520af2a748fa9798f91320e076e44a29e05d7b403b8aa226d5d3d896aca97a}\label{classIBUS_a809520af2a748fa9798f91320e076e44a29e05d7b403b8aa226d5d3d896aca97a}} 
+ch\+\_\+6&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ch\_7@{ch\_7}!IBUS@{IBUS}}\index{IBUS@{IBUS}!ch\_7@{ch\_7}}}\mbox{\Hypertarget{classIBUS_a809520af2a748fa9798f91320e076e44a4fa191210f790ccc6ee1209545dacb4e}\label{classIBUS_a809520af2a748fa9798f91320e076e44a4fa191210f790ccc6ee1209545dacb4e}} 
+ch\+\_\+7&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ch\_8@{ch\_8}!IBUS@{IBUS}}\index{IBUS@{IBUS}!ch\_8@{ch\_8}}}\mbox{\Hypertarget{classIBUS_a809520af2a748fa9798f91320e076e44aa5d44b5907f6093e947241d256205ee3}\label{classIBUS_a809520af2a748fa9798f91320e076e44aa5d44b5907f6093e947241d256205ee3}} 
+ch\+\_\+8&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ch\_9@{ch\_9}!IBUS@{IBUS}}\index{IBUS@{IBUS}!ch\_9@{ch\_9}}}\mbox{\Hypertarget{classIBUS_a809520af2a748fa9798f91320e076e44a3254661966ac92589a6a1e9c9a0fa874}\label{classIBUS_a809520af2a748fa9798f91320e076e44a3254661966ac92589a6a1e9c9a0fa874}} 
+ch\+\_\+9&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ch\_10@{ch\_10}!IBUS@{IBUS}}\index{IBUS@{IBUS}!ch\_10@{ch\_10}}}\mbox{\Hypertarget{classIBUS_a809520af2a748fa9798f91320e076e44a809d60970853b19232d84dcc4f572d38}\label{classIBUS_a809520af2a748fa9798f91320e076e44a809d60970853b19232d84dcc4f572d38}} 
+ch\+\_\+10&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ch\_11@{ch\_11}!IBUS@{IBUS}}\index{IBUS@{IBUS}!ch\_11@{ch\_11}}}\mbox{\Hypertarget{classIBUS_a809520af2a748fa9798f91320e076e44a5ece551e69692047b1ddc557bb0fc264}\label{classIBUS_a809520af2a748fa9798f91320e076e44a5ece551e69692047b1ddc557bb0fc264}} 
+ch\+\_\+11&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ch\_12@{ch\_12}!IBUS@{IBUS}}\index{IBUS@{IBUS}!ch\_12@{ch\_12}}}\mbox{\Hypertarget{classIBUS_a809520af2a748fa9798f91320e076e44ae352696ca4da4f758c51dd6078481757}\label{classIBUS_a809520af2a748fa9798f91320e076e44ae352696ca4da4f758c51dd6078481757}} 
+ch\+\_\+12&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ch\_13@{ch\_13}!IBUS@{IBUS}}\index{IBUS@{IBUS}!ch\_13@{ch\_13}}}\mbox{\Hypertarget{classIBUS_a809520af2a748fa9798f91320e076e44a7652fe882e32cabf56a92fbea3dcff30}\label{classIBUS_a809520af2a748fa9798f91320e076e44a7652fe882e32cabf56a92fbea3dcff30}} 
+ch\+\_\+13&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ch\_14@{ch\_14}!IBUS@{IBUS}}\index{IBUS@{IBUS}!ch\_14@{ch\_14}}}\mbox{\Hypertarget{classIBUS_a809520af2a748fa9798f91320e076e44a3558ff6965a58983065a662089957c2b}\label{classIBUS_a809520af2a748fa9798f91320e076e44a3558ff6965a58983065a662089957c2b}} 
+ch\+\_\+14&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classIBUS_a4805e5c7a6008a81ae3a742c042c5474}\label{classIBUS_a4805e5c7a6008a81ae3a742c042c5474}} 
+\index{IBUS@{IBUS}!IBUS@{IBUS}}
+\index{IBUS@{IBUS}!IBUS@{IBUS}}
+\doxysubsubsection{\texorpdfstring{IBUS()}{IBUS()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily IBUS\+::\+IBUS (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Construct a new \mbox{\hyperlink{classIBUS}{IBUS}} object with Hardware\+Serial8 object. 
+
+\mbox{\Hypertarget{classIBUS_acd2a0e53ee5538d5a77632e87b16ff26}\label{classIBUS_acd2a0e53ee5538d5a77632e87b16ff26}} 
+\index{IBUS@{IBUS}!IBUS@{IBUS}}
+\index{IBUS@{IBUS}!IBUS@{IBUS}}
+\doxysubsubsection{\texorpdfstring{IBUS()}{IBUS()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily IBUS\+::\+IBUS (\begin{DoxyParamCaption}\item[{Hardware\+Serial \&}]{serial }\end{DoxyParamCaption})}
+
+
+
+Construct a new \mbox{\hyperlink{classIBUS}{IBUS}} object with another Hardware\+Serial object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em serial} & the Hardware\+Serial object \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classIBUS_ae379fa8a6456bb7b570275048e7da799}\label{classIBUS_ae379fa8a6456bb7b570275048e7da799}} 
+\index{IBUS@{IBUS}!getChannel@{getChannel}}
+\index{getChannel@{getChannel}!IBUS@{IBUS}}
+\doxysubsubsection{\texorpdfstring{getChannel()}{getChannel()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily uint32\+\_\+t IBUS\+::get\+Channel (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classIBUS_a809520af2a748fa9798f91320e076e44}{channel\+\_\+source}}}]{ch }\end{DoxyParamCaption})}
+
+
+
+Get the Channel value based on provided channel source. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ch} & the source \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+uint32\+\_\+t the channel value ranging from 1000 to 2000 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classIBUS_a07a87883a0a61b6621d83d91b72fb21d}\label{classIBUS_a07a87883a0a61b6621d83d91b72fb21d}} 
+\index{IBUS@{IBUS}!getChannel@{getChannel}}
+\index{getChannel@{getChannel}!IBUS@{IBUS}}
+\doxysubsubsection{\texorpdfstring{getChannel()}{getChannel()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily uint32\+\_\+t IBUS\+::get\+Channel (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classIBUS_a809520af2a748fa9798f91320e076e44}{channel\+\_\+source}}}]{channel\+\_\+number }\end{DoxyParamCaption})}
+
+
+
+Get the Channel value based on provided channel source. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ch} & the source \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+uint32\+\_\+t the channel value ranging from 1000 to 2000 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classIBUS_a96a11a00f7a8db167177f973b7c607be}\label{classIBUS_a96a11a00f7a8db167177f973b7c607be}} 
+\index{IBUS@{IBUS}!init@{init}}
+\index{init@{init}!IBUS@{IBUS}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily uint8\+\_\+t IBUS\+::init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Construct a new \mbox{\hyperlink{classIBUS}{IBUS}} object with Hardware\+Serial8 object. 
+
+\mbox{\Hypertarget{classIBUS_a54f00b8b785ba41f3a035a6620d8b04e}\label{classIBUS_a54f00b8b785ba41f3a035a6620d8b04e}} 
+\index{IBUS@{IBUS}!isAlive@{isAlive}}
+\index{isAlive@{isAlive}!IBUS@{IBUS}}
+\doxysubsubsection{\texorpdfstring{isAlive()}{isAlive()}}
+{\footnotesize\ttfamily uint8\+\_\+t IBUS\+::is\+Alive (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Defines if a connection is alive meaning if a transmitter is connected to the receiver. 
+
+\begin{DoxyReturn}{Returns}
+uint8\+\_\+t 1 if connected and 0 if not connected 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classIBUS_ae7d0ad69a6822723e2cae72e6ea6d836}\label{classIBUS_ae7d0ad69a6822723e2cae72e6ea6d836}} 
+\index{IBUS@{IBUS}!isFailsafe@{isFailsafe}}
+\index{isFailsafe@{isFailsafe}!IBUS@{IBUS}}
+\doxysubsubsection{\texorpdfstring{isFailsafe()}{isFailsafe()}}
+{\footnotesize\ttfamily uint8\+\_\+t IBUS\+::is\+Failsafe (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Defines if a connection is alive meaning if a transmitter is connected to the receiver. 
+
+\begin{DoxyReturn}{Returns}
+uint8\+\_\+t 0 if connected and 1 if not connected 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classIBUS_a7417d9ebbae20700416702eb1c8bcefa}\label{classIBUS_a7417d9ebbae20700416702eb1c8bcefa}} 
+\index{IBUS@{IBUS}!read@{read}}
+\index{read@{read}!IBUS@{IBUS}}
+\doxysubsubsection{\texorpdfstring{read()}{read()}}
+{\footnotesize\ttfamily uint8\+\_\+t IBUS\+::read (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+search for receiving data based on the START\+\_\+\+FRAME\+\_\+\+SEQUENCE 
+
+\begin{DoxyNote}{Note}
+if this method is addressed faster than INTER\+\_\+\+FRAME\+\_\+\+STOP, it will do nothing but returning 2.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+uint8\+\_\+t 
+\begin{DoxyItemize}
+\item 0, no connection. 
+\item 1, connection and communication. 
+\item 2, requested to fast after one another. See\+: INTER\+\_\+\+FRAME\+\_\+\+STOP 
+\end{DoxyItemize}
+\end{DoxyReturn}
+\mbox{\Hypertarget{classIBUS_a0f4e3f8c940330295627e3328f009242}\label{classIBUS_a0f4e3f8c940330295627e3328f009242}} 
+\index{IBUS@{IBUS}!readData@{readData}}
+\index{readData@{readData}!IBUS@{IBUS}}
+\doxysubsubsection{\texorpdfstring{readData()}{readData()}}
+{\footnotesize\ttfamily uint8\+\_\+t IBUS\+::read\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+search for receiving data based on the START\+\_\+\+FRAME\+\_\+\+SEQUENCE 
+
+\begin{DoxyNote}{Note}
+if this method is addressed faster than INTER\+\_\+\+FRAME\+\_\+\+STOP, it will do nothing but returning 2.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+uint8\+\_\+t 
+\begin{DoxyItemize}
+\item 0, no connection. 
+\item 1, connection and communication. 
+\item 2, requested to fast after one another. See\+: INTER\+\_\+\+FRAME\+\_\+\+STOP 
+\end{DoxyItemize}
+\end{DoxyReturn}
+\mbox{\Hypertarget{classIBUS_ab43edae3ba453732e3e38a94ce554d5b}\label{classIBUS_ab43edae3ba453732e3e38a94ce554d5b}} 
+\index{IBUS@{IBUS}!setChannelDefaultValue@{setChannelDefaultValue}}
+\index{setChannelDefaultValue@{setChannelDefaultValue}!IBUS@{IBUS}}
+\doxysubsubsection{\texorpdfstring{setChannelDefaultValue()}{setChannelDefaultValue()}}
+{\footnotesize\ttfamily uint8\+\_\+t IBUS\+::set\+Channel\+Default\+Value (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classIBUS_a809520af2a748fa9798f91320e076e44}{channel\+\_\+source}}}]{ch,  }\item[{uint16\+\_\+t}]{milliseconds }\end{DoxyParamCaption})}
+
+
+
+Set the Channel Default Value object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ch} & \\
+\hline
+{\em milliseconds} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+uint8\+\_\+t 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+lib/ibus\+\_\+\+V2/\mbox{\hyperlink{ibus_8h}{ibus.\+h}}\item 
+lib/\+X6\+B\+\_\+lib/\mbox{\hyperlink{X6B_8h}{X6\+B.\+h}}\item 
+lib/ibus\+\_\+\+V2/\mbox{\hyperlink{ibus_8cpp}{ibus.\+cpp}}\item 
+lib/\+X6\+B\+\_\+lib/\mbox{\hyperlink{X6B_8cpp}{X6\+B.\+cpp}}\end{DoxyCompactItemize}

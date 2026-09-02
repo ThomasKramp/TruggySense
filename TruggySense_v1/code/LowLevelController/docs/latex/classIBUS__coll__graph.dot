@@ -1,0 +1,8 @@
+digraph "IBUS"
+{
+ // INTERACTIVE_SVG=YES
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="{IBUS\n||+ uint8_t init()\l+ uint8_t read()\l+ uint16_t getChannel\l(channel_source channel\l_number)\l+ uint8_t isFailsafe()\l+  IBUS()\l+  IBUS(HardwareSerial\l &serial)\l+ uint8_t readData()\l+ uint32_t getChannel\l(channel_source ch)\l+ uint8_t isAlive()\l+ uint8_t setChannelDefault\lValue(channel_source ch,\l uint16_t milliseconds)\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+}

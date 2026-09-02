@@ -1,0 +1,76 @@
+\hypertarget{classSDLogger}{}\doxysection{SDLogger Class Reference}
+\label{classSDLogger}\index{SDLogger@{SDLogger}}
+
+
+{\ttfamily \#include $<$sd\+\_\+logger.\+h$>$}
+
+
+
+Collaboration diagram for SDLogger\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=262pt]{classSDLogger__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+String \mbox{\hyperlink{classSDLogger_a90b80b75e716710d7f41e2d826975d20}{generate\+Unique\+Filename\+And\+Use}} ()
+\item 
+uint8\+\_\+t \mbox{\hyperlink{classSDLogger_ab59949c5596c12af1dcbfdf0e65cb1e4}{init}} ()
+\item 
+String \mbox{\hyperlink{classSDLogger_a2d4340a61ec14c41e53701477b90e10d}{get\+File\+Name}} ()
+\item 
+uint64\+\_\+t \mbox{\hyperlink{classSDLogger_a8655ef788c1bd2d1af5b45143016d0c5}{get\+File\+Size}} ()
+\item 
+uint8\+\_\+t \mbox{\hyperlink{classSDLogger_a337861f9bc3d644848c4fc4965e9a712}{log\+Data}} (\mbox{\hyperlink{sd__logger_8h_ae50b5f5c5e57fd05e9e83da805bfe4e6}{logging\+\_\+data\+\_\+t}} data)
+\item 
+uint8\+\_\+t \mbox{\hyperlink{classSDLogger_ada27619221012466d196cee328fc374c}{close\+File}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classSDLogger_ada27619221012466d196cee328fc374c}\label{classSDLogger_ada27619221012466d196cee328fc374c}} 
+\index{SDLogger@{SDLogger}!closeFile@{closeFile}}
+\index{closeFile@{closeFile}!SDLogger@{SDLogger}}
+\doxysubsubsection{\texorpdfstring{closeFile()}{closeFile()}}
+{\footnotesize\ttfamily uint8\+\_\+t SDLogger\+::close\+File (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+save data to SD-\/card \mbox{\Hypertarget{classSDLogger_a90b80b75e716710d7f41e2d826975d20}\label{classSDLogger_a90b80b75e716710d7f41e2d826975d20}} 
+\index{SDLogger@{SDLogger}!generateUniqueFilenameAndUse@{generateUniqueFilenameAndUse}}
+\index{generateUniqueFilenameAndUse@{generateUniqueFilenameAndUse}!SDLogger@{SDLogger}}
+\doxysubsubsection{\texorpdfstring{generateUniqueFilenameAndUse()}{generateUniqueFilenameAndUse()}}
+{\footnotesize\ttfamily String SDLogger\+::generate\+Unique\+Filename\+And\+Use (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classSDLogger_a2d4340a61ec14c41e53701477b90e10d}\label{classSDLogger_a2d4340a61ec14c41e53701477b90e10d}} 
+\index{SDLogger@{SDLogger}!getFileName@{getFileName}}
+\index{getFileName@{getFileName}!SDLogger@{SDLogger}}
+\doxysubsubsection{\texorpdfstring{getFileName()}{getFileName()}}
+{\footnotesize\ttfamily String SDLogger\+::get\+File\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get the currently used filename. \mbox{\Hypertarget{classSDLogger_a8655ef788c1bd2d1af5b45143016d0c5}\label{classSDLogger_a8655ef788c1bd2d1af5b45143016d0c5}} 
+\index{SDLogger@{SDLogger}!getFileSize@{getFileSize}}
+\index{getFileSize@{getFileSize}!SDLogger@{SDLogger}}
+\doxysubsubsection{\texorpdfstring{getFileSize()}{getFileSize()}}
+{\footnotesize\ttfamily uint64\+\_\+t SDLogger\+::get\+File\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classSDLogger_ab59949c5596c12af1dcbfdf0e65cb1e4}\label{classSDLogger_ab59949c5596c12af1dcbfdf0e65cb1e4}} 
+\index{SDLogger@{SDLogger}!init@{init}}
+\index{init@{init}!SDLogger@{SDLogger}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily uint8\+\_\+t SDLogger\+::init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classSDLogger_a337861f9bc3d644848c4fc4965e9a712}\label{classSDLogger_a337861f9bc3d644848c4fc4965e9a712}} 
+\index{SDLogger@{SDLogger}!logData@{logData}}
+\index{logData@{logData}!SDLogger@{SDLogger}}
+\doxysubsubsection{\texorpdfstring{logData()}{logData()}}
+{\footnotesize\ttfamily uint8\+\_\+t SDLogger\+::log\+Data (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{sd__logger_8h_ae50b5f5c5e57fd05e9e83da805bfe4e6}{logging\+\_\+data\+\_\+t}}}]{data }\end{DoxyParamCaption})}
+
+Write data to the SD-\/card with a struct of logging\+\_\+data\+\_\+t. Write data to the internal file with a struct of logging\+\_\+data\+\_\+t. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+lib/sd\+\_\+logger/\mbox{\hyperlink{sd__logger_8h}{sd\+\_\+logger.\+h}}\item 
+lib/sd\+\_\+logger/\mbox{\hyperlink{sd__logger_8cpp}{sd\+\_\+logger.\+cpp}}\end{DoxyCompactItemize}

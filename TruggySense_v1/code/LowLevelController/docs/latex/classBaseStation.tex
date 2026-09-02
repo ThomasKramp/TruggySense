@@ -1,0 +1,70 @@
+\hypertarget{classBaseStation}{}\doxysection{Base\+Station Class Reference}
+\label{classBaseStation}\index{BaseStation@{BaseStation}}
+
+
+{\ttfamily \#include $<$base\+\_\+station.\+h$>$}
+
+
+
+Collaboration diagram for Base\+Station\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=231pt]{classBaseStation__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{classBaseStation_aeb6acff49dfecd5054fe57562017e42a}{init}} ()
+\begin{DoxyCompactList}\small\item\em Initialize the radio. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{classBaseStation_a03966cdaa7454850df89b2b293f368fd}{send\+Data}} (\mbox{\hyperlink{sd__logger_8h_ae50b5f5c5e57fd05e9e83da805bfe4e6}{logging\+\_\+data\+\_\+t}} data)
+\begin{DoxyCompactList}\small\item\em Send data to the basis station. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classBaseStation_aeb6acff49dfecd5054fe57562017e42a}\label{classBaseStation_aeb6acff49dfecd5054fe57562017e42a}} 
+\index{BaseStation@{BaseStation}!init@{init}}
+\index{init@{init}!BaseStation@{BaseStation}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily uint8\+\_\+t Base\+Station\+::init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Initialize the radio. 
+
+Will initialize the radio and will set the TX power to the maximum.
+
+\begin{DoxyReturn}{Returns}
+uint8\+\_\+t 1 if initialization was a success and 0 if not. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classBaseStation_a03966cdaa7454850df89b2b293f368fd}\label{classBaseStation_a03966cdaa7454850df89b2b293f368fd}} 
+\index{BaseStation@{BaseStation}!sendData@{sendData}}
+\index{sendData@{sendData}!BaseStation@{BaseStation}}
+\doxysubsubsection{\texorpdfstring{sendData()}{sendData()}}
+{\footnotesize\ttfamily uint8\+\_\+t Base\+Station\+::send\+Data (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{sd__logger_8h_ae50b5f5c5e57fd05e9e83da805bfe4e6}{logging\+\_\+data\+\_\+t}}}]{data }\end{DoxyParamCaption})}
+
+
+
+Send data to the basis station. 
+
+The driver will try to restart the nrf24 by performing \mbox{\hyperlink{classBaseStation_aeb6acff49dfecd5054fe57562017e42a}{init()}} as long as tryouts is not 0. If the tryouts reaches 0, nothing will be sended anymore and no \mbox{\hyperlink{classBaseStation_aeb6acff49dfecd5054fe57562017e42a}{init()}} is fired.
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & containing the logging data structure logging\+\_\+data\+\_\+t \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+uint8\+\_\+t 1 if success otherwise 0.
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+the return of a 0 means that the tryouts has reached their end. 
+\end{DoxyNote}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+lib/base\+\_\+station\+\_\+link/\mbox{\hyperlink{base__station_8h}{base\+\_\+station.\+h}}\item 
+lib/base\+\_\+station\+\_\+link/\mbox{\hyperlink{base__station_8cpp}{base\+\_\+station.\+cpp}}\end{DoxyCompactItemize}

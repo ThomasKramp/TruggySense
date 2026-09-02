@@ -1,0 +1,191 @@
+%TF.GenerationSoftware,KiCad,Pcbnew,8.0.7*%
+%TF.CreationDate,2025-02-07T22:27:17+01:00*%
+%TF.ProjectId,Teensy_board_10_prot_esd_2,5465656e-7379-45f6-926f-6172645f3130,rev?*%
+%TF.SameCoordinates,Original*%
+%TF.FileFunction,Copper,L1,Top*%
+%TF.FilePolarity,Positive*%
+%FSLAX46Y46*%
+G04 Gerber Fmt 4.6, Leading zero omitted, Abs format (unit mm)*
+G04 Created by KiCad (PCBNEW 8.0.7) date 2025-02-07 22:27:17*
+%MOMM*%
+%LPD*%
+G01*
+G04 APERTURE LIST*
+%TA.AperFunction,ComponentPad*%
+%ADD10R,1.700000X1.700000*%
+%TD*%
+G04 APERTURE END LIST*
+D10*
+%TO.P,J186,1,Pin_1*%
+%TO.N,/Communication & pheripherals/Protection_IO1/IN_8*%
+X137100000Y-81750000D03*
+%TD*%
+%TO.P,J40,1,Pin_1*%
+%TO.N,/Communication & pheripherals/Protection_IO1/OUT_1*%
+X111500000Y-119350000D03*
+%TD*%
+%TO.P,J182,1,Pin_1*%
+%TO.N,/Communication & pheripherals/Protection_IO1/IN_4*%
+X122700000Y-81750000D03*
+%TD*%
+%TO.P,J168,1,Pin_1*%
+%TO.N,/Communication & pheripherals/Protection_IO1/OUT_8*%
+X130300000Y-97750000D03*
+%TD*%
+%TO.P,J180,1,Pin_1*%
+%TO.N,/Communication & pheripherals/Protection_IO1/IN_2*%
+X115500000Y-81750000D03*
+%TD*%
+%TO.P,J183,1,Pin_1*%
+%TO.N,/Communication & pheripherals/Protection_IO1/IN_5*%
+X126300000Y-81750000D03*
+%TD*%
+%TO.P,J179,1,Pin_1*%
+%TO.N,/Communication & pheripherals/Protection_IO1/IN_1*%
+X111900000Y-81750000D03*
+%TD*%
+%TO.P,J169,1,Pin_1*%
+%TO.N,/Communication & pheripherals/Protection_IO1/OUT_9*%
+X138500000Y-119350000D03*
+%TD*%
+%TO.P,J240,1,Pin_1*%
+%TO.N,GND*%
+X122000000Y-90450000D03*
+%TD*%
+%TO.P,J242,1,Pin_1*%
+%TO.N,GND*%
+X136300000Y-90550000D03*
+%TD*%
+%TO.P,J185,1,Pin_1*%
+%TO.N,/Communication & pheripherals/Protection_IO1/IN_7*%
+X133500000Y-81750000D03*
+%TD*%
+%TO.P,J243,1,Pin_1*%
+%TO.N,GND*%
+X163200000Y-87950000D03*
+%TD*%
+%TO.P,J241,1,Pin_1*%
+%TO.N,GND*%
+X164500000Y-120350000D03*
+%TD*%
+%TO.P,J190,1,Pin_1*%
+%TO.N,/Communication & pheripherals/Protection_IO1/IN_12*%
+X151500000Y-81750000D03*
+%TD*%
+%TO.P,J166,1,Pin_1*%
+%TO.N,/Communication & pheripherals/Protection_IO1/OUT_6*%
+X126900000Y-112150000D03*
+%TD*%
+%TO.P,J184,1,Pin_1*%
+%TO.N,/Communication & pheripherals/Protection_IO1/IN_6*%
+X129900000Y-81750000D03*
+%TD*%
+%TO.P,J194,1,Pin_1*%
+%TO.N,/Communication & pheripherals/Protection_IO1/IN_16*%
+X165900000Y-81750000D03*
+%TD*%
+%TO.P,J164,1,Pin_1*%
+%TO.N,/Communication & pheripherals/Protection_IO1/OUT_4*%
+X115900000Y-97750000D03*
+%TD*%
+%TO.P,J195,1,Pin_1*%
+%TO.N,/Communication & pheripherals/Protection_IO1/IN_17*%
+X169500000Y-81750000D03*
+%TD*%
+%TO.P,J174,1,Pin_1*%
+%TO.N,/Communication & pheripherals/Protection_IO1/OUT_14*%
+X153700000Y-112350000D03*
+%TD*%
+%TO.P,J173,1,Pin_1*%
+%TO.N,/Communication & pheripherals/Protection_IO1/OUT_13*%
+X151300000Y-119350000D03*
+%TD*%
+%TO.P,J181,1,Pin_1*%
+%TO.N,/Communication & pheripherals/Protection_IO1/IN_3*%
+X119100000Y-81750000D03*
+%TD*%
+%TO.P,J193,1,Pin_1*%
+%TO.N,/Communication & pheripherals/Protection_IO1/IN_15*%
+X162300000Y-81750000D03*
+%TD*%
+%TO.P,J172,1,Pin_1*%
+%TO.N,/Communication & pheripherals/Protection_IO1/OUT_12*%
+X144500000Y-97750000D03*
+%TD*%
+%TO.P,J170,1,Pin_1*%
+%TO.N,/Communication & pheripherals/Protection_IO1/OUT_10*%
+X140500000Y-112150000D03*
+%TD*%
+%TO.P,J178,1,Pin_1*%
+%TO.N,/Communication & pheripherals/Protection_IO1/OUT_18*%
+X166700000Y-106950000D03*
+%TD*%
+%TO.P,J188,1,Pin_1*%
+%TO.N,/Communication & pheripherals/Protection_IO1/IN_10*%
+X144300000Y-81750000D03*
+%TD*%
+%TO.P,J196,1,Pin_1*%
+%TO.N,/Communication & pheripherals/Protection_IO1/IN_18*%
+X173100000Y-81750000D03*
+%TD*%
+%TO.P,J192,1,Pin_1*%
+%TO.N,/Communication & pheripherals/Protection_IO1/IN_14*%
+X158700000Y-81750000D03*
+%TD*%
+%TO.P,J228,1,Pin_1*%
+%TO.N,GND*%
+X134900000Y-119350000D03*
+%TD*%
+%TO.P,J171,1,Pin_1*%
+%TO.N,/Communication & pheripherals/Protection_IO1/OUT_11*%
+X142500000Y-104950000D03*
+%TD*%
+%TO.P,J165,1,Pin_1*%
+%TO.N,/Communication & pheripherals/Protection_IO1/OUT_5*%
+X124900000Y-119350000D03*
+%TD*%
+%TO.P,J175,1,Pin_1*%
+%TO.N,/Communication & pheripherals/Protection_IO1/OUT_15*%
+X155700000Y-105150000D03*
+%TD*%
+%TO.P,J191,1,Pin_1*%
+%TO.N,/Communication & pheripherals/Protection_IO1/IN_13*%
+X155100000Y-81750000D03*
+%TD*%
+%TO.P,J227,1,Pin_1*%
+%TO.N,GND*%
+X171900000Y-120250000D03*
+%TD*%
+%TO.P,J176,1,Pin_1*%
+%TO.N,/Communication & pheripherals/Protection_IO1/OUT_16*%
+X157900000Y-97950000D03*
+%TD*%
+%TO.P,J177,1,Pin_1*%
+%TO.N,/Communication & pheripherals/Protection_IO1/OUT_17*%
+X164500000Y-116750000D03*
+%TD*%
+%TO.P,J167,1,Pin_1*%
+%TO.N,/Communication & pheripherals/Protection_IO1/OUT_7*%
+X128900000Y-104950000D03*
+%TD*%
+%TO.P,J162,1,Pin_1*%
+%TO.N,/Communication & pheripherals/Protection_IO1/OUT_2*%
+X112100000Y-112150000D03*
+%TD*%
+%TO.P,J189,1,Pin_1*%
+%TO.N,/Communication & pheripherals/Protection_IO1/IN_11*%
+X147900000Y-81750000D03*
+%TD*%
+%TO.P,J163,1,Pin_1*%
+%TO.N,/Communication & pheripherals/Protection_IO1/OUT_3*%
+X114100000Y-104950000D03*
+%TD*%
+%TO.P,J244,1,Pin_1*%
+%TO.N,GND*%
+X150100000Y-90550000D03*
+%TD*%
+%TO.P,J187,1,Pin_1*%
+%TO.N,/Communication & pheripherals/Protection_IO1/IN_9*%
+X140700000Y-81750000D03*
+%TD*%
+M02*

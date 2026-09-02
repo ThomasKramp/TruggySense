@@ -1,0 +1,27 @@
+var searchData=
+[
+  ['i_0',['i',['../structmovement.html#a0146c5f745b20224bf43052078c7ddd7',1,'movement::i()'],['../structquaternion.html#a16ede59d39415b8dbcc1fc3a08edd812',1,'quaternion::i()'],['../classIMU.html#a198ebcb2f100aa3d5fb4286af9c480f0ac8b29de6f09f99b09ad00ba765148d82',1,'IMU::i()'],['../structlogging__data.html#a0d20b210dc3949f058ee2873137a471c',1,'logging_data::i()']]],
+  ['i_5fesc_5f1_1',['i_esc_1',['../structcurrent.html#a4199634fbb29112c1f5fcb6e34c290a0',1,'current::i_esc_1()'],['../structlogging__data.html#a0ed1215723b8d7850aba69103d17e2a3',1,'logging_data::i_esc_1()']]],
+  ['i_5fesc_5f2_2',['i_esc_2',['../structcurrent.html#a9f1a0160269b8a086543b65d681f8402',1,'current::i_esc_2()'],['../structlogging__data.html#a369dae12288394b7983292d53c0759a2',1,'logging_data::i_esc_2()']]],
+  ['i_5fesc_5f3_3',['i_esc_3',['../structlogging__data.html#a953c582381a8032830d98b1688739a82',1,'logging_data::i_esc_3()'],['../structcurrent.html#ad6c901d85a0e0b8281d555969a4ed403',1,'current::i_esc_3()']]],
+  ['i_5fesc_5f4_4',['i_esc_4',['../structlogging__data.html#adbd985a7305d741b1bad93133d240f8e',1,'logging_data::i_esc_4()'],['../structcurrent.html#a3614e688f6b0f71973e9689a55a0bdf4',1,'current::i_esc_4()']]],
+  ['i_5fhlc_5',['i_hlc',['../structlogging__data.html#a60afd0fb3f1c60e8602066e74db2addd',1,'logging_data::i_hlc()'],['../structcurrent.html#ae00f9b5e388bb78dd6ccf82e80bccf5a',1,'current::i_hlc()']]],
+  ['i_5fllc_6',['i_llc',['../structcurrent.html#ab46bcb1721a7c9ca25a927ccd1b19a51',1,'current::i_llc()'],['../structlogging__data.html#a6717424f34f0376fc273c72584d51d61',1,'logging_data::i_llc()']]],
+  ['i_5fss_7',['i_ss',['../structcurrent.html#afb362a3316740e55ff4ce3e53b049bef',1,'current::i_ss()'],['../structlogging__data.html#a80d74ccc3d563061156c006651f4e232',1,'logging_data::i_ss()']]],
+  ['ibus_8',['IBUS',['../classIBUS.html#a4805e5c7a6008a81ae3a742c042c5474',1,'IBUS::IBUS()'],['../classIBUS.html#acd2a0e53ee5538d5a77632e87b16ff26',1,'IBUS::IBUS(HardwareSerial &amp;serial)'],['../classIBUS.html',1,'IBUS']]],
+  ['ibus_2ecpp_9',['ibus.cpp',['../ibus_8cpp.html',1,'']]],
+  ['ibus_2eh_10',['ibus.h',['../ibus_8h.html',1,'']]],
+  ['ibus_5fserial_11',['IBUS_SERIAL',['../X6B_8h.html#a8efaa132168a470cf7f02c52e65a7a5e',1,'X6B.h']]],
+  ['imu_12',['imu',['../tasks_8cpp.html#a047a89b0208974c18d5c49656240616a',1,'tasks.cpp']]],
+  ['imu_13',['IMU',['../classIMU.html',1,'']]],
+  ['imu_2ecpp_14',['imu.cpp',['../imu_8cpp.html',1,'']]],
+  ['imu_2eh_15',['imu.h',['../imu_8h.html',1,'']]],
+  ['imu_5fdata_16',['imu_data',['../classIMU.html#a198ebcb2f100aa3d5fb4286af9c480f0',1,'IMU']]],
+  ['imu_5ferror_17',['imu_error',['../tasks_8cpp.html#a3b3d9400886481aee7578c2c2aef11c6',1,'tasks.cpp']]],
+  ['init_18',['init',['../classActuate.html#ab7712530dffbe063a7a96ea3f4768f1a',1,'Actuate::init()'],['../classVoltageMeasure.html#ab0ee6e57a0a5cfde66781fca1f718bed',1,'VoltageMeasure::init()'],['../classTemperature.html#ad128f7e2a26ed2687f5d72a0d96a48a1',1,'Temperature::init()'],['../classSDLogger.html#ab59949c5596c12af1dcbfdf0e65cb1e4',1,'SDLogger::init()'],['../classIMU.html#ac4a743aed13656f2a33d1bdf1e853969',1,'IMU::init()'],['../classIBUS.html#a96a11a00f7a8db167177f973b7c607be',1,'IBUS::init()'],['../classGPSDriver.html#a17e73a079be866162ca0c253758e218c',1,'GPSDriver::init()'],['../classCurrentMeasure.html#a8a667f729fe6779c3354060fb54117b8',1,'CurrentMeasure::init()'],['../classBaseStation.html#aeb6acff49dfecd5054fe57562017e42a',1,'BaseStation::init()']]],
+  ['initializetasks_19',['initializeTasks',['../tasks_8h.html#a13270f8d6bed5b53849d28bcf93ca468',1,'initializeTasks():&#160;tasks.cpp'],['../tasks_8cpp.html#a13270f8d6bed5b53849d28bcf93ca468',1,'initializeTasks():&#160;tasks.cpp']]],
+  ['inter_5fframe_5fstop_20',['INTER_FRAME_STOP',['../X6B_8h.html#a5f4714a38ff6188a898a108bbd87adfd',1,'X6B.h']]],
+  ['isalive_21',['isAlive',['../classIBUS.html#a54f00b8b785ba41f3a035a6620d8b04e',1,'IBUS']]],
+  ['isdisabled_22',['isDisabled',['../classActuate.html#ac4fb5113bf4fd86e0d5482f74ac9e644',1,'Actuate']]],
+  ['isfailsafe_23',['isFailsafe',['../classIBUS.html#ae7d0ad69a6822723e2cae72e6ea6d836',1,'IBUS']]]
+];

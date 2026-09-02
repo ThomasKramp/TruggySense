@@ -1,0 +1,11 @@
+FILE_TYPE = MULTI_PHYS_TABLE;
+
+PART 'TZMC3V3_GS08'
+CLASS = DISCRETE
+{========================================================================================}
+:"MANUFACTURER_NAME", "MANUFACTURER_PART_NUMBER"= "PART_NUMBER", "JEDEC_TYPE", "PACK_TYPE", "MOUSER_PART_NUMBER", "MOUSER_PRICE/STOCK", "ARROW_PART_NUMBER", "ARROW_PRICE/STOCK", "DESCRIPTION", "DATASHEET";
+{========================================================================================}
+ "Vishay", "TZMC3V3-GS08" (!) = "", "TZMC3V3GS08", "Other", "78-TZMC3.3", "https://www.mouser.co.uk/ProductDetail/Vishay-Semiconductors/TZMC3V3-GS08?qs=yIvl1B2wDi60Wfa8dflajg%3D%3D", "TZMC3V3-GS08", "https://www.arrow.com/en/products/tzmc3v3-gs08/vishay?utm_currency=USD&region=nac", "Vishay, 3.3V Zener Diode 5% 500 mW SMT 2-Pin MiniMELF", "https://www.vishay.com/docs/84122/tzm.pdf"
+END_PART
+
+END.

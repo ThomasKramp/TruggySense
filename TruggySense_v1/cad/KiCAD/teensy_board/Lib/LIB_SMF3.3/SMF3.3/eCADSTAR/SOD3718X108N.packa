@@ -1,0 +1,13 @@
+(unit MM)
+
+(package "SMF3_3"
+    (type UNDEF)
+    (uver 2)
+    (cuser "SamacSys")
+    (uuser "SamacSys")
+    (utime 2021-04-16-08:42:33)
+    (mountForm default
+        (footprintRef "SOD3718X108N")
+        (spec "System")
+    )
+)

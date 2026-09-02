@@ -1,0 +1,5 @@
+(fp_lib_table
+  (version 7)
+  (lib (name "VSSAF5M10HM3")(type "KiCad")(uri "${KIPRJMOD}/Components/LIB_VSSAF5M10-M3_H/VSSAF5M10-M3_H/KiCad")(options "")(descr ""))
+  (lib (name "Screw Terminal")(type "KiCad")(uri "${KIPRJMOD}/Components/LIB_1935161/1935161/KiCad")(options "")(descr ""))
+)

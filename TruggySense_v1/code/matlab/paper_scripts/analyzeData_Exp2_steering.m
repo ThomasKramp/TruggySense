@@ -1,0 +1,133 @@
+clc;
+clear;
+imgTrack = imread('track_picture.jpeg');
+json_string_fast = fileread("llc_data_16.json" ); %Normal driving (or fast)
+json_string_slow = fileread("llc_data_2.json" ); % slow driving
+data_fast = jsondecode(json_string_fast);
+data_slow = jsondecode(json_string_slow);
+
+positionLat = [data_fast.latitude];
+positionLong = [data_fast.longitude];
+
+pla_s = [data_slow.latitude];
+plo_s = [data_slow.longitude];
+
+velocityCar = [ data_fast.velocity ];
+
+wheelRPM1 = [data_fast.rpm_wheel_1];
+wheelRPM2 = [data_fast.rpm_wheel_2 ];
+wheelRPM3 = [data_fast.rpm_wheel_3 ];
+wheelRPM4 = [data_fast.rpm_wheel_4 ];
+
+orientationYaw = [ data_fast.yaw ];
+orientationYaw_s = [ data_slow.yaw ];
+
+actMotor_s = [data_slow.pwm_bm_1];
+actSS_s = [data_slow.pwm_ss];
+
+actMotor = [data_fast.pwm_bm_1];
+actSS = [data_fast.pwm_ss];
+
+timestamp = [ data_fast.timestamp ]/1000;
+
+idxValid = find( positionLat > 4 & positionLong > 4 );
+idxValid_slow = find( pla_s > 4 & plo_s > 4 );
+
+positionLat = smooth(positionLat(idxValid));
+positionLong = smooth(positionLong(idxValid));
+
+actMotor = actMotor(idxValid);
+actSS = actSS(idxValid);
+
+orientationYaw = orientationYaw(idxValid);
+orientationYaw_s = orientationYaw_s(idxValid_slow);
+
+actMotor_s = actMotor_s(idxValid_slow);
+actSS_s = actSS_s(idxValid_slow);
+
+% timestamp = timestamp(idxValid);
+
+pointsOfInterest = 1050:1083; %for data 16
+
+pointsOfInterest_slow = 1550:(1550+length(pointsOfInterest)-1);
+
+positionLat = positionLat(pointsOfInterest);
+positionLong = positionLong(pointsOfInterest);
+
+actSS = actSS(pointsOfInterest);
+actMotor = actMotor(pointsOfInterest);
+timestamp = timestamp(pointsOfInterest);
+
+orientationYaw = orientationYaw(pointsOfInterest);
+orientationYaw = orientationYaw - min(orientationYaw);
+orientationYaw= orientationYaw - mean(orientationYaw);
+
+orientationYaw_s = orientationYaw_s(pointsOfInterest_slow);
+orientationYaw_s = orientationYaw_s - min(orientationYaw_s);
+orientationYaw_s = orientationYaw_s - mean(orientationYaw_s);
+
+actSS_s = actSS_s(pointsOfInterest_slow);
+%%
+figure;
+%sgtitle('Exp2: "Fast Driving", steer correction on a straight track path')
+grid on;
+g1 = repmat({'First'},1000,2000);
+g2 = repmat({'Second'},1000,2000);
+g = [g1; g2];
+x = [(actSS); (actSS_s)];
+boxplot([actSS', actSS_s'], 'Labels',{'fast_ss', 'slow_ss'}, 'BoxStyle','outline', 'PlotStyle','compact', 'OutlierSize',5);
+bx1 = findobj(gca,'Tag','boxplot');
+set(bx1.Children,'LineWidth',2.5)
+
+title('Exp2: "Fast Driving", Distribution between fast and slow steer PWM value')
+ylabel('Pulse Width Duration (ms)');
+
+%%
+%figure;
+
+x = [(actSS); (actSS_s)];
+histogram(actSS,10, BinWidth=5, Normalization="percentage");
+hold on;
+histogram(actSS_s,10, BinWidth=5, Normalization="percentage")
+hold off;
+title('Exp2: "Fast Driving", Distribution of fast and slow steer PWM value')
+ylabel('probability (%)')
+ylabel('Pulse Width Duration (ms)');
+legend('fast_{ss}', 'slow_{ss}')
+%%
+figure;
+colororder({'k','k'})
+hold on
+plot(actSS, 'Color','red', LineWidth=2.5);
+plot(actSS_s, 'Color','blue', LineWidth=2.5);
+ylabel('Pulse Width Duration (ms)');
+hold off;
+yyaxis right
+hold on;
+plot(orientationYaw, LineStyle='-.', LineWidth=2.5);
+plot(orientationYaw_s, LineWidth=2.5);
+hold off;
+
+legend('PWM_{SS-fast}', 'PWM_{SS-slow}', 'yaw_{fast}', 'yaw_{slow}')
+title('Exp2: "Fast Driving", Raw PWM values of SS with yaw angles beteen fast and slow experiment')
+ylabel('Relative Yaw angle (°)');
+xlabel('sample point')
+
+% figure;
+% hold on;
+% plot(timestamp, actSS)
+% plot(timestamp, actMotor)
+% % plot(actSS)
+% % plot(actMotor)
+% hold off;
+% legend('pwm_{ss}', 'pwm_{motor}')
+% xlabel('time (s)')
+% ylabel('Pulse Width Duration (ms)')
+% title('PWM value of steering servo and ESC on a straight track path')
+% grid on;
+
+% actSS = actSS-min(actSS);
+% actSS = actSS./max(actSS);
+
+% figure; plotImageOnTrack( imgTrack, positionLat, positionLong, actSS );
+% title('Exp2: "Fast Driving", Steer correction on straight track path normalized');

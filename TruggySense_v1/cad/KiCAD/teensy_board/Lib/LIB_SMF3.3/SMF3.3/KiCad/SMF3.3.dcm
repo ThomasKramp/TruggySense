@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP SMF3.3
+D ESD Suppressors / TVS Diodes 200W 3.3V 5% Uni-directional
+K
+F https://componentsearchengine.com/Datasheets/2/SMF3.3.pdf
+$ENDCMP
+#
+#End Doc Library

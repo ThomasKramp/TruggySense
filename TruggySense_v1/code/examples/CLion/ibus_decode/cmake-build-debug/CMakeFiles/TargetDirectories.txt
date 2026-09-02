@@ -1,0 +1,3 @@
+/media/robbe/Nextcloud/UA/Master_Thesis/Portfolio/Tech Report/Code/playroom/CLion/ibus_decode/cmake-build-debug/CMakeFiles/ibus_decode.dir
+/media/robbe/Nextcloud/UA/Master_Thesis/Portfolio/Tech Report/Code/playroom/CLion/ibus_decode/cmake-build-debug/CMakeFiles/edit_cache.dir
+/media/robbe/Nextcloud/UA/Master_Thesis/Portfolio/Tech Report/Code/playroom/CLion/ibus_decode/cmake-build-debug/CMakeFiles/rebuild_cache.dir

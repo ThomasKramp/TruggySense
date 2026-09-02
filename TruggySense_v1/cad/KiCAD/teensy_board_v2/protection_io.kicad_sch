@@ -1,0 +1,680 @@
+(kicad_sch
+	(version 20250114)
+	(generator "eeschema")
+	(generator_version "9.0")
+	(uuid "503e0989-0815-490e-95fb-5eab83af86e5")
+	(paper "A4")
+	(lib_symbols)
+	(hierarchical_label "OUT_2"
+		(shape output)
+		(at 162.56 49.53 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "055b35e0-81e0-4e05-a246-63861a6c1aa5")
+	)
+	(hierarchical_label "IN_6"
+		(shape input)
+		(at 125.73 130.81 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "0c7b938c-502d-4abc-9f66-75c8561cc9ee")
+	)
+	(hierarchical_label "OUT_5"
+		(shape output)
+		(at 162.56 110.49 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "13c9d5d4-5611-49da-b568-b454572cf44e")
+	)
+	(hierarchical_label "IN_3"
+		(shape input)
+		(at 125.73 69.85 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "3b90c59b-0285-48f6-b3ef-2700557801bb")
+	)
+	(hierarchical_label "OUT_3"
+		(shape output)
+		(at 162.56 69.85 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "4ed25c96-bca5-4bfe-8617-e3bc38df3767")
+	)
+	(hierarchical_label "OUT_7"
+		(shape output)
+		(at 162.56 151.13 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "529937e2-4752-4220-b7a4-4371a1b15355")
+	)
+	(hierarchical_label "IN_4"
+		(shape input)
+		(at 125.73 90.17 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "7e15d027-6a6f-4cc6-9b8f-2a3e1f53523b")
+	)
+	(hierarchical_label "OUT_8"
+		(shape output)
+		(at 162.56 171.45 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "867e6a53-4a0f-4c11-babf-d9ec621e1dd9")
+	)
+	(hierarchical_label "IN_8"
+		(shape input)
+		(at 125.73 171.45 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "90d80068-6e6e-4484-b893-30933bb86b95")
+	)
+	(hierarchical_label "IN_1"
+		(shape input)
+		(at 125.73 27.94 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "9a8d9490-72fa-47bf-864d-fee681764018")
+	)
+	(hierarchical_label "IN_5"
+		(shape input)
+		(at 125.73 110.49 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "9e74ccd4-589f-42d6-94f4-72cba2b39df0")
+	)
+	(hierarchical_label "OUT_6"
+		(shape output)
+		(at 162.56 130.81 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "a2f57005-c0c9-4840-9851-57701d9889ad")
+	)
+	(hierarchical_label "IN_7"
+		(shape input)
+		(at 125.73 151.13 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "a8b51b07-0f29-4041-9a9a-fb99c1005776")
+	)
+	(hierarchical_label "OUT_1"
+		(shape output)
+		(at 162.56 27.94 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "c4028545-d117-49bb-8938-32f9ce2f7ce8")
+	)
+	(hierarchical_label "IN_2"
+		(shape input)
+		(at 125.73 49.53 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "d07dab6a-e154-4938-ad67-39353f05aae0")
+	)
+	(hierarchical_label "OUT_4"
+		(shape output)
+		(at 162.56 90.17 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "f4b3b6af-5d3b-40c2-86ed-cc1555aa6416")
+	)
+	(sheet
+		(at 125.73 148.59)
+		(size 36.83 5.08)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "1a22eb2c-9edb-4843-9819-808d925e17b7")
+		(property "Sheetname" "protection_17"
+			(at 125.73 147.8784 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "pin_protection_circuit.kicad_sch"
+			(at 125.73 154.2546 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "IN" input
+			(at 125.73 151.13 180)
+			(uuid "b2ff8c88-b4b7-4311-a342-8068d91ee35d")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "OUT" output
+			(at 162.56 151.13 0)
+			(uuid "f8e4c21f-56e0-4d50-8d95-964fc06e908c")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(instances
+			(project "Teensy_board_V2"
+				(path "/5d99a2db-09e2-4be1-8892-25ef91102b80/01df7748-fb84-4aef-aef2-66458cf888d6/9500f726-3dfe-45dd-b3ec-6f2fa7a4b461"
+					(page "32")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 125.73 25.4)
+		(size 36.83 5.08)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "37f37b59-2b34-4726-9ac0-cd3251a36b44")
+		(property "Sheetname" "protection_11"
+			(at 125.73 24.6884 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "pin_protection_circuit.kicad_sch"
+			(at 125.73 31.0646 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "IN" input
+			(at 125.73 27.94 180)
+			(uuid "1465a982-7401-497f-8f8a-6cd4592172d7")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "OUT" output
+			(at 162.56 27.94 0)
+			(uuid "04d08aa9-c909-4de2-91ec-9fceb34aadc3")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(instances
+			(project "Teensy_board_V2"
+				(path "/5d99a2db-09e2-4be1-8892-25ef91102b80/01df7748-fb84-4aef-aef2-66458cf888d6/9500f726-3dfe-45dd-b3ec-6f2fa7a4b461"
+					(page "26")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 125.73 168.91)
+		(size 36.83 5.08)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "57157281-6939-43d5-bb49-4141fe7c66bf")
+		(property "Sheetname" "protection_18"
+			(at 125.73 168.1984 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "pin_protection_circuit.kicad_sch"
+			(at 125.73 174.5746 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "IN" input
+			(at 125.73 171.45 180)
+			(uuid "9b2e0a44-227f-4947-8ca3-d96ed8bd05ae")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "OUT" output
+			(at 162.56 171.45 0)
+			(uuid "70db3d49-5a50-40d2-8234-ed0673f1e550")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(instances
+			(project "Teensy_board_V2"
+				(path "/5d99a2db-09e2-4be1-8892-25ef91102b80/01df7748-fb84-4aef-aef2-66458cf888d6/9500f726-3dfe-45dd-b3ec-6f2fa7a4b461"
+					(page "33")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 125.73 107.95)
+		(size 36.83 5.08)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "58f23d49-3fd1-4039-b808-8f784165f476")
+		(property "Sheetname" "protection_15"
+			(at 125.73 107.2384 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "pin_protection_circuit.kicad_sch"
+			(at 125.73 113.6146 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "IN" input
+			(at 125.73 110.49 180)
+			(uuid "71ff7aec-5ae1-4345-ac97-27855f8b7c6a")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "OUT" output
+			(at 162.56 110.49 0)
+			(uuid "66c8c46d-b651-4d02-9524-c1fb60376fa4")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(instances
+			(project "Teensy_board_V2"
+				(path "/5d99a2db-09e2-4be1-8892-25ef91102b80/01df7748-fb84-4aef-aef2-66458cf888d6/9500f726-3dfe-45dd-b3ec-6f2fa7a4b461"
+					(page "30")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 125.73 87.63)
+		(size 36.83 5.08)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "881938ba-a8e6-4d5a-9198-82cfe9d0c8e0")
+		(property "Sheetname" "protection_14"
+			(at 125.73 86.9184 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "pin_protection_circuit.kicad_sch"
+			(at 125.73 93.2946 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "IN" input
+			(at 125.73 90.17 180)
+			(uuid "93dec04c-ef40-412c-a939-4849e93e0942")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "OUT" output
+			(at 162.56 90.17 0)
+			(uuid "08b3b51c-63fb-497b-bb9c-2d9456979242")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(instances
+			(project "Teensy_board_V2"
+				(path "/5d99a2db-09e2-4be1-8892-25ef91102b80/01df7748-fb84-4aef-aef2-66458cf888d6/9500f726-3dfe-45dd-b3ec-6f2fa7a4b461"
+					(page "29")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 125.73 128.27)
+		(size 36.83 5.08)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "bcd95c59-99df-4218-b0c3-340ef4c75a92")
+		(property "Sheetname" "protection_16"
+			(at 125.73 127.5584 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "pin_protection_circuit.kicad_sch"
+			(at 125.73 133.9346 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "IN" input
+			(at 125.73 130.81 180)
+			(uuid "32f11465-2028-438b-89f6-8f45184c4b89")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "OUT" output
+			(at 162.56 130.81 0)
+			(uuid "aaa9d220-09b6-4e4a-bd72-1a5ce05a12d4")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(instances
+			(project "Teensy_board_V2"
+				(path "/5d99a2db-09e2-4be1-8892-25ef91102b80/01df7748-fb84-4aef-aef2-66458cf888d6/9500f726-3dfe-45dd-b3ec-6f2fa7a4b461"
+					(page "31")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 125.73 46.99)
+		(size 36.83 5.08)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "bee11a3c-0ae3-4dc0-a57d-6ec7cefb65fa")
+		(property "Sheetname" "protection_12"
+			(at 125.73 46.2784 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "pin_protection_circuit.kicad_sch"
+			(at 125.73 52.6546 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "IN" input
+			(at 125.73 49.53 180)
+			(uuid "c844d6a7-ce3d-4d5b-9ae2-7cfd1eefeaed")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "OUT" output
+			(at 162.56 49.53 0)
+			(uuid "5bc95b1d-b1d0-47a8-9529-f73836d119ab")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(instances
+			(project "Teensy_board_V2"
+				(path "/5d99a2db-09e2-4be1-8892-25ef91102b80/01df7748-fb84-4aef-aef2-66458cf888d6/9500f726-3dfe-45dd-b3ec-6f2fa7a4b461"
+					(page "27")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 125.73 67.31)
+		(size 36.83 5.08)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "cd49ec97-51fd-4e12-8f22-98671fcd5b09")
+		(property "Sheetname" "protection_13"
+			(at 125.73 66.5984 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "pin_protection_circuit.kicad_sch"
+			(at 125.73 72.9746 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "IN" input
+			(at 125.73 69.85 180)
+			(uuid "b61506a2-0625-4b17-bf36-4e4e7b59873a")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "OUT" output
+			(at 162.56 69.85 0)
+			(uuid "e2ac55d7-6750-47db-8a31-9380b1f38d14")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(instances
+			(project "Teensy_board_V2"
+				(path "/5d99a2db-09e2-4be1-8892-25ef91102b80/01df7748-fb84-4aef-aef2-66458cf888d6/9500f726-3dfe-45dd-b3ec-6f2fa7a4b461"
+					(page "28")
+				)
+			)
+		)
+	)
+)

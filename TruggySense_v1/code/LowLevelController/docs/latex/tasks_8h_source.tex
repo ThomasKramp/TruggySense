@@ -1,0 +1,211 @@
+\hypertarget{tasks_8h_source}{}\doxysection{tasks.\+h}
+\label{tasks_8h_source}\index{include/tasks.h@{include/tasks.h}}
+\mbox{\hyperlink{tasks_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{39 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{40 }
+\DoxyCodeLine{41 \textcolor{preprocessor}{\#include <stdint.h>}}
+\DoxyCodeLine{42 \textcolor{comment}{// \#include "{}X6B.h"{}}}
+\DoxyCodeLine{43 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{ibus_8h}{ibus.h}}"{}}}
+\DoxyCodeLine{44 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{actuate_8h}{actuate.h}}"{}}}
+\DoxyCodeLine{45 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{current_8h}{current.h}}"{}}}
+\DoxyCodeLine{46 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{voltage_8h}{voltage.h}}"{}}}
+\DoxyCodeLine{47 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{encoder_8h}{encoder.h}}"{}}}
+\DoxyCodeLine{48 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{temperature_8h}{temperature.h}}"{}}}
+\DoxyCodeLine{49 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{imu_8h}{imu.h}}"{}}}
+\DoxyCodeLine{50 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{sd__logger_8h}{sd\_logger.h}}"{}}}
+\DoxyCodeLine{51 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{gps_8h}{gps.h}}"{}}}
+\DoxyCodeLine{52 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{base__station_8h}{base\_station.h}}"{}}}
+\DoxyCodeLine{53 }
+\DoxyCodeLine{54 \textcolor{preprocessor}{\#define SYS\_TIMER\_INTERVAL\_US 500       }}
+\DoxyCodeLine{56 \textcolor{preprocessor}{\#define TIMER\_INTERVAL\_TEMPERATURE 2000 }}
+\DoxyCodeLine{57 \textcolor{preprocessor}{\#define TIMER\_INTERVAL\_IBUS 10          }}
+\DoxyCodeLine{58 \textcolor{preprocessor}{\#define TIMER\_INTERVAL\_GPS 1            }}
+\DoxyCodeLine{59 \textcolor{preprocessor}{\#define TIMER\_INTERVAL\_IMU 10           }}
+\DoxyCodeLine{60 \textcolor{preprocessor}{\#define TIMER\_INTERVAL\_ADC 1000         }}
+\DoxyCodeLine{61 \textcolor{preprocessor}{\#define TIMER\_INTERVAL\_ENCODER 166      }}
+\DoxyCodeLine{62 \textcolor{preprocessor}{\#define TIMER\_INTERVAL\_ACTUATE 10       }}
+\DoxyCodeLine{63 \textcolor{preprocessor}{\#define TIMER\_INTERVAL\_LEDS 100         }}
+\DoxyCodeLine{64 \textcolor{comment}{// \#define TIMER\_INTERVAL\_ROS\_SEND 10       /**< @brief the ROS send task interval rate in miliseconds*/}}
+\DoxyCodeLine{65 \textcolor{comment}{// \#define TIMER\_INTERVAL\_ROS\_RECEIVE 10    /**< @brief the ROS receive task interval rate in miliseconds*/}}
+\DoxyCodeLine{66 \textcolor{preprocessor}{\#define TIMER\_INTERVAL\_BASE\_STATION 500 }}
+\DoxyCodeLine{67 \textcolor{preprocessor}{\#define TIMER\_INTERVAL\_LOG 50           }}
+\DoxyCodeLine{68 \textcolor{preprocessor}{\#define TIMER\_INTERVAL\_SAVE\_LOG 100     }}
+\DoxyCodeLine{69 \textcolor{preprocessor}{\#define TIMER\_INTERVAL\_SAFETY 10        }}
+\DoxyCodeLine{79 uint8\_t \mbox{\hyperlink{tasks_8h_a13270f8d6bed5b53849d28bcf93ca468}{initializeTasks}}();}
+\DoxyCodeLine{80 }
+\DoxyCodeLine{89 \textcolor{keywordtype}{void} \mbox{\hyperlink{tasks_8h_a35ed32c99741706f5903957eebd93a92}{taskReadTemperature}}();}
+\DoxyCodeLine{90 }
+\DoxyCodeLine{95 \textcolor{keyword}{struct }\mbox{\hyperlink{structtemperature}{temperature}}}
+\DoxyCodeLine{96 \{}
+\DoxyCodeLine{97     \textcolor{keywordtype}{float} \mbox{\hyperlink{structtemperature_a06bd4e963e5652ffe37a9e066de70226}{t\_llc}};   }
+\DoxyCodeLine{98     \textcolor{keywordtype}{float} \mbox{\hyperlink{structtemperature_a195f61178e8c6a517d362e1edd83bd24}{t\_hlc}};   }
+\DoxyCodeLine{99     \textcolor{keywordtype}{float} \mbox{\hyperlink{structtemperature_ad3adcd6ac2b8b9b113ad82340dcfaad9}{t\_bp}};    }
+\DoxyCodeLine{100     \textcolor{keywordtype}{float} \mbox{\hyperlink{structtemperature_ac416a0323bca3781fcc044a74577ab12}{t\_ss}};    }
+\DoxyCodeLine{101     \textcolor{keywordtype}{float} \mbox{\hyperlink{structtemperature_ac435a932f58a77ca47efd61029d82a91}{t\_bm\_1}};  }
+\DoxyCodeLine{102     \textcolor{keywordtype}{float} \mbox{\hyperlink{structtemperature_a3fa4ebc7fc43c926876214d41f96d448}{t\_bm\_2}};  }
+\DoxyCodeLine{103     \textcolor{keywordtype}{float} \mbox{\hyperlink{structtemperature_a5c916ebafa2960f0eeab2a8a04ea6d08}{t\_bm\_3}};  }
+\DoxyCodeLine{104     \textcolor{keywordtype}{float} \mbox{\hyperlink{structtemperature_a1b4bfaad3bef03af310b725a3827db47}{t\_bm\_4}};  }
+\DoxyCodeLine{105     \textcolor{keywordtype}{float} \mbox{\hyperlink{structtemperature_a62d821e3ba77d2040496964555b2ec7a}{t\_esc\_1}}; }
+\DoxyCodeLine{106     \textcolor{keywordtype}{float} \mbox{\hyperlink{structtemperature_acb7d9a1d1675982cf8c4dee50dd15610}{t\_esc\_2}}; }
+\DoxyCodeLine{107     \textcolor{keywordtype}{float} \mbox{\hyperlink{structtemperature_afdace5ffaca322376ee13e8db33a3c34}{t\_esc\_3}}; }
+\DoxyCodeLine{108     \textcolor{keywordtype}{float} \mbox{\hyperlink{structtemperature_ad3dd9841c8cfeac99e53594e766a3a45}{t\_esc\_4}}; }
+\DoxyCodeLine{109 \};}
+\DoxyCodeLine{110 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\mbox{\hyperlink{structtemperature}{temperature}} \mbox{\hyperlink{structtemperature}{temperature\_t}};}
+\DoxyCodeLine{111 }
+\DoxyCodeLine{112 \textcolor{comment}{// extern Temperature temperature;}}
+\DoxyCodeLine{113 \textcolor{keyword}{extern} \mbox{\hyperlink{structtemperature}{temperature\_t}} \mbox{\hyperlink{tasks_8h_afa04f91a9a6a331858d5bef6640234df}{temperature\_data}};}
+\DoxyCodeLine{114 }
+\DoxyCodeLine{119 \textcolor{keywordtype}{void} \mbox{\hyperlink{tasks_8h_a7c26549615e853118dd0558393f56fc1}{taskReadIbus}}();}
+\DoxyCodeLine{120 }
+\DoxyCodeLine{125 \textcolor{keyword}{struct }\mbox{\hyperlink{structradio}{radio}}}
+\DoxyCodeLine{126 \{}
+\DoxyCodeLine{127     uint16\_t \mbox{\hyperlink{structradio_ad507053b34b2c9ddc47d88bc447b552b}{ch\_1}};    }
+\DoxyCodeLine{128     uint16\_t \mbox{\hyperlink{structradio_a97e351fa6eba9d9b9d273a549ae914fe}{ch\_2}};    }
+\DoxyCodeLine{129     uint16\_t \mbox{\hyperlink{structradio_aff5ee0e70f783d248724e5f50b8800f9}{ch\_3}};    }
+\DoxyCodeLine{130     uint16\_t \mbox{\hyperlink{structradio_adcc6df89a7d805683786d3a81fadad10}{ch\_4}};    }
+\DoxyCodeLine{131     uint16\_t \mbox{\hyperlink{structradio_a66acdafa3f69f0277176ee34dc865663}{ch\_5}};    }
+\DoxyCodeLine{132     uint16\_t \mbox{\hyperlink{structradio_aa6d0a210b4c5c33c6f9f5bb9634a1b23}{ch\_6}};    }
+\DoxyCodeLine{133     uint16\_t \mbox{\hyperlink{structradio_a9163b102aa82ec46c5fded4d86510c5f}{ch\_7}};    }
+\DoxyCodeLine{134     uint16\_t \mbox{\hyperlink{structradio_a1e45c4c06bd253ed535395ae7de4fab1}{ch\_8}};    }
+\DoxyCodeLine{135     uint16\_t \mbox{\hyperlink{structradio_aa53dc690a9a2024527d904e932de95e6}{ch\_9}};    }
+\DoxyCodeLine{136     uint16\_t \mbox{\hyperlink{structradio_a675b14cbdc1dcb0e42b3d79ea5dd43bb}{ch\_10}};   }
+\DoxyCodeLine{137     uint16\_t \mbox{\hyperlink{structradio_a674a47e7dc24d3288c617e74b55ef3a5}{ch\_11}};   }
+\DoxyCodeLine{138     uint16\_t \mbox{\hyperlink{structradio_a10082798cfb2be8339614ad2e39df271}{ch\_12}};   }
+\DoxyCodeLine{139     uint16\_t \mbox{\hyperlink{structradio_a9130a0319665ac7a29247ecda57768c9}{ch\_13}};   }
+\DoxyCodeLine{140     uint16\_t \mbox{\hyperlink{structradio_a22a9a2685cb64d9d797e09c480917f4d}{ch\_14}};   }
+\DoxyCodeLine{141     uint8\_t \mbox{\hyperlink{structradio_aca7ac2ce60df08055dcc0b338f598f42}{failsafe}}; }
+\DoxyCodeLine{142 \};}
+\DoxyCodeLine{143 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\mbox{\hyperlink{structradio}{radio}} \mbox{\hyperlink{structradio}{radio\_t}};}
+\DoxyCodeLine{144 }
+\DoxyCodeLine{145 \textcolor{comment}{// extern IBUS x6b\_receiver;}}
+\DoxyCodeLine{146 \textcolor{keyword}{extern} \mbox{\hyperlink{structradio}{radio\_t}} \mbox{\hyperlink{tasks_8h_a06e33aaeca474d747692adcd4871ea27}{radio\_data}};}
+\DoxyCodeLine{147 }
+\DoxyCodeLine{152 \textcolor{keywordtype}{void} \mbox{\hyperlink{tasks_8h_a98cb7e9df95903c2b0a32ad446ec2ae8}{taskReadGps}}();}
+\DoxyCodeLine{153 }
+\DoxyCodeLine{158 \textcolor{keyword}{struct }\mbox{\hyperlink{structlocalization}{localization}}}
+\DoxyCodeLine{159 \{}
+\DoxyCodeLine{160     \textcolor{keywordtype}{long} \mbox{\hyperlink{structlocalization_a52cf146e18a7253276b1b1999c5fd144}{date}};                    }
+\DoxyCodeLine{161     \textcolor{keywordtype}{long} \mbox{\hyperlink{structlocalization_aa8d0896af9b6c0f2cb221abd9c791afb}{time}};                    }
+\DoxyCodeLine{162     \textcolor{keywordtype}{float} \mbox{\hyperlink{structlocalization_a450b2715016953f0b64c50a7026aff92}{latitude}};               }
+\DoxyCodeLine{163     \textcolor{keywordtype}{float} \mbox{\hyperlink{structlocalization_abbb0d0b830f39452a51f02725c08705d}{longitude}};              }
+\DoxyCodeLine{164     \textcolor{keywordtype}{float} \mbox{\hyperlink{structlocalization_ad3501a7176cddb548082ab0d5b5a1cc4}{velocity}};               }
+\DoxyCodeLine{165     \textcolor{keywordtype}{float} \mbox{\hyperlink{structlocalization_a00153ed94a87f880f393e65262459c0a}{altitude}};               }
+\DoxyCodeLine{166     uint8\_t \mbox{\hyperlink{structlocalization_a6e8899a045f316385aef5276a4caa43f}{connected\_satellites}}; }
+\DoxyCodeLine{167 \};}
+\DoxyCodeLine{168 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\mbox{\hyperlink{structlocalization}{localization}} \mbox{\hyperlink{structlocalization}{localization\_t}};}
+\DoxyCodeLine{169 }
+\DoxyCodeLine{170 \textcolor{comment}{// extern GPSDriver gps;}}
+\DoxyCodeLine{171 \textcolor{keyword}{extern} \mbox{\hyperlink{structlocalization}{localization\_t}} \mbox{\hyperlink{tasks_8h_a4172f5fd9675186566d15da33a4d712c}{gps\_data}};}
+\DoxyCodeLine{172 }
+\DoxyCodeLine{177 \textcolor{keywordtype}{void} \mbox{\hyperlink{tasks_8h_a1f6696da8071e5a9956caed0b892b6ce}{taskReadVAndI}}();}
+\DoxyCodeLine{178 }
+\DoxyCodeLine{183 \textcolor{keyword}{struct }\mbox{\hyperlink{structvoltage}{voltage}}}
+\DoxyCodeLine{184 \{}
+\DoxyCodeLine{185     \textcolor{keywordtype}{float} \mbox{\hyperlink{structvoltage_a88e3b983ca00d6aff291977ba33a759e}{v\_cell\_1}};   }
+\DoxyCodeLine{186     \textcolor{keywordtype}{float} \mbox{\hyperlink{structvoltage_a45630fc74b8a74a397f15c5c15fd235d}{v\_cell\_2}};   }
+\DoxyCodeLine{187     \textcolor{keywordtype}{float} \mbox{\hyperlink{structvoltage_ac30d52dbf2f80556a257803caabbbfa2}{v\_cell\_3}};   }
+\DoxyCodeLine{188     \textcolor{keywordtype}{float} \mbox{\hyperlink{structvoltage_a6e6b9dcc6cbdd351df693af68074b0c9}{v\_cell\_4}};   }
+\DoxyCodeLine{189     \textcolor{keywordtype}{float} \mbox{\hyperlink{structvoltage_a53c2c7f2ff189fb9a0c47cf29aaa7f45}{v\_batt}};     }
+\DoxyCodeLine{190     \textcolor{keywordtype}{float} \mbox{\hyperlink{structvoltage_a5a12a11aa1cd336905e2c761dd83f7ab}{v\_llc}};      }
+\DoxyCodeLine{191     \textcolor{keywordtype}{float} \mbox{\hyperlink{structvoltage_a27355601ed5bd3b2e4e16d50d3ed1e8f}{v\_hlc}};      }
+\DoxyCodeLine{192     \textcolor{keywordtype}{float} \mbox{\hyperlink{structvoltage_ada5721e11c41b52ac06a37d299b69064}{v\_phrp\_3v3}}; }
+\DoxyCodeLine{193     \textcolor{comment}{// float v\_phrp\_5v;  /**< @brief Voltage of pheripherals that use 5V*/}}
+\DoxyCodeLine{194 \};}
+\DoxyCodeLine{195 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\mbox{\hyperlink{structvoltage}{voltage}} \mbox{\hyperlink{structvoltage}{voltage\_t}};}
+\DoxyCodeLine{196 }
+\DoxyCodeLine{201 \textcolor{keyword}{struct }\mbox{\hyperlink{structcurrent}{current}}}
+\DoxyCodeLine{202 \{}
+\DoxyCodeLine{203     uint8\_t \mbox{\hyperlink{structcurrent_a4199634fbb29112c1f5fcb6e34c290a0}{i\_esc\_1}}; }
+\DoxyCodeLine{204     uint8\_t \mbox{\hyperlink{structcurrent_a9f1a0160269b8a086543b65d681f8402}{i\_esc\_2}}; }
+\DoxyCodeLine{205     uint8\_t \mbox{\hyperlink{structcurrent_ad6c901d85a0e0b8281d555969a4ed403}{i\_esc\_3}}; }
+\DoxyCodeLine{206     uint8\_t \mbox{\hyperlink{structcurrent_a3614e688f6b0f71973e9689a55a0bdf4}{i\_esc\_4}}; }
+\DoxyCodeLine{207     \textcolor{keywordtype}{float} \mbox{\hyperlink{structcurrent_afb362a3316740e55ff4ce3e53b049bef}{i\_ss}};      }
+\DoxyCodeLine{208     \textcolor{keywordtype}{float} \mbox{\hyperlink{structcurrent_ab46bcb1721a7c9ca25a927ccd1b19a51}{i\_llc}};     }
+\DoxyCodeLine{209     \textcolor{keywordtype}{float} \mbox{\hyperlink{structcurrent_ae00f9b5e388bb78dd6ccf82e80bccf5a}{i\_hlc}};     }
+\DoxyCodeLine{210 \};}
+\DoxyCodeLine{211 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\mbox{\hyperlink{structcurrent}{current}} \mbox{\hyperlink{structcurrent}{current\_t}};}
+\DoxyCodeLine{212 }
+\DoxyCodeLine{213 \textcolor{comment}{// extern VoltageMeasure voltageMeasure;}}
+\DoxyCodeLine{214 \textcolor{keyword}{extern} \mbox{\hyperlink{structvoltage}{voltage\_t}} \mbox{\hyperlink{tasks_8h_a1006ccd2fbb4b3bd769fa0a687f74b19}{voltage\_data}};}
+\DoxyCodeLine{215 \textcolor{comment}{// extern CurrentMeasure currentMeasure;}}
+\DoxyCodeLine{216 \textcolor{keyword}{extern} \mbox{\hyperlink{structcurrent}{current\_t}} \mbox{\hyperlink{tasks_8h_a0da0aada14aefd11eca73cb441926400}{current\_data}};}
+\DoxyCodeLine{217 }
+\DoxyCodeLine{222 \textcolor{keywordtype}{void} \mbox{\hyperlink{tasks_8h_aadd98f4c13e5da3a900fa3342023f4d3}{taskReadIMU}}();}
+\DoxyCodeLine{223 }
+\DoxyCodeLine{224 \textcolor{comment}{// https://simple.wikipedia.org/wiki/Pitch,\_yaw,\_and\_roll}}
+\DoxyCodeLine{225 }
+\DoxyCodeLine{230 \textcolor{keyword}{struct }\mbox{\hyperlink{structmovement}{movement}}}
+\DoxyCodeLine{231 \{}
+\DoxyCodeLine{232     \textcolor{keywordtype}{float} \mbox{\hyperlink{structmovement_a55a846bdce18580169cda9bae8d926a0}{roll}};  }
+\DoxyCodeLine{233     \textcolor{keywordtype}{float} \mbox{\hyperlink{structmovement_a80dfa41024eae25b9beb361f3f221547}{pitch}}; }
+\DoxyCodeLine{234     \textcolor{keywordtype}{float} \mbox{\hyperlink{structmovement_a709c2a17e495d6a575f457da77d38ffe}{yaw}};   }
+\DoxyCodeLine{235     \textcolor{keywordtype}{float} \mbox{\hyperlink{structmovement_a484c2b6f42fe524b32464f468900e25c}{w}};     }
+\DoxyCodeLine{236     \textcolor{keywordtype}{float} \mbox{\hyperlink{structmovement_a0146c5f745b20224bf43052078c7ddd7}{i}};     }
+\DoxyCodeLine{237     \textcolor{keywordtype}{float} \mbox{\hyperlink{structmovement_a9c5bc12fa230bcd76abf616224154022}{j}};     }
+\DoxyCodeLine{238     \textcolor{keywordtype}{float} \mbox{\hyperlink{structmovement_a6d10468298ef7e697b6a29345f38714b}{k}};     }
+\DoxyCodeLine{239 \};}
+\DoxyCodeLine{240 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\mbox{\hyperlink{structmovement}{movement}} \mbox{\hyperlink{structmovement}{movement\_t}};}
+\DoxyCodeLine{241 }
+\DoxyCodeLine{242 \textcolor{comment}{// extern IMU imu;}}
+\DoxyCodeLine{243 \textcolor{keyword}{extern} \mbox{\hyperlink{structmovement}{movement\_t}} \mbox{\hyperlink{tasks_8h_ac9e2f083f4bba03a0a5d08ff63f26463}{movement\_data}};}
+\DoxyCodeLine{244 }
+\DoxyCodeLine{249 \textcolor{keywordtype}{void} \mbox{\hyperlink{tasks_8h_ac72eb5e1cdbf849f60b2c3ea11333c85}{taskReadEncoder}}();}
+\DoxyCodeLine{250 }
+\DoxyCodeLine{255 \textcolor{keyword}{struct }\mbox{\hyperlink{structencoder}{encoder}}}
+\DoxyCodeLine{256 \{}
+\DoxyCodeLine{257     \textcolor{keywordtype}{float} \mbox{\hyperlink{structencoder_a7bb85f7b26803f2421ded742ad7af299}{rpm\_wheel\_1}}; }
+\DoxyCodeLine{258     \textcolor{keywordtype}{float} \mbox{\hyperlink{structencoder_aa5597977c4c158c3dc87035b9f6b81f3}{rpm\_wheel\_2}}; }
+\DoxyCodeLine{259     \textcolor{keywordtype}{float} \mbox{\hyperlink{structencoder_a5e939537ac32ffa507524a4ab19bdc6d}{rpm\_wheel\_3}}; }
+\DoxyCodeLine{260     \textcolor{keywordtype}{float} \mbox{\hyperlink{structencoder_a801885328866fe52208af92ce9f5a6e0}{rpm\_wheel\_4}}; }
+\DoxyCodeLine{261     \textcolor{keywordtype}{float} \mbox{\hyperlink{structencoder_acaebf85fa2842f30ec808b61f6dabe04}{rpm\_bm\_1}};    }
+\DoxyCodeLine{262     \textcolor{keywordtype}{float} \mbox{\hyperlink{structencoder_a324a24ae8d4252e7288eb9871204c0c2}{rpm\_bm\_2}};    }
+\DoxyCodeLine{263     \textcolor{keywordtype}{float} \mbox{\hyperlink{structencoder_a58836abcddaebbab443fc93b8f7fbd48}{rpm\_bm\_3}};    }
+\DoxyCodeLine{264     \textcolor{keywordtype}{float} \mbox{\hyperlink{structencoder_ad6616916b586a2b886e2e67ec2c9badc}{rpm\_bm\_4}};    }
+\DoxyCodeLine{265 \};}
+\DoxyCodeLine{266 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\mbox{\hyperlink{structencoder}{encoder}} \mbox{\hyperlink{structencoder}{encoder\_t}};}
+\DoxyCodeLine{267 }
+\DoxyCodeLine{268 \textcolor{comment}{// extern Encoder wheel\_encoder;}}
+\DoxyCodeLine{269 \textcolor{keyword}{extern} \mbox{\hyperlink{structencoder}{encoder\_t}} \mbox{\hyperlink{tasks_8h_a0febd7a717cd7da4044d29515010b451}{encoder\_data}};}
+\DoxyCodeLine{270 }
+\DoxyCodeLine{275 \textcolor{keywordtype}{void} \mbox{\hyperlink{tasks_8h_a2b5717148d8004b6b7f8ee7e182a2c01}{taskActuate}}();}
+\DoxyCodeLine{276 }
+\DoxyCodeLine{281 \textcolor{keyword}{struct }\mbox{\hyperlink{structvehicle__actuation}{vehicle\_actuation}}}
+\DoxyCodeLine{282 \{}
+\DoxyCodeLine{283     uint16\_t \mbox{\hyperlink{structvehicle__actuation_aa6a7bb2ec5f20a71351a059d3ce450a9}{pwm\_bm\_1}}; }
+\DoxyCodeLine{284     uint16\_t \mbox{\hyperlink{structvehicle__actuation_a62a7b59330e920653681da346408fd41}{pwm\_bm\_2}}; }
+\DoxyCodeLine{285     uint16\_t \mbox{\hyperlink{structvehicle__actuation_a0161597f1e7422fe6f36430b3578995b}{pwm\_bm\_3}}; }
+\DoxyCodeLine{286     uint16\_t \mbox{\hyperlink{structvehicle__actuation_af1f687b7879a03c9572271b1f271a373}{pwm\_bm\_4}}; }
+\DoxyCodeLine{287     uint16\_t \mbox{\hyperlink{structvehicle__actuation_a5e4da43caca26e777191e5015b53fdf2}{pwm\_ss}};   }
+\DoxyCodeLine{288 \};}
+\DoxyCodeLine{289 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\mbox{\hyperlink{structvehicle__actuation}{vehicle\_actuation}} \mbox{\hyperlink{structvehicle__actuation}{vehicle\_actuation\_t}};}
+\DoxyCodeLine{290 }
+\DoxyCodeLine{291 \textcolor{comment}{// extern Actuate vehicle\_actuation;}}
+\DoxyCodeLine{292 \textcolor{keyword}{extern} \mbox{\hyperlink{structvehicle__actuation}{vehicle\_actuation\_t}} \mbox{\hyperlink{tasks_8h_a4107d6d25a21290c6ef198e8c4ed7680}{vehicle\_actuation\_data}};}
+\DoxyCodeLine{293 }
+\DoxyCodeLine{298 \textcolor{keywordtype}{void} \mbox{\hyperlink{tasks_8h_a615290dad12d12ef4468935aa6589979}{taskLed}}();}
+\DoxyCodeLine{299 }
+\DoxyCodeLine{300 \textcolor{keyword}{struct }\mbox{\hyperlink{structled__control}{led\_control}}}
+\DoxyCodeLine{301 \{}
+\DoxyCodeLine{302     uint8\_t \mbox{\hyperlink{structled__control_adc3a3b8b2d535d68e2b1ae3368778dce}{led\_1}}; }
+\DoxyCodeLine{303     uint8\_t \mbox{\hyperlink{structled__control_a7894ed0397f5c05dde5dcb78af069751}{led\_2}}; }
+\DoxyCodeLine{304     uint8\_t \mbox{\hyperlink{structled__control_ad3dd6f4dc544b8415885e0b3e8fe25f7}{led\_3}}; }
+\DoxyCodeLine{305 \};}
+\DoxyCodeLine{306 \textcolor{keyword}{typedef} \mbox{\hyperlink{structled__control}{led\_control}} \mbox{\hyperlink{tasks_8h_a6fe5c7d9a4143ad23c15eeaf2c5a102b}{led\_control\_t}};}
+\DoxyCodeLine{307 }
+\DoxyCodeLine{313 \textcolor{keywordtype}{void} \mbox{\hyperlink{tasks_8h_af30f2fc173d77001cb45558437c552fb}{taskLog}}();}
+\DoxyCodeLine{314 }
+\DoxyCodeLine{319 \textcolor{keywordtype}{void} \mbox{\hyperlink{tasks_8h_a5591a493a42241bbcc3102c4052bb2fa}{taskSaveLog}}();}
+\DoxyCodeLine{320 }
+\DoxyCodeLine{326 \textcolor{keywordtype}{void} \mbox{\hyperlink{tasks_8h_a636ca644c11cea39cfd1ca471421bf82}{taskWriteBaseStation}}();}
+\DoxyCodeLine{327 }
+\DoxyCodeLine{333 \textcolor{keywordtype}{void} \mbox{\hyperlink{tasks_8h_a8a46c8115424cbd24d15befbd76f9cd1}{taskSafety}}();}
+\DoxyCodeLine{334 }
+\DoxyCodeLine{335 \textcolor{keyword}{extern} \textcolor{keyword}{volatile} uint8\_t \mbox{\hyperlink{tasks_8h_aa33f014cb40162a7eb0c10a6afa47a7d}{dead\_switch}}; }
+\DoxyCodeLine{341 \textcolor{keywordtype}{void} \mbox{\hyperlink{tasks_8h_ab7e413c4737e4bcb00d84c7a57c7e663}{sysTick}}();}
+\DoxyCodeLine{342 }
+\DoxyCodeLine{343 \textcolor{comment}{// void taskPublishRos();}}
+\DoxyCodeLine{344 \textcolor{comment}{// void taskSubscribeRos();}}
+
+\end{DoxyCode}

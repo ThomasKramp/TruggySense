@@ -1,0 +1,604 @@
+\hypertarget{tasks_8h}{}\doxysection{include/tasks.h File Reference}
+\label{tasks_8h}\index{include/tasks.h@{include/tasks.h}}
+
+
+In this file, all tasks their function names will be defined and a brief description of what the tasks include.  
+
+
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}ibus.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}actuate.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}current.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}voltage.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}encoder.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}temperature.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}imu.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}sd\+\_\+logger.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}gps.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}base\+\_\+station.\+h\char`\"{}}\newline
+Include dependency graph for tasks.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{tasks_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=258pt]{tasks_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structtemperature}{temperature}}
+\begin{DoxyCompactList}\small\item\em datastruct of sensed temperatures \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structradio}{radio}}
+\begin{DoxyCompactList}\small\item\em datastruct of radio channels \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structlocalization}{localization}}
+\begin{DoxyCompactList}\small\item\em datastruct of localization data \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structvoltage}{voltage}}
+\begin{DoxyCompactList}\small\item\em datastruct of voltage measurement data \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structcurrent}{current}}
+\begin{DoxyCompactList}\small\item\em datastruct of current measurement data \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structmovement}{movement}}
+\begin{DoxyCompactList}\small\item\em datastruct of \mbox{\hyperlink{classIMU}{IMU}} measurement data \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structencoder}{encoder}}
+\begin{DoxyCompactList}\small\item\em datastruct of encoder measurement data \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structvehicle__actuation}{vehicle\+\_\+actuation}}
+\begin{DoxyCompactList}\small\item\em datastruct of pwm data that needs to be set \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structled__control}{led\+\_\+control}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{tasks_8h_a5236a111b32525aac0b66900788fcf27}{SYS\+\_\+\+TIMER\+\_\+\+INTERVAL\+\_\+\+US}}~500
+\begin{DoxyCompactList}\small\item\em The system tick interval described in micro seconds. Should always be lower then the lowest task interval. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{tasks_8h_a3c293398af1463e15832339c7496e20c}{TIMER\+\_\+\+INTERVAL\+\_\+\+TEMPERATURE}}~2000
+\begin{DoxyCompactList}\small\item\em the temperature task interval rate in miliseconds \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{tasks_8h_a76893c5e51cd7bb9db92a737f65793d7}{TIMER\+\_\+\+INTERVAL\+\_\+\+IBUS}}~10
+\begin{DoxyCompactList}\small\item\em the ibus task interval rate in miliseconds \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{tasks_8h_aaebfdba89771051e3621deb8d5db43a4}{TIMER\+\_\+\+INTERVAL\+\_\+\+GPS}}~1
+\begin{DoxyCompactList}\small\item\em the gps task interval rate in miliseconds \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{tasks_8h_af3de97237d33a076c4fd2d8e72f41a73}{TIMER\+\_\+\+INTERVAL\+\_\+\+IMU}}~10
+\begin{DoxyCompactList}\small\item\em the imu task interval rate in miliseconds \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{tasks_8h_a516995f8bd0bbce29a25bfee882665f6}{TIMER\+\_\+\+INTERVAL\+\_\+\+ADC}}~1000
+\begin{DoxyCompactList}\small\item\em the adc task interval rate in miliseconds containing current and voltage measurement \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{tasks_8h_a9e71607217394d04e5b45736c2010723}{TIMER\+\_\+\+INTERVAL\+\_\+\+ENCODER}}~166
+\begin{DoxyCompactList}\small\item\em the encoder task interval rate in miliseconds \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{tasks_8h_ace7614a8228b1100d3e32a7beea5f42d}{TIMER\+\_\+\+INTERVAL\+\_\+\+ACTUATE}}~10
+\begin{DoxyCompactList}\small\item\em the actuation/ PWM task interval rate in miliseconds \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{tasks_8h_a79a080ddb3e014900213181cec6004e8}{TIMER\+\_\+\+INTERVAL\+\_\+\+LEDS}}~100
+\begin{DoxyCompactList}\small\item\em the led task interval rate in miliseconds \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{tasks_8h_a65309a78ab580c0fbb21babf49377718}{TIMER\+\_\+\+INTERVAL\+\_\+\+BASE\+\_\+\+STATION}}~500
+\begin{DoxyCompactList}\small\item\em the base station communication task interval rate in miliseconds \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{tasks_8h_a490ff80729f969634a19a7e29f9f5590}{TIMER\+\_\+\+INTERVAL\+\_\+\+LOG}}~50
+\begin{DoxyCompactList}\small\item\em the logging task interval rate in miliseconds \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{tasks_8h_a8fa1965b0307c2e7df74c4808778ab5b}{TIMER\+\_\+\+INTERVAL\+\_\+\+SAVE\+\_\+\+LOG}}~100
+\begin{DoxyCompactList}\small\item\em the saving loggings task interval rate in miliseconds \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{tasks_8h_aaa48a5fe3586fea42d021643d4e112cc}{TIMER\+\_\+\+INTERVAL\+\_\+\+SAFETY}}~10
+\begin{DoxyCompactList}\small\item\em the logging task interval rate in miliseconds \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \mbox{\hyperlink{structtemperature}{temperature}} \mbox{\hyperlink{tasks_8h_a77ac062b2f0d5b68b2755dc75fe485ef}{temperature\+\_\+t}}
+\item 
+typedef struct \mbox{\hyperlink{structradio}{radio}} \mbox{\hyperlink{tasks_8h_a335a4a47333f47fdac2b568f35eccf15}{radio\+\_\+t}}
+\item 
+typedef struct \mbox{\hyperlink{structlocalization}{localization}} \mbox{\hyperlink{tasks_8h_a1f1e0df1db69086db03bea01467fb441}{localization\+\_\+t}}
+\item 
+typedef struct \mbox{\hyperlink{structvoltage}{voltage}} \mbox{\hyperlink{tasks_8h_a837df7fd446ddc6aaec3479784092005}{voltage\+\_\+t}}
+\item 
+typedef struct \mbox{\hyperlink{structcurrent}{current}} \mbox{\hyperlink{tasks_8h_a9225579bfc855f23a78d188a67ce7841}{current\+\_\+t}}
+\item 
+typedef struct \mbox{\hyperlink{structmovement}{movement}} \mbox{\hyperlink{tasks_8h_a3308c488c239017ba56b061a578e58c8}{movement\+\_\+t}}
+\item 
+typedef struct \mbox{\hyperlink{structencoder}{encoder}} \mbox{\hyperlink{tasks_8h_ad22b2bbeb7072a55405fdae105e52afe}{encoder\+\_\+t}}
+\item 
+typedef struct \mbox{\hyperlink{structvehicle__actuation}{vehicle\+\_\+actuation}} \mbox{\hyperlink{tasks_8h_a7943deaf15076dfa8246240c76534c30}{vehicle\+\_\+actuation\+\_\+t}}
+\item 
+typedef \mbox{\hyperlink{structled__control}{led\+\_\+control}} \mbox{\hyperlink{tasks_8h_a6fe5c7d9a4143ad23c15eeaf2c5a102b}{led\+\_\+control\+\_\+t}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{tasks_8h_a13270f8d6bed5b53849d28bcf93ca468}{initialize\+Tasks}} ()
+\begin{DoxyCompactList}\small\item\em Initialization of all tasks. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{tasks_8h_a35ed32c99741706f5903957eebd93a92}{task\+Read\+Temperature}} ()
+\begin{DoxyCompactList}\small\item\em Task that will read the temperatures. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{tasks_8h_a7c26549615e853118dd0558393f56fc1}{task\+Read\+Ibus}} ()
+\begin{DoxyCompactList}\small\item\em Task that can read the radio receiver and stores it in radio\+\_\+t struct. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{tasks_8h_a98cb7e9df95903c2b0a32ad446ec2ae8}{task\+Read\+Gps}} ()
+\begin{DoxyCompactList}\small\item\em Task that can read the GPS module and store its data in localization\+\_\+t struct. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{tasks_8h_a1f6696da8071e5a9956caed0b892b6ce}{task\+Read\+VAndI}} ()
+\begin{DoxyCompactList}\small\item\em Task that will read the ADC of both voltage and currents that are currently present and stores it in voltage\+\_\+t and current\+\_\+t. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{tasks_8h_aadd98f4c13e5da3a900fa3342023f4d3}{task\+Read\+IMU}} ()
+\begin{DoxyCompactList}\small\item\em Task that reads the 9-\/axis \mbox{\hyperlink{classIMU}{IMU}} and store its data in movement\+\_\+t struct. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{tasks_8h_ac72eb5e1cdbf849f60b2c3ea11333c85}{task\+Read\+Encoder}} ()
+\begin{DoxyCompactList}\small\item\em Task that calculates the vehicles wheel \& motor speed in RPM and stores it in encoder\+\_\+t. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{tasks_8h_a2b5717148d8004b6b7f8ee7e182a2c01}{task\+Actuate}} ()
+\begin{DoxyCompactList}\small\item\em Task that actuates PWM actuators such as the ESCs and servo based on the vehicle\+\_\+actuation\+\_\+t struct data. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{tasks_8h_a615290dad12d12ef4468935aa6589979}{task\+Led}} ()
+\begin{DoxyCompactList}\small\item\em Task to control the onboard LEDs for notifying the user based on the led\+\_\+control\+\_\+t. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{tasks_8h_af30f2fc173d77001cb45558437c552fb}{task\+Log}} ()
+\begin{DoxyCompactList}\small\item\em Task to log loggings into the \mbox{\hyperlink{structlogging__data}{logging\+\_\+data}} struct. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{tasks_8h_a5591a493a42241bbcc3102c4052bb2fa}{task\+Save\+Log}} ()
+\begin{DoxyCompactList}\small\item\em Task to log loggings onto an SD-\/card. Will use \mbox{\hyperlink{structlogging__data}{logging\+\_\+data}} struct ad datastructure. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{tasks_8h_a636ca644c11cea39cfd1ca471421bf82}{task\+Write\+Base\+Station}} ()
+\begin{DoxyCompactList}\small\item\em Task to write received data to the base station. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{tasks_8h_a8a46c8115424cbd24d15befbd76f9cd1}{task\+Safety}} ()
+\begin{DoxyCompactList}\small\item\em Task that controls the safety of the vehicle. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{tasks_8h_ab7e413c4737e4bcb00d84c7a57c7e663}{sys\+Tick}} ()
+\begin{DoxyCompactList}\small\item\em Task that handles the tick counter used to enable the tasks scedules or trigger moments. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{tasks_8h_a77ac062b2f0d5b68b2755dc75fe485ef}{temperature\+\_\+t}} \mbox{\hyperlink{tasks_8h_afa04f91a9a6a331858d5bef6640234df}{temperature\+\_\+data}}
+\item 
+\mbox{\hyperlink{tasks_8h_a335a4a47333f47fdac2b568f35eccf15}{radio\+\_\+t}} \mbox{\hyperlink{tasks_8h_a06e33aaeca474d747692adcd4871ea27}{radio\+\_\+data}}
+\item 
+\mbox{\hyperlink{tasks_8h_a1f1e0df1db69086db03bea01467fb441}{localization\+\_\+t}} \mbox{\hyperlink{tasks_8h_a4172f5fd9675186566d15da33a4d712c}{gps\+\_\+data}}
+\item 
+\mbox{\hyperlink{tasks_8h_a837df7fd446ddc6aaec3479784092005}{voltage\+\_\+t}} \mbox{\hyperlink{tasks_8h_a1006ccd2fbb4b3bd769fa0a687f74b19}{voltage\+\_\+data}}
+\item 
+\mbox{\hyperlink{tasks_8h_a9225579bfc855f23a78d188a67ce7841}{current\+\_\+t}} \mbox{\hyperlink{tasks_8h_a0da0aada14aefd11eca73cb441926400}{current\+\_\+data}}
+\item 
+\mbox{\hyperlink{tasks_8h_a3308c488c239017ba56b061a578e58c8}{movement\+\_\+t}} \mbox{\hyperlink{tasks_8h_ac9e2f083f4bba03a0a5d08ff63f26463}{movement\+\_\+data}}
+\item 
+\mbox{\hyperlink{tasks_8h_ad22b2bbeb7072a55405fdae105e52afe}{encoder\+\_\+t}} \mbox{\hyperlink{tasks_8h_a0febd7a717cd7da4044d29515010b451}{encoder\+\_\+data}}
+\item 
+\mbox{\hyperlink{tasks_8h_a7943deaf15076dfa8246240c76534c30}{vehicle\+\_\+actuation\+\_\+t}} \mbox{\hyperlink{tasks_8h_a4107d6d25a21290c6ef198e8c4ed7680}{vehicle\+\_\+actuation\+\_\+data}}
+\item 
+volatile uint8\+\_\+t \mbox{\hyperlink{tasks_8h_aa33f014cb40162a7eb0c10a6afa47a7d}{dead\+\_\+switch}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+In this file, all tasks their function names will be defined and a brief description of what the tasks include. 
+
+\begin{DoxyAuthor}{Author}
+Robbe Elsermans
+\end{DoxyAuthor}
+Here, all task files will be defined and their datastructure. A task will run off a certain moment in time which are defined by TIMER\+\_\+\+INTERVAL\+\_\+\{task name\}. These timers are set to a value which is partly derived from the proposal document. Nevertheless, some timer intervals have been lowerd due to the fact that the drivers required this.\+ADC\+\_\+\+ETC\+\_\+\+CTRL\+\_\+\+DMA\+\_\+\+MODE\+\_\+\+SEL
+
+If you want to lower a certain task, thus increase the sample rate, you need to check if a tasks total duration is not longer than the task interval rate. This is easly done by using millis() and Serial.\+print() at the beginning and ending of a task to have insights in the duration of the task.
+
+Remember to also increase the logging rate TIMER\+\_\+\+INTERVAL\+\_\+\+LOG and save rate TIMER\+\_\+\+INTERVAL\+\_\+\+SAVE\+\_\+\+LOG to actually save the sampled data.
+
+When one would expand the datastructures with more data, they must be aware of the concequences.
+
+
+\begin{DoxyEnumerate}
+\item Changing the tasks such that the datastruct is filled in 
+\item Changing the datastruct for logging in \mbox{\hyperlink{sd__logger_8h}{sd\+\_\+logger.\+h}}. Make sure to follow the sorting here (internally, data is stored aligned) 
+\item Changing the \mbox{\hyperlink{tasks_8h_af30f2fc173d77001cb45558437c552fb}{task\+Log()}} and \mbox{\hyperlink{tasks_8h_a5591a493a42241bbcc3102c4052bb2fa}{task\+Save\+Log()}} tasks 
+\item Changing the \mbox{\hyperlink{base__station_8h}{base\+\_\+station.\+h}} such that the correct chuncks and payload size is entered 
+\item Changing the node-\/red backend such that the binary file is decoded correctly 
+\item Changing the base\+\_\+station receiver nrf\+\_\+rx to match the datastructure in \mbox{\hyperlink{sd__logger_8h}{sd\+\_\+logger.\+h}} 
+\end{DoxyEnumerate}
+
+I know, adding a byte is cumbersome. If you want, you can change the code such that it becomes easier to add or remove code. -\/\texorpdfstring{$>$}{>} base\+\_\+station could be initialized with the total payload which then can be sliced to 30 byte chunks inside the driver for instance.
+
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2025-\/04-\/10
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2025 Robbe Elsermans, All rights reserved. This project is released under the CC BY-\/\+NC-\/\+SA licence. See licence.\+txt for more information 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{tasks_8h_a5236a111b32525aac0b66900788fcf27}\label{tasks_8h_a5236a111b32525aac0b66900788fcf27}} 
+\index{tasks.h@{tasks.h}!SYS\_TIMER\_INTERVAL\_US@{SYS\_TIMER\_INTERVAL\_US}}
+\index{SYS\_TIMER\_INTERVAL\_US@{SYS\_TIMER\_INTERVAL\_US}!tasks.h@{tasks.h}}
+\doxysubsubsection{\texorpdfstring{SYS\_TIMER\_INTERVAL\_US}{SYS\_TIMER\_INTERVAL\_US}}
+{\footnotesize\ttfamily \#define SYS\+\_\+\+TIMER\+\_\+\+INTERVAL\+\_\+\+US~500}
+
+
+
+The system tick interval described in micro seconds. Should always be lower then the lowest task interval. 
+
+\mbox{\Hypertarget{tasks_8h_ace7614a8228b1100d3e32a7beea5f42d}\label{tasks_8h_ace7614a8228b1100d3e32a7beea5f42d}} 
+\index{tasks.h@{tasks.h}!TIMER\_INTERVAL\_ACTUATE@{TIMER\_INTERVAL\_ACTUATE}}
+\index{TIMER\_INTERVAL\_ACTUATE@{TIMER\_INTERVAL\_ACTUATE}!tasks.h@{tasks.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_INTERVAL\_ACTUATE}{TIMER\_INTERVAL\_ACTUATE}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+INTERVAL\+\_\+\+ACTUATE~10}
+
+
+
+the actuation/ PWM task interval rate in miliseconds 
+
+\mbox{\Hypertarget{tasks_8h_a516995f8bd0bbce29a25bfee882665f6}\label{tasks_8h_a516995f8bd0bbce29a25bfee882665f6}} 
+\index{tasks.h@{tasks.h}!TIMER\_INTERVAL\_ADC@{TIMER\_INTERVAL\_ADC}}
+\index{TIMER\_INTERVAL\_ADC@{TIMER\_INTERVAL\_ADC}!tasks.h@{tasks.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_INTERVAL\_ADC}{TIMER\_INTERVAL\_ADC}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+INTERVAL\+\_\+\+ADC~1000}
+
+
+
+the adc task interval rate in miliseconds containing current and voltage measurement 
+
+\mbox{\Hypertarget{tasks_8h_a65309a78ab580c0fbb21babf49377718}\label{tasks_8h_a65309a78ab580c0fbb21babf49377718}} 
+\index{tasks.h@{tasks.h}!TIMER\_INTERVAL\_BASE\_STATION@{TIMER\_INTERVAL\_BASE\_STATION}}
+\index{TIMER\_INTERVAL\_BASE\_STATION@{TIMER\_INTERVAL\_BASE\_STATION}!tasks.h@{tasks.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_INTERVAL\_BASE\_STATION}{TIMER\_INTERVAL\_BASE\_STATION}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+INTERVAL\+\_\+\+BASE\+\_\+\+STATION~500}
+
+
+
+the base station communication task interval rate in miliseconds 
+
+\mbox{\Hypertarget{tasks_8h_a9e71607217394d04e5b45736c2010723}\label{tasks_8h_a9e71607217394d04e5b45736c2010723}} 
+\index{tasks.h@{tasks.h}!TIMER\_INTERVAL\_ENCODER@{TIMER\_INTERVAL\_ENCODER}}
+\index{TIMER\_INTERVAL\_ENCODER@{TIMER\_INTERVAL\_ENCODER}!tasks.h@{tasks.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_INTERVAL\_ENCODER}{TIMER\_INTERVAL\_ENCODER}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+INTERVAL\+\_\+\+ENCODER~166}
+
+
+
+the encoder task interval rate in miliseconds 
+
+\mbox{\Hypertarget{tasks_8h_aaebfdba89771051e3621deb8d5db43a4}\label{tasks_8h_aaebfdba89771051e3621deb8d5db43a4}} 
+\index{tasks.h@{tasks.h}!TIMER\_INTERVAL\_GPS@{TIMER\_INTERVAL\_GPS}}
+\index{TIMER\_INTERVAL\_GPS@{TIMER\_INTERVAL\_GPS}!tasks.h@{tasks.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_INTERVAL\_GPS}{TIMER\_INTERVAL\_GPS}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+INTERVAL\+\_\+\+GPS~1}
+
+
+
+the gps task interval rate in miliseconds 
+
+\mbox{\Hypertarget{tasks_8h_a76893c5e51cd7bb9db92a737f65793d7}\label{tasks_8h_a76893c5e51cd7bb9db92a737f65793d7}} 
+\index{tasks.h@{tasks.h}!TIMER\_INTERVAL\_IBUS@{TIMER\_INTERVAL\_IBUS}}
+\index{TIMER\_INTERVAL\_IBUS@{TIMER\_INTERVAL\_IBUS}!tasks.h@{tasks.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_INTERVAL\_IBUS}{TIMER\_INTERVAL\_IBUS}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+INTERVAL\+\_\+\+IBUS~10}
+
+
+
+the ibus task interval rate in miliseconds 
+
+\mbox{\Hypertarget{tasks_8h_af3de97237d33a076c4fd2d8e72f41a73}\label{tasks_8h_af3de97237d33a076c4fd2d8e72f41a73}} 
+\index{tasks.h@{tasks.h}!TIMER\_INTERVAL\_IMU@{TIMER\_INTERVAL\_IMU}}
+\index{TIMER\_INTERVAL\_IMU@{TIMER\_INTERVAL\_IMU}!tasks.h@{tasks.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_INTERVAL\_IMU}{TIMER\_INTERVAL\_IMU}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+INTERVAL\+\_\+\+IMU~10}
+
+
+
+the imu task interval rate in miliseconds 
+
+\mbox{\Hypertarget{tasks_8h_a79a080ddb3e014900213181cec6004e8}\label{tasks_8h_a79a080ddb3e014900213181cec6004e8}} 
+\index{tasks.h@{tasks.h}!TIMER\_INTERVAL\_LEDS@{TIMER\_INTERVAL\_LEDS}}
+\index{TIMER\_INTERVAL\_LEDS@{TIMER\_INTERVAL\_LEDS}!tasks.h@{tasks.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_INTERVAL\_LEDS}{TIMER\_INTERVAL\_LEDS}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+INTERVAL\+\_\+\+LEDS~100}
+
+
+
+the led task interval rate in miliseconds 
+
+\mbox{\Hypertarget{tasks_8h_a490ff80729f969634a19a7e29f9f5590}\label{tasks_8h_a490ff80729f969634a19a7e29f9f5590}} 
+\index{tasks.h@{tasks.h}!TIMER\_INTERVAL\_LOG@{TIMER\_INTERVAL\_LOG}}
+\index{TIMER\_INTERVAL\_LOG@{TIMER\_INTERVAL\_LOG}!tasks.h@{tasks.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_INTERVAL\_LOG}{TIMER\_INTERVAL\_LOG}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+INTERVAL\+\_\+\+LOG~50}
+
+
+
+the logging task interval rate in miliseconds 
+
+\mbox{\Hypertarget{tasks_8h_aaa48a5fe3586fea42d021643d4e112cc}\label{tasks_8h_aaa48a5fe3586fea42d021643d4e112cc}} 
+\index{tasks.h@{tasks.h}!TIMER\_INTERVAL\_SAFETY@{TIMER\_INTERVAL\_SAFETY}}
+\index{TIMER\_INTERVAL\_SAFETY@{TIMER\_INTERVAL\_SAFETY}!tasks.h@{tasks.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_INTERVAL\_SAFETY}{TIMER\_INTERVAL\_SAFETY}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+INTERVAL\+\_\+\+SAFETY~10}
+
+
+
+the logging task interval rate in miliseconds 
+
+\mbox{\Hypertarget{tasks_8h_a8fa1965b0307c2e7df74c4808778ab5b}\label{tasks_8h_a8fa1965b0307c2e7df74c4808778ab5b}} 
+\index{tasks.h@{tasks.h}!TIMER\_INTERVAL\_SAVE\_LOG@{TIMER\_INTERVAL\_SAVE\_LOG}}
+\index{TIMER\_INTERVAL\_SAVE\_LOG@{TIMER\_INTERVAL\_SAVE\_LOG}!tasks.h@{tasks.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_INTERVAL\_SAVE\_LOG}{TIMER\_INTERVAL\_SAVE\_LOG}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+INTERVAL\+\_\+\+SAVE\+\_\+\+LOG~100}
+
+
+
+the saving loggings task interval rate in miliseconds 
+
+\mbox{\Hypertarget{tasks_8h_a3c293398af1463e15832339c7496e20c}\label{tasks_8h_a3c293398af1463e15832339c7496e20c}} 
+\index{tasks.h@{tasks.h}!TIMER\_INTERVAL\_TEMPERATURE@{TIMER\_INTERVAL\_TEMPERATURE}}
+\index{TIMER\_INTERVAL\_TEMPERATURE@{TIMER\_INTERVAL\_TEMPERATURE}!tasks.h@{tasks.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_INTERVAL\_TEMPERATURE}{TIMER\_INTERVAL\_TEMPERATURE}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+INTERVAL\+\_\+\+TEMPERATURE~2000}
+
+
+
+the temperature task interval rate in miliseconds 
+
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{tasks_8h_a9225579bfc855f23a78d188a67ce7841}\label{tasks_8h_a9225579bfc855f23a78d188a67ce7841}} 
+\index{tasks.h@{tasks.h}!current\_t@{current\_t}}
+\index{current\_t@{current\_t}!tasks.h@{tasks.h}}
+\doxysubsubsection{\texorpdfstring{current\_t}{current\_t}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structcurrent}{current}} \mbox{\hyperlink{tasks_8h_a9225579bfc855f23a78d188a67ce7841}{current\+\_\+t}}}
+
+\mbox{\Hypertarget{tasks_8h_ad22b2bbeb7072a55405fdae105e52afe}\label{tasks_8h_ad22b2bbeb7072a55405fdae105e52afe}} 
+\index{tasks.h@{tasks.h}!encoder\_t@{encoder\_t}}
+\index{encoder\_t@{encoder\_t}!tasks.h@{tasks.h}}
+\doxysubsubsection{\texorpdfstring{encoder\_t}{encoder\_t}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structencoder}{encoder}} \mbox{\hyperlink{tasks_8h_ad22b2bbeb7072a55405fdae105e52afe}{encoder\+\_\+t}}}
+
+\mbox{\Hypertarget{tasks_8h_a6fe5c7d9a4143ad23c15eeaf2c5a102b}\label{tasks_8h_a6fe5c7d9a4143ad23c15eeaf2c5a102b}} 
+\index{tasks.h@{tasks.h}!led\_control\_t@{led\_control\_t}}
+\index{led\_control\_t@{led\_control\_t}!tasks.h@{tasks.h}}
+\doxysubsubsection{\texorpdfstring{led\_control\_t}{led\_control\_t}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{structled__control}{led\+\_\+control}} \mbox{\hyperlink{tasks_8h_a6fe5c7d9a4143ad23c15eeaf2c5a102b}{led\+\_\+control\+\_\+t}}}
+
+\mbox{\Hypertarget{tasks_8h_a1f1e0df1db69086db03bea01467fb441}\label{tasks_8h_a1f1e0df1db69086db03bea01467fb441}} 
+\index{tasks.h@{tasks.h}!localization\_t@{localization\_t}}
+\index{localization\_t@{localization\_t}!tasks.h@{tasks.h}}
+\doxysubsubsection{\texorpdfstring{localization\_t}{localization\_t}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structlocalization}{localization}} \mbox{\hyperlink{tasks_8h_a1f1e0df1db69086db03bea01467fb441}{localization\+\_\+t}}}
+
+\mbox{\Hypertarget{tasks_8h_a3308c488c239017ba56b061a578e58c8}\label{tasks_8h_a3308c488c239017ba56b061a578e58c8}} 
+\index{tasks.h@{tasks.h}!movement\_t@{movement\_t}}
+\index{movement\_t@{movement\_t}!tasks.h@{tasks.h}}
+\doxysubsubsection{\texorpdfstring{movement\_t}{movement\_t}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structmovement}{movement}} \mbox{\hyperlink{tasks_8h_a3308c488c239017ba56b061a578e58c8}{movement\+\_\+t}}}
+
+\mbox{\Hypertarget{tasks_8h_a335a4a47333f47fdac2b568f35eccf15}\label{tasks_8h_a335a4a47333f47fdac2b568f35eccf15}} 
+\index{tasks.h@{tasks.h}!radio\_t@{radio\_t}}
+\index{radio\_t@{radio\_t}!tasks.h@{tasks.h}}
+\doxysubsubsection{\texorpdfstring{radio\_t}{radio\_t}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structradio}{radio}} \mbox{\hyperlink{tasks_8h_a335a4a47333f47fdac2b568f35eccf15}{radio\+\_\+t}}}
+
+\mbox{\Hypertarget{tasks_8h_a77ac062b2f0d5b68b2755dc75fe485ef}\label{tasks_8h_a77ac062b2f0d5b68b2755dc75fe485ef}} 
+\index{tasks.h@{tasks.h}!temperature\_t@{temperature\_t}}
+\index{temperature\_t@{temperature\_t}!tasks.h@{tasks.h}}
+\doxysubsubsection{\texorpdfstring{temperature\_t}{temperature\_t}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structtemperature}{temperature}} \mbox{\hyperlink{tasks_8h_a77ac062b2f0d5b68b2755dc75fe485ef}{temperature\+\_\+t}}}
+
+\mbox{\Hypertarget{tasks_8h_a7943deaf15076dfa8246240c76534c30}\label{tasks_8h_a7943deaf15076dfa8246240c76534c30}} 
+\index{tasks.h@{tasks.h}!vehicle\_actuation\_t@{vehicle\_actuation\_t}}
+\index{vehicle\_actuation\_t@{vehicle\_actuation\_t}!tasks.h@{tasks.h}}
+\doxysubsubsection{\texorpdfstring{vehicle\_actuation\_t}{vehicle\_actuation\_t}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structvehicle__actuation}{vehicle\+\_\+actuation}} \mbox{\hyperlink{tasks_8h_a7943deaf15076dfa8246240c76534c30}{vehicle\+\_\+actuation\+\_\+t}}}
+
+\mbox{\Hypertarget{tasks_8h_a837df7fd446ddc6aaec3479784092005}\label{tasks_8h_a837df7fd446ddc6aaec3479784092005}} 
+\index{tasks.h@{tasks.h}!voltage\_t@{voltage\_t}}
+\index{voltage\_t@{voltage\_t}!tasks.h@{tasks.h}}
+\doxysubsubsection{\texorpdfstring{voltage\_t}{voltage\_t}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structvoltage}{voltage}} \mbox{\hyperlink{tasks_8h_a837df7fd446ddc6aaec3479784092005}{voltage\+\_\+t}}}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{tasks_8h_a13270f8d6bed5b53849d28bcf93ca468}\label{tasks_8h_a13270f8d6bed5b53849d28bcf93ca468}} 
+\index{tasks.h@{tasks.h}!initializeTasks@{initializeTasks}}
+\index{initializeTasks@{initializeTasks}!tasks.h@{tasks.h}}
+\doxysubsubsection{\texorpdfstring{initializeTasks()}{initializeTasks()}}
+{\footnotesize\ttfamily uint8\+\_\+t initialize\+Tasks (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Initialization of all tasks. 
+
+If a certain module doesn\textquotesingle{}t despond such as the n\+RF, SD-\/card, \mbox{\hyperlink{classIMU}{IMU}}, and GPS, it will disable these tasks at teh very start. Nevertheless, this initializer will then throw 0 because a failure has happend.
+
+\begin{DoxyReturn}{Returns}
+uint8\+\_\+t 1 if success or 0 if failure 
+\end{DoxyReturn}
+\mbox{\Hypertarget{tasks_8h_ab7e413c4737e4bcb00d84c7a57c7e663}\label{tasks_8h_ab7e413c4737e4bcb00d84c7a57c7e663}} 
+\index{tasks.h@{tasks.h}!sysTick@{sysTick}}
+\index{sysTick@{sysTick}!tasks.h@{tasks.h}}
+\doxysubsubsection{\texorpdfstring{sysTick()}{sysTick()}}
+{\footnotesize\ttfamily void sys\+Tick (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Task that handles the tick counter used to enable the tasks scedules or trigger moments. 
+
+\mbox{\Hypertarget{tasks_8h_a2b5717148d8004b6b7f8ee7e182a2c01}\label{tasks_8h_a2b5717148d8004b6b7f8ee7e182a2c01}} 
+\index{tasks.h@{tasks.h}!taskActuate@{taskActuate}}
+\index{taskActuate@{taskActuate}!tasks.h@{tasks.h}}
+\doxysubsubsection{\texorpdfstring{taskActuate()}{taskActuate()}}
+{\footnotesize\ttfamily void task\+Actuate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Task that actuates PWM actuators such as the ESCs and servo based on the vehicle\+\_\+actuation\+\_\+t struct data. 
+
+\mbox{\Hypertarget{tasks_8h_a615290dad12d12ef4468935aa6589979}\label{tasks_8h_a615290dad12d12ef4468935aa6589979}} 
+\index{tasks.h@{tasks.h}!taskLed@{taskLed}}
+\index{taskLed@{taskLed}!tasks.h@{tasks.h}}
+\doxysubsubsection{\texorpdfstring{taskLed()}{taskLed()}}
+{\footnotesize\ttfamily void task\+Led (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Task to control the onboard LEDs for notifying the user based on the led\+\_\+control\+\_\+t. 
+
+\begin{DoxyNote}{Note}
+is not used at the moment 
+\end{DoxyNote}
+\mbox{\Hypertarget{tasks_8h_af30f2fc173d77001cb45558437c552fb}\label{tasks_8h_af30f2fc173d77001cb45558437c552fb}} 
+\index{tasks.h@{tasks.h}!taskLog@{taskLog}}
+\index{taskLog@{taskLog}!tasks.h@{tasks.h}}
+\doxysubsubsection{\texorpdfstring{taskLog()}{taskLog()}}
+{\footnotesize\ttfamily void task\+Log (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Task to log loggings into the \mbox{\hyperlink{structlogging__data}{logging\+\_\+data}} struct. 
+
+\begin{DoxyNote}{Note}
+Data structure used here is defined in \mbox{\hyperlink{sd__logger_8h}{sd\+\_\+logger.\+h}}. 
+\end{DoxyNote}
+\mbox{\Hypertarget{tasks_8h_ac72eb5e1cdbf849f60b2c3ea11333c85}\label{tasks_8h_ac72eb5e1cdbf849f60b2c3ea11333c85}} 
+\index{tasks.h@{tasks.h}!taskReadEncoder@{taskReadEncoder}}
+\index{taskReadEncoder@{taskReadEncoder}!tasks.h@{tasks.h}}
+\doxysubsubsection{\texorpdfstring{taskReadEncoder()}{taskReadEncoder()}}
+{\footnotesize\ttfamily void task\+Read\+Encoder (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Task that calculates the vehicles wheel \& motor speed in RPM and stores it in encoder\+\_\+t. 
+
+\mbox{\Hypertarget{tasks_8h_a98cb7e9df95903c2b0a32ad446ec2ae8}\label{tasks_8h_a98cb7e9df95903c2b0a32ad446ec2ae8}} 
+\index{tasks.h@{tasks.h}!taskReadGps@{taskReadGps}}
+\index{taskReadGps@{taskReadGps}!tasks.h@{tasks.h}}
+\doxysubsubsection{\texorpdfstring{taskReadGps()}{taskReadGps()}}
+{\footnotesize\ttfamily void task\+Read\+Gps (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Task that can read the GPS module and store its data in localization\+\_\+t struct. 
+
+\mbox{\Hypertarget{tasks_8h_a7c26549615e853118dd0558393f56fc1}\label{tasks_8h_a7c26549615e853118dd0558393f56fc1}} 
+\index{tasks.h@{tasks.h}!taskReadIbus@{taskReadIbus}}
+\index{taskReadIbus@{taskReadIbus}!tasks.h@{tasks.h}}
+\doxysubsubsection{\texorpdfstring{taskReadIbus()}{taskReadIbus()}}
+{\footnotesize\ttfamily void task\+Read\+Ibus (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Task that can read the radio receiver and stores it in radio\+\_\+t struct. 
+
+\mbox{\Hypertarget{tasks_8h_aadd98f4c13e5da3a900fa3342023f4d3}\label{tasks_8h_aadd98f4c13e5da3a900fa3342023f4d3}} 
+\index{tasks.h@{tasks.h}!taskReadIMU@{taskReadIMU}}
+\index{taskReadIMU@{taskReadIMU}!tasks.h@{tasks.h}}
+\doxysubsubsection{\texorpdfstring{taskReadIMU()}{taskReadIMU()}}
+{\footnotesize\ttfamily void task\+Read\+IMU (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Task that reads the 9-\/axis \mbox{\hyperlink{classIMU}{IMU}} and store its data in movement\+\_\+t struct. 
+
+\mbox{\Hypertarget{tasks_8h_a35ed32c99741706f5903957eebd93a92}\label{tasks_8h_a35ed32c99741706f5903957eebd93a92}} 
+\index{tasks.h@{tasks.h}!taskReadTemperature@{taskReadTemperature}}
+\index{taskReadTemperature@{taskReadTemperature}!tasks.h@{tasks.h}}
+\doxysubsubsection{\texorpdfstring{taskReadTemperature()}{taskReadTemperature()}}
+{\footnotesize\ttfamily void task\+Read\+Temperature (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Task that will read the temperatures. 
+
+Task that will read the temperatures of the pheripherals and environments. This includes the DS18\+B20+ sensors (One\+Wire) as well as the Teensy internal temperature sensor. It will store the sensed values to the struct temperature\+\_\+t \mbox{\Hypertarget{tasks_8h_a1f6696da8071e5a9956caed0b892b6ce}\label{tasks_8h_a1f6696da8071e5a9956caed0b892b6ce}} 
+\index{tasks.h@{tasks.h}!taskReadVAndI@{taskReadVAndI}}
+\index{taskReadVAndI@{taskReadVAndI}!tasks.h@{tasks.h}}
+\doxysubsubsection{\texorpdfstring{taskReadVAndI()}{taskReadVAndI()}}
+{\footnotesize\ttfamily void task\+Read\+VAndI (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Task that will read the ADC of both voltage and currents that are currently present and stores it in voltage\+\_\+t and current\+\_\+t. 
+
+\mbox{\Hypertarget{tasks_8h_a8a46c8115424cbd24d15befbd76f9cd1}\label{tasks_8h_a8a46c8115424cbd24d15befbd76f9cd1}} 
+\index{tasks.h@{tasks.h}!taskSafety@{taskSafety}}
+\index{taskSafety@{taskSafety}!tasks.h@{tasks.h}}
+\doxysubsubsection{\texorpdfstring{taskSafety()}{taskSafety()}}
+{\footnotesize\ttfamily void task\+Safety (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Task that controls the safety of the vehicle. 
+
+\mbox{\Hypertarget{tasks_8h_a5591a493a42241bbcc3102c4052bb2fa}\label{tasks_8h_a5591a493a42241bbcc3102c4052bb2fa}} 
+\index{tasks.h@{tasks.h}!taskSaveLog@{taskSaveLog}}
+\index{taskSaveLog@{taskSaveLog}!tasks.h@{tasks.h}}
+\doxysubsubsection{\texorpdfstring{taskSaveLog()}{taskSaveLog()}}
+{\footnotesize\ttfamily void task\+Save\+Log (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Task to log loggings onto an SD-\/card. Will use \mbox{\hyperlink{structlogging__data}{logging\+\_\+data}} struct ad datastructure. 
+
+\begin{DoxyNote}{Note}
+Data structure used here is defined in \mbox{\hyperlink{sd__logger_8h}{sd\+\_\+logger.\+h}}. 
+\end{DoxyNote}
+\mbox{\Hypertarget{tasks_8h_a636ca644c11cea39cfd1ca471421bf82}\label{tasks_8h_a636ca644c11cea39cfd1ca471421bf82}} 
+\index{tasks.h@{tasks.h}!taskWriteBaseStation@{taskWriteBaseStation}}
+\index{taskWriteBaseStation@{taskWriteBaseStation}!tasks.h@{tasks.h}}
+\doxysubsubsection{\texorpdfstring{taskWriteBaseStation()}{taskWriteBaseStation()}}
+{\footnotesize\ttfamily void task\+Write\+Base\+Station (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Task to write received data to the base station. 
+
+\begin{DoxyNote}{Note}
+Data structure used here is defined in \mbox{\hyperlink{sd__logger_8h}{sd\+\_\+logger.\+h}}. 
+\end{DoxyNote}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{tasks_8h_a0da0aada14aefd11eca73cb441926400}\label{tasks_8h_a0da0aada14aefd11eca73cb441926400}} 
+\index{tasks.h@{tasks.h}!current\_data@{current\_data}}
+\index{current\_data@{current\_data}!tasks.h@{tasks.h}}
+\doxysubsubsection{\texorpdfstring{current\_data}{current\_data}}
+{\footnotesize\ttfamily \mbox{\hyperlink{tasks_8h_a9225579bfc855f23a78d188a67ce7841}{current\+\_\+t}} current\+\_\+data\hspace{0.3cm}{\ttfamily [extern]}}
+
+\mbox{\Hypertarget{tasks_8h_aa33f014cb40162a7eb0c10a6afa47a7d}\label{tasks_8h_aa33f014cb40162a7eb0c10a6afa47a7d}} 
+\index{tasks.h@{tasks.h}!dead\_switch@{dead\_switch}}
+\index{dead\_switch@{dead\_switch}!tasks.h@{tasks.h}}
+\doxysubsubsection{\texorpdfstring{dead\_switch}{dead\_switch}}
+{\footnotesize\ttfamily volatile uint8\+\_\+t dead\+\_\+switch\hspace{0.3cm}{\ttfamily [extern]}}
+
+Determines if the vehicle can be driven or not. \begin{DoxyNote}{Note}
+is used as start and stop signal to Save a Log onto the sd card in \mbox{\hyperlink{tasks_8h_a5591a493a42241bbcc3102c4052bb2fa}{task\+Save\+Log()}}. 
+\end{DoxyNote}
+\mbox{\Hypertarget{tasks_8h_a0febd7a717cd7da4044d29515010b451}\label{tasks_8h_a0febd7a717cd7da4044d29515010b451}} 
+\index{tasks.h@{tasks.h}!encoder\_data@{encoder\_data}}
+\index{encoder\_data@{encoder\_data}!tasks.h@{tasks.h}}
+\doxysubsubsection{\texorpdfstring{encoder\_data}{encoder\_data}}
+{\footnotesize\ttfamily \mbox{\hyperlink{tasks_8h_ad22b2bbeb7072a55405fdae105e52afe}{encoder\+\_\+t}} encoder\+\_\+data\hspace{0.3cm}{\ttfamily [extern]}}
+
+\mbox{\Hypertarget{tasks_8h_a4172f5fd9675186566d15da33a4d712c}\label{tasks_8h_a4172f5fd9675186566d15da33a4d712c}} 
+\index{tasks.h@{tasks.h}!gps\_data@{gps\_data}}
+\index{gps\_data@{gps\_data}!tasks.h@{tasks.h}}
+\doxysubsubsection{\texorpdfstring{gps\_data}{gps\_data}}
+{\footnotesize\ttfamily \mbox{\hyperlink{tasks_8h_a1f1e0df1db69086db03bea01467fb441}{localization\+\_\+t}} gps\+\_\+data\hspace{0.3cm}{\ttfamily [extern]}}
+
+\mbox{\Hypertarget{tasks_8h_ac9e2f083f4bba03a0a5d08ff63f26463}\label{tasks_8h_ac9e2f083f4bba03a0a5d08ff63f26463}} 
+\index{tasks.h@{tasks.h}!movement\_data@{movement\_data}}
+\index{movement\_data@{movement\_data}!tasks.h@{tasks.h}}
+\doxysubsubsection{\texorpdfstring{movement\_data}{movement\_data}}
+{\footnotesize\ttfamily \mbox{\hyperlink{tasks_8h_a3308c488c239017ba56b061a578e58c8}{movement\+\_\+t}} movement\+\_\+data\hspace{0.3cm}{\ttfamily [extern]}}
+
+\mbox{\Hypertarget{tasks_8h_a06e33aaeca474d747692adcd4871ea27}\label{tasks_8h_a06e33aaeca474d747692adcd4871ea27}} 
+\index{tasks.h@{tasks.h}!radio\_data@{radio\_data}}
+\index{radio\_data@{radio\_data}!tasks.h@{tasks.h}}
+\doxysubsubsection{\texorpdfstring{radio\_data}{radio\_data}}
+{\footnotesize\ttfamily \mbox{\hyperlink{tasks_8h_a335a4a47333f47fdac2b568f35eccf15}{radio\+\_\+t}} radio\+\_\+data\hspace{0.3cm}{\ttfamily [extern]}}
+
+\mbox{\Hypertarget{tasks_8h_afa04f91a9a6a331858d5bef6640234df}\label{tasks_8h_afa04f91a9a6a331858d5bef6640234df}} 
+\index{tasks.h@{tasks.h}!temperature\_data@{temperature\_data}}
+\index{temperature\_data@{temperature\_data}!tasks.h@{tasks.h}}
+\doxysubsubsection{\texorpdfstring{temperature\_data}{temperature\_data}}
+{\footnotesize\ttfamily \mbox{\hyperlink{tasks_8h_a77ac062b2f0d5b68b2755dc75fe485ef}{temperature\+\_\+t}} temperature\+\_\+data\hspace{0.3cm}{\ttfamily [extern]}}
+
+\mbox{\Hypertarget{tasks_8h_a4107d6d25a21290c6ef198e8c4ed7680}\label{tasks_8h_a4107d6d25a21290c6ef198e8c4ed7680}} 
+\index{tasks.h@{tasks.h}!vehicle\_actuation\_data@{vehicle\_actuation\_data}}
+\index{vehicle\_actuation\_data@{vehicle\_actuation\_data}!tasks.h@{tasks.h}}
+\doxysubsubsection{\texorpdfstring{vehicle\_actuation\_data}{vehicle\_actuation\_data}}
+{\footnotesize\ttfamily \mbox{\hyperlink{tasks_8h_a7943deaf15076dfa8246240c76534c30}{vehicle\+\_\+actuation\+\_\+t}} vehicle\+\_\+actuation\+\_\+data\hspace{0.3cm}{\ttfamily [extern]}}
+
+\mbox{\Hypertarget{tasks_8h_a1006ccd2fbb4b3bd769fa0a687f74b19}\label{tasks_8h_a1006ccd2fbb4b3bd769fa0a687f74b19}} 
+\index{tasks.h@{tasks.h}!voltage\_data@{voltage\_data}}
+\index{voltage\_data@{voltage\_data}!tasks.h@{tasks.h}}
+\doxysubsubsection{\texorpdfstring{voltage\_data}{voltage\_data}}
+{\footnotesize\ttfamily \mbox{\hyperlink{tasks_8h_a837df7fd446ddc6aaec3479784092005}{voltage\+\_\+t}} voltage\+\_\+data\hspace{0.3cm}{\ttfamily [extern]}}
+

@@ -1,0 +1,22 @@
+services:
+  microros:
+    build:
+      context: .
+      dockerfile: Dockerfile.pio
+      args:
+        GIT_USER_NAME: "${GIT_USER_NAME}"
+        GIT_USER_EMAIL: "${GIT_USER_EMAIL}"
+
+    container_name: microros-pio
+    privileged: true
+    stdin_open: true
+    tty: true
+
+    volumes:
+      - ${HOST_WORKSPACE_PATH}/TruggySense/code/protocol_tests/ROS2:/workspace
+      - /dev:/dev
+
+    environment:
+      - ROS_DOMAIN_ID=0
+
+    command: /bin/bash

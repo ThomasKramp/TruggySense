@@ -1,0 +1,129 @@
+\hypertarget{sd__logger_8h_source}{}\doxysection{sd\+\_\+logger.\+h}
+\label{sd__logger_8h_source}\index{lib/sd\_logger/sd\_logger.h@{lib/sd\_logger/sd\_logger.h}}
+\mbox{\hyperlink{sd__logger_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{15 \textcolor{preprocessor}{\#include "{}SdFat.h"{}}}
+\DoxyCodeLine{16 }
+\DoxyCodeLine{17 \textcolor{keyword}{struct }\mbox{\hyperlink{structlogging__data}{logging\_data}}}
+\DoxyCodeLine{18 \{}
+\DoxyCodeLine{19     uint32\_t \mbox{\hyperlink{structlogging__data_af58a91bba4224fab44fc6552b10516fa}{timestamp}};     \textcolor{comment}{// The timestamp of the data}}
+\DoxyCodeLine{20     uint32\_t \mbox{\hyperlink{structlogging__data_a3cc40c2c9a4e7136cd14f6b47e01750f}{date}};          \textcolor{comment}{// The date aquired from a satellite}}
+\DoxyCodeLine{21     uint32\_t \mbox{\hyperlink{structlogging__data_abf9b5bf5d86865fa8596e5a70b052d58}{time}};          \textcolor{comment}{// The time aquired from a satellite}}
+\DoxyCodeLine{22     \textcolor{keywordtype}{float} \mbox{\hyperlink{structlogging__data_a53cea3aac0d792ec9a815d52f390d53c}{t\_llc}};        \textcolor{comment}{// Temperature of low level controller}}
+\DoxyCodeLine{23     \textcolor{keywordtype}{float} \mbox{\hyperlink{structlogging__data_ac3e85e5f0dddd36bac124bf2f5ab8a7b}{t\_hlc}};        \textcolor{comment}{// Temperature of high level controller}}
+\DoxyCodeLine{24     \textcolor{keywordtype}{float} \mbox{\hyperlink{structlogging__data_a89b6a4d158dd682a6d8508e3ab0d7a70}{t\_bp}};         \textcolor{comment}{// Temperature of battery pack}}
+\DoxyCodeLine{25     \textcolor{keywordtype}{float} \mbox{\hyperlink{structlogging__data_a4bc28072f774bcb52acfa95bceb65c20}{t\_ss}};         \textcolor{comment}{// Temperature of steering servo motor}}
+\DoxyCodeLine{26     \textcolor{keywordtype}{float} \mbox{\hyperlink{structlogging__data_a6bf48b59d99447a4ec0d8f66dd47e032}{t\_bm\_1}};       \textcolor{comment}{// Temperature of brushless motor 1}}
+\DoxyCodeLine{27     \textcolor{keywordtype}{float} \mbox{\hyperlink{structlogging__data_ac18087c2ce1db7efb103adebd43cd2d1}{t\_bm\_2}};       \textcolor{comment}{// Temperature of brushless motor 2}}
+\DoxyCodeLine{28     \textcolor{keywordtype}{float} \mbox{\hyperlink{structlogging__data_ae821dc16a2ba35913fddbcbd70d537a3}{t\_bm\_3}};       \textcolor{comment}{// Temperature of brushless motor 3}}
+\DoxyCodeLine{29     \textcolor{keywordtype}{float} \mbox{\hyperlink{structlogging__data_a38b20cb4097e9bfed8f2785efe565bec}{t\_bm\_4}};       \textcolor{comment}{// Temperature of brushless motor 4}}
+\DoxyCodeLine{30     \textcolor{keywordtype}{float} \mbox{\hyperlink{structlogging__data_a90ee9778ad35fbb1afe350e5adf81f93}{t\_esc\_1}};      \textcolor{comment}{// Temperature of Electric Speed Controller 1}}
+\DoxyCodeLine{31     \textcolor{keywordtype}{float} \mbox{\hyperlink{structlogging__data_a231c9ab0f96af08ba2a391db790c14a7}{t\_esc\_2}};      \textcolor{comment}{// Temperature of Electric Speed Controller 2}}
+\DoxyCodeLine{32     \textcolor{keywordtype}{float} \mbox{\hyperlink{structlogging__data_aed82eecf1804ec5cd71c043be7520f00}{t\_esc\_3}};      \textcolor{comment}{// Temperature of Electric Speed Controller 3}}
+\DoxyCodeLine{33     \textcolor{keywordtype}{float} \mbox{\hyperlink{structlogging__data_a3882578846d110a925e3a7f1067a564d}{t\_esc\_4}};      \textcolor{comment}{// Temperature of Electric Speed Controller 4}}
+\DoxyCodeLine{34     \textcolor{keywordtype}{float} \mbox{\hyperlink{structlogging__data_a80d74ccc3d563061156c006651f4e232}{i\_ss}};         \textcolor{comment}{// Current usgae of steering servo}}
+\DoxyCodeLine{35     \textcolor{keywordtype}{float} \mbox{\hyperlink{structlogging__data_a6717424f34f0376fc273c72584d51d61}{i\_llc}};        \textcolor{comment}{// Current usage of low level controller}}
+\DoxyCodeLine{36     \textcolor{keywordtype}{float} \mbox{\hyperlink{structlogging__data_a60afd0fb3f1c60e8602066e74db2addd}{i\_hlc}};        \textcolor{comment}{// Current usage of high level controller}}
+\DoxyCodeLine{37     \textcolor{keywordtype}{float} \mbox{\hyperlink{structlogging__data_a08e63db36c9801747411aabff3051354}{roll}};         \textcolor{comment}{// roll defines rolling}}
+\DoxyCodeLine{38     \textcolor{keywordtype}{float} \mbox{\hyperlink{structlogging__data_a1fe4c08def5bc85316e38d0a7d7828db}{pitch}};        \textcolor{comment}{// pitch defines nose up or down}}
+\DoxyCodeLine{39     \textcolor{keywordtype}{float} \mbox{\hyperlink{structlogging__data_a659bc50347fdbfa1512fc9c9135621d4}{yaw}};          \textcolor{comment}{// yaw defines left right swing}}
+\DoxyCodeLine{40     \textcolor{keywordtype}{float} \mbox{\hyperlink{structlogging__data_a06c5ca4c13a772805f22983cf5005f2c}{w}};            \textcolor{comment}{// real part of quaternion}}
+\DoxyCodeLine{41     \textcolor{keywordtype}{float} \mbox{\hyperlink{structlogging__data_a0d20b210dc3949f058ee2873137a471c}{i}};            \textcolor{comment}{// i part}}
+\DoxyCodeLine{42     \textcolor{keywordtype}{float} \mbox{\hyperlink{structlogging__data_a71b5c8382d46288b7afc8d9859924f70}{j}};            \textcolor{comment}{// j part}}
+\DoxyCodeLine{43     \textcolor{keywordtype}{float} \mbox{\hyperlink{structlogging__data_a586b8c340a24b2846291aefa1e1d7322}{k}};            \textcolor{comment}{// k part}}
+\DoxyCodeLine{44     \textcolor{keywordtype}{float} \mbox{\hyperlink{structlogging__data_ae863a16166ac736e36281a9db1a9fd7a}{rpm\_wheel\_1}};  \textcolor{comment}{// The RPM of wheel 1}}
+\DoxyCodeLine{45     \textcolor{keywordtype}{float} \mbox{\hyperlink{structlogging__data_acdf2adb323b6e2cb0e98cefd0c8e1be2}{rpm\_wheel\_2}};  \textcolor{comment}{// The RPM of wheel 2}}
+\DoxyCodeLine{46     \textcolor{keywordtype}{float} \mbox{\hyperlink{structlogging__data_a25b9685f5313ec4121a2224a9d85440c}{rpm\_wheel\_3}};  \textcolor{comment}{// The RPM of wheel 3}}
+\DoxyCodeLine{47     \textcolor{keywordtype}{float} \mbox{\hyperlink{structlogging__data_a435f5ffecd092489f5a16cd65219669e}{rpm\_wheel\_4}};  \textcolor{comment}{// The RPM of wheel 4}}
+\DoxyCodeLine{48     \textcolor{keywordtype}{float} \mbox{\hyperlink{structlogging__data_a26e9b2fe54b0fcdf89369068b256d97e}{rpm\_bm\_1}};     \textcolor{comment}{// The RPM of motor 1}}
+\DoxyCodeLine{49     \textcolor{keywordtype}{float} \mbox{\hyperlink{structlogging__data_aadd35d467d6819829a49980d1ff99cd7}{rpm\_bm\_2}};     \textcolor{comment}{// The RPM of motor 2}}
+\DoxyCodeLine{50     \textcolor{keywordtype}{float} \mbox{\hyperlink{structlogging__data_a203a17bc5488e6ffa92e5a414f0454a1}{rpm\_bm\_3}};     \textcolor{comment}{// The RPM of motor 3}}
+\DoxyCodeLine{51     \textcolor{keywordtype}{float} \mbox{\hyperlink{structlogging__data_ae31b122d422df4b1b9e3d3168f91e64f}{rpm\_bm\_4}};     \textcolor{comment}{// The RPM of motor 4}}
+\DoxyCodeLine{52     \textcolor{keywordtype}{float} \mbox{\hyperlink{structlogging__data_a2edde3ffb101fce4a783bc0abe25ed15}{latitude}};     \textcolor{comment}{// The latitude}}
+\DoxyCodeLine{53     \textcolor{keywordtype}{float} \mbox{\hyperlink{structlogging__data_ab846a69316c26d150ac230e15d677917}{longitude}};    \textcolor{comment}{// the longitide}}
+\DoxyCodeLine{54     \textcolor{keywordtype}{float} \mbox{\hyperlink{structlogging__data_aeec43906960bdd7ba018005b487cfc5c}{velocity}};     \textcolor{comment}{// the relative velocity}}
+\DoxyCodeLine{55     \textcolor{keywordtype}{float} \mbox{\hyperlink{structlogging__data_a424f1d4892a91f769fcab9224c8dfee4}{altitude}};     \textcolor{comment}{// the altitude based on received satellites distances}}
+\DoxyCodeLine{56     \textcolor{keywordtype}{float} \mbox{\hyperlink{structlogging__data_a6b36334018843ded23dc95e622963d3e}{v\_cell\_1}};     \textcolor{comment}{// Battery cell voltage 1.}}
+\DoxyCodeLine{57     \textcolor{keywordtype}{float} \mbox{\hyperlink{structlogging__data_a87a80cdd6a9eac2d15165d35cad3c931}{v\_cell\_2}};     \textcolor{comment}{// Battery cell voltage 2.}}
+\DoxyCodeLine{58     \textcolor{keywordtype}{float} \mbox{\hyperlink{structlogging__data_ad4a3bade8466b07de30d05883eadae5e}{v\_cell\_3}};     \textcolor{comment}{// Battery cell voltage 3.}}
+\DoxyCodeLine{59     \textcolor{keywordtype}{float} \mbox{\hyperlink{structlogging__data_a442f304101430066c874a09e00a12751}{v\_cell\_4}};     \textcolor{comment}{// Battery cell voltage 4.}}
+\DoxyCodeLine{60     \textcolor{keywordtype}{float} \mbox{\hyperlink{structlogging__data_a1b92e938d56a6f95d2720d333f7e2c05}{v\_batt}};       \textcolor{comment}{// Battery voltage.}}
+\DoxyCodeLine{61     \textcolor{keywordtype}{float} \mbox{\hyperlink{structlogging__data_a932c0ef5dfa0e63a42115a4e0298f8e6}{v\_llc}};        \textcolor{comment}{// VOltage of low level controllers power supply.}}
+\DoxyCodeLine{62     \textcolor{keywordtype}{float} \mbox{\hyperlink{structlogging__data_a365804e0f30e8f80d477e13e13dd28f4}{v\_hlc}};        \textcolor{comment}{// Voltage of high level controllers power supply.}}
+\DoxyCodeLine{63     \textcolor{keywordtype}{float} \mbox{\hyperlink{structlogging__data_a02184f14575368fd1e8bafd839527f2d}{v\_phrp\_3v3}};   \textcolor{comment}{// Voltage of pheripherals that use 3.3V}}
+\DoxyCodeLine{64     uint16\_t \mbox{\hyperlink{structlogging__data_a0d60af22013719fd9ab49f899ac65d4d}{ch\_1}};      \textcolor{comment}{// Channel 1 that ranges from 1000 to 2000 (ms)}}
+\DoxyCodeLine{65     uint16\_t \mbox{\hyperlink{structlogging__data_ad5f5754179838ff258fb5681c013d5fe}{ch\_2}};      \textcolor{comment}{// Channel 2 that ranges from 1000 to 2000 (ms)}}
+\DoxyCodeLine{66     uint16\_t \mbox{\hyperlink{structlogging__data_ab5a4acac88380e3336590f6bc7903777}{ch\_3}};      \textcolor{comment}{// Channel 3 that ranges from 1000 to 2000 (ms)}}
+\DoxyCodeLine{67     uint16\_t \mbox{\hyperlink{structlogging__data_ad0da2aa482a498c158047a7e6433065f}{ch\_4}};      \textcolor{comment}{// Channel 4 that ranges from 1000 to 2000 (ms)}}
+\DoxyCodeLine{68     uint16\_t \mbox{\hyperlink{structlogging__data_a8f06433cba300a33a045fd23d3706133}{ch\_5}};      \textcolor{comment}{// Channel 5 that ranges from 1000 to 2000 (ms)}}
+\DoxyCodeLine{69     uint16\_t \mbox{\hyperlink{structlogging__data_a9ac4046c6250fae2b547866707b838cc}{ch\_6}};      \textcolor{comment}{// Channel 6 that ranges from 1000 to 2000 (ms)}}
+\DoxyCodeLine{70     uint16\_t \mbox{\hyperlink{structlogging__data_a0a3e05f6c863f1c2e77381cc3feb245f}{ch\_7}};      \textcolor{comment}{// Channel 7 that ranges from 1000 to 2000 (ms)}}
+\DoxyCodeLine{71     uint16\_t \mbox{\hyperlink{structlogging__data_a1fa655110c7e95c7e03ceac0ba2e19e4}{ch\_8}};      \textcolor{comment}{// Channel 8 that ranges from 1000 to 2000 (ms)}}
+\DoxyCodeLine{72     uint16\_t \mbox{\hyperlink{structlogging__data_ac94f7855f480d9341feb0d67e087aa70}{ch\_9}};      \textcolor{comment}{// Channel 9 that ranges from 1000 to 2000 (ms)}}
+\DoxyCodeLine{73     uint16\_t \mbox{\hyperlink{structlogging__data_a28c2bfebe41e089f1261c96df5e1d231}{ch\_10}};     \textcolor{comment}{// Channel 10 that ranges from 1000 to 2000 (ms)}}
+\DoxyCodeLine{74     uint16\_t \mbox{\hyperlink{structlogging__data_acd7f07386b15fe7389c8107950fcfaf2}{ch\_11}};     \textcolor{comment}{// Channel 11 that ranges from 1000 to 2000 (ms)}}
+\DoxyCodeLine{75     uint16\_t \mbox{\hyperlink{structlogging__data_a0c17b31b71f699c1cef7008fd150e22d}{ch\_12}};     \textcolor{comment}{// Channel 12 that ranges from 1000 to 2000 (ms)}}
+\DoxyCodeLine{76     uint16\_t \mbox{\hyperlink{structlogging__data_a127d40fea943360b4d9f07698f76ca6a}{ch\_13}};     \textcolor{comment}{// Channel 13 that ranges from 1000 to 2000 (ms)}}
+\DoxyCodeLine{77     uint16\_t \mbox{\hyperlink{structlogging__data_af4818262ad6a49e0750da9858acb13a8}{ch\_14}};     \textcolor{comment}{// Channel 14 that ranges from 1000 to 2000 (ms)}}
+\DoxyCodeLine{78     uint16\_t \mbox{\hyperlink{structlogging__data_a3a56b19146e5392d2958e70caf473508}{pwm\_bm\_1}};  \textcolor{comment}{// PWM value from 1000 to 2000 (ms) for brushless motor 1}}
+\DoxyCodeLine{79     uint16\_t \mbox{\hyperlink{structlogging__data_a2c9d2d38d1c5eb1afda23b128285b144}{pwm\_bm\_2}};  \textcolor{comment}{// PWM value from 1000 to 2000 (ms) for brushless motor 2}}
+\DoxyCodeLine{80     uint16\_t \mbox{\hyperlink{structlogging__data_aebabc9d40092d11e0efcbeffa8380db0}{pwm\_bm\_3}};  \textcolor{comment}{// PWM value from 1000 to 2000 (ms) for brushless motor 3}}
+\DoxyCodeLine{81     uint16\_t \mbox{\hyperlink{structlogging__data_ac60a45d4f783d997b5e28936bb7ff3d8}{pwm\_bm\_4}};  \textcolor{comment}{// PWM value from 1000 to 2000 (ms) for brushless motor 4}}
+\DoxyCodeLine{82     uint16\_t \mbox{\hyperlink{structlogging__data_a1ef316a9c43fa7e3e55807b31823734a}{pwm\_ss}};    \textcolor{comment}{// PWM value from 1000 to 2000 (ms) for steering servo}}
+\DoxyCodeLine{83     uint8\_t \mbox{\hyperlink{structlogging__data_a97ece746b0460c237184595865579b17}{c\_s}};        \textcolor{comment}{// Connected satellites}}
+\DoxyCodeLine{84     uint8\_t \mbox{\hyperlink{structlogging__data_a3c33c613c0e31c7db6b7a7da227a5953}{failsafe}};   \textcolor{comment}{// when failsafe is active or not. 0 if not active, 1 if active.}}
+\DoxyCodeLine{85     uint8\_t \mbox{\hyperlink{structlogging__data_aa000ceb7d7b8638b8f7d9c4065eb650f}{dead\_switch}};\textcolor{comment}{// A deadswitch on the transmitter side if something goes wrong}}
+\DoxyCodeLine{86     uint8\_t \mbox{\hyperlink{structlogging__data_a0ed1215723b8d7850aba69103d17e2a3}{i\_esc\_1}};    \textcolor{comment}{// Current usage of esc 1}}
+\DoxyCodeLine{87     uint8\_t \mbox{\hyperlink{structlogging__data_a369dae12288394b7983292d53c0759a2}{i\_esc\_2}};    \textcolor{comment}{// Current usage of esc 2}}
+\DoxyCodeLine{88     uint8\_t \mbox{\hyperlink{structlogging__data_a953c582381a8032830d98b1688739a82}{i\_esc\_3}};    \textcolor{comment}{// Current usage of esc 3}}
+\DoxyCodeLine{89     uint8\_t \mbox{\hyperlink{structlogging__data_adbd985a7305d741b1bad93133d240f8e}{i\_esc\_4}};    \textcolor{comment}{// Current usage of esc 4}}
+\DoxyCodeLine{90 \};}
+\DoxyCodeLine{91 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\mbox{\hyperlink{structlogging__data}{logging\_data}} \mbox{\hyperlink{structlogging__data}{logging\_data\_t}};}
+\DoxyCodeLine{92 }
+\DoxyCodeLine{93 \textcolor{preprocessor}{\#define BASE\_FILE\_NAME "{}llc\_data\_0.bin"{}}}
+\DoxyCodeLine{94 }
+\DoxyCodeLine{95 \textcolor{comment}{// const uint8\_t SD\_CS\_PIN = SS;}}
+\DoxyCodeLine{96 \textcolor{preprocessor}{\#define SD\_CONFIG SdioConfig(FIFO\_SDIO)}}
+\DoxyCodeLine{97 }
+\DoxyCodeLine{98 \textcolor{keyword}{class }\mbox{\hyperlink{classSDLogger}{SDLogger}}}
+\DoxyCodeLine{99 \{}
+\DoxyCodeLine{100 \textcolor{keyword}{private}:}
+\DoxyCodeLine{101     SdFs sd;}
+\DoxyCodeLine{102     FsFile file;}
+\DoxyCodeLine{103     String filename;}
+\DoxyCodeLine{104 }
+\DoxyCodeLine{105     uint8\_t writeBinData(\mbox{\hyperlink{structlogging__data}{logging\_data\_t}} bin\_data);}
+\DoxyCodeLine{106     uint8\_t writeBinData(uint8\_t * bin\_data);}
+\DoxyCodeLine{107 }
+\DoxyCodeLine{108 \textcolor{keyword}{public}:}
+\DoxyCodeLine{109     \textcolor{comment}{//Find a correct file name without overwriting other existing files.}}
+\DoxyCodeLine{110     \textcolor{comment}{//It uses a sequence number that keeps increasing.}}
+\DoxyCodeLine{111     String \mbox{\hyperlink{classSDLogger_a90b80b75e716710d7f41e2d826975d20}{generateUniqueFilenameAndUse}}();}
+\DoxyCodeLine{112 }
+\DoxyCodeLine{113     \textcolor{comment}{// Setup the connection and test if the SD-\/card is accessible}}
+\DoxyCodeLine{114     \textcolor{comment}{// Creates a file for this session.}}
+\DoxyCodeLine{115     \textcolor{comment}{// Return 1 if success and 0 if not.}}
+\DoxyCodeLine{116     uint8\_t \mbox{\hyperlink{classSDLogger_ab59949c5596c12af1dcbfdf0e65cb1e4}{init}}();}
+\DoxyCodeLine{117 }
+\DoxyCodeLine{118     \textcolor{comment}{// // This creates a file,}}
+\DoxyCodeLine{119     \textcolor{comment}{// // if it exists, it creates a file with a number higher then the previous.}}
+\DoxyCodeLine{120     \textcolor{comment}{// uint8\_t createFile();}}
+\DoxyCodeLine{121 }
+\DoxyCodeLine{125     String \mbox{\hyperlink{classSDLogger_a2d4340a61ec14c41e53701477b90e10d}{getFileName}}();}
+\DoxyCodeLine{126 }
+\DoxyCodeLine{127     \textcolor{comment}{// Returns the current file size in bytes.}}
+\DoxyCodeLine{128     uint64\_t \mbox{\hyperlink{classSDLogger_a8655ef788c1bd2d1af5b45143016d0c5}{getFileSize}}();}
+\DoxyCodeLine{129 }
+\DoxyCodeLine{133     \textcolor{comment}{// uint8\_t writeDataToSdCard(logging\_data\_t data);}}
+\DoxyCodeLine{134 }
+\DoxyCodeLine{138     uint8\_t \mbox{\hyperlink{classSDLogger_a337861f9bc3d644848c4fc4965e9a712}{logData}}(\mbox{\hyperlink{structlogging__data}{logging\_data\_t}} data);}
+\DoxyCodeLine{139 }
+\DoxyCodeLine{143     \textcolor{comment}{// uint8\_t saveData();}}
+\DoxyCodeLine{144 }
+\DoxyCodeLine{145     uint8\_t \mbox{\hyperlink{classSDLogger_ada27619221012466d196cee328fc374c}{closeFile}}();}
+\DoxyCodeLine{146 \};}
+
+\end{DoxyCode}

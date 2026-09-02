@@ -1,0 +1,13 @@
+(unit MM)
+
+(package "TZMC3V3-GS08"
+    (type UNDEF)
+    (uver 2)
+    (cuser "SamacSys")
+    (uuser "SamacSys")
+    (utime 2020-03-17-12:34:53)
+    (mountForm default
+        (footprintRef "TZMC3V3GS08")
+        (spec "System")
+    )
+)

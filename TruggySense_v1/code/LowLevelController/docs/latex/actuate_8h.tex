@@ -1,0 +1,143 @@
+\hypertarget{actuate_8h}{}\doxysection{lib/actuation/actuate.h File Reference}
+\label{actuate_8h}\index{lib/actuation/actuate.h@{lib/actuation/actuate.h}}
+
+
+A driver to drive PWM controlled modules such as the ESC and Servo.  
+
+
+{\ttfamily \#include \char`\"{}stdint.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$PWMServo.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}wiring.\+h\char`\"{}}\newline
+Include dependency graph for actuate.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=304pt]{actuate_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{actuate_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classActuate}{Actuate}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classActuate}{Actuate}} class will actuate the received microseconds value to the selected pin defined by enum actuator. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{actuate_8h_a72628e5830e2e3a88c197853cca54038}{PWM\+\_\+\+PIN\+\_\+\+MOTOR\+\_\+\+RR}}~33
+\begin{DoxyCompactList}\small\item\em Pin definition of motor Rear Right. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{actuate_8h_a6a9a89006defbb2853f2ea471c860fc6}{PWM\+\_\+\+PIN\+\_\+\+MOTOR\+\_\+\+RL}}~9
+\begin{DoxyCompactList}\small\item\em Pin definition of motor Rear Left. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{actuate_8h_a0f39763d1f054a78055d09756f223d30}{PWM\+\_\+\+PIN\+\_\+\+MOTOR\+\_\+\+FR}}~23
+\begin{DoxyCompactList}\small\item\em Pin definition of motor Front Right. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{actuate_8h_a0b856a0612988a0745f2c8f9692e9d14}{PWM\+\_\+\+PIN\+\_\+\+MOTOR\+\_\+\+FL}}~37
+\begin{DoxyCompactList}\small\item\em Pin definition of motor Front Left. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{actuate_8h_ad2804eef656f5f0016deb403ae12bc12}{PWM\+\_\+\+PIN\+\_\+\+STEER\+\_\+\+SERVO}}~22
+\begin{DoxyCompactList}\small\item\em Pin definition of Steer Servo. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{actuate_8h_aea443485c3a07a0d6adc2a8e7ba46d0d}{PWM\+\_\+\+US\+\_\+\+LOW\+\_\+\+VAL}}~1000
+\begin{DoxyCompactList}\small\item\em Minimum us value that can be received. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{actuate_8h_ab628dcece5ed4be4a501e6aed6069bc4}{PWM\+\_\+\+US\+\_\+\+HIGH\+\_\+\+VAL}}~2000
+\begin{DoxyCompactList}\small\item\em Maximum us value that can be received. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A driver to drive PWM controlled modules such as the ESC and Servo. 
+
+\begin{DoxyAuthor}{Author}
+Robbe Elsermans
+\end{DoxyAuthor}
+The PWM modules will be actuated through the duration in microseconds which goes from 1000µs to 2000µs. In order to use PWM in conmination with interrupts, PWMServo.\+h is used instead of Servo.\+h. See $<$href src=\char`\"{}https\+://www.\+pjrc.\+com/teensy/td\+\_\+libs\+\_\+\+Servo.\+html\char`\"{}$>$here$<$/href$>$ why.
+
+\begin{DoxyNote}{Note}
+I\textquotesingle{}ve added a detach() function to the PWMServo.\+cpp which does the job for me because it was not implemented by default.
+\end{DoxyNote}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2025-\/04-\/10
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2025 Robbe Elsermans, All rights reserved. This project is released under the CC BY-\/\+NC-\/\+SA licence. See licence.\+txt for more information 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{actuate_8h_a0b856a0612988a0745f2c8f9692e9d14}\label{actuate_8h_a0b856a0612988a0745f2c8f9692e9d14}} 
+\index{actuate.h@{actuate.h}!PWM\_PIN\_MOTOR\_FL@{PWM\_PIN\_MOTOR\_FL}}
+\index{PWM\_PIN\_MOTOR\_FL@{PWM\_PIN\_MOTOR\_FL}!actuate.h@{actuate.h}}
+\doxysubsubsection{\texorpdfstring{PWM\_PIN\_MOTOR\_FL}{PWM\_PIN\_MOTOR\_FL}}
+{\footnotesize\ttfamily \#define PWM\+\_\+\+PIN\+\_\+\+MOTOR\+\_\+\+FL~37}
+
+
+
+Pin definition of motor Front Left. 
+
+\mbox{\Hypertarget{actuate_8h_a0f39763d1f054a78055d09756f223d30}\label{actuate_8h_a0f39763d1f054a78055d09756f223d30}} 
+\index{actuate.h@{actuate.h}!PWM\_PIN\_MOTOR\_FR@{PWM\_PIN\_MOTOR\_FR}}
+\index{PWM\_PIN\_MOTOR\_FR@{PWM\_PIN\_MOTOR\_FR}!actuate.h@{actuate.h}}
+\doxysubsubsection{\texorpdfstring{PWM\_PIN\_MOTOR\_FR}{PWM\_PIN\_MOTOR\_FR}}
+{\footnotesize\ttfamily \#define PWM\+\_\+\+PIN\+\_\+\+MOTOR\+\_\+\+FR~23}
+
+
+
+Pin definition of motor Front Right. 
+
+\mbox{\Hypertarget{actuate_8h_a6a9a89006defbb2853f2ea471c860fc6}\label{actuate_8h_a6a9a89006defbb2853f2ea471c860fc6}} 
+\index{actuate.h@{actuate.h}!PWM\_PIN\_MOTOR\_RL@{PWM\_PIN\_MOTOR\_RL}}
+\index{PWM\_PIN\_MOTOR\_RL@{PWM\_PIN\_MOTOR\_RL}!actuate.h@{actuate.h}}
+\doxysubsubsection{\texorpdfstring{PWM\_PIN\_MOTOR\_RL}{PWM\_PIN\_MOTOR\_RL}}
+{\footnotesize\ttfamily \#define PWM\+\_\+\+PIN\+\_\+\+MOTOR\+\_\+\+RL~9}
+
+
+
+Pin definition of motor Rear Left. 
+
+\mbox{\Hypertarget{actuate_8h_a72628e5830e2e3a88c197853cca54038}\label{actuate_8h_a72628e5830e2e3a88c197853cca54038}} 
+\index{actuate.h@{actuate.h}!PWM\_PIN\_MOTOR\_RR@{PWM\_PIN\_MOTOR\_RR}}
+\index{PWM\_PIN\_MOTOR\_RR@{PWM\_PIN\_MOTOR\_RR}!actuate.h@{actuate.h}}
+\doxysubsubsection{\texorpdfstring{PWM\_PIN\_MOTOR\_RR}{PWM\_PIN\_MOTOR\_RR}}
+{\footnotesize\ttfamily \#define PWM\+\_\+\+PIN\+\_\+\+MOTOR\+\_\+\+RR~33}
+
+
+
+Pin definition of motor Rear Right. 
+
+\mbox{\Hypertarget{actuate_8h_ad2804eef656f5f0016deb403ae12bc12}\label{actuate_8h_ad2804eef656f5f0016deb403ae12bc12}} 
+\index{actuate.h@{actuate.h}!PWM\_PIN\_STEER\_SERVO@{PWM\_PIN\_STEER\_SERVO}}
+\index{PWM\_PIN\_STEER\_SERVO@{PWM\_PIN\_STEER\_SERVO}!actuate.h@{actuate.h}}
+\doxysubsubsection{\texorpdfstring{PWM\_PIN\_STEER\_SERVO}{PWM\_PIN\_STEER\_SERVO}}
+{\footnotesize\ttfamily \#define PWM\+\_\+\+PIN\+\_\+\+STEER\+\_\+\+SERVO~22}
+
+
+
+Pin definition of Steer Servo. 
+
+\mbox{\Hypertarget{actuate_8h_ab628dcece5ed4be4a501e6aed6069bc4}\label{actuate_8h_ab628dcece5ed4be4a501e6aed6069bc4}} 
+\index{actuate.h@{actuate.h}!PWM\_US\_HIGH\_VAL@{PWM\_US\_HIGH\_VAL}}
+\index{PWM\_US\_HIGH\_VAL@{PWM\_US\_HIGH\_VAL}!actuate.h@{actuate.h}}
+\doxysubsubsection{\texorpdfstring{PWM\_US\_HIGH\_VAL}{PWM\_US\_HIGH\_VAL}}
+{\footnotesize\ttfamily \#define PWM\+\_\+\+US\+\_\+\+HIGH\+\_\+\+VAL~2000}
+
+
+
+Maximum us value that can be received. 
+
+\mbox{\Hypertarget{actuate_8h_aea443485c3a07a0d6adc2a8e7ba46d0d}\label{actuate_8h_aea443485c3a07a0d6adc2a8e7ba46d0d}} 
+\index{actuate.h@{actuate.h}!PWM\_US\_LOW\_VAL@{PWM\_US\_LOW\_VAL}}
+\index{PWM\_US\_LOW\_VAL@{PWM\_US\_LOW\_VAL}!actuate.h@{actuate.h}}
+\doxysubsubsection{\texorpdfstring{PWM\_US\_LOW\_VAL}{PWM\_US\_LOW\_VAL}}
+{\footnotesize\ttfamily \#define PWM\+\_\+\+US\+\_\+\+LOW\+\_\+\+VAL~1000}
+
+
+
+Minimum us value that can be received. 
+

@@ -1,0 +1,9 @@
+Manufacturer=Vishay
+PartNumber=TZMC3V3-GS08
+PartCategory=Zener Diode
+PackageCategory=Other
+PinCount=2
+Version=2.4
+Released=2019-10-14 16:05:50
+Downloaded=2025-01-27 18:39:24
+3D=N

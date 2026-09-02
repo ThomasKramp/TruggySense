@@ -1,0 +1,137 @@
+******************************************************************
+*
+* 		TDK Electronics
+* 		PPD Business Group
+* 		A-8530 Deutschlandsberg
+* 		Siemensstraße 43
+*
+*		Andreas Lesch
+*       	PPD CMRD INT
+*		Tel  +43 (0) 676 8226 4991
+*		Email andreas.lesch@tdk.com
+*
+*
+******************************************************************
+* Please read the hints in "Readme.txt".
+******************************************************************
+*
+*
+******************************************************************
+************************ preliminary *****************************
+******************************************************************
+*
+* Library TVS.sub
+* Version 1.2 ( 02. February 2023)
+*
+*
+*
+******************************************************************
+* Library for Linear Technologies LTspice
+*
+******************************************************************
+*
+*
+*
+.model idealD D(Is=1e-14 N=0.1 Rs=0.001 )
+*
+.model snapback1SW SW(Ron=0.001 Roff=1e6 Von=11.6 Voff=11.4)
+.model Before_snapback D(Is=5e-17 N=9.1 Rs=17 )
+.model mainIV D(Is=5.6e-16 N=1.82 Rs=0.43 )
+.model sbcmSW SW(Ron=0.001 Roff=180 Von=11.8 Voff=0)
+.model cmSW SW(Ron=0.001 Roff=11 Von=10.95 Voff=0)
+.model mainIV2 D(Is=4.49e-15 N=3.62 Rs=0.27 )
+*
+.model snapback1SW_GP101 SW(Ron=0.001 Roff=1e6 Von=4 Voff=3.9)
+.model Before_snapback_GP101 D(Is=5e-16 N=9.1 Rs=1000 )
+.model mainIV_GP101 D(Is=2.6e-16 N=6.5 Rs=0.09 )
+.model cmSW_GP101 SW(Ron=0.001 Roff=11 Von=3.5 Voff=0)
+*
+*
+*
+*
+.SUBCKT SD01005SL_GP101 A1 A2 PARAMS: L1v=0.24n C1v=5p R1v=0.55
+L1 A1 N005 {L1v}
+C1 N005 N007 {C1v}
+R1 N007 A2 {R1v}
+R2 N005 A2 1e7
+D1 N005 Positive idealD
+E1 N009 A2 Positive A2 1
+V1 Snap_A Snap_B 7
+D3 A2 Snap_B idealD
+C2 snap_c A2 1p
+R3 snap_c A2 1e6
+D4 Test N011 idealD
+V2 N011 N015 100
+R4 N015 A2 50
+D5 N013 Test idealD
+R5 N013 A2 50
+R6 Snap_C_LP snap_c 4
+C3 Snap_C_LP A2 1p
+S1 V3 Positive Snap_C_LP A2 snapback1SW_GP101
+F1 A2 Test V3 -0.9
+R7 A2 Test 1e100
+R8 A2 Positive 1e100
+R9 Snap_A N009 1K
+D6 N018 A2 mainIV_GP101
+R10 A2 Snap_B 1e100
+R11 A2 snap_c 1e100
+V3 B V3 0
+R12 Test snap_c 1000
+D12 Positive A2 Before_snapback_GP101
+G2 A2 snap_c A2 Snap_B -1
+F3 A2 N021 V8 +1
+R17 N021 A2 1e100
+V8 B N017 0
+S3 N018 N017 CM_C A2 cmSW_GP101
+V9 CM_C N021 1.37
+C5 N021 A2 30n
+D9 N021 N023 idealD
+D10 P001 N021 idealD
+R18 N025 A2 50
+R19 P001 A2 50
+V10 N023 N025 100
+R21 N021 A2 1e6
+D2 Negative N005 idealD
+D13 A2 Negative Before_snapback_GP101
+E3 N010 A2 Negative A2 -1
+V11 Snap_A_N Snap_B_N 7
+D14 A2 Snap_B_N idealD
+C7 snap_c_N A2 1p
+R25 snap_c_N A2 1e6
+D15 N008 N012 idealD
+V12 N012 N016 100
+R26 N016 A2 50
+D16 N014 N008 idealD
+R27 N014 A2 50
+R28 Snap_C_LP_N snap_c_N 4
+C8 Snap_C_LP_N A2 1p
+S4 V3_N Negative Snap_C_LP_N A2 snapback1SW_GP101
+F4 A2 N008 V13 +0.9
+R29 A2 N008 1e100
+R30 A2 Negative 1e100
+R31 Snap_A_N N010 1K
+D17 A2 N020 mainIV_GP101
+R32 A2 Snap_B_N 1e100
+R33 A2 snap_c_N 1e100
+V13 B_N V3_N 0
+R34 N008 snap_c_N 1000
+G1 A2 snap_c_N A2 Snap_B_N -1
+F6 A2 N022 V16 -1
+R38 N022 A2 1e100
+V16 B_N N019 0
+S6 N020 N019 CM_C_N A2 cmSW_GP101
+V17 CM_C_N N022 1.37
+C10 N022 A2 30n
+D20 N022 N024 idealD
+D21 P002 N022 idealD
+R39 N026 A2 50
+R40 P002 A2 50
+V19 N024 N026 100
+R42 N022 A2 1e6
+.ic v(snap_c_N)=0
+.ic v(snap_c)=0
+.ENDS
+*
+*
+*
+*

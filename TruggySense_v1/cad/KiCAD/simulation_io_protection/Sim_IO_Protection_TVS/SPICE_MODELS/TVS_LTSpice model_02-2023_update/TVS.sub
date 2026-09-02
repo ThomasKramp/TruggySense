@@ -1,0 +1,963 @@
+******************************************************************
+*
+* 		TDK Electronics
+* 		PPD Business Group
+* 		A-8530 Deutschlandsberg
+* 		Siemensstraﬂe 43
+*
+*		Andreas Lesch
+*       	PPD CMRD INT
+*		Tel  +43 (0) 676 8226 4991
+*		Email andreas.lesch@tdk.com
+*
+*
+******************************************************************
+* Please read the hints in "Readme.txt".
+******************************************************************
+*
+*
+******************************************************************
+************************ preliminary *****************************
+******************************************************************
+*
+* Library TVS.sub
+* Version 1.2 ( 02. February 2023)
+*
+*
+*
+******************************************************************
+* Library for Linear Technologies LTspice
+*
+******************************************************************
+*
+*
+*
+.model idealD D(Is=1e-14 N=0.1 Rs=0.001 )
+*
+.model snapback1SW SW(Ron=0.001 Roff=1e6 Von=11.6 Voff=11.4)
+.model Before_snapback D(Is=5e-17 N=9.1 Rs=17 )
+.model mainIV D(Is=5.6e-16 N=1.82 Rs=0.43 )
+.model sbcmSW SW(Ron=0.001 Roff=180 Von=11.8 Voff=0)
+.model cmSW SW(Ron=0.001 Roff=11 Von=10.95 Voff=0)
+.model mainIV2 D(Is=4.49e-15 N=3.62 Rs=0.27 )
+*
+.model snapback1SW_ULC101 SW(Ron=0.001 Roff=1e6 Von=11.6 Voff=11.4)
+.model Before_snapback_ULC101 D(Is=5e-17 N=9.1 Rs=17 )
+.model mainIV_ULC101 D(Is=5.6e-16 N=1.82 Rs=0.43 )
+.model sbcmSW_ULC101 SW(Ron=0.001 Roff=180 Von=11.8 Voff=0)
+.model cmSW_ULC101 SW(Ron=0.001 Roff=11 Von=10.95 Voff=0)
+.model mainIV2_ULC101 D(Is=4.49e-15 N=3.62 Rs=0.27 )
+*
+.model snapback1SW_ULC102 SW(Ron=0.001 Roff=1e6 Von=4.8 Voff=4.6)
+.model Before_snapback_ULC102 D(Is=1.5e-20 N=9.1 Rs=72)
+.model mainIV_ULC102 D(Is=2.6e-16 N=1.82 Rs=0.43)
+.model sbcmSW_ULC102 SW(Ron=0.001 Roff=318 Von=11.8 Voff=0)
+.model cmSW_ULC102 SW(Ron=0.001 Roff=11 Von=10.95 Voff=0)
+.model mainIV2_ULC102 D(Is=4.49e-15 N=3.62 Rs=0.27)
+*
+.model snapback1SW_ULC103 SW(Ron=0.001 Roff=1e6 Von=4.9 Voff=4.7)
+.model Before_snapback_ULC103 D(Is=1.5e-20 N=5.9 Rs=70 )
+.model mainIV_ULC103 D(Is=2.6e-16 N=1.8 Rs=0.73 )
+.model sbcmSW_ULC103 SW(Ron=0.001 Roff=350 Von=10.8 Voff=0)
+.model cmSW_ULC103 SW(Ron=0.001 Roff=11 Von=11.95 Voff=0)
+.model mainIV2_ULC103 D(Is=4.49e-15 N=3.82 Rs=0.46 )
+*
+.model snapback1SW_GP101 SW(Ron=0.001 Roff=1e6 Von=4 Voff=3.9)
+.model Before_snapback_GP101 D(Is=5e-16 N=9.1 Rs=1000 )
+.model mainIV_GP101 D(Is=2.6e-16 N=6.5 Rs=0.09 )
+.model cmSW_GP101 SW(Ron=0.001 Roff=11 Von=3.5 Voff=0)
+*
+.model snapback1SW_GP103 SW(Ron=0.001 Roff=1e6 Von=4 Voff=3.9)
+.model Before_snapback_GP103 D(Is=1e-16 N=10 Rs=3200 )
+.model mainIV_GP103 D(Is=1e-16 N=21.2 Rs=0.29 )
+.model cmSW_GP103 SW(Ron=0.001 Roff=11 Von=3.5 Voff=0)
+*
+.model mainIV_GP104 D(Is=6e-17 N=23.7 Rs=0.42 )
+.model cmSW_GP104 SW(Ron=0.001 Roff=1.2 Von=5.3 Voff=0)
+.model FESW_GP104 SW(Ron=0.001 Roff=50 Von=11.3 Voff=0)
+*
+*
+*
+*
+.SUBCKT SD0201SL_ULC101 A1 A2 PARAMS: L1v=0.32n C1v=0.65p R1v=25 C4v=700p
+L1 A1 N005 {L1v}
+C1 N005 N007 {C1v}
+R1 N007 A2 {R1v}
+R2 N005 A2 1e7
+D1 N005 Positive idealD
+E1 N011 A2 Positive A2 1
+V1 Snap_A Snap_B 7.8
+D3 A2 Snap_B idealD
+C2 snap_c A2 155p
+R3 snap_c A2 1e6
+D4 N009 N013 idealD
+V2 N013 N017 100
+R4 N017 A2 50
+D5 N015 N009 idealD
+R5 N015 A2 50
+R6 Snap_C_LP snap_c 11
+C3 Snap_C_LP A2 24p
+S1 V3 Positive Snap_C_LP A2 snapback1SW_ULC101
+F1 A2 N009 V3 -1
+R7 A2 N009 1e100
+R8 A2 Positive 1e100
+R9 Snap_A N011 1K
+D6 N025 A2 mainIV_ULC101
+R10 A2 Snap_B 1e100
+R11 A2 snap_c 1e100
+V3 B V3 0
+R12 N009 snap_c 1000
+D12 Positive A2 Before_snapback_ULC101
+G2 A2 snap_c A2 Snap_B -1
+F2 A2 N028 V5 +1
+R14 N028 A2 1e100
+V5 B N022 0
+S2 N023 N022 SBCM_C A2 sbcmSW_ULC101
+V6 SBCM_C N028 2.65
+C4 N028 A2 {C4v}
+D7 N028 N034 idealD
+D8 N031 N028 idealD
+R15 N038 A2 50
+R16 N031 A2 50
+F3 A2 N029 V8 +1
+R17 N029 A2 1e100
+V8 N023 N024 0
+S3 N025 N024 CM_C A2 cmSW_ULC101
+V9 CM_C N029 3.1
+C5 N029 A2 30000p
+D9 N029 N035 idealD
+D10 P001 N029 idealD
+R18 N039 A2 50
+R19 P001 A2 50
+D11 N025 A2 mainIV2_ULC101
+V7 N034 N038 100
+V10 N035 N039 100
+R20 N028 A2 1e6
+R21 N029 A2 1e6
+D2 Negative N005 idealD
+D13 A2 Negative Before_snapback_ULC101
+E3 N010 A2 Negative A2 -1
+V11 Snap_A_N Snap_B_N 7.8
+D14 A2 Snap_B_N idealD
+C7 snap_c_N A2 155p
+R25 snap_c_N A2 1e6
+D15 N008 N012 idealD
+V12 N012 N016 100
+R26 N016 A2 50
+D16 N014 N008 idealD
+R27 N014 A2 50
+R28 Snap_C_LP_N snap_c_N 11
+C8 Snap_C_LP_N A2 24p
+S4 V3_N Negative Snap_C_LP_N A2 snapback1SW_ULC101
+F4 A2 N008 V13 +1
+R29 A2 N008 1e100
+R30 A2 Negative 1e100
+R31 Snap_A_N N010 1K
+D17 A2 N021 mainIV_ULC101
+R32 A2 Snap_B_N 1e100
+R33 A2 snap_c_N 1e100
+V13 B_N V3_N 0
+R34 N008 snap_c_N 1000
+G1 A2 snap_c_N A2 Snap_B_N -1
+F5 A2 N026 V14 -1
+R35 N026 A2 1e100
+V14 B_N N018 0
+S5 N019 N018 SBCM_C_N A2 sbcmSW_ULC101
+V15 SBCM_C_N N026 2.65
+C9 N026 A2 700p
+D18 N026 N032 idealD
+D19 N030 N026 idealD
+R36 N036 A2 50
+R37 N030 A2 50
+F6 A2 N027 V16 -1
+R38 N027 A2 1e100
+V16 N019 N020 0
+S6 N021 N020 CM_C_N A2 cmSW_ULC101
+V17 CM_C_N N027 3.1
+C10 N027 A2 30000p
+D20 N027 N033 idealD
+D21 P002 N027 idealD
+R39 N037 A2 50
+R40 P002 A2 50
+D22 A2 N021 mainIV2_ULC101
+V18 N032 N036 100
+V19 N033 N037 100
+R41 N026 A2 1e6
+R42 N027 A2 1e6
+.ic v(snap_c_N)=0
+.ic v(snap_c)=0
+.ENDS
+*
+*
+*
+*
+.SUBCKT SD01005SL_ULC101 A1 A2 PARAMS: L1v=0.33n C1v=0.48p R1v=20.1 C4v=650p
+L1 A1 N005 {L1v}
+C1 N005 N007 {C1v}
+R1 N007 A2 {R1v}
+R2 N005 A2 1e7
+D1 N005 Positive idealD
+E1 N011 A2 Positive A2 1
+V1 Snap_A Snap_B 7.8
+D3 A2 Snap_B idealD
+C2 snap_c A2 155p
+R3 snap_c A2 1e6
+D4 N009 N013 idealD
+V2 N013 N017 100
+R4 N017 A2 50
+D5 N015 N009 idealD
+R5 N015 A2 50
+R6 Snap_C_LP snap_c 11
+C3 Snap_C_LP A2 24p
+S1 V3 Positive Snap_C_LP A2 snapback1SW_ULC101
+F1 A2 N009 V3 -1
+R7 A2 N009 1e100
+R8 A2 Positive 1e100
+R9 Snap_A N011 1K
+D6 N025 A2 mainIV_ULC101
+R10 A2 Snap_B 1e100
+R11 A2 snap_c 1e100
+V3 B V3 0
+R12 N009 snap_c 1000
+D12 Positive A2 Before_snapback_ULC101
+G2 A2 snap_c A2 Snap_B -1
+F2 A2 N028 V5 +1
+R14 N028 A2 1e100
+V5 B N022 0
+S2 N023 N022 SBCM_C A2 sbcmSW_ULC101
+V6 SBCM_C N028 2.65
+C4 N028 A2 {C4v}
+D7 N028 N034 idealD
+D8 N031 N028 idealD
+R15 N038 A2 50
+R16 N031 A2 50
+F3 A2 N029 V8 +1
+R17 N029 A2 1e100
+V8 N023 N024 0
+S3 N025 N024 CM_C A2 cmSW_ULC101
+V9 CM_C N029 3.1
+C5 N029 A2 30000p
+D9 N029 N035 idealD
+D10 P001 N029 idealD
+R18 N039 A2 50
+R19 P001 A2 50
+D11 N025 A2 mainIV2_ULC101
+V7 N034 N038 100
+V10 N035 N039 100
+R20 N028 A2 1e6
+R21 N029 A2 1e6
+D2 Negative N005 idealD
+D13 A2 Negative Before_snapback_ULC101
+E3 N010 A2 Negative A2 -1
+V11 Snap_A_N Snap_B_N 7.8
+D14 A2 Snap_B_N idealD
+C7 snap_c_N A2 155p
+R25 snap_c_N A2 1e6
+D15 N008 N012 idealD
+V12 N012 N016 100
+R26 N016 A2 50
+D16 N014 N008 idealD
+R27 N014 A2 50
+R28 Snap_C_LP_N snap_c_N 11
+C8 Snap_C_LP_N A2 24p
+S4 V3_N Negative Snap_C_LP_N A2 snapback1SW_ULC101
+F4 A2 N008 V13 +1
+R29 A2 N008 1e100
+R30 A2 Negative 1e100
+R31 Snap_A_N N010 1K
+D17 A2 N021 mainIV_ULC101
+R32 A2 Snap_B_N 1e100
+R33 A2 snap_c_N 1e100
+V13 B_N V3_N 0
+R34 N008 snap_c_N 1000
+G1 A2 snap_c_N A2 Snap_B_N -1
+F5 A2 N026 V14 -1
+R35 N026 A2 1e100
+V14 B_N N018 0
+S5 N019 N018 SBCM_C_N A2 sbcmSW_ULC101
+V15 SBCM_C_N N026 2.65
+C9 N026 A2 700p
+D18 N026 N032 idealD
+D19 N030 N026 idealD
+R36 N036 A2 50
+R37 N030 A2 50
+F6 A2 N027 V16 -1
+R38 N027 A2 1e100
+V16 N019 N020 0
+S6 N021 N020 CM_C_N A2 cmSW_ULC101
+V17 CM_C_N N027 3.1
+C10 N027 A2 30000p
+D20 N027 N033 idealD
+D21 P002 N027 idealD
+R39 N037 A2 50
+R40 P002 A2 50
+D22 A2 N021 mainIV2_ULC101
+V18 N032 N036 100
+V19 N033 N037 100
+R41 N026 A2 1e6
+R42 N027 A2 1e6
+.ic v(snap_c_N)=0
+.ic v(snap_c)=0
+.ENDS
+*
+*
+*
+*
+.SUBCKT SD0201SL_ULC102 A1 A2 PARAMS: L1v=0.38n C1v=0.55p R1v=24.2
+L1 A1 N005 {L1v}
+C1 N005 N007 {C1v}
+R1 N007 A2 {R1v}
+R2 N005 A2 1e7
+D1 N005 Positive idealD
+E1 N010 A2 Positive A2 1
+V1 Snap_A Snap_B 10.9
+D3 A2 Snap_B idealD
+C2 snap_c A2 55p
+R3 snap_c A2 1e6
+D4 Test N012 idealD
+V2 N012 N016 100
+R4 N016 A2 50
+D5 N014 Test idealD
+R5 N014 A2 50
+R6 Snap_C_LP snap_c 11
+C3 Snap_C_LP A2 10p
+S1 V3 Positive Snap_C_LP A2 snapback1SW_ULC102
+F1 A2 Test V3 -1.2
+R7 A2 Test 1e100
+R8 A2 Positive 1e100
+R9 Snap_A N010 1K
+D6 N024 A2 mainIV_ULC102
+R10 A2 Snap_B 1e100
+R11 A2 snap_c 1e100
+V3 B V3 0
+R12 Test snap_c 1000
+D12 Positive A2 Before_snapback_ULC102
+G2 A2 snap_c A2 Snap_B -1
+F2 A2 N027 V5 +1
+R14 N027 A2 1e100
+V5 B N021 0
+S2 N022 N021 SBCM_C A2 sbcmSW_ULC102
+V6 SBCM_C N027 2.6
+C4 N027 A2 700p
+D7 N027 N033 idealD
+D8 N030 N027 idealD
+R15 N037 A2 50
+R16 N030 A2 50
+F3 A2 N028 V8 +1
+R17 N028 A2 1e100
+V8 N022 N023 0
+S3 N024 N023 CM_C A2 cmSW_ULC102
+V9 CM_C N028 3.1
+C5 N028 A2 30n
+D9 N028 N034 idealD
+D10 P001 N028 idealD
+R18 N038 A2 50
+R19 P001 A2 50
+D11 N024 A2 mainIV2_ULC102
+V7 N033 N037 100
+V10 N034 N038 100
+R20 N027 A2 1e6
+R21 N028 A2 1e6
+D2 Negative N005 idealD
+D13 A2 Negative Before_snapback_ULC102
+E3 N009 A2 Negative A2 -1
+V11 Snap_A_N Snap_B_N 10.9
+D14 A2 Snap_B_N idealD
+C7 snap_c_N A2 55p
+R25 snap_c_N A2 1e6
+D15 N008 N011 idealD
+V12 N011 N015 100
+R26 N015 A2 50
+D16 N013 N008 idealD
+R27 N013 A2 50
+R28 Snap_C_LP_N snap_c_N 11
+C8 Snap_C_LP_N A2 10p
+S4 V3_N Negative Snap_C_LP_N A2 snapback1SW_ULC102
+F4 A2 N008 V13 +1.2
+R29 A2 N008 1e100
+R30 A2 Negative 1e100
+R31 Snap_A_N N009 1K
+D17 A2 N020 mainIV_ULC102
+R32 A2 Snap_B_N 1e100
+R33 A2 snap_c_N 1e100
+V13 B_N V3_N 0
+R34 N008 snap_c_N 1000
+G1 A2 snap_c_N A2 Snap_B_N -1
+F5 A2 N025 V14 -1
+R35 N025 A2 1e100
+V14 B_N N017 0
+S5 N018 N017 SBCM_C_N A2 sbcmSW_ULC102
+V15 SBCM_C_N N025 2.65
+C9 N025 A2 700p
+D18 N025 N031 idealD
+D19 N029 N025 idealD
+R36 N035 A2 50
+R37 N029 A2 50
+F6 A2 N026 V16 -1
+R38 N026 A2 1e100
+V16 N018 N019 0
+S6 N020 N019 CM_C_N A2 cmSW_ULC102
+V17 CM_C_N N026 3.1
+C10 N026 A2 30n
+D20 N026 N032 idealD
+D21 P002 N026 idealD
+R39 N036 A2 50
+R40 P002 A2 50
+D22 A2 N020 mainIV2_ULC102
+V18 N031 N035 100
+V19 N032 N036 100
+R41 N025 A2 1e6
+R42 N026 A2 1e6
+.ic v(snap_c_N)=0
+.ic v(snap_c)=0
+.ENDS
+*
+*
+*
+*
+.SUBCKT SD01005SL_ULC102 A1 A2 PARAMS: L1v=0.4n C1v=0.45p R1v=22.3
+L1 A1 N005 {L1v}
+C1 N005 N007 {C1v}
+R1 N007 A2 {R1v}
+R2 N005 A2 1e7
+D1 N005 Positive idealD
+E1 N010 A2 Positive A2 1
+V1 Snap_A Snap_B 10.9
+D3 A2 Snap_B idealD
+C2 snap_c A2 55p
+R3 snap_c A2 1e6
+D4 Test N012 idealD
+V2 N012 N016 100
+R4 N016 A2 50
+D5 N014 Test idealD
+R5 N014 A2 50
+R6 Snap_C_LP snap_c 11
+C3 Snap_C_LP A2 10p
+S1 V3 Positive Snap_C_LP A2 snapback1SW_ULC102
+F1 A2 Test V3 -1.2
+R7 A2 Test 1e100
+R8 A2 Positive 1e100
+R9 Snap_A N010 1K
+D6 N024 A2 mainIV_ULC102
+R10 A2 Snap_B 1e100
+R11 A2 snap_c 1e100
+V3 B V3 0
+R12 Test snap_c 1000
+D12 Positive A2 Before_snapback_ULC102
+G2 A2 snap_c A2 Snap_B -1
+F2 A2 N027 V5 +1
+R14 N027 A2 1e100
+V5 B N021 0
+S2 N022 N021 SBCM_C A2 sbcmSW_ULC102
+V6 SBCM_C N027 2.6
+C4 N027 A2 700p
+D7 N027 N033 idealD
+D8 N030 N027 idealD
+R15 N037 A2 50
+R16 N030 A2 50
+F3 A2 N028 V8 +1
+R17 N028 A2 1e100
+V8 N022 N023 0
+S3 N024 N023 CM_C A2 cmSW_ULC102
+V9 CM_C N028 3.1
+C5 N028 A2 30n
+D9 N028 N034 idealD
+D10 P001 N028 idealD
+R18 N038 A2 50
+R19 P001 A2 50
+D11 N024 A2 mainIV2_ULC102
+V7 N033 N037 100
+V10 N034 N038 100
+R20 N027 A2 1e6
+R21 N028 A2 1e6
+D2 Negative N005 idealD
+D13 A2 Negative Before_snapback_ULC102
+E3 N009 A2 Negative A2 -1
+V11 Snap_A_N Snap_B_N 10.9
+D14 A2 Snap_B_N idealD
+C7 snap_c_N A2 55p
+R25 snap_c_N A2 1e6
+D15 N008 N011 idealD
+V12 N011 N015 100
+R26 N015 A2 50
+D16 N013 N008 idealD
+R27 N013 A2 50
+R28 Snap_C_LP_N snap_c_N 11
+C8 Snap_C_LP_N A2 10p
+S4 V3_N Negative Snap_C_LP_N A2 snapback1SW_ULC102
+F4 A2 N008 V13 +1.2
+R29 A2 N008 1e100
+R30 A2 Negative 1e100
+R31 Snap_A_N N009 1K
+D17 A2 N020 mainIV_ULC102
+R32 A2 Snap_B_N 1e100
+R33 A2 snap_c_N 1e100
+V13 B_N V3_N 0
+R34 N008 snap_c_N 1000
+G1 A2 snap_c_N A2 Snap_B_N -1
+F5 A2 N025 V14 -1
+R35 N025 A2 1e100
+V14 B_N N017 0
+S5 N018 N017 SBCM_C_N A2 sbcmSW_ULC102
+V15 SBCM_C_N N025 2.65
+C9 N025 A2 700p
+D18 N025 N031 idealD
+D19 N029 N025 idealD
+R36 N035 A2 50
+R37 N029 A2 50
+F6 A2 N026 V16 -1
+R38 N026 A2 1e100
+V16 N018 N019 0
+S6 N020 N019 CM_C_N A2 cmSW_ULC102
+V17 CM_C_N N026 3.1
+C10 N026 A2 30n
+D20 N026 N032 idealD
+D21 P002 N026 idealD
+R39 N036 A2 50
+R40 P002 A2 50
+D22 A2 N020 mainIV2_ULC102
+V18 N031 N035 100
+V19 N032 N036 100
+R41 N025 A2 1e6
+R42 N026 A2 1e6
+.ic v(snap_c_N)=0
+.ic v(snap_c)=0
+.ENDS
+*
+*
+*
+*
+.SUBCKT SD0201SL_ULC103 A1 A2 PARAMS: L1v=0.27n C1v=0.3p R1v=27
+L1 A1 N005 {L1v}
+C1 N005 N007 {C1v}
+R1 N007 A2 {R1v}
+R2 N005 A2 1e7
+D1 N005 Positive idealD
+E1 N010 A2 Positive A2 1
+V1 Snap_A Snap_B 7.4
+D3 A2 Snap_B idealD
+C2 snap_c A2 70p
+R3 snap_c A2 1e6
+D4 Test N012 idealD
+V2 N012 N016 100
+R4 N016 A2 50
+D5 N014 Test idealD
+R5 N014 A2 50
+R6 Snap_C_LP snap_c 20
+C3 Snap_C_LP A2 1p
+S1 V3 Positive Snap_C_LP A2 snapback1SW_ULC103
+F1 A2 Test V3 -1
+R7 A2 Test 1e100
+R8 A2 Positive 1e100
+R9 Snap_A N010 1K
+D6 N024 A2 mainIV_ULC103
+R10 A2 Snap_B 1e100
+R11 A2 snap_c 1e100
+V3 B V3 0
+R12 Test snap_c 1000
+D12 Positive A2 Before_snapback_ULC103
+G2 A2 snap_c A2 Snap_B -1
+F2 A2 N027 V5 +1
+R14 N027 A2 1e100
+V5 B N021 0
+S2 N022 N021 SBCM_C A2 sbcmSW_ULC103
+V6 SBCM_C N027 2.55
+C4 N027 A2 1020p
+D7 N027 N033 idealD
+D8 N030 N027 idealD
+R15 N037 A2 50
+R16 N030 A2 50
+F3 A2 N028 V8 +1
+R17 N028 A2 1e100
+V8 N022 N023 0
+S3 N024 N023 CM_C A2 cmSW_ULC103
+V9 CM_C N028 3
+C5 N028 A2 18160p
+D9 N028 N034 idealD
+D10 P001 N028 idealD
+R18 N038 A2 50
+R19 P001 A2 50
+D11 N024 A2 mainIV2_ULC103
+V7 N033 N037 100
+V10 N034 N038 100
+R20 N027 A2 1e6
+R21 N028 A2 1e6
+D2 Negative N005 idealD
+D13 A2 Negative Before_snapback_ULC103
+E3 N009 A2 Negative A2 -1
+V11 Snap_A_N Snap_B_N 10.9
+D14 A2 Snap_B_N idealD
+C7 snap_c_N A2 70p
+R25 snap_c_N A2 1e6
+D15 N008 N011 idealD
+V12 N011 N015 100
+R26 N015 A2 50
+D16 N013 N008 idealD
+R27 N013 A2 50
+R28 Snap_C_LP_N snap_c_N 20
+C8 Snap_C_LP_N A2 1p
+S4 V3_N Negative Snap_C_LP_N A2 snapback1SW_ULC103
+F4 A2 N008 V13 +1
+R29 A2 N008 1e100
+R30 A2 Negative 1e100
+R31 Snap_A_N N009 1K
+D17 A2 N020 mainIV_ULC103
+R32 A2 Snap_B_N 1e100
+R33 A2 snap_c_N 1e100
+V13 B_N V3_N 0
+R34 N008 snap_c_N 1000
+G1 A2 snap_c_N A2 Snap_B_N -1
+F5 A2 N025 V14 -1
+R35 N025 A2 1e100
+V14 B_N N017 0
+S5 N018 N017 SBCM_C_N A2 sbcmSW_ULC103
+V15 SBCM_C_N N025 2.55
+C9 N025 A2 1020p
+D18 N025 N031 idealD
+D19 N029 N025 idealD
+R36 N035 A2 50
+R37 N029 A2 50
+F6 A2 N026 V16 -1
+R38 N026 A2 1e100
+V16 N018 N019 0
+S6 N020 N019 CM_C_N A2 cmSW_ULC103
+V17 CM_C_N N026 3
+C10 N026 A2 18160p
+D20 N026 N032 idealD
+D21 P002 N026 idealD
+R39 N036 A2 50
+R40 P002 A2 50
+D22 A2 N020 mainIV2_ULC103
+V18 N031 N035 100
+V19 N032 N036 100
+R41 N025 A2 1e6
+R42 N026 A2 1e6
+.ic v(snap_c_N)=0
+.ic v(snap_c)=0
+.ENDS
+*
+*
+*
+*
+.SUBCKT SD0201SL_GP101 A1 A2 PARAMS: L1v=0.14n C1v=13p R1v=0.28
+L1 A1 N005 0.14n
+C1 N005 N007 13p
+R1 N007 A2 0.28
+R2 N005 A2 1e7
+D1 N005 Positive idealD
+E1 N009 A2 Positive A2 1
+V1 Snap_A Snap_B 7
+D3 A2 Snap_B idealD
+C2 snap_c A2 1p
+R3 snap_c A2 1e6
+D4 Test N011 idealD
+V2 N011 N015 100
+R4 N015 A2 50
+D5 N013 Test idealD
+R5 N013 A2 50
+R6 Snap_C_LP snap_c 4
+C3 Snap_C_LP A2 1p
+S1 V3 Positive Snap_C_LP A2 snapback1SW_GP101
+F1 A2 Test V3 -0.9
+R7 A2 Test 1e100
+R8 A2 Positive 1e100
+R9 Snap_A N009 1K
+D6 N018 A2 mainIV_GP101
+R10 A2 Snap_B 1e100
+R11 A2 snap_c 1e100
+V3 B V3 0
+R12 Test snap_c 1000
+D12 Positive A2 Before_snapback_GP101
+G2 A2 snap_c A2 Snap_B -1
+F3 A2 N021 V8 +1
+R17 N021 A2 1e100
+V8 B N017 0
+S3 N018 N017 CM_C A2 cmSW_GP101
+V9 CM_C N021 1.37
+C5 N021 A2 30n
+D9 N021 N023 idealD
+D10 P001 N021 idealD
+R18 N025 A2 50
+R19 P001 A2 50
+V10 N023 N025 100
+R21 N021 A2 1e6
+D2 Negative N005 idealD
+D13 A2 Negative Before_snapback_GP101
+E3 N010 A2 Negative A2 -1
+V11 Snap_A_N Snap_B_N 7
+D14 A2 Snap_B_N idealD
+C7 snap_c_N A2 1p
+R25 snap_c_N A2 1e6
+D15 N008 N012 idealD
+V12 N012 N016 100
+R26 N016 A2 50
+D16 N014 N008 idealD
+R27 N014 A2 50
+R28 Snap_C_LP_N snap_c_N 4
+C8 Snap_C_LP_N A2 1p
+S4 V3_N Negative Snap_C_LP_N A2 snapback1SW_GP101
+F4 A2 N008 V13 +0.9
+R29 A2 N008 1e100
+R30 A2 Negative 1e100
+R31 Snap_A_N N010 1K
+D17 A2 N020 mainIV_GP101
+R32 A2 Snap_B_N 1e100
+R33 A2 snap_c_N 1e100
+V13 B_N V3_N 0
+R34 N008 snap_c_N 1000
+G1 A2 snap_c_N A2 Snap_B_N -1
+F6 A2 N022 V16 -1
+R38 N022 A2 1e100
+V16 B_N N019 0
+S6 N020 N019 CM_C_N A2 cmSW_GP101
+V17 CM_C_N N022 1.37
+C10 N022 A2 30n
+D20 N022 N024 idealD
+D21 P002 N022 idealD
+R39 N026 A2 50
+R40 P002 A2 50
+V19 N024 N026 100
+R42 N022 A2 1e6
+.ic v(snap_c_N)=0
+.ic v(snap_c)=0
+.ENDS
+*
+*
+*
+*
+.SUBCKT SD01005SL_GP101 A1 A2 PARAMS: L1v=0.24n C1v=5p R1v=0.55
+L1 A1 N005 {L1v}
+C1 N005 N007 {C1v}
+R1 N007 A2 {R1v}
+R2 N005 A2 1e7
+D1 N005 Positive idealD
+E1 N009 A2 Positive A2 1
+V1 Snap_A Snap_B 7
+D3 A2 Snap_B idealD
+C2 snap_c A2 1p
+R3 snap_c A2 1e6
+D4 Test N011 idealD
+V2 N011 N015 100
+R4 N015 A2 50
+D5 N013 Test idealD
+R5 N013 A2 50
+R6 Snap_C_LP snap_c 4
+C3 Snap_C_LP A2 1p
+S1 V3 Positive Snap_C_LP A2 snapback1SW_GP101
+F1 A2 Test V3 -0.9
+R7 A2 Test 1e100
+R8 A2 Positive 1e100
+R9 Snap_A N009 1K
+D6 N018 A2 mainIV_GP101
+R10 A2 Snap_B 1e100
+R11 A2 snap_c 1e100
+V3 B V3 0
+R12 Test snap_c 1000
+D12 Positive A2 Before_snapback_GP101
+G2 A2 snap_c A2 Snap_B -1
+F3 A2 N021 V8 +1
+R17 N021 A2 1e100
+V8 B N017 0
+S3 N018 N017 CM_C A2 cmSW_GP101
+V9 CM_C N021 1.37
+C5 N021 A2 30n
+D9 N021 N023 idealD
+D10 P001 N021 idealD
+R18 N025 A2 50
+R19 P001 A2 50
+V10 N023 N025 100
+R21 N021 A2 1e6
+D2 Negative N005 idealD
+D13 A2 Negative Before_snapback_GP101
+E3 N010 A2 Negative A2 -1
+V11 Snap_A_N Snap_B_N 7
+D14 A2 Snap_B_N idealD
+C7 snap_c_N A2 1p
+R25 snap_c_N A2 1e6
+D15 N008 N012 idealD
+V12 N012 N016 100
+R26 N016 A2 50
+D16 N014 N008 idealD
+R27 N014 A2 50
+R28 Snap_C_LP_N snap_c_N 4
+C8 Snap_C_LP_N A2 1p
+S4 V3_N Negative Snap_C_LP_N A2 snapback1SW_GP101
+F4 A2 N008 V13 +0.9
+R29 A2 N008 1e100
+R30 A2 Negative 1e100
+R31 Snap_A_N N010 1K
+D17 A2 N020 mainIV_GP101
+R32 A2 Snap_B_N 1e100
+R33 A2 snap_c_N 1e100
+V13 B_N V3_N 0
+R34 N008 snap_c_N 1000
+G1 A2 snap_c_N A2 Snap_B_N -1
+F6 A2 N022 V16 -1
+R38 N022 A2 1e100
+V16 B_N N019 0
+S6 N020 N019 CM_C_N A2 cmSW_GP101
+V17 CM_C_N N022 1.37
+C10 N022 A2 30n
+D20 N022 N024 idealD
+D21 P002 N022 idealD
+R39 N026 A2 50
+R40 P002 A2 50
+V19 N024 N026 100
+R42 N022 A2 1e6
+.ic v(snap_c_N)=0
+.ic v(snap_c)=0
+.ENDS
+*
+*
+*
+*
+.SUBCKT SD0201SL_GP103 A1 A2 PARAMS: L1v=0.27n C1v=9p R1v=0.28
+L1 A1 N005 {L1v}
+C1 N005 N007 {C1v}
+R1 N007 A2 {R1v}
+R2 N005 A2 1e7
+D1 N005 Positive idealD
+E1 N009 A2 Positive A2 1
+V1 Snap_A Snap_B 22
+D3 A2 Snap_B idealD
+C2 snap_c A2 1p
+R3 snap_c A2 1e6
+D4 Test N011 idealD
+V2 N011 N015 100
+R4 N015 A2 50
+D5 N013 Test idealD
+R5 N013 A2 50
+R6 Snap_C_LP snap_c 4
+C3 Snap_C_LP A2 2p
+S1 V3 Positive Snap_C_LP A2 snapback1SW_GP103
+F1 A2 Test V3 -0.9
+R7 A2 Test 1e100
+R8 A2 Positive 1e100
+R9 Snap_A N009 1K
+D6 N018 A2 mainIV_GP103
+R10 A2 Snap_B 1e100
+R11 A2 snap_c 1e100
+V3 B V3 0
+R12 Test snap_c 1000
+D12 Positive A2 Before_snapback_GP103
+G2 A2 snap_c A2 Snap_B -1
+F3 A2 N021 V8 +1
+R17 N021 A2 1e100
+V8 B N017 0
+S3 N018 N017 CM_C A2 cmSW_GP103
+V9 CM_C N021 1.37
+C5 N021 A2 30n
+D9 N021 N023 idealD
+D10 P001 N021 idealD
+R18 N025 A2 50
+R19 P001 A2 50
+V10 N023 N025 100
+R21 N021 A2 1e6
+D2 Negative N005 idealD
+D13 A2 Negative Before_snapback_GP103
+E3 N010 A2 Negative A2 -1
+V11 Snap_A_N Snap_B_N 7
+D14 A2 Snap_B_N idealD
+C7 snap_c_N A2 1p
+R25 snap_c_N A2 1e6
+D15 N008 N012 idealD
+V12 N012 N016 100
+R26 N016 A2 50
+D16 N014 N008 idealD
+R27 N014 A2 50
+R28 Snap_C_LP_N snap_c_N 4
+C8 Snap_C_LP_N A2 2p
+S4 V3_N Negative Snap_C_LP_N A2 snapback1SW_GP103
+F4 A2 N008 V13 +0.9
+R29 A2 N008 1e100
+R30 A2 Negative 1e100
+R31 Snap_A_N N010 1K
+D17 A2 N020 mainIV_GP103
+R32 A2 Snap_B_N 1e100
+R33 A2 snap_c_N 1e100
+V13 B_N V3_N 0
+R34 N008 snap_c_N 1000
+G1 A2 snap_c_N A2 Snap_B_N -1
+F6 A2 N022 V16 -1
+R38 N022 A2 1e100
+V16 B_N N019 0
+S6 N020 N019 CM_C_N A2 cmSW_GP103
+V17 CM_C_N N022 1.37
+C10 N022 A2 30n
+D20 N022 N024 idealD
+D21 P002 N022 idealD
+R39 N026 A2 50
+R40 P002 A2 50
+V19 N024 N026 100
+R42 N022 A2 1e6
+.ic v(snap_c_N)=0
+.ic v(snap_c)=0
+.ENDS
+*
+*
+*
+*
+.SUBCKT SD0201SL_GP104 A1 A2 PARAMS: L1v=0.27n C1v=5.5p R1v=0.54
+L1 A1 N005 {L1v}
+C1 N005 N007 {C1v}
+R1 N007 A2 {R1v}
+R2 N005 A2 1e7
+D1 N005 Positive idealD
+D6 N011 A2 mainIV_GP104
+F3 A2 N017 V8 +1
+R17 N017 A2 1e100
+V8 N009 N010 0
+S3 N011 N010 CM_C A2 cmSW_GP104
+V9 CM_C N017 1.33
+C5 N017 A2 27n
+D9 N017 N021 idealD
+D10 P001 N017 idealD
+R18 N025 A2 50
+R19 P001 A2 50
+V10 N021 N025 100
+R21 N017 A2 1e6
+D2 Negative N005 idealD
+D17 A2 N015 mainIV_GP104
+F6 A2 N019 V16 -1
+R38 N019 A2 1e100
+V16 N013 N014 0
+S6 N015 N014 CM_C_N A2 cmSW_GP104
+V17 CM_C_N N019 1.33
+C10 N019 A2 27n
+D20 N019 N023 idealD
+D21 P002 N019 idealD
+R39 N027 A2 50
+R40 P002 A2 50
+V19 N023 N027 100
+R42 N019 A2 1e6
+F1 A2 N016 V8 +1
+R3 N016 A2 1e100
+V1 Positive N008 0
+S1 N009 N008 FE_C A2 FESW_GP104
+V2 FE_C N016 3.62
+C2 N016 A2 1n
+D4 N016 N020 idealD
+D5 P003 N016 idealD
+R4 N024 A2 50
+R5 P003 A2 50
+V3 N020 N024 100
+R6 N016 A2 1e6
+F2 A2 N018 V16 -1
+R7 N018 A2 1e100
+V5 Negative N012 0
+S2 N013 N012 FE_C_N A2 FESW_GP104
+V6 FE_C_N N018 3.62
+C3 N018 A2 1n
+D7 N018 N022 idealD
+D8 P004 N018 idealD
+R8 N026 A2 50
+R9 P004 A2 50
+V7 N022 N026 100
+R10 N018 A2 1e6
+.ic v(snap_c_N)=0
+.ic v(snap_c)=0
+.ENDS
+*
+*
+*
+*

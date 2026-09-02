@@ -1,0 +1,19 @@
+var searchData=
+[
+  ['latitude_0',['latitude',['../structlocalization.html#a450b2715016953f0b64c50a7026aff92',1,'localization::latitude()'],['../structlogging__data.html#a2edde3ffb101fce4a783bc0abe25ed15',1,'logging_data::latitude()']]],
+  ['led_5f1_1',['led_1',['../structled__control.html#adc3a3b8b2d535d68e2b1ae3368778dce',1,'led_control']]],
+  ['led_5f2_2',['led_2',['../structled__control.html#a7894ed0397f5c05dde5dcb78af069751',1,'led_control']]],
+  ['led_5f3_3',['led_3',['../structled__control.html#ad3dd6f4dc544b8415885e0b3e8fe25f7',1,'led_control']]],
+  ['led_5fcontrol_4',['led_control',['../structled__control.html',1,'']]],
+  ['led_5fcontrol_5ft_5',['led_control_t',['../tasks_8h.html#a6fe5c7d9a4143ad23c15eeaf2c5a102b',1,'tasks.h']]],
+  ['llc_6',['llc',['../classCurrentMeasure.html#ab0fbc2c517c55632c04527522334e8b4aee6a4d082c7c0cd43bd1f6aec65ae0ae',1,'CurrentMeasure::llc()'],['../classTemperature.html#af7441a7bcbc69bbc36f98dbe1080d3d0a020d34252410779795b582f396791fc5',1,'Temperature::llc()'],['../classVoltageMeasure.html#a543420e2be7494b1c26e65f37aad35fbaef06283dc637d25f70af4fbe372f4c97',1,'VoltageMeasure::llc()']]],
+  ['llc_5favailability_7',['LLC_AVAILABILITY',['../temperature_8h.html#a1dd0e7b43e684fe89f602e33e2a4490c',1,'temperature.h']]],
+  ['localization_8',['localization',['../structlocalization.html',1,'']]],
+  ['localization_5ft_9',['localization_t',['../tasks_8h.html#a1f1e0df1db69086db03bea01467fb441',1,'tasks.h']]],
+  ['log_5fdata_10',['log_data',['../tasks_8cpp.html#a0862a47e151fdfeb0d689dde0c9748a3',1,'tasks.cpp']]],
+  ['logdata_11',['logData',['../classSDLogger.html#a337861f9bc3d644848c4fc4965e9a712',1,'SDLogger']]],
+  ['logging_5fdata_12',['logging_data',['../structlogging__data.html',1,'']]],
+  ['logging_5fdata_5ft_13',['logging_data_t',['../sd__logger_8h.html#ae50b5f5c5e57fd05e9e83da805bfe4e6',1,'sd_logger.h']]],
+  ['longitude_14',['longitude',['../structlocalization.html#abbb0d0b830f39452a51f02725c08705d',1,'localization::longitude()'],['../structlogging__data.html#ab846a69316c26d150ac230e15d677917',1,'logging_data::longitude()']]],
+  ['loop_15',['loop',['../main_8cpp.html#afe461d27b9c48d5921c00d521181f12f',1,'main.cpp']]]
+];

@@ -1,0 +1,8 @@
+digraph "movement"
+{
+ // INTERACTIVE_SVG=YES
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="{movement\n|+ float roll\l+ float pitch\l+ float yaw\l+ float w\l+ float i\l+ float j\l+ float k\l|}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="datastruct of IMU measurement data"];
+}

@@ -1,0 +1,3 @@
+<map id="Temperature" name="Temperature">
+<area shape="rect" id="node1" title="Class that will initialize, check if the sensor exists and read the value from the sensor." alt="" coords="5,5,244,127"/>
+</map>

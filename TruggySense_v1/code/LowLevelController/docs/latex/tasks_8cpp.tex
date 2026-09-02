@@ -1,0 +1,431 @@
+\hypertarget{tasks_8cpp}{}\doxysection{src/tasks.cpp File Reference}
+\label{tasks_8cpp}\index{src/tasks.cpp@{src/tasks.cpp}}
+{\ttfamily \#include \char`\"{}tasks.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$Arduino.\+h$>$}\newline
+{\ttfamily \#include $<$Timer\+Interrupt\+\_\+\+Generic.\+h$>$}\newline
+{\ttfamily \#include $<$ISR\+\_\+\+Timer\+\_\+\+Generic.\+h$>$}\newline
+Include dependency graph for tasks.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{tasks_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+Teensy\+Timer \mbox{\hyperlink{tasks_8cpp_ae102263c37a081ee2f8e3bbc48cb5d12}{global\+\_\+timer}} (TEENSY\+\_\+\+TIMER\+\_\+1)
+\item 
+uint8\+\_\+t \mbox{\hyperlink{tasks_8cpp_a13270f8d6bed5b53849d28bcf93ca468}{initialize\+Tasks}} ()
+\begin{DoxyCompactList}\small\item\em Initialization of all tasks. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{tasks_8cpp_a98cb7e9df95903c2b0a32ad446ec2ae8}{task\+Read\+Gps}} ()
+\begin{DoxyCompactList}\small\item\em Task that can read the GPS module and store its data in localization\+\_\+t struct. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{tasks_8cpp_a7c26549615e853118dd0558393f56fc1}{task\+Read\+Ibus}} ()
+\begin{DoxyCompactList}\small\item\em Task that can read the radio receiver and stores it in radio\+\_\+t struct. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{tasks_8cpp_ac72eb5e1cdbf849f60b2c3ea11333c85}{task\+Read\+Encoder}} ()
+\begin{DoxyCompactList}\small\item\em Task that calculates the vehicles wheel \& motor speed in RPM and stores it in encoder\+\_\+t. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{tasks_8cpp_a35ed32c99741706f5903957eebd93a92}{task\+Read\+Temperature}} ()
+\begin{DoxyCompactList}\small\item\em Task that will read the temperatures. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{tasks_8cpp_a1f6696da8071e5a9956caed0b892b6ce}{task\+Read\+VAndI}} ()
+\begin{DoxyCompactList}\small\item\em Task that will read the ADC of both voltage and currents that are currently present and stores it in voltage\+\_\+t and current\+\_\+t. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{tasks_8cpp_a2b5717148d8004b6b7f8ee7e182a2c01}{task\+Actuate}} ()
+\begin{DoxyCompactList}\small\item\em Task that actuates PWM actuators such as the ESCs and servo based on the vehicle\+\_\+actuation\+\_\+t struct data. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{tasks_8cpp_aadd98f4c13e5da3a900fa3342023f4d3}{task\+Read\+IMU}} ()
+\begin{DoxyCompactList}\small\item\em Task that reads the 9-\/axis \mbox{\hyperlink{classIMU}{IMU}} and store its data in movement\+\_\+t struct. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{tasks_8cpp_af30f2fc173d77001cb45558437c552fb}{task\+Log}} ()
+\begin{DoxyCompactList}\small\item\em Task to log loggings into the \mbox{\hyperlink{structlogging__data}{logging\+\_\+data}} struct. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{tasks_8cpp_a5591a493a42241bbcc3102c4052bb2fa}{task\+Save\+Log}} ()
+\begin{DoxyCompactList}\small\item\em Task to log loggings onto an SD-\/card. Will use \mbox{\hyperlink{structlogging__data}{logging\+\_\+data}} struct ad datastructure. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{tasks_8cpp_a636ca644c11cea39cfd1ca471421bf82}{task\+Write\+Base\+Station}} ()
+\begin{DoxyCompactList}\small\item\em Task to write received data to the base station. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{tasks_8cpp_a8a46c8115424cbd24d15befbd76f9cd1}{task\+Safety}} ()
+\begin{DoxyCompactList}\small\item\em Task that controls the safety of the vehicle. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{tasks_8cpp_ab7e413c4737e4bcb00d84c7a57c7e663}{sys\+Tick}} ()
+\begin{DoxyCompactList}\small\item\em Task that handles the tick counter used to enable the tasks scedules or trigger moments. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+ISR\+\_\+\+Timer \mbox{\hyperlink{tasks_8cpp_a2251e267a59ddf9bd99e31675f53d70e}{task\+\_\+isr\+\_\+timer}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{tasks_8cpp_a461f979a5226b7874daa571f655cec5a}{tasks\+\_\+initialized}} = 0
+\item 
+\mbox{\hyperlink{classIBUS}{IBUS}} \mbox{\hyperlink{tasks_8cpp_a3e11e1e12180f36a6ed6f9d1634c10d7}{x6b\+\_\+receiver}}
+\item 
+\mbox{\hyperlink{tasks_8h_a335a4a47333f47fdac2b568f35eccf15}{radio\+\_\+t}} \mbox{\hyperlink{tasks_8cpp_a06e33aaeca474d747692adcd4871ea27}{radio\+\_\+data}}
+\item 
+\mbox{\hyperlink{classEncoder}{Encoder}} \mbox{\hyperlink{tasks_8cpp_a3fd47c493314fbec06181872bacfc712}{wheel\+\_\+encoder}}
+\item 
+\mbox{\hyperlink{tasks_8h_ad22b2bbeb7072a55405fdae105e52afe}{encoder\+\_\+t}} \mbox{\hyperlink{tasks_8cpp_a0febd7a717cd7da4044d29515010b451}{encoder\+\_\+data}}
+\item 
+\mbox{\hyperlink{classTemperature}{Temperature}} \mbox{\hyperlink{tasks_8cpp_a84c76b4b31078f2eb868808dbf2ee0d3}{temperature}}
+\item 
+\mbox{\hyperlink{tasks_8h_a77ac062b2f0d5b68b2755dc75fe485ef}{temperature\+\_\+t}} \mbox{\hyperlink{tasks_8cpp_afa04f91a9a6a331858d5bef6640234df}{temperature\+\_\+data}}
+\item 
+\mbox{\hyperlink{classActuate}{Actuate}} \mbox{\hyperlink{tasks_8cpp_a4878771f0e6448b7673451691625e37f}{vehicle\+\_\+actuate}}
+\item 
+\mbox{\hyperlink{tasks_8h_a7943deaf15076dfa8246240c76534c30}{vehicle\+\_\+actuation\+\_\+t}} \mbox{\hyperlink{tasks_8cpp_a4107d6d25a21290c6ef198e8c4ed7680}{vehicle\+\_\+actuation\+\_\+data}}
+\item 
+\mbox{\hyperlink{classVoltageMeasure}{Voltage\+Measure}} \mbox{\hyperlink{tasks_8cpp_a0641e71cd3c41faad2f604c432a4b50e}{voltage\+Measure}}
+\item 
+\mbox{\hyperlink{classCurrentMeasure}{Current\+Measure}} \mbox{\hyperlink{tasks_8cpp_a367aab7c236b3397483ddceabb9b70d7}{current\+Measure}}
+\item 
+\mbox{\hyperlink{tasks_8h_a837df7fd446ddc6aaec3479784092005}{voltage\+\_\+t}} \mbox{\hyperlink{tasks_8cpp_a1006ccd2fbb4b3bd769fa0a687f74b19}{voltage\+\_\+data}}
+\item 
+\mbox{\hyperlink{tasks_8h_a9225579bfc855f23a78d188a67ce7841}{current\+\_\+t}} \mbox{\hyperlink{tasks_8cpp_a0da0aada14aefd11eca73cb441926400}{current\+\_\+data}}
+\item 
+\mbox{\hyperlink{classIMU}{IMU}} \mbox{\hyperlink{tasks_8cpp_a047a89b0208974c18d5c49656240616a}{imu}}
+\item 
+\mbox{\hyperlink{tasks_8h_a3308c488c239017ba56b061a578e58c8}{movement\+\_\+t}} \mbox{\hyperlink{tasks_8cpp_ac9e2f083f4bba03a0a5d08ff63f26463}{movement\+\_\+data}}
+\item 
+\mbox{\hyperlink{classSDLogger}{SDLogger}} \mbox{\hyperlink{tasks_8cpp_ae046f3914fad1d72c645cd6232d42ce9}{sd\+\_\+logger}}
+\item 
+\mbox{\hyperlink{sd__logger_8h_ae50b5f5c5e57fd05e9e83da805bfe4e6}{logging\+\_\+data\+\_\+t}} \mbox{\hyperlink{tasks_8cpp_a0862a47e151fdfeb0d689dde0c9748a3}{log\+\_\+data}}
+\item 
+volatile uint8\+\_\+t \mbox{\hyperlink{tasks_8cpp_a0d91a9319f73fd6c7a11f5bc4db72651}{new\+Write\+File}} = true
+\item 
+\mbox{\hyperlink{tasks_8h_a1f1e0df1db69086db03bea01467fb441}{localization\+\_\+t}} \mbox{\hyperlink{tasks_8cpp_a4172f5fd9675186566d15da33a4d712c}{gps\+\_\+data}}
+\item 
+\mbox{\hyperlink{classGPSDriver}{GPSDriver}} \mbox{\hyperlink{tasks_8cpp_a2c76a0da4f49a41f8cdf34ce480ef577}{gps}}
+\item 
+\mbox{\hyperlink{classBaseStation}{Base\+Station}} \mbox{\hyperlink{tasks_8cpp_a71c7ed9c5a4e50908dd0b83a70742f6a}{base\+Station}}
+\item 
+volatile uint8\+\_\+t \mbox{\hyperlink{tasks_8cpp_aa33f014cb40162a7eb0c10a6afa47a7d}{dead\+\_\+switch}}
+\item 
+volatile uint8\+\_\+t \mbox{\hyperlink{tasks_8cpp_ab23a308049af28756e1416b79a9599d7}{error}}
+\item 
+volatile uint8\+\_\+t \mbox{\hyperlink{tasks_8cpp_a5ff17fd12be72c1fd65b331c5eb42c5a}{sd\+\_\+error}}
+\item 
+volatile uint8\+\_\+t \mbox{\hyperlink{tasks_8cpp_ac528d33f610076eaba9bb85156b145c2}{bs\+\_\+error}}
+\item 
+volatile uint8\+\_\+t \mbox{\hyperlink{tasks_8cpp_a3b3d9400886481aee7578c2c2aef11c6}{imu\+\_\+error}}
+\item 
+volatile uint8\+\_\+t \mbox{\hyperlink{tasks_8cpp_a63785213dc6909acac6da1cd42371c38}{gps\+\_\+error}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{tasks_8cpp_ae102263c37a081ee2f8e3bbc48cb5d12}\label{tasks_8cpp_ae102263c37a081ee2f8e3bbc48cb5d12}} 
+\index{tasks.cpp@{tasks.cpp}!global\_timer@{global\_timer}}
+\index{global\_timer@{global\_timer}!tasks.cpp@{tasks.cpp}}
+\doxysubsubsection{\texorpdfstring{global\_timer()}{global\_timer()}}
+{\footnotesize\ttfamily Teensy\+Timer global\+\_\+timer (\begin{DoxyParamCaption}\item[{TEENSY\+\_\+\+TIMER\+\_\+1}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{tasks_8cpp_a13270f8d6bed5b53849d28bcf93ca468}\label{tasks_8cpp_a13270f8d6bed5b53849d28bcf93ca468}} 
+\index{tasks.cpp@{tasks.cpp}!initializeTasks@{initializeTasks}}
+\index{initializeTasks@{initializeTasks}!tasks.cpp@{tasks.cpp}}
+\doxysubsubsection{\texorpdfstring{initializeTasks()}{initializeTasks()}}
+{\footnotesize\ttfamily uint8\+\_\+t initialize\+Tasks (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Initialization of all tasks. 
+
+If a certain module doesn\textquotesingle{}t despond such as the n\+RF, SD-\/card, \mbox{\hyperlink{classIMU}{IMU}}, and GPS, it will disable these tasks at teh very start. Nevertheless, this initializer will then throw 0 because a failure has happend.
+
+\begin{DoxyReturn}{Returns}
+uint8\+\_\+t 1 if success or 0 if failure 
+\end{DoxyReturn}
+\mbox{\Hypertarget{tasks_8cpp_ab7e413c4737e4bcb00d84c7a57c7e663}\label{tasks_8cpp_ab7e413c4737e4bcb00d84c7a57c7e663}} 
+\index{tasks.cpp@{tasks.cpp}!sysTick@{sysTick}}
+\index{sysTick@{sysTick}!tasks.cpp@{tasks.cpp}}
+\doxysubsubsection{\texorpdfstring{sysTick()}{sysTick()}}
+{\footnotesize\ttfamily void sys\+Tick (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Task that handles the tick counter used to enable the tasks scedules or trigger moments. 
+
+\mbox{\Hypertarget{tasks_8cpp_a2b5717148d8004b6b7f8ee7e182a2c01}\label{tasks_8cpp_a2b5717148d8004b6b7f8ee7e182a2c01}} 
+\index{tasks.cpp@{tasks.cpp}!taskActuate@{taskActuate}}
+\index{taskActuate@{taskActuate}!tasks.cpp@{tasks.cpp}}
+\doxysubsubsection{\texorpdfstring{taskActuate()}{taskActuate()}}
+{\footnotesize\ttfamily void task\+Actuate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Task that actuates PWM actuators such as the ESCs and servo based on the vehicle\+\_\+actuation\+\_\+t struct data. 
+
+\mbox{\Hypertarget{tasks_8cpp_af30f2fc173d77001cb45558437c552fb}\label{tasks_8cpp_af30f2fc173d77001cb45558437c552fb}} 
+\index{tasks.cpp@{tasks.cpp}!taskLog@{taskLog}}
+\index{taskLog@{taskLog}!tasks.cpp@{tasks.cpp}}
+\doxysubsubsection{\texorpdfstring{taskLog()}{taskLog()}}
+{\footnotesize\ttfamily void task\+Log (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Task to log loggings into the \mbox{\hyperlink{structlogging__data}{logging\+\_\+data}} struct. 
+
+\begin{DoxyNote}{Note}
+Data structure used here is defined in \mbox{\hyperlink{sd__logger_8h}{sd\+\_\+logger.\+h}}. 
+\end{DoxyNote}
+\mbox{\Hypertarget{tasks_8cpp_ac72eb5e1cdbf849f60b2c3ea11333c85}\label{tasks_8cpp_ac72eb5e1cdbf849f60b2c3ea11333c85}} 
+\index{tasks.cpp@{tasks.cpp}!taskReadEncoder@{taskReadEncoder}}
+\index{taskReadEncoder@{taskReadEncoder}!tasks.cpp@{tasks.cpp}}
+\doxysubsubsection{\texorpdfstring{taskReadEncoder()}{taskReadEncoder()}}
+{\footnotesize\ttfamily void task\+Read\+Encoder (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Task that calculates the vehicles wheel \& motor speed in RPM and stores it in encoder\+\_\+t. 
+
+\mbox{\Hypertarget{tasks_8cpp_a98cb7e9df95903c2b0a32ad446ec2ae8}\label{tasks_8cpp_a98cb7e9df95903c2b0a32ad446ec2ae8}} 
+\index{tasks.cpp@{tasks.cpp}!taskReadGps@{taskReadGps}}
+\index{taskReadGps@{taskReadGps}!tasks.cpp@{tasks.cpp}}
+\doxysubsubsection{\texorpdfstring{taskReadGps()}{taskReadGps()}}
+{\footnotesize\ttfamily void task\+Read\+Gps (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Task that can read the GPS module and store its data in localization\+\_\+t struct. 
+
+\mbox{\Hypertarget{tasks_8cpp_a7c26549615e853118dd0558393f56fc1}\label{tasks_8cpp_a7c26549615e853118dd0558393f56fc1}} 
+\index{tasks.cpp@{tasks.cpp}!taskReadIbus@{taskReadIbus}}
+\index{taskReadIbus@{taskReadIbus}!tasks.cpp@{tasks.cpp}}
+\doxysubsubsection{\texorpdfstring{taskReadIbus()}{taskReadIbus()}}
+{\footnotesize\ttfamily void task\+Read\+Ibus (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Task that can read the radio receiver and stores it in radio\+\_\+t struct. 
+
+\mbox{\Hypertarget{tasks_8cpp_aadd98f4c13e5da3a900fa3342023f4d3}\label{tasks_8cpp_aadd98f4c13e5da3a900fa3342023f4d3}} 
+\index{tasks.cpp@{tasks.cpp}!taskReadIMU@{taskReadIMU}}
+\index{taskReadIMU@{taskReadIMU}!tasks.cpp@{tasks.cpp}}
+\doxysubsubsection{\texorpdfstring{taskReadIMU()}{taskReadIMU()}}
+{\footnotesize\ttfamily void task\+Read\+IMU (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Task that reads the 9-\/axis \mbox{\hyperlink{classIMU}{IMU}} and store its data in movement\+\_\+t struct. 
+
+\mbox{\Hypertarget{tasks_8cpp_a35ed32c99741706f5903957eebd93a92}\label{tasks_8cpp_a35ed32c99741706f5903957eebd93a92}} 
+\index{tasks.cpp@{tasks.cpp}!taskReadTemperature@{taskReadTemperature}}
+\index{taskReadTemperature@{taskReadTemperature}!tasks.cpp@{tasks.cpp}}
+\doxysubsubsection{\texorpdfstring{taskReadTemperature()}{taskReadTemperature()}}
+{\footnotesize\ttfamily void task\+Read\+Temperature (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Task that will read the temperatures. 
+
+Task that will read the temperatures of the pheripherals and environments. This includes the DS18\+B20+ sensors (One\+Wire) as well as the Teensy internal temperature sensor. It will store the sensed values to the struct temperature\+\_\+t \mbox{\Hypertarget{tasks_8cpp_a1f6696da8071e5a9956caed0b892b6ce}\label{tasks_8cpp_a1f6696da8071e5a9956caed0b892b6ce}} 
+\index{tasks.cpp@{tasks.cpp}!taskReadVAndI@{taskReadVAndI}}
+\index{taskReadVAndI@{taskReadVAndI}!tasks.cpp@{tasks.cpp}}
+\doxysubsubsection{\texorpdfstring{taskReadVAndI()}{taskReadVAndI()}}
+{\footnotesize\ttfamily void task\+Read\+VAndI (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Task that will read the ADC of both voltage and currents that are currently present and stores it in voltage\+\_\+t and current\+\_\+t. 
+
+\mbox{\Hypertarget{tasks_8cpp_a8a46c8115424cbd24d15befbd76f9cd1}\label{tasks_8cpp_a8a46c8115424cbd24d15befbd76f9cd1}} 
+\index{tasks.cpp@{tasks.cpp}!taskSafety@{taskSafety}}
+\index{taskSafety@{taskSafety}!tasks.cpp@{tasks.cpp}}
+\doxysubsubsection{\texorpdfstring{taskSafety()}{taskSafety()}}
+{\footnotesize\ttfamily void task\+Safety (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Task that controls the safety of the vehicle. 
+
+\mbox{\Hypertarget{tasks_8cpp_a5591a493a42241bbcc3102c4052bb2fa}\label{tasks_8cpp_a5591a493a42241bbcc3102c4052bb2fa}} 
+\index{tasks.cpp@{tasks.cpp}!taskSaveLog@{taskSaveLog}}
+\index{taskSaveLog@{taskSaveLog}!tasks.cpp@{tasks.cpp}}
+\doxysubsubsection{\texorpdfstring{taskSaveLog()}{taskSaveLog()}}
+{\footnotesize\ttfamily void task\+Save\+Log (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Task to log loggings onto an SD-\/card. Will use \mbox{\hyperlink{structlogging__data}{logging\+\_\+data}} struct ad datastructure. 
+
+\begin{DoxyNote}{Note}
+Data structure used here is defined in \mbox{\hyperlink{sd__logger_8h}{sd\+\_\+logger.\+h}}. 
+\end{DoxyNote}
+\mbox{\Hypertarget{tasks_8cpp_a636ca644c11cea39cfd1ca471421bf82}\label{tasks_8cpp_a636ca644c11cea39cfd1ca471421bf82}} 
+\index{tasks.cpp@{tasks.cpp}!taskWriteBaseStation@{taskWriteBaseStation}}
+\index{taskWriteBaseStation@{taskWriteBaseStation}!tasks.cpp@{tasks.cpp}}
+\doxysubsubsection{\texorpdfstring{taskWriteBaseStation()}{taskWriteBaseStation()}}
+{\footnotesize\ttfamily void task\+Write\+Base\+Station (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Task to write received data to the base station. 
+
+\begin{DoxyNote}{Note}
+Data structure used here is defined in \mbox{\hyperlink{sd__logger_8h}{sd\+\_\+logger.\+h}}. 
+\end{DoxyNote}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{tasks_8cpp_a71c7ed9c5a4e50908dd0b83a70742f6a}\label{tasks_8cpp_a71c7ed9c5a4e50908dd0b83a70742f6a}} 
+\index{tasks.cpp@{tasks.cpp}!baseStation@{baseStation}}
+\index{baseStation@{baseStation}!tasks.cpp@{tasks.cpp}}
+\doxysubsubsection{\texorpdfstring{baseStation}{baseStation}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classBaseStation}{Base\+Station}} base\+Station}
+
+\mbox{\Hypertarget{tasks_8cpp_ac528d33f610076eaba9bb85156b145c2}\label{tasks_8cpp_ac528d33f610076eaba9bb85156b145c2}} 
+\index{tasks.cpp@{tasks.cpp}!bs\_error@{bs\_error}}
+\index{bs\_error@{bs\_error}!tasks.cpp@{tasks.cpp}}
+\doxysubsubsection{\texorpdfstring{bs\_error}{bs\_error}}
+{\footnotesize\ttfamily volatile uint8\+\_\+t bs\+\_\+error}
+
+\mbox{\Hypertarget{tasks_8cpp_a0da0aada14aefd11eca73cb441926400}\label{tasks_8cpp_a0da0aada14aefd11eca73cb441926400}} 
+\index{tasks.cpp@{tasks.cpp}!current\_data@{current\_data}}
+\index{current\_data@{current\_data}!tasks.cpp@{tasks.cpp}}
+\doxysubsubsection{\texorpdfstring{current\_data}{current\_data}}
+{\footnotesize\ttfamily \mbox{\hyperlink{tasks_8h_a9225579bfc855f23a78d188a67ce7841}{current\+\_\+t}} current\+\_\+data}
+
+\mbox{\Hypertarget{tasks_8cpp_a367aab7c236b3397483ddceabb9b70d7}\label{tasks_8cpp_a367aab7c236b3397483ddceabb9b70d7}} 
+\index{tasks.cpp@{tasks.cpp}!currentMeasure@{currentMeasure}}
+\index{currentMeasure@{currentMeasure}!tasks.cpp@{tasks.cpp}}
+\doxysubsubsection{\texorpdfstring{currentMeasure}{currentMeasure}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classCurrentMeasure}{Current\+Measure}} current\+Measure}
+
+\mbox{\Hypertarget{tasks_8cpp_aa33f014cb40162a7eb0c10a6afa47a7d}\label{tasks_8cpp_aa33f014cb40162a7eb0c10a6afa47a7d}} 
+\index{tasks.cpp@{tasks.cpp}!dead\_switch@{dead\_switch}}
+\index{dead\_switch@{dead\_switch}!tasks.cpp@{tasks.cpp}}
+\doxysubsubsection{\texorpdfstring{dead\_switch}{dead\_switch}}
+{\footnotesize\ttfamily volatile uint8\+\_\+t dead\+\_\+switch}
+
+Determines if the vehicle can be driven or not. \begin{DoxyNote}{Note}
+is used as start and stop signal to Save a Log onto the sd card in \mbox{\hyperlink{tasks_8h_a5591a493a42241bbcc3102c4052bb2fa}{task\+Save\+Log()}}. 
+\end{DoxyNote}
+\mbox{\Hypertarget{tasks_8cpp_a0febd7a717cd7da4044d29515010b451}\label{tasks_8cpp_a0febd7a717cd7da4044d29515010b451}} 
+\index{tasks.cpp@{tasks.cpp}!encoder\_data@{encoder\_data}}
+\index{encoder\_data@{encoder\_data}!tasks.cpp@{tasks.cpp}}
+\doxysubsubsection{\texorpdfstring{encoder\_data}{encoder\_data}}
+{\footnotesize\ttfamily \mbox{\hyperlink{tasks_8h_ad22b2bbeb7072a55405fdae105e52afe}{encoder\+\_\+t}} encoder\+\_\+data}
+
+\mbox{\Hypertarget{tasks_8cpp_ab23a308049af28756e1416b79a9599d7}\label{tasks_8cpp_ab23a308049af28756e1416b79a9599d7}} 
+\index{tasks.cpp@{tasks.cpp}!error@{error}}
+\index{error@{error}!tasks.cpp@{tasks.cpp}}
+\doxysubsubsection{\texorpdfstring{error}{error}}
+{\footnotesize\ttfamily volatile uint8\+\_\+t error}
+
+\mbox{\Hypertarget{tasks_8cpp_a2c76a0da4f49a41f8cdf34ce480ef577}\label{tasks_8cpp_a2c76a0da4f49a41f8cdf34ce480ef577}} 
+\index{tasks.cpp@{tasks.cpp}!gps@{gps}}
+\index{gps@{gps}!tasks.cpp@{tasks.cpp}}
+\doxysubsubsection{\texorpdfstring{gps}{gps}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classGPSDriver}{GPSDriver}} gps}
+
+\mbox{\Hypertarget{tasks_8cpp_a4172f5fd9675186566d15da33a4d712c}\label{tasks_8cpp_a4172f5fd9675186566d15da33a4d712c}} 
+\index{tasks.cpp@{tasks.cpp}!gps\_data@{gps\_data}}
+\index{gps\_data@{gps\_data}!tasks.cpp@{tasks.cpp}}
+\doxysubsubsection{\texorpdfstring{gps\_data}{gps\_data}}
+{\footnotesize\ttfamily \mbox{\hyperlink{tasks_8h_a1f1e0df1db69086db03bea01467fb441}{localization\+\_\+t}} gps\+\_\+data}
+
+\mbox{\Hypertarget{tasks_8cpp_a63785213dc6909acac6da1cd42371c38}\label{tasks_8cpp_a63785213dc6909acac6da1cd42371c38}} 
+\index{tasks.cpp@{tasks.cpp}!gps\_error@{gps\_error}}
+\index{gps\_error@{gps\_error}!tasks.cpp@{tasks.cpp}}
+\doxysubsubsection{\texorpdfstring{gps\_error}{gps\_error}}
+{\footnotesize\ttfamily volatile uint8\+\_\+t gps\+\_\+error}
+
+\mbox{\Hypertarget{tasks_8cpp_a047a89b0208974c18d5c49656240616a}\label{tasks_8cpp_a047a89b0208974c18d5c49656240616a}} 
+\index{tasks.cpp@{tasks.cpp}!imu@{imu}}
+\index{imu@{imu}!tasks.cpp@{tasks.cpp}}
+\doxysubsubsection{\texorpdfstring{imu}{imu}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classIMU}{IMU}} imu}
+
+\mbox{\Hypertarget{tasks_8cpp_a3b3d9400886481aee7578c2c2aef11c6}\label{tasks_8cpp_a3b3d9400886481aee7578c2c2aef11c6}} 
+\index{tasks.cpp@{tasks.cpp}!imu\_error@{imu\_error}}
+\index{imu\_error@{imu\_error}!tasks.cpp@{tasks.cpp}}
+\doxysubsubsection{\texorpdfstring{imu\_error}{imu\_error}}
+{\footnotesize\ttfamily volatile uint8\+\_\+t imu\+\_\+error}
+
+\mbox{\Hypertarget{tasks_8cpp_a0862a47e151fdfeb0d689dde0c9748a3}\label{tasks_8cpp_a0862a47e151fdfeb0d689dde0c9748a3}} 
+\index{tasks.cpp@{tasks.cpp}!log\_data@{log\_data}}
+\index{log\_data@{log\_data}!tasks.cpp@{tasks.cpp}}
+\doxysubsubsection{\texorpdfstring{log\_data}{log\_data}}
+{\footnotesize\ttfamily \mbox{\hyperlink{sd__logger_8h_ae50b5f5c5e57fd05e9e83da805bfe4e6}{logging\+\_\+data\+\_\+t}} log\+\_\+data}
+
+\mbox{\Hypertarget{tasks_8cpp_ac9e2f083f4bba03a0a5d08ff63f26463}\label{tasks_8cpp_ac9e2f083f4bba03a0a5d08ff63f26463}} 
+\index{tasks.cpp@{tasks.cpp}!movement\_data@{movement\_data}}
+\index{movement\_data@{movement\_data}!tasks.cpp@{tasks.cpp}}
+\doxysubsubsection{\texorpdfstring{movement\_data}{movement\_data}}
+{\footnotesize\ttfamily \mbox{\hyperlink{tasks_8h_a3308c488c239017ba56b061a578e58c8}{movement\+\_\+t}} movement\+\_\+data}
+
+\mbox{\Hypertarget{tasks_8cpp_a0d91a9319f73fd6c7a11f5bc4db72651}\label{tasks_8cpp_a0d91a9319f73fd6c7a11f5bc4db72651}} 
+\index{tasks.cpp@{tasks.cpp}!newWriteFile@{newWriteFile}}
+\index{newWriteFile@{newWriteFile}!tasks.cpp@{tasks.cpp}}
+\doxysubsubsection{\texorpdfstring{newWriteFile}{newWriteFile}}
+{\footnotesize\ttfamily volatile uint8\+\_\+t new\+Write\+File = true}
+
+\mbox{\Hypertarget{tasks_8cpp_a06e33aaeca474d747692adcd4871ea27}\label{tasks_8cpp_a06e33aaeca474d747692adcd4871ea27}} 
+\index{tasks.cpp@{tasks.cpp}!radio\_data@{radio\_data}}
+\index{radio\_data@{radio\_data}!tasks.cpp@{tasks.cpp}}
+\doxysubsubsection{\texorpdfstring{radio\_data}{radio\_data}}
+{\footnotesize\ttfamily \mbox{\hyperlink{tasks_8h_a335a4a47333f47fdac2b568f35eccf15}{radio\+\_\+t}} radio\+\_\+data}
+
+\mbox{\Hypertarget{tasks_8cpp_a5ff17fd12be72c1fd65b331c5eb42c5a}\label{tasks_8cpp_a5ff17fd12be72c1fd65b331c5eb42c5a}} 
+\index{tasks.cpp@{tasks.cpp}!sd\_error@{sd\_error}}
+\index{sd\_error@{sd\_error}!tasks.cpp@{tasks.cpp}}
+\doxysubsubsection{\texorpdfstring{sd\_error}{sd\_error}}
+{\footnotesize\ttfamily volatile uint8\+\_\+t sd\+\_\+error}
+
+\mbox{\Hypertarget{tasks_8cpp_ae046f3914fad1d72c645cd6232d42ce9}\label{tasks_8cpp_ae046f3914fad1d72c645cd6232d42ce9}} 
+\index{tasks.cpp@{tasks.cpp}!sd\_logger@{sd\_logger}}
+\index{sd\_logger@{sd\_logger}!tasks.cpp@{tasks.cpp}}
+\doxysubsubsection{\texorpdfstring{sd\_logger}{sd\_logger}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classSDLogger}{SDLogger}} sd\+\_\+logger}
+
+\mbox{\Hypertarget{tasks_8cpp_a2251e267a59ddf9bd99e31675f53d70e}\label{tasks_8cpp_a2251e267a59ddf9bd99e31675f53d70e}} 
+\index{tasks.cpp@{tasks.cpp}!task\_isr\_timer@{task\_isr\_timer}}
+\index{task\_isr\_timer@{task\_isr\_timer}!tasks.cpp@{tasks.cpp}}
+\doxysubsubsection{\texorpdfstring{task\_isr\_timer}{task\_isr\_timer}}
+{\footnotesize\ttfamily ISR\+\_\+\+Timer task\+\_\+isr\+\_\+timer}
+
+\mbox{\Hypertarget{tasks_8cpp_a461f979a5226b7874daa571f655cec5a}\label{tasks_8cpp_a461f979a5226b7874daa571f655cec5a}} 
+\index{tasks.cpp@{tasks.cpp}!tasks\_initialized@{tasks\_initialized}}
+\index{tasks\_initialized@{tasks\_initialized}!tasks.cpp@{tasks.cpp}}
+\doxysubsubsection{\texorpdfstring{tasks\_initialized}{tasks\_initialized}}
+{\footnotesize\ttfamily uint8\+\_\+t tasks\+\_\+initialized = 0}
+
+\mbox{\Hypertarget{tasks_8cpp_a84c76b4b31078f2eb868808dbf2ee0d3}\label{tasks_8cpp_a84c76b4b31078f2eb868808dbf2ee0d3}} 
+\index{tasks.cpp@{tasks.cpp}!temperature@{temperature}}
+\index{temperature@{temperature}!tasks.cpp@{tasks.cpp}}
+\doxysubsubsection{\texorpdfstring{temperature}{temperature}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classTemperature}{Temperature}} \mbox{\hyperlink{structtemperature}{temperature}}}
+
+\mbox{\Hypertarget{tasks_8cpp_afa04f91a9a6a331858d5bef6640234df}\label{tasks_8cpp_afa04f91a9a6a331858d5bef6640234df}} 
+\index{tasks.cpp@{tasks.cpp}!temperature\_data@{temperature\_data}}
+\index{temperature\_data@{temperature\_data}!tasks.cpp@{tasks.cpp}}
+\doxysubsubsection{\texorpdfstring{temperature\_data}{temperature\_data}}
+{\footnotesize\ttfamily \mbox{\hyperlink{tasks_8h_a77ac062b2f0d5b68b2755dc75fe485ef}{temperature\+\_\+t}} temperature\+\_\+data}
+
+\mbox{\Hypertarget{tasks_8cpp_a4878771f0e6448b7673451691625e37f}\label{tasks_8cpp_a4878771f0e6448b7673451691625e37f}} 
+\index{tasks.cpp@{tasks.cpp}!vehicle\_actuate@{vehicle\_actuate}}
+\index{vehicle\_actuate@{vehicle\_actuate}!tasks.cpp@{tasks.cpp}}
+\doxysubsubsection{\texorpdfstring{vehicle\_actuate}{vehicle\_actuate}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classActuate}{Actuate}} vehicle\+\_\+actuate}
+
+\mbox{\Hypertarget{tasks_8cpp_a4107d6d25a21290c6ef198e8c4ed7680}\label{tasks_8cpp_a4107d6d25a21290c6ef198e8c4ed7680}} 
+\index{tasks.cpp@{tasks.cpp}!vehicle\_actuation\_data@{vehicle\_actuation\_data}}
+\index{vehicle\_actuation\_data@{vehicle\_actuation\_data}!tasks.cpp@{tasks.cpp}}
+\doxysubsubsection{\texorpdfstring{vehicle\_actuation\_data}{vehicle\_actuation\_data}}
+{\footnotesize\ttfamily \mbox{\hyperlink{tasks_8h_a7943deaf15076dfa8246240c76534c30}{vehicle\+\_\+actuation\+\_\+t}} vehicle\+\_\+actuation\+\_\+data}
+
+\mbox{\Hypertarget{tasks_8cpp_a1006ccd2fbb4b3bd769fa0a687f74b19}\label{tasks_8cpp_a1006ccd2fbb4b3bd769fa0a687f74b19}} 
+\index{tasks.cpp@{tasks.cpp}!voltage\_data@{voltage\_data}}
+\index{voltage\_data@{voltage\_data}!tasks.cpp@{tasks.cpp}}
+\doxysubsubsection{\texorpdfstring{voltage\_data}{voltage\_data}}
+{\footnotesize\ttfamily \mbox{\hyperlink{tasks_8h_a837df7fd446ddc6aaec3479784092005}{voltage\+\_\+t}} voltage\+\_\+data}
+
+\mbox{\Hypertarget{tasks_8cpp_a0641e71cd3c41faad2f604c432a4b50e}\label{tasks_8cpp_a0641e71cd3c41faad2f604c432a4b50e}} 
+\index{tasks.cpp@{tasks.cpp}!voltageMeasure@{voltageMeasure}}
+\index{voltageMeasure@{voltageMeasure}!tasks.cpp@{tasks.cpp}}
+\doxysubsubsection{\texorpdfstring{voltageMeasure}{voltageMeasure}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classVoltageMeasure}{Voltage\+Measure}} voltage\+Measure}
+
+\mbox{\Hypertarget{tasks_8cpp_a3fd47c493314fbec06181872bacfc712}\label{tasks_8cpp_a3fd47c493314fbec06181872bacfc712}} 
+\index{tasks.cpp@{tasks.cpp}!wheel\_encoder@{wheel\_encoder}}
+\index{wheel\_encoder@{wheel\_encoder}!tasks.cpp@{tasks.cpp}}
+\doxysubsubsection{\texorpdfstring{wheel\_encoder}{wheel\_encoder}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classEncoder}{Encoder}} wheel\+\_\+encoder}
+
+\mbox{\Hypertarget{tasks_8cpp_a3e11e1e12180f36a6ed6f9d1634c10d7}\label{tasks_8cpp_a3e11e1e12180f36a6ed6f9d1634c10d7}} 
+\index{tasks.cpp@{tasks.cpp}!x6b\_receiver@{x6b\_receiver}}
+\index{x6b\_receiver@{x6b\_receiver}!tasks.cpp@{tasks.cpp}}
+\doxysubsubsection{\texorpdfstring{x6b\_receiver}{x6b\_receiver}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classIBUS}{IBUS}} x6b\+\_\+receiver}
+

@@ -1,0 +1,40 @@
+\hypertarget{base__station_8h_source}{}\doxysection{base\+\_\+station.\+h}
+\label{base__station_8h_source}\index{lib/base\_station\_link/base\_station.h@{lib/base\_station\_link/base\_station.h}}
+\mbox{\hyperlink{base__station_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{17 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{18 }
+\DoxyCodeLine{19 \textcolor{preprocessor}{\#include <stdint.h>}}
+\DoxyCodeLine{20 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{sd__logger_8h}{sd\_logger.h}}"{}}}
+\DoxyCodeLine{21 }
+\DoxyCodeLine{22 \textcolor{preprocessor}{\#define CE\_PIN 10 }}
+\DoxyCodeLine{23 \textcolor{preprocessor}{\#define CSN\_PIN 28 }}
+\DoxyCodeLine{29 \textcolor{keyword}{const} \textcolor{keywordtype}{byte} \mbox{\hyperlink{base__station_8h_ae71d9442720f8b13e7629f5ed46959d4}{path}}[6] = \textcolor{stringliteral}{"{}00001"{}};}
+\DoxyCodeLine{30 }
+\DoxyCodeLine{35 \textcolor{preprocessor}{\#define MAXIMUM\_TRYOUT 10}}
+\DoxyCodeLine{36 }
+\DoxyCodeLine{41 \textcolor{keyword}{constexpr} \textcolor{keywordtype}{int} \mbox{\hyperlink{base__station_8h_ad8f35edf51fa8de3e8aa19a67bfe4663}{payload\_length}} = 228;}
+\DoxyCodeLine{42 }
+\DoxyCodeLine{47 \textcolor{keyword}{constexpr} \textcolor{keywordtype}{int} \mbox{\hyperlink{base__station_8h_a5e8a19491a3ca8d0665e1b5098dfae7e}{chunks\_count}} = 10;}
+\DoxyCodeLine{48 }
+\DoxyCodeLine{55 \textcolor{keyword}{constexpr} \textcolor{keywordtype}{int} \mbox{\hyperlink{base__station_8h_a94482756937b99f5d736aff23ea5fec0}{chunk\_size}} = 30 + 1;}
+\DoxyCodeLine{56 }
+\DoxyCodeLine{57 \textcolor{keyword}{class }\mbox{\hyperlink{classBaseStation}{BaseStation}}}
+\DoxyCodeLine{58 \{}
+\DoxyCodeLine{59 \textcolor{keyword}{private}:}
+\DoxyCodeLine{64     uint8\_t tryouts;}
+\DoxyCodeLine{65 }
+\DoxyCodeLine{70     uint8\_t is\_initialized;}
+\DoxyCodeLine{71 }
+\DoxyCodeLine{76     \mbox{\hyperlink{structlogging__data}{logging\_data\_t}} payload;}
+\DoxyCodeLine{77 }
+\DoxyCodeLine{86     \textcolor{keywordtype}{void} toChunk(uint8\_t *payload, uint8\_t chunked\_payload[\mbox{\hyperlink{base__station_8h_a5e8a19491a3ca8d0665e1b5098dfae7e}{chunks\_count}}][\mbox{\hyperlink{base__station_8h_a94482756937b99f5d736aff23ea5fec0}{chunk\_size}}]);}
+\DoxyCodeLine{87 }
+\DoxyCodeLine{88 \textcolor{keyword}{public}:}
+\DoxyCodeLine{96     uint8\_t \mbox{\hyperlink{classBaseStation_aeb6acff49dfecd5054fe57562017e42a}{init}}();}
+\DoxyCodeLine{97 }
+\DoxyCodeLine{109     uint8\_t \mbox{\hyperlink{classBaseStation_a03966cdaa7454850df89b2b293f368fd}{sendData}}(\mbox{\hyperlink{structlogging__data}{logging\_data\_t}} data);}
+\DoxyCodeLine{110 \};}
+
+\end{DoxyCode}

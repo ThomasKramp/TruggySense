@@ -1,0 +1,9 @@
+Manufacturer=Vishay
+PartNumber=VSSAF5M10-M3/H
+PartCategory=Schottky Diode
+PackageCategory=Small Outline Diode Flat Lead
+PinCount=2
+Version=1.1
+Released=2024-03-06 09:01:56
+Downloaded=2025-01-29 10:42:58
+3D=Y

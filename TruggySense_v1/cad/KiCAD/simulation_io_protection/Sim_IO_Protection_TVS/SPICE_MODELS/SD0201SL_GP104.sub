@@ -1,0 +1,114 @@
+******************************************************************
+*
+* 		TDK Electronics
+* 		PPD Business Group
+* 		A-8530 Deutschlandsberg
+* 		Siemensstraße 43
+*
+*		Andreas Lesch
+*       	PPD CMRD INT
+*		Tel  +43 (0) 676 8226 4991
+*		Email andreas.lesch@tdk.com
+*
+*
+******************************************************************
+* Please read the hints in "Readme.txt".
+******************************************************************
+*
+*
+******************************************************************
+************************ preliminary *****************************
+******************************************************************
+*
+* Library TVS.sub
+* Version 1.2 ( 02. February 2023)
+*
+*
+*
+******************************************************************
+* Library for Linear Technologies LTspice
+*
+******************************************************************
+*
+*
+*
+.model idealD D(Is=1e-14 N=0.1 Rs=0.001 )
+*
+.model snapback1SW SW(Ron=0.001 Roff=1e6 Von=11.6 Voff=11.4)
+.model Before_snapback D(Is=5e-17 N=9.1 Rs=17 )
+.model mainIV D(Is=5.6e-16 N=1.82 Rs=0.43 )
+.model sbcmSW SW(Ron=0.001 Roff=180 Von=11.8 Voff=0)
+.model cmSW SW(Ron=0.001 Roff=11 Von=10.95 Voff=0)
+.model mainIV2 D(Is=4.49e-15 N=3.62 Rs=0.27 )
+*
+.model mainIV_GP104 D(Is=6e-17 N=23.7 Rs=0.42 )
+.model cmSW_GP104 SW(Ron=0.001 Roff=1.2 Von=5.3 Voff=0)
+.model FESW_GP104 SW(Ron=0.001 Roff=50 Von=11.3 Voff=0)
+*
+*
+*
+*
+.SUBCKT SD0201SL_GP104 A1 A2 PARAMS: L1v=0.27n C1v=5.5p R1v=0.54
+L1 A1 N005 {L1v}
+C1 N005 N007 {C1v}
+R1 N007 A2 {R1v}
+R2 N005 A2 1e7
+D1 N005 Positive idealD
+D6 N011 A2 mainIV_GP104
+F3 A2 N017 V8 +1
+R17 N017 A2 1e100
+V8 N009 N010 0
+S3 N011 N010 CM_C A2 cmSW_GP104
+V9 CM_C N017 1.33
+C5 N017 A2 27n
+D9 N017 N021 idealD
+D10 P001 N017 idealD
+R18 N025 A2 50
+R19 P001 A2 50
+V10 N021 N025 100
+R21 N017 A2 1e6
+D2 Negative N005 idealD
+D17 A2 N015 mainIV_GP104
+F6 A2 N019 V16 -1
+R38 N019 A2 1e100
+V16 N013 N014 0
+S6 N015 N014 CM_C_N A2 cmSW_GP104
+V17 CM_C_N N019 1.33
+C10 N019 A2 27n
+D20 N019 N023 idealD
+D21 P002 N019 idealD
+R39 N027 A2 50
+R40 P002 A2 50
+V19 N023 N027 100
+R42 N019 A2 1e6
+F1 A2 N016 V8 +1
+R3 N016 A2 1e100
+V1 Positive N008 0
+S1 N009 N008 FE_C A2 FESW_GP104
+V2 FE_C N016 3.62
+C2 N016 A2 1n
+D4 N016 N020 idealD
+D5 P003 N016 idealD
+R4 N024 A2 50
+R5 P003 A2 50
+V3 N020 N024 100
+R6 N016 A2 1e6
+F2 A2 N018 V16 -1
+R7 N018 A2 1e100
+V5 Negative N012 0
+S2 N013 N012 FE_C_N A2 FESW_GP104
+V6 FE_C_N N018 3.62
+C3 N018 A2 1n
+D7 N018 N022 idealD
+D8 P004 N018 idealD
+R8 N026 A2 50
+R9 P004 A2 50
+V7 N022 N026 100
+R10 N018 A2 1e6
+.ic v(snap_c_N)=0
+.ic v(snap_c)=0
+.ENDS
+*
+*
+*
+*

@@ -1,0 +1,18 @@
+.OPA350UA_2K5 :1 ;High-Speed, Single-Supply, Rail-to-Rail Operational Amplifiers MicroAmplifier Series
+SOIC127P600X175-8N
+*STM IC
+*NGS
+*PLB 1="NC_1" 2="-IN" 3="+IN" 4="V-" 5="NC_2" 6="OUTPUT" 7="V+" 8="NC_3"
+*MXP 8
+*DFN OPA350UA_2K5
+~!Manufacturer_Name (Texas Instruments)
+~!Manufacturer_Part_Number (OPA350UA/2K5)
+~!Mouser Part Number (595-OPA350UA/2K5)
+~!Link Mouser Price/Stock (https://www.mouser.co.uk/ProductDetail/Texas-Instruments/OPA350UA-2K5?qs=7nS3%252BbEUL6sT6%2Fm03FwKkQ%3D%3D)
+~!Arrow Part Number (OPA350UA/2K5)
+~!Link Arrow Price/Stock (https://www.arrow.com/en/products/opa350ua2k5/texas-instruments?region=nac)
+~!Link Datasheet (http://www.ti.com/lit/gpn/OPA350)
+~!Height (1.75mm)
+~!3D_Model (OPA350UA_2K5)
+OPA350UA_2K5
+1.1!U 2.1!U 3.1!U 4.1!U 8.1!U 7.1!U 6.1!U 5.1!U 

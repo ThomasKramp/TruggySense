@@ -1,0 +1,57 @@
+\hypertarget{imu_8h_source}{}\doxysection{imu.\+h}
+\label{imu_8h_source}\index{lib/IMU/imu.h@{lib/IMU/imu.h}}
+\mbox{\hyperlink{imu_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{15 \textcolor{preprocessor}{\#include <Adafruit\_BNO08x.h>}}
+\DoxyCodeLine{16 \textcolor{preprocessor}{\#include <Wire.h>}}
+\DoxyCodeLine{17 }
+\DoxyCodeLine{22 \textcolor{keyword}{struct }\mbox{\hyperlink{structeuler}{euler}}}
+\DoxyCodeLine{23 \{}
+\DoxyCodeLine{24     \textcolor{keywordtype}{float} \mbox{\hyperlink{structeuler_aeaa5ad87d4cbffef12d3c7c99a8ee9e9}{yaw}};}
+\DoxyCodeLine{25     \textcolor{keywordtype}{float} \mbox{\hyperlink{structeuler_a55daa93f65c12d03de45b4407ab324e3}{pitch}};}
+\DoxyCodeLine{26     \textcolor{keywordtype}{float} \mbox{\hyperlink{structeuler_aae7a8b632cb03a275ab3d1cade53943a}{roll}};}
+\DoxyCodeLine{27 \};}
+\DoxyCodeLine{28 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\mbox{\hyperlink{structeuler}{euler}} \mbox{\hyperlink{structeuler}{euler\_t}};}
+\DoxyCodeLine{29 }
+\DoxyCodeLine{34 \textcolor{keyword}{struct }\mbox{\hyperlink{structquaternion}{quaternion}} \textcolor{comment}{// A 4D dimention}}
+\DoxyCodeLine{35 \{}
+\DoxyCodeLine{36     \textcolor{keywordtype}{float} \mbox{\hyperlink{structquaternion_ab2b38aca1971114e0ba4218b75d7f472}{w}};}
+\DoxyCodeLine{37     \textcolor{keywordtype}{float} \mbox{\hyperlink{structquaternion_a16ede59d39415b8dbcc1fc3a08edd812}{i}};}
+\DoxyCodeLine{38     \textcolor{keywordtype}{float} \mbox{\hyperlink{structquaternion_a2d19959f12a5db39a7425831692ce0e5}{j}};}
+\DoxyCodeLine{39     \textcolor{keywordtype}{float} \mbox{\hyperlink{structquaternion_a332ff944c38d72bd92b94ccb361b4b77}{k}};}
+\DoxyCodeLine{40 \};}
+\DoxyCodeLine{41 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\mbox{\hyperlink{structquaternion}{quaternion}} \mbox{\hyperlink{structquaternion}{quaternion\_t}};}
+\DoxyCodeLine{42 }
+\DoxyCodeLine{43 \textcolor{preprocessor}{\#define BNO08X\_RESET -\/1 }\textcolor{comment}{//no reset is connected to it}}
+\DoxyCodeLine{44 }
+\DoxyCodeLine{57 \textcolor{keyword}{class }\mbox{\hyperlink{classIMU}{IMU}}}
+\DoxyCodeLine{58 \{}
+\DoxyCodeLine{59 \textcolor{keyword}{private}:}
+\DoxyCodeLine{60     \mbox{\hyperlink{structeuler}{euler\_t}} position\_euler;}
+\DoxyCodeLine{61     \mbox{\hyperlink{structquaternion}{quaternion\_t}} position\_quaternion;}
+\DoxyCodeLine{62     \textcolor{keyword}{const} sh2\_SensorId\_t report\_type = SH2\_ARVR\_STABILIZED\_RV;}
+\DoxyCodeLine{63     \textcolor{keyword}{const} \textcolor{keywordtype}{long} report\_interval\_us = 5000;}
+\DoxyCodeLine{64     sh2\_SensorValue\_t sensor\_value;}
+\DoxyCodeLine{65 }
+\DoxyCodeLine{78     \textcolor{keywordtype}{void} quaternionToEuler(\textcolor{keywordtype}{float} qr, \textcolor{keywordtype}{float} qi, \textcolor{keywordtype}{float} qj, \textcolor{keywordtype}{float} qk, \mbox{\hyperlink{structeuler}{euler\_t}} *ypr, \textcolor{keywordtype}{bool} degrees = \textcolor{keyword}{false});}
+\DoxyCodeLine{79     }
+\DoxyCodeLine{80     }
+\DoxyCodeLine{81     \textcolor{keywordtype}{void} setReports(sh2\_SensorId\_t report\_type, \textcolor{keywordtype}{long} report\_interval);}
+\DoxyCodeLine{82 }
+\DoxyCodeLine{83 \textcolor{keyword}{public}:}
+\DoxyCodeLine{84 }
+\DoxyCodeLine{89     \textcolor{keyword}{enum} \mbox{\hyperlink{classIMU_a198ebcb2f100aa3d5fb4286af9c480f0}{imu\_data}}\{}
+\DoxyCodeLine{90     \mbox{\hyperlink{classIMU_a198ebcb2f100aa3d5fb4286af9c480f0a4feeda6d15a9fdb5eb662eb589388700}{roll}}, \mbox{\hyperlink{classIMU_a198ebcb2f100aa3d5fb4286af9c480f0a27520082e6982c0423ac8e42a9cd04ce}{pitch}}, \mbox{\hyperlink{classIMU_a198ebcb2f100aa3d5fb4286af9c480f0ab47041922cefcf5cb86dcb28f654f7b9}{yaw}}, \mbox{\hyperlink{classIMU_a198ebcb2f100aa3d5fb4286af9c480f0a8cb6ddb57cd5a5b7ab7f9658990e08a9}{w}}, \mbox{\hyperlink{classIMU_a198ebcb2f100aa3d5fb4286af9c480f0ac8b29de6f09f99b09ad00ba765148d82}{i}}, \mbox{\hyperlink{classIMU_a198ebcb2f100aa3d5fb4286af9c480f0aef2a8b2637a98f5275c1b7003bafedb2}{j}}, \mbox{\hyperlink{classIMU_a198ebcb2f100aa3d5fb4286af9c480f0a36e05e7a19140b24d66f2c4752562a2a}{k}}}
+\DoxyCodeLine{91     \};}
+\DoxyCodeLine{92 }
+\DoxyCodeLine{98     uint8\_t \mbox{\hyperlink{classIMU_ac4a743aed13656f2a33d1bdf1e853969}{init}}();}
+\DoxyCodeLine{99 }
+\DoxyCodeLine{104     \textcolor{keywordtype}{void} \mbox{\hyperlink{classIMU_a7cd0fdf1253f32ed41e5942900571c4a}{computeData}}();}
+\DoxyCodeLine{105 }
+\DoxyCodeLine{112     \textcolor{keywordtype}{float} \mbox{\hyperlink{classIMU_a1f155b076a027129da15bc4aef4d0d68}{getDataBySource}}(\mbox{\hyperlink{classIMU_a198ebcb2f100aa3d5fb4286af9c480f0}{imu\_data}} data\_source);}
+\DoxyCodeLine{113 \};}
+
+\end{DoxyCode}

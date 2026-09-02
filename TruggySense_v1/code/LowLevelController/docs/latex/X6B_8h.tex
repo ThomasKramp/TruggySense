@@ -1,0 +1,228 @@
+\hypertarget{X6B_8h}{}\doxysection{lib/\+X6\+B\+\_\+lib/\+X6B.h File Reference}
+\label{X6B_8h}\index{lib/X6B\_lib/X6B.h@{lib/X6B\_lib/X6B.h}}
+
+
+containing a reversed engineerd \mbox{\hyperlink{classIBUS}{IBUS}} protocol library  
+
+
+{\ttfamily \#include \char`\"{}Arduino.\+h\char`\"{}}\newline
+Include dependency graph for X6\+B.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=180pt]{X6B_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=191pt]{X6B_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classIBUS}{IBUS}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{X6B_8h_a8efaa132168a470cf7f02c52e65a7a5e}{IBUS\+\_\+\+SERIAL}}~Serial8
+\item 
+\#define \mbox{\hyperlink{X6B_8h_a1a1040ed35f96eac51cc4bfdede7a965}{START\+\_\+\+FRAME\+\_\+\+SEQUENCE}}~0x2040
+\item 
+\#define \mbox{\hyperlink{X6B_8h_a69629b77e517daf716c92ad1f8418558}{FRAME\+\_\+\+LENGTH}}~16
+\item 
+\#define \mbox{\hyperlink{X6B_8h_a5f4714a38ff6188a898a108bbd87adfd}{INTER\+\_\+\+FRAME\+\_\+\+STOP}}~4
+\item 
+\#define \mbox{\hyperlink{X6B_8h_afea0f85f7375c630e9fb0261acd6c828}{DEAD\+\_\+\+TIME}}~20
+\item 
+\#define \mbox{\hyperlink{X6B_8h_a7ac0ffba6ed6694d963dd2bb59aaa876}{NO\+\_\+\+CRC\+\_\+\+FRAME\+\_\+\+LENGTH}}~((\mbox{\hyperlink{X6B_8h_a69629b77e517daf716c92ad1f8418558}{FRAME\+\_\+\+LENGTH}} -\/ 1) $\ast$ 2)
+\item 
+\#define \mbox{\hyperlink{X6B_8h_adf1745bef900ab9b7756ca9a524a6c37}{CH1\+\_\+\+DEFAULT\+\_\+\+VAL}}~1500
+\item 
+\#define \mbox{\hyperlink{X6B_8h_ad6f800af9d451eb3fcbccf3d1eed8b0b}{CH2\+\_\+\+DEFAULT\+\_\+\+VAL}}~1500
+\item 
+\#define \mbox{\hyperlink{X6B_8h_a3545e45c5b80e4bbc9c21f5839e28605}{CH3\+\_\+\+DEFAULT\+\_\+\+VAL}}~1000
+\item 
+\#define \mbox{\hyperlink{X6B_8h_a8232de80aeeb10246443862add4949ef}{CH4\+\_\+\+DEFAULT\+\_\+\+VAL}}~1500
+\item 
+\#define \mbox{\hyperlink{X6B_8h_a6aba7f5d7ba7bda602bead188c019567}{CH5\+\_\+\+DEFAULT\+\_\+\+VAL}}~1000
+\item 
+\#define \mbox{\hyperlink{X6B_8h_a70d7a8f0d7cc3d3d326fc80da85a6c4f}{CH6\+\_\+\+DEFAULT\+\_\+\+VAL}}~1000
+\item 
+\#define \mbox{\hyperlink{X6B_8h_a17f44d896b73fd1a5fbc01f8211974eb}{CH7\+\_\+\+DEFAULT\+\_\+\+VAL}}~1000
+\item 
+\#define \mbox{\hyperlink{X6B_8h_a7939de99f591ae150a87f2cf7480e2eb}{CH8\+\_\+\+DEFAULT\+\_\+\+VAL}}~1000
+\item 
+\#define \mbox{\hyperlink{X6B_8h_a379bef039f47bd457b034b91ea232b35}{CH9\+\_\+\+DEFAULT\+\_\+\+VAL}}~1000
+\item 
+\#define \mbox{\hyperlink{X6B_8h_aaaac6dc3a6a93c1f4d35f6c7b7308d0e}{CH10\+\_\+\+DEFAULT\+\_\+\+VAL}}~1000
+\item 
+\#define \mbox{\hyperlink{X6B_8h_a9f8446a6cba2eb912e2bc4dcc2490240}{CH11\+\_\+\+DEFAULT\+\_\+\+VAL}}~1000
+\item 
+\#define \mbox{\hyperlink{X6B_8h_a21b1c11f3a934b6f6e710fb1a53794fe}{CH12\+\_\+\+DEFAULT\+\_\+\+VAL}}~1000
+\item 
+\#define \mbox{\hyperlink{X6B_8h_a4760b23dac8c69e3b2ac43121e796955}{CH13\+\_\+\+DEFAULT\+\_\+\+VAL}}~1000
+\item 
+\#define \mbox{\hyperlink{X6B_8h_a5ceec5f672a64a0f8e082cb76601f358}{CH14\+\_\+\+DEFAULT\+\_\+\+VAL}}~1000
+\item 
+\#define \mbox{\hyperlink{X6B_8h_aa50c466475e60be69f9ea7305f2b96cc}{CH\+\_\+\+LOW\+\_\+\+MIN}}~950
+\item 
+\#define \mbox{\hyperlink{X6B_8h_a4bb5ca055d216c6df4895093a1968714}{CH\+\_\+\+HIGH\+\_\+\+MAX}}~2050
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+containing a reversed engineerd \mbox{\hyperlink{classIBUS}{IBUS}} protocol library 
+
+\begin{DoxyAuthor}{Author}
+Robbe Elsermans 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2025-\/04-\/10
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2025 Robbe Elsermans, All rights reserved. This project is released under the CC BY-\/\+NC-\/\+SA licence. See licence.\+txt for more information 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{X6B_8h_aaaac6dc3a6a93c1f4d35f6c7b7308d0e}\label{X6B_8h_aaaac6dc3a6a93c1f4d35f6c7b7308d0e}} 
+\index{X6B.h@{X6B.h}!CH10\_DEFAULT\_VAL@{CH10\_DEFAULT\_VAL}}
+\index{CH10\_DEFAULT\_VAL@{CH10\_DEFAULT\_VAL}!X6B.h@{X6B.h}}
+\doxysubsubsection{\texorpdfstring{CH10\_DEFAULT\_VAL}{CH10\_DEFAULT\_VAL}}
+{\footnotesize\ttfamily \#define CH10\+\_\+\+DEFAULT\+\_\+\+VAL~1000}
+
+\mbox{\Hypertarget{X6B_8h_a9f8446a6cba2eb912e2bc4dcc2490240}\label{X6B_8h_a9f8446a6cba2eb912e2bc4dcc2490240}} 
+\index{X6B.h@{X6B.h}!CH11\_DEFAULT\_VAL@{CH11\_DEFAULT\_VAL}}
+\index{CH11\_DEFAULT\_VAL@{CH11\_DEFAULT\_VAL}!X6B.h@{X6B.h}}
+\doxysubsubsection{\texorpdfstring{CH11\_DEFAULT\_VAL}{CH11\_DEFAULT\_VAL}}
+{\footnotesize\ttfamily \#define CH11\+\_\+\+DEFAULT\+\_\+\+VAL~1000}
+
+\mbox{\Hypertarget{X6B_8h_a21b1c11f3a934b6f6e710fb1a53794fe}\label{X6B_8h_a21b1c11f3a934b6f6e710fb1a53794fe}} 
+\index{X6B.h@{X6B.h}!CH12\_DEFAULT\_VAL@{CH12\_DEFAULT\_VAL}}
+\index{CH12\_DEFAULT\_VAL@{CH12\_DEFAULT\_VAL}!X6B.h@{X6B.h}}
+\doxysubsubsection{\texorpdfstring{CH12\_DEFAULT\_VAL}{CH12\_DEFAULT\_VAL}}
+{\footnotesize\ttfamily \#define CH12\+\_\+\+DEFAULT\+\_\+\+VAL~1000}
+
+\mbox{\Hypertarget{X6B_8h_a4760b23dac8c69e3b2ac43121e796955}\label{X6B_8h_a4760b23dac8c69e3b2ac43121e796955}} 
+\index{X6B.h@{X6B.h}!CH13\_DEFAULT\_VAL@{CH13\_DEFAULT\_VAL}}
+\index{CH13\_DEFAULT\_VAL@{CH13\_DEFAULT\_VAL}!X6B.h@{X6B.h}}
+\doxysubsubsection{\texorpdfstring{CH13\_DEFAULT\_VAL}{CH13\_DEFAULT\_VAL}}
+{\footnotesize\ttfamily \#define CH13\+\_\+\+DEFAULT\+\_\+\+VAL~1000}
+
+\mbox{\Hypertarget{X6B_8h_a5ceec5f672a64a0f8e082cb76601f358}\label{X6B_8h_a5ceec5f672a64a0f8e082cb76601f358}} 
+\index{X6B.h@{X6B.h}!CH14\_DEFAULT\_VAL@{CH14\_DEFAULT\_VAL}}
+\index{CH14\_DEFAULT\_VAL@{CH14\_DEFAULT\_VAL}!X6B.h@{X6B.h}}
+\doxysubsubsection{\texorpdfstring{CH14\_DEFAULT\_VAL}{CH14\_DEFAULT\_VAL}}
+{\footnotesize\ttfamily \#define CH14\+\_\+\+DEFAULT\+\_\+\+VAL~1000}
+
+\mbox{\Hypertarget{X6B_8h_adf1745bef900ab9b7756ca9a524a6c37}\label{X6B_8h_adf1745bef900ab9b7756ca9a524a6c37}} 
+\index{X6B.h@{X6B.h}!CH1\_DEFAULT\_VAL@{CH1\_DEFAULT\_VAL}}
+\index{CH1\_DEFAULT\_VAL@{CH1\_DEFAULT\_VAL}!X6B.h@{X6B.h}}
+\doxysubsubsection{\texorpdfstring{CH1\_DEFAULT\_VAL}{CH1\_DEFAULT\_VAL}}
+{\footnotesize\ttfamily \#define CH1\+\_\+\+DEFAULT\+\_\+\+VAL~1500}
+
+\mbox{\Hypertarget{X6B_8h_ad6f800af9d451eb3fcbccf3d1eed8b0b}\label{X6B_8h_ad6f800af9d451eb3fcbccf3d1eed8b0b}} 
+\index{X6B.h@{X6B.h}!CH2\_DEFAULT\_VAL@{CH2\_DEFAULT\_VAL}}
+\index{CH2\_DEFAULT\_VAL@{CH2\_DEFAULT\_VAL}!X6B.h@{X6B.h}}
+\doxysubsubsection{\texorpdfstring{CH2\_DEFAULT\_VAL}{CH2\_DEFAULT\_VAL}}
+{\footnotesize\ttfamily \#define CH2\+\_\+\+DEFAULT\+\_\+\+VAL~1500}
+
+\mbox{\Hypertarget{X6B_8h_a3545e45c5b80e4bbc9c21f5839e28605}\label{X6B_8h_a3545e45c5b80e4bbc9c21f5839e28605}} 
+\index{X6B.h@{X6B.h}!CH3\_DEFAULT\_VAL@{CH3\_DEFAULT\_VAL}}
+\index{CH3\_DEFAULT\_VAL@{CH3\_DEFAULT\_VAL}!X6B.h@{X6B.h}}
+\doxysubsubsection{\texorpdfstring{CH3\_DEFAULT\_VAL}{CH3\_DEFAULT\_VAL}}
+{\footnotesize\ttfamily \#define CH3\+\_\+\+DEFAULT\+\_\+\+VAL~1000}
+
+\mbox{\Hypertarget{X6B_8h_a8232de80aeeb10246443862add4949ef}\label{X6B_8h_a8232de80aeeb10246443862add4949ef}} 
+\index{X6B.h@{X6B.h}!CH4\_DEFAULT\_VAL@{CH4\_DEFAULT\_VAL}}
+\index{CH4\_DEFAULT\_VAL@{CH4\_DEFAULT\_VAL}!X6B.h@{X6B.h}}
+\doxysubsubsection{\texorpdfstring{CH4\_DEFAULT\_VAL}{CH4\_DEFAULT\_VAL}}
+{\footnotesize\ttfamily \#define CH4\+\_\+\+DEFAULT\+\_\+\+VAL~1500}
+
+\mbox{\Hypertarget{X6B_8h_a6aba7f5d7ba7bda602bead188c019567}\label{X6B_8h_a6aba7f5d7ba7bda602bead188c019567}} 
+\index{X6B.h@{X6B.h}!CH5\_DEFAULT\_VAL@{CH5\_DEFAULT\_VAL}}
+\index{CH5\_DEFAULT\_VAL@{CH5\_DEFAULT\_VAL}!X6B.h@{X6B.h}}
+\doxysubsubsection{\texorpdfstring{CH5\_DEFAULT\_VAL}{CH5\_DEFAULT\_VAL}}
+{\footnotesize\ttfamily \#define CH5\+\_\+\+DEFAULT\+\_\+\+VAL~1000}
+
+\mbox{\Hypertarget{X6B_8h_a70d7a8f0d7cc3d3d326fc80da85a6c4f}\label{X6B_8h_a70d7a8f0d7cc3d3d326fc80da85a6c4f}} 
+\index{X6B.h@{X6B.h}!CH6\_DEFAULT\_VAL@{CH6\_DEFAULT\_VAL}}
+\index{CH6\_DEFAULT\_VAL@{CH6\_DEFAULT\_VAL}!X6B.h@{X6B.h}}
+\doxysubsubsection{\texorpdfstring{CH6\_DEFAULT\_VAL}{CH6\_DEFAULT\_VAL}}
+{\footnotesize\ttfamily \#define CH6\+\_\+\+DEFAULT\+\_\+\+VAL~1000}
+
+\mbox{\Hypertarget{X6B_8h_a17f44d896b73fd1a5fbc01f8211974eb}\label{X6B_8h_a17f44d896b73fd1a5fbc01f8211974eb}} 
+\index{X6B.h@{X6B.h}!CH7\_DEFAULT\_VAL@{CH7\_DEFAULT\_VAL}}
+\index{CH7\_DEFAULT\_VAL@{CH7\_DEFAULT\_VAL}!X6B.h@{X6B.h}}
+\doxysubsubsection{\texorpdfstring{CH7\_DEFAULT\_VAL}{CH7\_DEFAULT\_VAL}}
+{\footnotesize\ttfamily \#define CH7\+\_\+\+DEFAULT\+\_\+\+VAL~1000}
+
+\mbox{\Hypertarget{X6B_8h_a7939de99f591ae150a87f2cf7480e2eb}\label{X6B_8h_a7939de99f591ae150a87f2cf7480e2eb}} 
+\index{X6B.h@{X6B.h}!CH8\_DEFAULT\_VAL@{CH8\_DEFAULT\_VAL}}
+\index{CH8\_DEFAULT\_VAL@{CH8\_DEFAULT\_VAL}!X6B.h@{X6B.h}}
+\doxysubsubsection{\texorpdfstring{CH8\_DEFAULT\_VAL}{CH8\_DEFAULT\_VAL}}
+{\footnotesize\ttfamily \#define CH8\+\_\+\+DEFAULT\+\_\+\+VAL~1000}
+
+\mbox{\Hypertarget{X6B_8h_a379bef039f47bd457b034b91ea232b35}\label{X6B_8h_a379bef039f47bd457b034b91ea232b35}} 
+\index{X6B.h@{X6B.h}!CH9\_DEFAULT\_VAL@{CH9\_DEFAULT\_VAL}}
+\index{CH9\_DEFAULT\_VAL@{CH9\_DEFAULT\_VAL}!X6B.h@{X6B.h}}
+\doxysubsubsection{\texorpdfstring{CH9\_DEFAULT\_VAL}{CH9\_DEFAULT\_VAL}}
+{\footnotesize\ttfamily \#define CH9\+\_\+\+DEFAULT\+\_\+\+VAL~1000}
+
+\mbox{\Hypertarget{X6B_8h_a4bb5ca055d216c6df4895093a1968714}\label{X6B_8h_a4bb5ca055d216c6df4895093a1968714}} 
+\index{X6B.h@{X6B.h}!CH\_HIGH\_MAX@{CH\_HIGH\_MAX}}
+\index{CH\_HIGH\_MAX@{CH\_HIGH\_MAX}!X6B.h@{X6B.h}}
+\doxysubsubsection{\texorpdfstring{CH\_HIGH\_MAX}{CH\_HIGH\_MAX}}
+{\footnotesize\ttfamily \#define CH\+\_\+\+HIGH\+\_\+\+MAX~2050}
+
+\mbox{\Hypertarget{X6B_8h_aa50c466475e60be69f9ea7305f2b96cc}\label{X6B_8h_aa50c466475e60be69f9ea7305f2b96cc}} 
+\index{X6B.h@{X6B.h}!CH\_LOW\_MIN@{CH\_LOW\_MIN}}
+\index{CH\_LOW\_MIN@{CH\_LOW\_MIN}!X6B.h@{X6B.h}}
+\doxysubsubsection{\texorpdfstring{CH\_LOW\_MIN}{CH\_LOW\_MIN}}
+{\footnotesize\ttfamily \#define CH\+\_\+\+LOW\+\_\+\+MIN~950}
+
+\mbox{\Hypertarget{X6B_8h_afea0f85f7375c630e9fb0261acd6c828}\label{X6B_8h_afea0f85f7375c630e9fb0261acd6c828}} 
+\index{X6B.h@{X6B.h}!DEAD\_TIME@{DEAD\_TIME}}
+\index{DEAD\_TIME@{DEAD\_TIME}!X6B.h@{X6B.h}}
+\doxysubsubsection{\texorpdfstring{DEAD\_TIME}{DEAD\_TIME}}
+{\footnotesize\ttfamily \#define DEAD\+\_\+\+TIME~20}
+
+\mbox{\Hypertarget{X6B_8h_a69629b77e517daf716c92ad1f8418558}\label{X6B_8h_a69629b77e517daf716c92ad1f8418558}} 
+\index{X6B.h@{X6B.h}!FRAME\_LENGTH@{FRAME\_LENGTH}}
+\index{FRAME\_LENGTH@{FRAME\_LENGTH}!X6B.h@{X6B.h}}
+\doxysubsubsection{\texorpdfstring{FRAME\_LENGTH}{FRAME\_LENGTH}}
+{\footnotesize\ttfamily \#define FRAME\+\_\+\+LENGTH~16}
+
+\mbox{\Hypertarget{X6B_8h_a8efaa132168a470cf7f02c52e65a7a5e}\label{X6B_8h_a8efaa132168a470cf7f02c52e65a7a5e}} 
+\index{X6B.h@{X6B.h}!IBUS\_SERIAL@{IBUS\_SERIAL}}
+\index{IBUS\_SERIAL@{IBUS\_SERIAL}!X6B.h@{X6B.h}}
+\doxysubsubsection{\texorpdfstring{IBUS\_SERIAL}{IBUS\_SERIAL}}
+{\footnotesize\ttfamily \#define IBUS\+\_\+\+SERIAL~Serial8}
+
+\mbox{\Hypertarget{X6B_8h_a5f4714a38ff6188a898a108bbd87adfd}\label{X6B_8h_a5f4714a38ff6188a898a108bbd87adfd}} 
+\index{X6B.h@{X6B.h}!INTER\_FRAME\_STOP@{INTER\_FRAME\_STOP}}
+\index{INTER\_FRAME\_STOP@{INTER\_FRAME\_STOP}!X6B.h@{X6B.h}}
+\doxysubsubsection{\texorpdfstring{INTER\_FRAME\_STOP}{INTER\_FRAME\_STOP}}
+{\footnotesize\ttfamily \#define INTER\+\_\+\+FRAME\+\_\+\+STOP~4}
+
+\mbox{\Hypertarget{X6B_8h_a7ac0ffba6ed6694d963dd2bb59aaa876}\label{X6B_8h_a7ac0ffba6ed6694d963dd2bb59aaa876}} 
+\index{X6B.h@{X6B.h}!NO\_CRC\_FRAME\_LENGTH@{NO\_CRC\_FRAME\_LENGTH}}
+\index{NO\_CRC\_FRAME\_LENGTH@{NO\_CRC\_FRAME\_LENGTH}!X6B.h@{X6B.h}}
+\doxysubsubsection{\texorpdfstring{NO\_CRC\_FRAME\_LENGTH}{NO\_CRC\_FRAME\_LENGTH}}
+{\footnotesize\ttfamily \#define NO\+\_\+\+CRC\+\_\+\+FRAME\+\_\+\+LENGTH~((\mbox{\hyperlink{X6B_8h_a69629b77e517daf716c92ad1f8418558}{FRAME\+\_\+\+LENGTH}} -\/ 1) $\ast$ 2)}
+
+\mbox{\Hypertarget{X6B_8h_a1a1040ed35f96eac51cc4bfdede7a965}\label{X6B_8h_a1a1040ed35f96eac51cc4bfdede7a965}} 
+\index{X6B.h@{X6B.h}!START\_FRAME\_SEQUENCE@{START\_FRAME\_SEQUENCE}}
+\index{START\_FRAME\_SEQUENCE@{START\_FRAME\_SEQUENCE}!X6B.h@{X6B.h}}
+\doxysubsubsection{\texorpdfstring{START\_FRAME\_SEQUENCE}{START\_FRAME\_SEQUENCE}}
+{\footnotesize\ttfamily \#define START\+\_\+\+FRAME\+\_\+\+SEQUENCE~0x2040}
+

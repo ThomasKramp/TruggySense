@@ -1,0 +1,140 @@
+\hypertarget{classEncoder}{}\doxysection{Encoder Class Reference}
+\label{classEncoder}\index{Encoder@{Encoder}}
+
+
+\mbox{\hyperlink{classEncoder}{Encoder}} class that will manage the interrupts triggered by the encoders and calculate the RPM within the trigger interval of \mbox{\hyperlink{classEncoder_a3c8a92bd5e85688abe614cab8944ba1d}{get\+Wheel\+Speed()}}.  
+
+
+
+
+{\ttfamily \#include $<$encoder.\+h$>$}
+
+
+
+Collaboration diagram for Encoder\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=217pt]{classEncoder__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{classEncoder_a58432c11ce8cec4b26684c87e10f4b57}{position}} \{ \mbox{\hyperlink{classEncoder_a58432c11ce8cec4b26684c87e10f4b57a671b37104be2e52ce15fe5146dafb473}{FL}}
+, \mbox{\hyperlink{classEncoder_a58432c11ce8cec4b26684c87e10f4b57a8f02f8e5afe915a320c163f5645402da}{RL}}
+, \mbox{\hyperlink{classEncoder_a58432c11ce8cec4b26684c87e10f4b57a1ce670999847b168aab669cb0a0e3702}{RR}}
+, \mbox{\hyperlink{classEncoder_a58432c11ce8cec4b26684c87e10f4b57a3e35780efd735d36d520b8adc3220818}{FR}}
+ \}
+\begin{DoxyCompactList}\small\item\em All possible positions of the encoders. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classEncoder_ab5d9324930644abeb150da7a7747ffe3}{Encoder}} ()
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{classEncoder}{Encoder}} object and assign the encoder pins as interrupts. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classEncoder_a3c8a92bd5e85688abe614cab8944ba1d}{get\+Wheel\+Speed}} (\mbox{\hyperlink{classEncoder_a58432c11ce8cec4b26684c87e10f4b57}{position}} pos)
+\begin{DoxyCompactList}\small\item\em Get the Wheel Speed in RPM. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classEncoder_a8742143a7f5c3ba717128d98b57e8024}{get\+Wheel\+Counter}} (\mbox{\hyperlink{classEncoder_a58432c11ce8cec4b26684c87e10f4b57}{position}} pos)
+\begin{DoxyCompactList}\small\item\em Get the Wheel Counter state based on a wheel position defined by position. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classEncoder}{Encoder}} class that will manage the interrupts triggered by the encoders and calculate the RPM within the trigger interval of \mbox{\hyperlink{classEncoder_a3c8a92bd5e85688abe614cab8944ba1d}{get\+Wheel\+Speed()}}. 
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{classEncoder_a58432c11ce8cec4b26684c87e10f4b57}\label{classEncoder_a58432c11ce8cec4b26684c87e10f4b57}} 
+\index{Encoder@{Encoder}!position@{position}}
+\index{position@{position}!Encoder@{Encoder}}
+\doxysubsubsection{\texorpdfstring{position}{position}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{classEncoder_a58432c11ce8cec4b26684c87e10f4b57}{Encoder\+::position}}}
+
+
+
+All possible positions of the encoders. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FL@{FL}!Encoder@{Encoder}}\index{Encoder@{Encoder}!FL@{FL}}}\mbox{\Hypertarget{classEncoder_a58432c11ce8cec4b26684c87e10f4b57a671b37104be2e52ce15fe5146dafb473}\label{classEncoder_a58432c11ce8cec4b26684c87e10f4b57a671b37104be2e52ce15fe5146dafb473}} 
+FL&Front Left position. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RL@{RL}!Encoder@{Encoder}}\index{Encoder@{Encoder}!RL@{RL}}}\mbox{\Hypertarget{classEncoder_a58432c11ce8cec4b26684c87e10f4b57a8f02f8e5afe915a320c163f5645402da}\label{classEncoder_a58432c11ce8cec4b26684c87e10f4b57a8f02f8e5afe915a320c163f5645402da}} 
+RL&Rear Left position. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RR@{RR}!Encoder@{Encoder}}\index{Encoder@{Encoder}!RR@{RR}}}\mbox{\Hypertarget{classEncoder_a58432c11ce8cec4b26684c87e10f4b57a1ce670999847b168aab669cb0a0e3702}\label{classEncoder_a58432c11ce8cec4b26684c87e10f4b57a1ce670999847b168aab669cb0a0e3702}} 
+RR&Rear Right position. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FR@{FR}!Encoder@{Encoder}}\index{Encoder@{Encoder}!FR@{FR}}}\mbox{\Hypertarget{classEncoder_a58432c11ce8cec4b26684c87e10f4b57a3e35780efd735d36d520b8adc3220818}\label{classEncoder_a58432c11ce8cec4b26684c87e10f4b57a3e35780efd735d36d520b8adc3220818}} 
+FR&Front Right position. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classEncoder_ab5d9324930644abeb150da7a7747ffe3}\label{classEncoder_ab5d9324930644abeb150da7a7747ffe3}} 
+\index{Encoder@{Encoder}!Encoder@{Encoder}}
+\index{Encoder@{Encoder}!Encoder@{Encoder}}
+\doxysubsubsection{\texorpdfstring{Encoder()}{Encoder()}}
+{\footnotesize\ttfamily Encoder\+::\+Encoder (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Construct a new \mbox{\hyperlink{classEncoder}{Encoder}} object and assign the encoder pins as interrupts. 
+
+\begin{DoxyNote}{Note}
+a pullup is added to the encoder pins internally where the interrupts will be triggered for a falling edge. 
+\end{DoxyNote}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classEncoder_a8742143a7f5c3ba717128d98b57e8024}\label{classEncoder_a8742143a7f5c3ba717128d98b57e8024}} 
+\index{Encoder@{Encoder}!getWheelCounter@{getWheelCounter}}
+\index{getWheelCounter@{getWheelCounter}!Encoder@{Encoder}}
+\doxysubsubsection{\texorpdfstring{getWheelCounter()}{getWheelCounter()}}
+{\footnotesize\ttfamily float Encoder\+::get\+Wheel\+Counter (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classEncoder_a58432c11ce8cec4b26684c87e10f4b57}{position}}}]{pos }\end{DoxyParamCaption})}
+
+
+
+Get the Wheel Counter state based on a wheel position defined by position. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pos} & which position \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+float the counter value 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classEncoder_a3c8a92bd5e85688abe614cab8944ba1d}\label{classEncoder_a3c8a92bd5e85688abe614cab8944ba1d}} 
+\index{Encoder@{Encoder}!getWheelSpeed@{getWheelSpeed}}
+\index{getWheelSpeed@{getWheelSpeed}!Encoder@{Encoder}}
+\doxysubsubsection{\texorpdfstring{getWheelSpeed()}{getWheelSpeed()}}
+{\footnotesize\ttfamily float Encoder\+::get\+Wheel\+Speed (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classEncoder_a58432c11ce8cec4b26684c87e10f4b57}{position}}}]{pos }\end{DoxyParamCaption})}
+
+
+
+Get the Wheel Speed in RPM. 
+
+Will calculate the RPM of a given wheel position defined by position. It will use the pulse counter from the wheel pin in combination with the duration between triggers of this method.
+
+
+\begin{DoxyParams}{Parameters}
+{\em pos} & which position \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+float the RPM 
+\end{DoxyReturn}
+Example
+
+Given\+: N\+\_\+\+MAG=40, DELTA=0.\+1, COUNTER=2,
+
+if we have 2 counts in the period of 0.\+1s, this means that for 1 second, we must divide this counter with 1/0.\+1=10 which yields 20 counts -\/\texorpdfstring{$>$}{>} 20/40 = 0.\+5 Hz so we have a rotation speed of 0.\+5 Hz. -\/\texorpdfstring{$>$}{>} F\+\_\+\+WHEEL=(1/\+DELTA)$\ast$(COUNT/\+N\+\_\+\+MAG)
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+lib/encoder/\mbox{\hyperlink{encoder_8h}{encoder.\+h}}\item 
+lib/encoder/\mbox{\hyperlink{encoder_8cpp}{encoder.\+cpp}}\end{DoxyCompactItemize}

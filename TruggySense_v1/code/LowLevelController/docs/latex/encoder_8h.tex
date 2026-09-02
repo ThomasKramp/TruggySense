@@ -1,0 +1,213 @@
+\hypertarget{encoder_8h}{}\doxysection{lib/encoder/encoder.h File Reference}
+\label{encoder_8h}\index{lib/encoder/encoder.h@{lib/encoder/encoder.h}}
+
+
+Enables encoding of the wheels and motors utilized by the RCV.  
+
+
+{\ttfamily \#include $<$Arduino.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}stdint.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Timer\+Interrupt\+\_\+\+Generic.\+h\char`\"{}}\newline
+Include dependency graph for encoder.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{encoder_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{encoder_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classEncoder}{Encoder}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classEncoder}{Encoder}} class that will manage the interrupts triggered by the encoders and calculate the RPM within the trigger interval of \mbox{\hyperlink{classEncoder_a3c8a92bd5e85688abe614cab8944ba1d}{get\+Wheel\+Speed()}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{encoder_8h_af4a0f1ab68269a95aefd86310467cc88}{WHEEL\+\_\+\+FR}}~5
+\begin{DoxyCompactList}\small\item\em Pin definition of Front Right wheel encoder. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{encoder_8h_ab33042045f88259a8098654ab4f58d01}{WHEEL\+\_\+\+FL}}~3
+\begin{DoxyCompactList}\small\item\em Pin definition of Front Left wheel encoder. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{encoder_8h_a0d62affc001ee0a23796f23890b55afd}{WHEEL\+\_\+\+RR}}~4
+\begin{DoxyCompactList}\small\item\em Pin definition of Rear Right wheel encoder. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{encoder_8h_ab423efb6baced7b09c7461cd30096a31}{WHEEL\+\_\+\+RL}}~2
+\begin{DoxyCompactList}\small\item\em Pin definition of Rear Left wheel encoder. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{encoder_8h_a242f0df69f46cd8b9f234a8f77b33380}{MOTOR\+\_\+\+FR}}~30
+\begin{DoxyCompactList}\small\item\em Pin definition of Front Right wheel motor. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{encoder_8h_a840821f0529bc384c45b38be86b1f18b}{MOTOR\+\_\+\+FL}}~31
+\begin{DoxyCompactList}\small\item\em Pin definition of Front Right wheel motor. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{encoder_8h_ad0b715682838b91e17d2a9019d4914b8}{MOTOR\+\_\+\+RR}}~32
+\begin{DoxyCompactList}\small\item\em Pin definition of Front Right wheel motor. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{encoder_8h_ab07b6b10c32596758993dec2e128bbda}{MOTOR\+\_\+\+RL}}~36
+\begin{DoxyCompactList}\small\item\em Pin definition of Front Right wheel motor. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{encoder_8h_a4589b21f87e384cf93c35ac08feb006b}{FR\+\_\+\+N\+\_\+\+MAGNET}}~14
+\begin{DoxyCompactList}\small\item\em The number of magnets used on the Front Right wheel. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{encoder_8h_ad740ba231e5d4b190db4d2471abe4d4a}{FL\+\_\+\+N\+\_\+\+MAGNET}}~14
+\begin{DoxyCompactList}\small\item\em The number of magnets used on the Front Left wheel. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{encoder_8h_af85b03261359e8bbd81ea54e1056781b}{RR\+\_\+\+N\+\_\+\+MAGNET}}~14
+\begin{DoxyCompactList}\small\item\em The number of magnets used on the Rear Right wheel. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{encoder_8h_a92f777fe79461d893416129d24de2d4b}{RL\+\_\+\+N\+\_\+\+MAGNET}}~14
+\begin{DoxyCompactList}\small\item\em The number of magnets used on the Read Left wheel. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{encoder_8h_a6485ba8baa7fbb0be37f03a96654bf56}{NUM\+\_\+\+ENCODER\+\_\+\+PINS}}~4
+\begin{DoxyCompactList}\small\item\em The amount of encoder pins utilized per group. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Enables encoding of the wheels and motors utilized by the RCV. 
+
+\begin{DoxyAuthor}{Author}
+Robbe Elsermans 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2025-\/04-\/10
+\end{DoxyDate}
+\begin{DoxyNote}{Note}
+only wheel part is implemented
+\end{DoxyNote}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2025 Robbe Elsermans, All rights reserved. This project is released under the CC BY-\/\+NC-\/\+SA licence. See licence.\+txt for more information 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{encoder_8h_ad740ba231e5d4b190db4d2471abe4d4a}\label{encoder_8h_ad740ba231e5d4b190db4d2471abe4d4a}} 
+\index{encoder.h@{encoder.h}!FL\_N\_MAGNET@{FL\_N\_MAGNET}}
+\index{FL\_N\_MAGNET@{FL\_N\_MAGNET}!encoder.h@{encoder.h}}
+\doxysubsubsection{\texorpdfstring{FL\_N\_MAGNET}{FL\_N\_MAGNET}}
+{\footnotesize\ttfamily \#define FL\+\_\+\+N\+\_\+\+MAGNET~14}
+
+
+
+The number of magnets used on the Front Left wheel. 
+
+\mbox{\Hypertarget{encoder_8h_a4589b21f87e384cf93c35ac08feb006b}\label{encoder_8h_a4589b21f87e384cf93c35ac08feb006b}} 
+\index{encoder.h@{encoder.h}!FR\_N\_MAGNET@{FR\_N\_MAGNET}}
+\index{FR\_N\_MAGNET@{FR\_N\_MAGNET}!encoder.h@{encoder.h}}
+\doxysubsubsection{\texorpdfstring{FR\_N\_MAGNET}{FR\_N\_MAGNET}}
+{\footnotesize\ttfamily \#define FR\+\_\+\+N\+\_\+\+MAGNET~14}
+
+
+
+The number of magnets used on the Front Right wheel. 
+
+\mbox{\Hypertarget{encoder_8h_a840821f0529bc384c45b38be86b1f18b}\label{encoder_8h_a840821f0529bc384c45b38be86b1f18b}} 
+\index{encoder.h@{encoder.h}!MOTOR\_FL@{MOTOR\_FL}}
+\index{MOTOR\_FL@{MOTOR\_FL}!encoder.h@{encoder.h}}
+\doxysubsubsection{\texorpdfstring{MOTOR\_FL}{MOTOR\_FL}}
+{\footnotesize\ttfamily \#define MOTOR\+\_\+\+FL~31}
+
+
+
+Pin definition of Front Right wheel motor. 
+
+\mbox{\Hypertarget{encoder_8h_a242f0df69f46cd8b9f234a8f77b33380}\label{encoder_8h_a242f0df69f46cd8b9f234a8f77b33380}} 
+\index{encoder.h@{encoder.h}!MOTOR\_FR@{MOTOR\_FR}}
+\index{MOTOR\_FR@{MOTOR\_FR}!encoder.h@{encoder.h}}
+\doxysubsubsection{\texorpdfstring{MOTOR\_FR}{MOTOR\_FR}}
+{\footnotesize\ttfamily \#define MOTOR\+\_\+\+FR~30}
+
+
+
+Pin definition of Front Right wheel motor. 
+
+\mbox{\Hypertarget{encoder_8h_ab07b6b10c32596758993dec2e128bbda}\label{encoder_8h_ab07b6b10c32596758993dec2e128bbda}} 
+\index{encoder.h@{encoder.h}!MOTOR\_RL@{MOTOR\_RL}}
+\index{MOTOR\_RL@{MOTOR\_RL}!encoder.h@{encoder.h}}
+\doxysubsubsection{\texorpdfstring{MOTOR\_RL}{MOTOR\_RL}}
+{\footnotesize\ttfamily \#define MOTOR\+\_\+\+RL~36}
+
+
+
+Pin definition of Front Right wheel motor. 
+
+\mbox{\Hypertarget{encoder_8h_ad0b715682838b91e17d2a9019d4914b8}\label{encoder_8h_ad0b715682838b91e17d2a9019d4914b8}} 
+\index{encoder.h@{encoder.h}!MOTOR\_RR@{MOTOR\_RR}}
+\index{MOTOR\_RR@{MOTOR\_RR}!encoder.h@{encoder.h}}
+\doxysubsubsection{\texorpdfstring{MOTOR\_RR}{MOTOR\_RR}}
+{\footnotesize\ttfamily \#define MOTOR\+\_\+\+RR~32}
+
+
+
+Pin definition of Front Right wheel motor. 
+
+\mbox{\Hypertarget{encoder_8h_a6485ba8baa7fbb0be37f03a96654bf56}\label{encoder_8h_a6485ba8baa7fbb0be37f03a96654bf56}} 
+\index{encoder.h@{encoder.h}!NUM\_ENCODER\_PINS@{NUM\_ENCODER\_PINS}}
+\index{NUM\_ENCODER\_PINS@{NUM\_ENCODER\_PINS}!encoder.h@{encoder.h}}
+\doxysubsubsection{\texorpdfstring{NUM\_ENCODER\_PINS}{NUM\_ENCODER\_PINS}}
+{\footnotesize\ttfamily \#define NUM\+\_\+\+ENCODER\+\_\+\+PINS~4}
+
+
+
+The amount of encoder pins utilized per group. 
+
+\mbox{\Hypertarget{encoder_8h_a92f777fe79461d893416129d24de2d4b}\label{encoder_8h_a92f777fe79461d893416129d24de2d4b}} 
+\index{encoder.h@{encoder.h}!RL\_N\_MAGNET@{RL\_N\_MAGNET}}
+\index{RL\_N\_MAGNET@{RL\_N\_MAGNET}!encoder.h@{encoder.h}}
+\doxysubsubsection{\texorpdfstring{RL\_N\_MAGNET}{RL\_N\_MAGNET}}
+{\footnotesize\ttfamily \#define RL\+\_\+\+N\+\_\+\+MAGNET~14}
+
+
+
+The number of magnets used on the Read Left wheel. 
+
+\mbox{\Hypertarget{encoder_8h_af85b03261359e8bbd81ea54e1056781b}\label{encoder_8h_af85b03261359e8bbd81ea54e1056781b}} 
+\index{encoder.h@{encoder.h}!RR\_N\_MAGNET@{RR\_N\_MAGNET}}
+\index{RR\_N\_MAGNET@{RR\_N\_MAGNET}!encoder.h@{encoder.h}}
+\doxysubsubsection{\texorpdfstring{RR\_N\_MAGNET}{RR\_N\_MAGNET}}
+{\footnotesize\ttfamily \#define RR\+\_\+\+N\+\_\+\+MAGNET~14}
+
+
+
+The number of magnets used on the Rear Right wheel. 
+
+\mbox{\Hypertarget{encoder_8h_ab33042045f88259a8098654ab4f58d01}\label{encoder_8h_ab33042045f88259a8098654ab4f58d01}} 
+\index{encoder.h@{encoder.h}!WHEEL\_FL@{WHEEL\_FL}}
+\index{WHEEL\_FL@{WHEEL\_FL}!encoder.h@{encoder.h}}
+\doxysubsubsection{\texorpdfstring{WHEEL\_FL}{WHEEL\_FL}}
+{\footnotesize\ttfamily \#define WHEEL\+\_\+\+FL~3}
+
+
+
+Pin definition of Front Left wheel encoder. 
+
+\mbox{\Hypertarget{encoder_8h_af4a0f1ab68269a95aefd86310467cc88}\label{encoder_8h_af4a0f1ab68269a95aefd86310467cc88}} 
+\index{encoder.h@{encoder.h}!WHEEL\_FR@{WHEEL\_FR}}
+\index{WHEEL\_FR@{WHEEL\_FR}!encoder.h@{encoder.h}}
+\doxysubsubsection{\texorpdfstring{WHEEL\_FR}{WHEEL\_FR}}
+{\footnotesize\ttfamily \#define WHEEL\+\_\+\+FR~5}
+
+
+
+Pin definition of Front Right wheel encoder. 
+
+\mbox{\Hypertarget{encoder_8h_ab423efb6baced7b09c7461cd30096a31}\label{encoder_8h_ab423efb6baced7b09c7461cd30096a31}} 
+\index{encoder.h@{encoder.h}!WHEEL\_RL@{WHEEL\_RL}}
+\index{WHEEL\_RL@{WHEEL\_RL}!encoder.h@{encoder.h}}
+\doxysubsubsection{\texorpdfstring{WHEEL\_RL}{WHEEL\_RL}}
+{\footnotesize\ttfamily \#define WHEEL\+\_\+\+RL~2}
+
+
+
+Pin definition of Rear Left wheel encoder. 
+
+\mbox{\Hypertarget{encoder_8h_a0d62affc001ee0a23796f23890b55afd}\label{encoder_8h_a0d62affc001ee0a23796f23890b55afd}} 
+\index{encoder.h@{encoder.h}!WHEEL\_RR@{WHEEL\_RR}}
+\index{WHEEL\_RR@{WHEEL\_RR}!encoder.h@{encoder.h}}
+\doxysubsubsection{\texorpdfstring{WHEEL\_RR}{WHEEL\_RR}}
+{\footnotesize\ttfamily \#define WHEEL\+\_\+\+RR~4}
+
+
+
+Pin definition of Rear Right wheel encoder. 
+

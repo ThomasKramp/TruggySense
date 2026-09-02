@@ -1,0 +1,147 @@
+%TF.GenerationSoftware,KiCad,Pcbnew,8.0.7*%
+%TF.CreationDate,2025-02-07T22:31:18+01:00*%
+%TF.ProjectId,Teensy_board_11_prot_esd_3,5465656e-7379-45f6-926f-6172645f3131,rev?*%
+%TF.SameCoordinates,Original*%
+%TF.FileFunction,Copper,L1,Top*%
+%TF.FilePolarity,Positive*%
+%FSLAX46Y46*%
+G04 Gerber Fmt 4.6, Leading zero omitted, Abs format (unit mm)*
+G04 Created by KiCad (PCBNEW 8.0.7) date 2025-02-07 22:31:18*
+%MOMM*%
+%LPD*%
+G01*
+G04 APERTURE LIST*
+%TA.AperFunction,ComponentPad*%
+%ADD10R,1.700000X1.700000*%
+%TD*%
+G04 APERTURE END LIST*
+D10*
+%TO.P,J233,1,Pin_1*%
+%TO.N,GND*%
+X177900000Y-124750000D03*
+%TD*%
+%TO.P,J110,1,Pin_1*%
+%TO.N,/ADC inputs/Protection_circuit_ADC1/OUT_9*%
+X153700000Y-103050000D03*
+%TD*%
+%TO.P,J138,1,Pin_1*%
+%TO.N,/ADC inputs/Protection_circuit_ADC1/IN_7*%
+X153700000Y-86950000D03*
+%TD*%
+%TO.P,J238,1,Pin_1*%
+%TO.N,GND*%
+X177900000Y-117550000D03*
+%TD*%
+%TO.P,J114,1,Pin_1*%
+%TO.N,/ADC inputs/Protection_circuit_ADC1/OUT_13*%
+X168700000Y-110250000D03*
+%TD*%
+%TO.P,J132,1,Pin_1*%
+%TO.N,/ADC inputs/Protection_circuit_ADC1/IN_1*%
+X132100000Y-86950000D03*
+%TD*%
+%TO.P,J112,1,Pin_1*%
+%TO.N,/ADC inputs/Protection_circuit_ADC1/OUT_11*%
+X165100000Y-124650000D03*
+%TD*%
+%TO.P,J115,1,Pin_1*%
+%TO.N,/ADC inputs/Protection_circuit_ADC1/OUT_14*%
+X170500000Y-103050000D03*
+%TD*%
+%TO.P,J104,1,Pin_1*%
+%TO.N,/ADC inputs/Protection_circuit_ADC1/OUT_3*%
+X135700000Y-110450000D03*
+%TD*%
+%TO.P,J232,1,Pin_1*%
+%TO.N,GND*%
+X177900000Y-113950000D03*
+%TD*%
+%TO.P,J105,1,Pin_1*%
+%TO.N,/ADC inputs/Protection_circuit_ADC1/OUT_4*%
+X137500000Y-103250000D03*
+%TD*%
+%TO.P,J108,1,Pin_1*%
+%TO.N,/ADC inputs/Protection_circuit_ADC1/OUT_7*%
+X150100000Y-117450000D03*
+%TD*%
+%TO.P,J106,1,Pin_1*%
+%TO.N,/ADC inputs/Protection_circuit_ADC1/OUT_5*%
+X139300000Y-96050000D03*
+%TD*%
+%TO.P,J135,1,Pin_1*%
+%TO.N,/ADC inputs/Protection_circuit_ADC1/IN_4*%
+X142900000Y-86950000D03*
+%TD*%
+%TO.P,J142,1,Pin_1*%
+%TO.N,/ADC inputs/Protection_circuit_ADC1/IN_11*%
+X168100000Y-86950000D03*
+%TD*%
+%TO.P,J48,1,Pin_1*%
+%TO.N,/ADC inputs/Protection_circuit_ADC1/OUT_1*%
+X131900000Y-124850000D03*
+%TD*%
+%TO.P,J133,1,Pin_1*%
+%TO.N,/ADC inputs/Protection_circuit_ADC1/IN_2*%
+X135700000Y-86950000D03*
+%TD*%
+%TO.P,J113,1,Pin_1*%
+%TO.N,/ADC inputs/Protection_circuit_ADC1/OUT_12*%
+X166900000Y-117650000D03*
+%TD*%
+%TO.P,J136,1,Pin_1*%
+%TO.N,/ADC inputs/Protection_circuit_ADC1/IN_5*%
+X146500000Y-86950000D03*
+%TD*%
+%TO.P,J109,1,Pin_1*%
+%TO.N,/ADC inputs/Protection_circuit_ADC1/OUT_8*%
+X151925000Y-110225000D03*
+%TD*%
+%TO.P,J143,1,Pin_1*%
+%TO.N,/ADC inputs/Protection_circuit_ADC1/IN_12*%
+X171700000Y-86950000D03*
+%TD*%
+%TO.P,J107,1,Pin_1*%
+%TO.N,/ADC inputs/Protection_circuit_ADC1/OUT_6*%
+X148300000Y-124650000D03*
+%TD*%
+%TO.P,J134,1,Pin_1*%
+%TO.N,/ADC inputs/Protection_circuit_ADC1/IN_3*%
+X139300000Y-86950000D03*
+%TD*%
+%TO.P,J103,1,Pin_1*%
+%TO.N,/ADC inputs/Protection_circuit_ADC1/OUT_2*%
+X133900000Y-117650000D03*
+%TD*%
+%TO.P,J139,1,Pin_1*%
+%TO.N,/ADC inputs/Protection_circuit_ADC1/IN_8*%
+X157300000Y-86950000D03*
+%TD*%
+%TO.P,J111,1,Pin_1*%
+%TO.N,/ADC inputs/Protection_circuit_ADC1/OUT_10*%
+X155500000Y-95850000D03*
+%TD*%
+%TO.P,J239,1,Pin_1*%
+%TO.N,GND*%
+X177900000Y-121150000D03*
+%TD*%
+%TO.P,J137,1,Pin_1*%
+%TO.N,/ADC inputs/Protection_circuit_ADC1/IN_6*%
+X150100000Y-86950000D03*
+%TD*%
+%TO.P,J144,1,Pin_1*%
+%TO.N,/ADC inputs/Protection_circuit_ADC1/IN_13*%
+X175300000Y-86950000D03*
+%TD*%
+%TO.P,J145,1,Pin_1*%
+%TO.N,/ADC inputs/Protection_circuit_ADC1/IN_14*%
+X178900000Y-86950000D03*
+%TD*%
+%TO.P,J140,1,Pin_1*%
+%TO.N,/ADC inputs/Protection_circuit_ADC1/IN_9*%
+X160900000Y-86950000D03*
+%TD*%
+%TO.P,J141,1,Pin_1*%
+%TO.N,/ADC inputs/Protection_circuit_ADC1/IN_10*%
+X164500000Y-86950000D03*
+%TD*%
+M02*

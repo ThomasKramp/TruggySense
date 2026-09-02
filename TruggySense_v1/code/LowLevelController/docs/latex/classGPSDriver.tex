@@ -1,0 +1,178 @@
+\hypertarget{classGPSDriver}{}\doxysection{GPSDriver Class Reference}
+\label{classGPSDriver}\index{GPSDriver@{GPSDriver}}
+
+
+{\ttfamily \#include $<$gps.\+h$>$}
+
+
+
+Collaboration diagram for GPSDriver\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=262pt]{classGPSDriver__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{classGPSDriver_a17e73a079be866162ca0c253758e218c}{init}} ()
+\begin{DoxyCompactList}\small\item\em initialize gps module by checking connection \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{classGPSDriver_ae8e1899f5db37454f172e946aae916be}{read\+Gps}} ()
+\begin{DoxyCompactList}\small\item\em read serial string if available and pass it through tiny\+GPS \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{classGPSDriver_ab94192d92dde282930f44051e4005721}{get\+Velocity}} ()
+\begin{DoxyCompactList}\small\item\em Get the Velocity object. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classGPSDriver_a1647379535095627a751bf760369bc29}{get\+Latitude}} ()
+\begin{DoxyCompactList}\small\item\em Get the Latitude object. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classGPSDriver_a9ed63a96714f498365beaf5d94fb2651}{get\+Longitude}} ()
+\begin{DoxyCompactList}\small\item\em Get the Longitude object. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{classGPSDriver_a2b87da9ee2b29217fd31f58c6b44c1e1}{get\+Date}} ()
+\begin{DoxyCompactList}\small\item\em Get the Date object. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{classGPSDriver_abd3505ad1298feba973076a0ea216fd5}{get\+Time}} ()
+\begin{DoxyCompactList}\small\item\em Get the Time object in UTC format. \end{DoxyCompactList}\item 
+int16\+\_\+t \mbox{\hyperlink{classGPSDriver_a6b62ba098b160307129cedc9d987403c}{get\+Altitude}} ()
+\begin{DoxyCompactList}\small\item\em Get the altitude based on received satellite information. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{classGPSDriver_a0c126cb0a905a5c855f7e4f310e44f2f}{get\+Connected\+Satelites}} ()
+\begin{DoxyCompactList}\small\item\em Get the number of received satellites. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classGPSDriver_a6b62ba098b160307129cedc9d987403c}\label{classGPSDriver_a6b62ba098b160307129cedc9d987403c}} 
+\index{GPSDriver@{GPSDriver}!getAltitude@{getAltitude}}
+\index{getAltitude@{getAltitude}!GPSDriver@{GPSDriver}}
+\doxysubsubsection{\texorpdfstring{getAltitude()}{getAltitude()}}
+{\footnotesize\ttfamily int16\+\_\+t GPSDriver\+::get\+Altitude (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the altitude based on received satellite information. 
+
+\begin{DoxyNote}{Note}
+Can only be valid if there is a 3D fix (\texorpdfstring{$>$}{>}=4 satelites).
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+int16\+\_\+t the altitude in meters (m), 0 if not acquired 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classGPSDriver_a0c126cb0a905a5c855f7e4f310e44f2f}\label{classGPSDriver_a0c126cb0a905a5c855f7e4f310e44f2f}} 
+\index{GPSDriver@{GPSDriver}!getConnectedSatelites@{getConnectedSatelites}}
+\index{getConnectedSatelites@{getConnectedSatelites}!GPSDriver@{GPSDriver}}
+\doxysubsubsection{\texorpdfstring{getConnectedSatelites()}{getConnectedSatelites()}}
+{\footnotesize\ttfamily uint8\+\_\+t GPSDriver\+::get\+Connected\+Satelites (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the number of received satellites. 
+
+\begin{DoxyReturn}{Returns}
+uint8\+\_\+t count of found satellites, 0 if not acquired 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classGPSDriver_a2b87da9ee2b29217fd31f58c6b44c1e1}\label{classGPSDriver_a2b87da9ee2b29217fd31f58c6b44c1e1}} 
+\index{GPSDriver@{GPSDriver}!getDate@{getDate}}
+\index{getDate@{getDate}!GPSDriver@{GPSDriver}}
+\doxysubsubsection{\texorpdfstring{getDate()}{getDate()}}
+{\footnotesize\ttfamily uint32\+\_\+t GPSDriver\+::get\+Date (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the Date object. 
+
+\begin{DoxyReturn}{Returns}
+uint32\+\_\+t in the from of DDMMYY, 0 if not acquired 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classGPSDriver_a1647379535095627a751bf760369bc29}\label{classGPSDriver_a1647379535095627a751bf760369bc29}} 
+\index{GPSDriver@{GPSDriver}!getLatitude@{getLatitude}}
+\index{getLatitude@{getLatitude}!GPSDriver@{GPSDriver}}
+\doxysubsubsection{\texorpdfstring{getLatitude()}{getLatitude()}}
+{\footnotesize\ttfamily float GPSDriver\+::get\+Latitude (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the Latitude object. 
+
+\begin{DoxyNote}{Note}
+Can only be valid if there is a 3D fix (\texorpdfstring{$>$}{>}=4 satelites).
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+float the latitude in degrees (°), 0 if not acquired 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classGPSDriver_a9ed63a96714f498365beaf5d94fb2651}\label{classGPSDriver_a9ed63a96714f498365beaf5d94fb2651}} 
+\index{GPSDriver@{GPSDriver}!getLongitude@{getLongitude}}
+\index{getLongitude@{getLongitude}!GPSDriver@{GPSDriver}}
+\doxysubsubsection{\texorpdfstring{getLongitude()}{getLongitude()}}
+{\footnotesize\ttfamily float GPSDriver\+::get\+Longitude (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the Longitude object. 
+
+\begin{DoxyNote}{Note}
+Can only be valid if there is a 3D fix (\texorpdfstring{$>$}{>}=4 satelites).
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+float the longitude in degrees (°), 0 if not acquired 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classGPSDriver_abd3505ad1298feba973076a0ea216fd5}\label{classGPSDriver_abd3505ad1298feba973076a0ea216fd5}} 
+\index{GPSDriver@{GPSDriver}!getTime@{getTime}}
+\index{getTime@{getTime}!GPSDriver@{GPSDriver}}
+\doxysubsubsection{\texorpdfstring{getTime()}{getTime()}}
+{\footnotesize\ttfamily uint32\+\_\+t GPSDriver\+::get\+Time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the Time object in UTC format. 
+
+\begin{DoxyReturn}{Returns}
+uint32\+\_\+t in the form HHMMSSmm, 0 if not acquired 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classGPSDriver_ab94192d92dde282930f44051e4005721}\label{classGPSDriver_ab94192d92dde282930f44051e4005721}} 
+\index{GPSDriver@{GPSDriver}!getVelocity@{getVelocity}}
+\index{getVelocity@{getVelocity}!GPSDriver@{GPSDriver}}
+\doxysubsubsection{\texorpdfstring{getVelocity()}{getVelocity()}}
+{\footnotesize\ttfamily uint8\+\_\+t GPSDriver\+::get\+Velocity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the Velocity object. 
+
+\begin{DoxyNote}{Note}
+Can only be valid if there is a 3D fix (\texorpdfstring{$>$}{>}=4 satelites).
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+uint8\+\_\+t the velocity in meters per second (m/s), 0 if not acquired 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classGPSDriver_a17e73a079be866162ca0c253758e218c}\label{classGPSDriver_a17e73a079be866162ca0c253758e218c}} 
+\index{GPSDriver@{GPSDriver}!init@{init}}
+\index{init@{init}!GPSDriver@{GPSDriver}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily uint8\+\_\+t GPSDriver\+::init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+initialize gps module by checking connection 
+
+\begin{DoxyReturn}{Returns}
+uint8\+\_\+t 1 if success, 0 if failure 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classGPSDriver_ae8e1899f5db37454f172e946aae916be}\label{classGPSDriver_ae8e1899f5db37454f172e946aae916be}} 
+\index{GPSDriver@{GPSDriver}!readGps@{readGps}}
+\index{readGps@{readGps}!GPSDriver@{GPSDriver}}
+\doxysubsubsection{\texorpdfstring{readGps()}{readGps()}}
+{\footnotesize\ttfamily uint8\+\_\+t GPSDriver\+::read\+Gps (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+read serial string if available and pass it through tiny\+GPS 
+
+\begin{DoxyNote}{Note}
+must be updated frequently such that a full char sequence can be decoded by the Tiny\+GPS++ library
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+uint8\+\_\+t 1 if success, 0 if no char sequences received withing 5 seconds 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+lib/gps/\mbox{\hyperlink{gps_8h}{gps.\+h}}\item 
+lib/gps/\mbox{\hyperlink{gps_8cpp}{gps.\+cpp}}\end{DoxyCompactItemize}

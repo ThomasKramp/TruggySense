@@ -1,0 +1,9 @@
+Manufacturer=Texas Instruments
+PartNumber=OPA350UA/2K5
+PartCategory=Integrated Circuit
+PackageCategory=Small Outline Packages
+PinCount=8
+Version=1.1
+Released=2020-04-10 17:20:17
+Downloaded=2025-01-24 16:35:09
+3D=Y

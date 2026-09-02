@@ -1,0 +1,146 @@
+\hypertarget{base__station_8h}{}\doxysection{lib/base\+\_\+station\+\_\+link/base\+\_\+station.h File Reference}
+\label{base__station_8h}\index{lib/base\_station\_link/base\_station.h@{lib/base\_station\_link/base\_station.h}}
+
+
+The base station class file which is used for sending telemetry data.  
+
+
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}sd\+\_\+logger.\+h\char`\"{}}\newline
+Include dependency graph for base\+\_\+station.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=224pt]{base__station_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=349pt]{base__station_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classBaseStation}{Base\+Station}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{base__station_8h_abb388c9dfbdca89b280a12c4af1a030f}{CE\+\_\+\+PIN}}~10
+\begin{DoxyCompactList}\small\item\em Pin definition of Chip Enable to control data transmission (when to Rx and when to Tx) \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{base__station_8h_a6c4d73944fe1bd2ff7ceee867c315ac1}{CSN\+\_\+\+PIN}}~28
+\begin{DoxyCompactList}\small\item\em Pin definition of Chip Select Pin with negative logic of the SPI device. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{base__station_8h_aac43a478bdd4f898006744135f634e15}{MAXIMUM\+\_\+\+TRYOUT}}~10
+\begin{DoxyCompactList}\small\item\em The maximum allowable tryouts if a failure occures. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const byte \mbox{\hyperlink{base__station_8h_ae71d9442720f8b13e7629f5ed46959d4}{path}} \mbox{[}6\mbox{]} = \char`\"{}00001\char`\"{}
+\begin{DoxyCompactList}\small\item\em The selected path name. Must be in sync (the same) with the receivers end. \end{DoxyCompactList}\item 
+constexpr int \mbox{\hyperlink{base__station_8h_ad8f35edf51fa8de3e8aa19a67bfe4663}{payload\+\_\+length}} = 228
+\begin{DoxyCompactList}\small\item\em The length of the used payload defined in \mbox{\hyperlink{sd__logger_8h}{sd\+\_\+logger.\+h}} logging\+\_\+data\+\_\+t. \end{DoxyCompactList}\item 
+constexpr int \mbox{\hyperlink{base__station_8h_a5e8a19491a3ca8d0665e1b5098dfae7e}{chunks\+\_\+count}} = 10
+\begin{DoxyCompactList}\small\item\em The amount of chunks that will be sended over. \end{DoxyCompactList}\item 
+constexpr int \mbox{\hyperlink{base__station_8h_a94482756937b99f5d736aff23ea5fec0}{chunk\+\_\+size}} = 30 + 1
+\begin{DoxyCompactList}\small\item\em the byte size of one chunk. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The base station class file which is used for sending telemetry data. 
+
+\begin{DoxyAuthor}{Author}
+Robbe Elsermans
+\end{DoxyAuthor}
+Will cut the data into chunks of chunk\+\_\+size. Is created to work for nrf24 boards that have a maximul payload size of 32 byte per transfer. It uses the logging\+\_\+data\+\_\+t data structure originating from sd\+\_\+lohher.\+h. \begin{DoxyVersion}{Version}
+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2025-\/04-\/28
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2025 Robbe Elsermans, All rights reserved. This project is released under the CC BY-\/\+NC-\/\+SA licence. See licence.\+txt for more information 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{base__station_8h_abb388c9dfbdca89b280a12c4af1a030f}\label{base__station_8h_abb388c9dfbdca89b280a12c4af1a030f}} 
+\index{base\_station.h@{base\_station.h}!CE\_PIN@{CE\_PIN}}
+\index{CE\_PIN@{CE\_PIN}!base\_station.h@{base\_station.h}}
+\doxysubsubsection{\texorpdfstring{CE\_PIN}{CE\_PIN}}
+{\footnotesize\ttfamily \#define CE\+\_\+\+PIN~10}
+
+
+
+Pin definition of Chip Enable to control data transmission (when to Rx and when to Tx) 
+
+\mbox{\Hypertarget{base__station_8h_a6c4d73944fe1bd2ff7ceee867c315ac1}\label{base__station_8h_a6c4d73944fe1bd2ff7ceee867c315ac1}} 
+\index{base\_station.h@{base\_station.h}!CSN\_PIN@{CSN\_PIN}}
+\index{CSN\_PIN@{CSN\_PIN}!base\_station.h@{base\_station.h}}
+\doxysubsubsection{\texorpdfstring{CSN\_PIN}{CSN\_PIN}}
+{\footnotesize\ttfamily \#define CSN\+\_\+\+PIN~28}
+
+
+
+Pin definition of Chip Select Pin with negative logic of the SPI device. 
+
+\mbox{\Hypertarget{base__station_8h_aac43a478bdd4f898006744135f634e15}\label{base__station_8h_aac43a478bdd4f898006744135f634e15}} 
+\index{base\_station.h@{base\_station.h}!MAXIMUM\_TRYOUT@{MAXIMUM\_TRYOUT}}
+\index{MAXIMUM\_TRYOUT@{MAXIMUM\_TRYOUT}!base\_station.h@{base\_station.h}}
+\doxysubsubsection{\texorpdfstring{MAXIMUM\_TRYOUT}{MAXIMUM\_TRYOUT}}
+{\footnotesize\ttfamily \#define MAXIMUM\+\_\+\+TRYOUT~10}
+
+
+
+The maximum allowable tryouts if a failure occures. 
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{base__station_8h_a94482756937b99f5d736aff23ea5fec0}\label{base__station_8h_a94482756937b99f5d736aff23ea5fec0}} 
+\index{base\_station.h@{base\_station.h}!chunk\_size@{chunk\_size}}
+\index{chunk\_size@{chunk\_size}!base\_station.h@{base\_station.h}}
+\doxysubsubsection{\texorpdfstring{chunk\_size}{chunk\_size}}
+{\footnotesize\ttfamily constexpr int chunk\+\_\+size = 30 + 1\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+
+
+the byte size of one chunk. 
+
+\begin{DoxyNote}{Note}
+The +1 addition is due to the sequence number. 
+\end{DoxyNote}
+\mbox{\Hypertarget{base__station_8h_a5e8a19491a3ca8d0665e1b5098dfae7e}\label{base__station_8h_a5e8a19491a3ca8d0665e1b5098dfae7e}} 
+\index{base\_station.h@{base\_station.h}!chunks\_count@{chunks\_count}}
+\index{chunks\_count@{chunks\_count}!base\_station.h@{base\_station.h}}
+\doxysubsubsection{\texorpdfstring{chunks\_count}{chunks\_count}}
+{\footnotesize\ttfamily constexpr int chunks\+\_\+count = 10\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+
+
+The amount of chunks that will be sended over. 
+
+\mbox{\Hypertarget{base__station_8h_ae71d9442720f8b13e7629f5ed46959d4}\label{base__station_8h_ae71d9442720f8b13e7629f5ed46959d4}} 
+\index{base\_station.h@{base\_station.h}!path@{path}}
+\index{path@{path}!base\_station.h@{base\_station.h}}
+\doxysubsubsection{\texorpdfstring{path}{path}}
+{\footnotesize\ttfamily const byte path\mbox{[}6\mbox{]} = \char`\"{}00001\char`\"{}}
+
+
+
+The selected path name. Must be in sync (the same) with the receivers end. 
+
+\mbox{\Hypertarget{base__station_8h_ad8f35edf51fa8de3e8aa19a67bfe4663}\label{base__station_8h_ad8f35edf51fa8de3e8aa19a67bfe4663}} 
+\index{base\_station.h@{base\_station.h}!payload\_length@{payload\_length}}
+\index{payload\_length@{payload\_length}!base\_station.h@{base\_station.h}}
+\doxysubsubsection{\texorpdfstring{payload\_length}{payload\_length}}
+{\footnotesize\ttfamily constexpr int payload\+\_\+length = 228\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+
+
+The length of the used payload defined in \mbox{\hyperlink{sd__logger_8h}{sd\+\_\+logger.\+h}} logging\+\_\+data\+\_\+t. 
+

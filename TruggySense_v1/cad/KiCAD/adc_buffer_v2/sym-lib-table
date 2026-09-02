@@ -1,0 +1,4 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "OPA350")(type "KiCad")(uri "${KIPRJMOD}/LIB_OPA350UA_2K5/OPA350UA_2K5/KiCad/OPA350UA_2K5.kicad_sym")(options "")(descr ""))
+)

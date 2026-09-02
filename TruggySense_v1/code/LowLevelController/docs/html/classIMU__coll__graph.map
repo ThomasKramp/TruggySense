@@ -1,0 +1,3 @@
+<map id="IMU" name="IMU">
+<area shape="rect" id="node1" title="Initialize, read and get the Euler or Quaternion specific angles given by e_imu_data from the BNO085 ..." alt="" coords="5,5,188,127"/>
+</map>

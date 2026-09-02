@@ -1,0 +1,20 @@
+var searchData=
+[
+  ['sd_5fconfig_0',['SD_CONFIG',['../sd__logger_8h.html#a0584f45d96c62d7d203d272b99af6fa1',1,'sd_logger.h']]],
+  ['sd_5ferror_1',['sd_error',['../tasks_8cpp.html#a5ff17fd12be72c1fd65b331c5eb42c5a',1,'tasks.cpp']]],
+  ['sd_5flogger_2',['sd_logger',['../tasks_8cpp.html#ae046f3914fad1d72c645cd6232d42ce9',1,'tasks.cpp']]],
+  ['sd_5flogger_2ecpp_3',['sd_logger.cpp',['../sd__logger_8cpp.html',1,'']]],
+  ['sd_5flogger_2eh_4',['sd_logger.h',['../sd__logger_8h.html',1,'']]],
+  ['sdlogger_5',['SDLogger',['../classSDLogger.html',1,'']]],
+  ['senddata_6',['sendData',['../classBaseStation.html#a03966cdaa7454850df89b2b293f368fd',1,'BaseStation']]],
+  ['setchanneldefaultvalue_7',['setChannelDefaultValue',['../classIBUS.html#ab43edae3ba453732e3e38a94ce554d5b',1,'IBUS']]],
+  ['setup_8',['setup',['../main_8cpp.html#a4fc01d736fe50cf5b977f755b675f11d',1,'main.cpp']]],
+  ['sim_5fros2_5ftimer_9',['sim_ROS2_timer',['../main_8cpp.html#a281594d249b251cc15e4f244737e7c0a',1,'main.cpp']]],
+  ['ss_10',['SS',['../classActuate.html#a7775c3b80aeee5e4cce5f5648ac82d79a671db912c018a35d69da4a7b36353004',1,'Actuate']]],
+  ['ss_11',['ss',['../classCurrentMeasure.html#ab0fbc2c517c55632c04527522334e8b4a4049b6881b1eee24929a2177cd38a1c8',1,'CurrentMeasure::ss()'],['../classTemperature.html#af7441a7bcbc69bbc36f98dbe1080d3d0a51c758bf28203422de6a5499a67340ca',1,'Temperature::ss()']]],
+  ['ss_5favailability_12',['SS_AVAILABILITY',['../temperature_8h.html#a3b5bb5f0e4f2c9f7e33df163ba372c43',1,'temperature.h']]],
+  ['start_5fframe_5fsequence_13',['START_FRAME_SEQUENCE',['../X6B_8h.html#a1a1040ed35f96eac51cc4bfdede7a965',1,'X6B.h']]],
+  ['steer_5fservo_14',['steer_servo',['../actuate_8cpp.html#a8af35bf24c7878576bbc7eb3744546f6',1,'actuate.cpp']]],
+  ['sys_5ftimer_5finterval_5fus_15',['SYS_TIMER_INTERVAL_US',['../tasks_8h.html#a5236a111b32525aac0b66900788fcf27',1,'tasks.h']]],
+  ['systick_16',['sysTick',['../tasks_8h.html#ab7e413c4737e4bcb00d84c7a57c7e663',1,'sysTick():&#160;tasks.cpp'],['../tasks_8cpp.html#ab7e413c4737e4bcb00d84c7a57c7e663',1,'sysTick():&#160;tasks.cpp']]]
+];

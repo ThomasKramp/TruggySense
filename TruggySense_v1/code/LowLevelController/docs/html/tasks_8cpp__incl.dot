@@ -1,0 +1,65 @@
+digraph "src/tasks.cpp"
+{
+ // INTERACTIVE_SVG=YES
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="src/tasks.cpp",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="tasks.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$tasks_8h.html",tooltip="In this file, all tasks their function names will be defined and a brief description of what the task..."];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="stdint.h",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node2 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="ibus.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$ibus_8h.html",tooltip="Driver for the FS-X6B receiver which utilized IBUS protocol. Can be used for any IBUS enabled receive..."];
+  Node4 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="Arduino.h",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node2 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="actuate.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$actuate_8h.html",tooltip="A driver to drive PWM controlled modules such as the ESC and Servo."];
+  Node6 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="PWMServo.h",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node6 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="wiring.h",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node2 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="current.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$current_8h.html",tooltip="Contains class and pins to enable current measurements with the INA169 and ACS758ECB-200B current sen..."];
+  Node9 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 -> Node10 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="voltage.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$voltage_8h.html",tooltip="Contains class and pins to enable voltage measurements with the build in ADC."];
+  Node10 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 -> Node11 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="encoder.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$encoder_8h.html",tooltip="Enables encoding of the wheels and motors utilized by the RCV."];
+  Node11 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 -> Node12 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node12 [label="TimerInterrupt_Generic.h",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node2 -> Node13 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13 [label="temperature.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$temperature_8h.html",tooltip="Contains class and pins to enable temperature measurements with the internal MCU and DS18B20+ OneWire..."];
+  Node13 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13 -> Node14 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node14 [label="OneWire.h",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node13 -> Node15 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node15 [label="DallasTemperature.h",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node2 -> Node16 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node16 [label="imu.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$imu_8h.html",tooltip="A driver that utilize the Adafruit_BNO08x library to acquire Euler angle and Quaternions from a BNO08..."];
+  Node16 -> Node17 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node17 [label="Adafruit_BNO08x.h",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node16 -> Node18 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node18 [label="Wire.h",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node2 -> Node19 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node19 [label="sd_logger.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$sd__logger_8h.html",tooltip="Class that uses SdFat.h to log logging_data_t struct in binary format to a local SD-card."];
+  Node19 -> Node20 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node20 [label="SdFat.h",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node2 -> Node21 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node21 [label="gps.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$gps_8h.html",tooltip="driver which contains gps class that utilizes TinyGPSPlus library"];
+  Node21 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node21 -> Node22 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node22 [label="TinyGPSPlus.h",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node2 -> Node23 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node23 [label="base_station.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$base__station_8h.html",tooltip="The base station class file which is used for sending telemetry data."];
+  Node23 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node23 -> Node19 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node12 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node24 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node24 [label="ISR_Timer_Generic.h",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+}

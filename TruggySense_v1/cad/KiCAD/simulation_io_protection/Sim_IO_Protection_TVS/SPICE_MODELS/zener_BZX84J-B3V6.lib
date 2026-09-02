@@ -1,0 +1,41 @@
+***********************************************************
+*
+* BZX84J-B3V6
+*
+* Nexperia
+*
+* Single Zener diodes
+* VFmax = 1,1V    @ IF = 100mA
+* IRmax = 5µA     @ VR = 1V
+* VZmax = 3,67V   @ IZ = 5mA
+* IZSM  = 12A     @ tp = 100µs
+*
+*
+*
+* Package pinning does not match Spice model pinning.
+* Package: SOD323F
+*
+* Package Pin 1: Cathode
+* Package Pin 2: Anode
+*
+*
+*
+* Extraction date (week/year): #
+* Simulator: SPICE2
+*
+***********************************************************
+*
+.subckt zener_diode 1 2
+.MODEL BZX84J-B3V6 D
++ IS = 8.498E-16
++ N = 1
++ BV = 3.6
++ IBV = 0.005
++ RS = 3.138
++ CJO = 3.062E-10
++ VJ = 0.6643
++ M = 0.3168
++ FC = 0.5
+.ENDS
+.ends
+*

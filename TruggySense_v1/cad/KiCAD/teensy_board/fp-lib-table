@@ -1,0 +1,7 @@
+(fp_lib_table
+  (version 7)
+  (lib (name "Teensy")(type "KiCad")(uri "${KIPRJMOD}/teensy.pretty-master")(options "")(descr ""))
+  (lib (name "Zener")(type "KiCad")(uri "${KIPRJMOD}/LIB_TZMC3V3-GS08/TZMC3V3-GS08/KiCad")(options "")(descr ""))
+  (lib (name "Opamp")(type "KiCad")(uri "${KIPRJMOD}/Lib/LIB_OPA350UA_2K5/OPA350UA_2K5/KiCad")(options "")(descr ""))
+  (lib (name "TVS")(type "KiCad")(uri "${KIPRJMOD}/Lib/LIB_SMF3.3/SMF3.3/KiCad")(options "")(descr ""))
+)

@@ -1,0 +1,9 @@
+Manufacturer=LITTELFUSE
+PartNumber=SMF3.3
+PartCategory=TVS Diode (Uni-directional)
+PackageCategory=Small Outline Diode
+PinCount=2
+Version=1.1
+Released=2021-04-16 08:42:33
+Downloaded=2025-02-01 20:14:24
+3D=Y

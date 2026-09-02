@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="484.90298pt"
+   height="147.88821pt"
+   viewBox="0 0 485.13073 147.88821"
+   version="1.1"
+   id="svg55"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs55">
+    <marker
+       style="overflow:visible"
+       id="Triangle"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.5)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path135" />
+    </marker>
+  </defs>
+  <g
+     id="Node000001"
+     class="node"
+     pointer-events="visible"
+     data-name="Node1"
+     transform="matrix(0.92018765,0,0,0.92018765,69.606942,224.9267)">
+    <g
+       id="a_Node000001">
+      <a
+         xlink:title=" "
+         id="a1">
+        <polygon
+           fill="#999999"
+           stroke="#666666"
+           points="132.22,-244 132.22,-224 204.59,-224 204.59,-244 "
+           id="polygon1" />
+        <text
+           text-anchor="middle"
+           x="168.39999"
+           y="-231"
+           font-family="Helvetica, sans-Serif"
+           font-size="10px"
+           id="text1">src/main.cpp</text>
+      </a>
+    </g>
+  </g>
+  <g
+     id="Node000003"
+     class="node"
+     pointer-events="visible"
+     data-name="Node3"
+     transform="matrix(0.92018765,0,0,0.92018765,-114.99533,211.79622)">
+    <g
+       id="a_Node000003">
+      <a
+         xlink:href="$tasks_8h.html"
+         xlink:title="In this file, all tasks their function names will be defined and a brief description of what the task..."
+         id="a4">
+        <polygon
+           fill="#ffffff"
+           stroke="#666666"
+           points="393.08,-188 345.72,-188 345.72,-168 393.08,-168 "
+           id="polygon4" />
+        <text
+           text-anchor="middle"
+           x="369.39999"
+           y="-175"
+           font-family="Helvetica, sans-Serif"
+           font-size="10px"
+           id="text4">tasks.h</text>
+      </a>
+    </g>
+  </g>
+  <g
+     id="Node000005"
+     class="node"
+     pointer-events="visible"
+     data-name="Node5"
+     transform="matrix(1.0481111,0,0,1.0481111,-35.342306,228.74607)">
+    <g
+       id="a_Node000005">
+      <a
+         xlink:href="$ibus_8h.html"
+         xlink:title="Driver for the FS-X6B receiver which utilized IBUS protocol. Can be used for any IBUS enabled receive..."
+         id="a8">
+        <polygon
+           fill="#ffffff"
+           stroke="#666666"
+           points="34.22,-132 34.22,-112 76.59,-112 76.59,-132 "
+           id="polygon8" />
+        <text
+           text-anchor="middle"
+           x="55.400002"
+           y="-119"
+           font-family="Helvetica, sans-Serif"
+           font-size="10px"
+           id="text8">ibus.h</text>
+      </a>
+    </g>
+  </g>
+  <g
+     id="Node000006"
+     class="node"
+     pointer-events="visible"
+     data-name="Node6"
+     transform="matrix(1.048111,0,0,1.048111,-201.44845,264.76287)">
+    <g
+       id="a_Node000006">
+      <a
+         xlink:href="$actuate_8h.html"
+         xlink:title="A driver to drive PWM controlled modules such as the ESC and Servo."
+         id="a10">
+        <polygon
+           fill="#ffffff"
+           stroke="#666666"
+           points="379.76,-132 379.76,-112 437.05,-112 437.05,-132 "
+           id="polygon10" />
+        <text
+           text-anchor="middle"
+           x="408.39999"
+           y="-119"
+           font-family="Helvetica, sans-Serif"
+           font-size="10px"
+           id="text10">actuate.h</text>
+      </a>
+    </g>
+  </g>
+  <g
+     id="Node000009"
+     class="node"
+     pointer-events="visible"
+     data-name="Node9"
+     transform="matrix(1.0481111,0,0,1.0481111,-74.767965,264.71201)">
+    <g
+       id="a_Node000009">
+      <a
+         xlink:href="$current_8h.html"
+         xlink:title="Contains class and pins to enable current measurements with the INA169 and ACS758ECB-200B current sen..."
+         id="a12">
+        <polygon
+           fill="#ffffff"
+           stroke="#666666"
+           points="94.44,-112 150.37,-112 150.37,-132 94.44,-132 "
+           id="polygon12" />
+        <text
+           text-anchor="middle"
+           x="122.4"
+           y="-119"
+           font-family="Helvetica, sans-Serif"
+           font-size="10px"
+           id="text12">current.h</text>
+      </a>
+    </g>
+  </g>
+  <g
+     id="Node000010"
+     class="node"
+     pointer-events="visible"
+     data-name="Node10"
+     transform="matrix(1.0481111,0,0,1.0481111,-107.63105,228.74608)">
+    <g
+       id="a_Node000010">
+      <a
+         xlink:href="$voltage_8h.html"
+         xlink:title="Contains class and pins to enable voltage measurements with the build in ADC."
+         id="a14">
+        <polygon
+           fill="#ffffff"
+           stroke="#666666"
+           points="168.32,-132 168.32,-112 224.49,-112 224.49,-132 "
+           id="polygon14" />
+        <text
+           text-anchor="middle"
+           x="196.39999"
+           y="-119"
+           font-family="Helvetica, sans-Serif"
+           font-size="10px"
+           id="text14">voltage.h</text>
+      </a>
+    </g>
+  </g>
+  <g
+     id="Node000011"
+     class="node"
+     pointer-events="visible"
+     data-name="Node11"
+     transform="matrix(1.048111,0,0,1.048111,-169.93375,228.74607)">
+    <g
+       id="a_Node000011">
+      <a
+         xlink:href="$encoder_8h.html"
+         xlink:title="Enables encoding of the wheels and motors utilized by the RCV."
+         id="a16">
+        <polygon
+           fill="#ffffff"
+           stroke="#666666"
+           points="361.88,-132 300.92,-132 300.92,-112 361.88,-112 "
+           id="polygon16" />
+        <text
+           text-anchor="middle"
+           x="331.39999"
+           y="-119"
+           font-family="Helvetica, sans-Serif"
+           font-size="10px"
+           id="text16">encoder.h</text>
+      </a>
+    </g>
+  </g>
+  <g
+     id="Node000013"
+     class="node"
+     pointer-events="visible"
+     data-name="Node13"
+     transform="matrix(1.0481111,0,0,1.0481111,-277.66148,228.74608)">
+    <g
+       id="a_Node000013">
+      <a
+         xlink:href="$temperature_8h.html"
+         xlink:title="Contains class and pins to enable temperature measurements with the internal MCU and DS18B20+ OneWire..."
+         id="a18">
+        <polygon
+           fill="#ffffff"
+           stroke="#666666"
+           points="571.66,-112 571.66,-132 493.15,-132 493.15,-112 "
+           id="polygon18" />
+        <text
+           text-anchor="middle"
+           x="532.36664"
+           y="-118.55508"
+           font-family="Helvetica, sans-Serif"
+           font-size="11.3902px"
+           id="text18"
+           style="stroke-width:1.13902">temperature.h</text>
+      </a>
+    </g>
+  </g>
+  <g
+     id="Node000016"
+     class="node"
+     pointer-events="visible"
+     data-name="Node16"
+     transform="matrix(1.048111,0,0,1.048111,-450.16158,264.76287)">
+    <g
+       id="a_Node000016">
+      <a
+         xlink:href="$imu_8h.html"
+         xlink:title="A driver that utilize the Adafruit_BNO08x library to acquire Euler angle and Quaternions from a BNO08..."
+         id="a20">
+        <polygon
+           fill="#ffffff"
+           stroke="#666666"
+           points="850.95,-132 850.95,-112 891.86,-112 891.86,-132 "
+           id="polygon20" />
+        <text
+           text-anchor="middle"
+           x="871.40002"
+           y="-119"
+           font-family="Helvetica, sans-Serif"
+           font-size="10px"
+           id="text20">imu.h</text>
+      </a>
+    </g>
+  </g>
+  <g
+     id="Node000019"
+     class="node"
+     pointer-events="visible"
+     data-name="Node19"
+     transform="matrix(1.048111,0,0,1.048111,-424.72288,170.05185)">
+    <g
+       id="a_Node000019">
+      <a
+         xlink:href="$sd__logger_8h.html"
+         xlink:title="Class that uses SdFat.h to log logging_data_t struct in binary format to a local SD-card."
+         id="a22">
+        <polygon
+           fill="#ffffff"
+           stroke="#666666"
+           points="762.14,-56 830.67,-56 830.67,-76 762.14,-76 "
+           id="polygon22" />
+        <text
+           text-anchor="middle"
+           x="796.40002"
+           y="-63"
+           font-family="Helvetica, sans-Serif"
+           font-size="10px"
+           id="text22">sd_logger.h</text>
+      </a>
+    </g>
+  </g>
+  <g
+     id="Node000021"
+     class="node"
+     pointer-events="visible"
+     data-name="Node21"
+     transform="matrix(1.0481111,0,0,1.0481111,-137.05652,264.76288)">
+    <g
+       id="a_Node000021">
+      <a
+         xlink:href="$gps_8h.html"
+         xlink:title="driver which contains gps class that utilizes TinyGPSPlus library"
+         id="a24">
+        <polygon
+           fill="#ffffff"
+           stroke="#666666"
+           points="283.87,-112 283.87,-132 242.94,-132 242.94,-112 "
+           id="polygon24" />
+        <text
+           text-anchor="middle"
+           x="263.39999"
+           y="-119"
+           font-family="Helvetica, sans-Serif"
+           font-size="10px"
+           id="text24">gps.h</text>
+      </a>
+    </g>
+  </g>
+  <g
+     id="Node000023"
+     class="node"
+     pointer-events="visible"
+     data-name="Node23"
+     transform="matrix(1.048111,0,0,1.048111,-317.73632,264.76287)">
+    <g
+       id="a_Node000023">
+      <a
+         xlink:href="$base__station_8h.html"
+         xlink:title="The base station class file which is used for sending telemetry data."
+         id="a26">
+        <polygon
+           fill="#ffffff"
+           stroke="#666666"
+           points="670.95,-132 589.85,-132 589.85,-112 670.95,-112 "
+           id="polygon26" />
+        <text
+           text-anchor="middle"
+           x="630.40002"
+           y="-119"
+           font-family="Helvetica, sans-Serif"
+           font-size="10px"
+           id="text26">base_station.h</text>
+      </a>
+    </g>
+  </g>
+  <path
+     style="fill:#000000;stroke:#63b8ff;stroke-width:1.83586;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Triangle)"
+     d="m 224.28826,19.366635 1e-5,12.005636"
+     id="path56" />
+  <path
+     style="fill:#000000;stroke:#63b8ff;stroke-width:1.83586;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Triangle)"
+     d="m 246.71203,57.204694 27.59972,28.192941"
+     id="path57" />
+  <path
+     style="fill:none;fill-opacity:1;stroke:#63b8ff;stroke-width:1.83586;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Triangle)"
+     d="m 247.29907,53.382605 98.04602,34.015969 10e-6,32.015036"
+     id="path58" />
+  <path
+     style="fill:none;stroke:#63b8ff;stroke-width:1.83586;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Triangle)"
+     d="M 247.29907,48.380256 370.35684,87.398574"
+     id="path59" />
+  <path
+     style="fill:none;stroke:#63b8ff;stroke-width:1.83586;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Triangle)"
+     d="M 247.29907,42.377438 460.39911,82.396225 V 119.41361"
+     id="path60" />
+  <path
+     style="fill:none;stroke:#63b8ff;stroke-width:1.83586;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Triangle)"
+     d="m 225.28874,57.384483 -1e-5,62.029127"
+     id="path61" />
+  <path
+     style="fill:none;stroke:#63b8ff;stroke-width:1.83586;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Triangle)"
+     d="M 206.27981,57.384484 182.26854,84.397165"
+     id="path62" />
+  <path
+     style="fill:none;stroke:#63b8ff;stroke-width:1.83586;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Triangle)"
+     d="M 202.27793,53.382605 135.24646,87.398574 V 119.41361"
+     id="path63" />
+  <path
+     style="fill:none;stroke:#63b8ff;stroke-width:1.83586;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Triangle)"
+     d="M 202.27793,48.380256 120.23942,87.398574"
+     id="path64" />
+  <path
+     style="fill:none;stroke:#63b8ff;stroke-width:1.83586;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Triangle)"
+     d="M 202.27793,44.378378 60.211242,87.398574 v 32.015036"
+     id="path65" />
+  <path
+     style="fill:none;stroke:#63b8ff;stroke-width:1.83586;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Triangle)"
+     d="M 202.27793,40.376498 47.205133,86.398105"
+     id="path66" />
+</svg>

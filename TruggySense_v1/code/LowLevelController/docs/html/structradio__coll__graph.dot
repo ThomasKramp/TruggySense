@@ -1,0 +1,8 @@
+digraph "radio"
+{
+ // INTERACTIVE_SVG=YES
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="{radio\n|+ uint16_t ch_1\l+ uint16_t ch_2\l+ uint16_t ch_3\l+ uint16_t ch_4\l+ uint16_t ch_5\l+ uint16_t ch_6\l+ uint16_t ch_7\l+ uint16_t ch_8\l+ uint16_t ch_9\l+ uint16_t ch_10\l+ uint16_t ch_11\l+ uint16_t ch_12\l+ uint16_t ch_13\l+ uint16_t ch_14\l+ uint8_t failsafe\l|}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="datastruct of radio channels"];
+}
